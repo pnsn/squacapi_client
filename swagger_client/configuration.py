@@ -40,7 +40,7 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "http://squacapi.pnsn.org"
+        self.host = "https://squacapi.pnsn.org"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
