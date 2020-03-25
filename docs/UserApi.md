@@ -26,10 +26,11 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: Basic
+# Configure API key authorization: Token
 configuration = swagger_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 
@@ -78,10 +79,11 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: Basic
+# Configure API key authorization: Token
 configuration = swagger_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
@@ -106,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 
@@ -130,10 +132,11 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: Basic
+# Configure API key authorization: Token
 configuration = swagger_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
@@ -154,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 
@@ -178,10 +181,11 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: Basic
+# Configure API key authorization: Token
 configuration = swagger_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
@@ -206,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 
@@ -216,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_token_create**
-> user_token_create()
+> Token user_token_create(data)
 
 
 
@@ -230,30 +234,36 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: Basic
+# Configure API key authorization: Token
 configuration = swagger_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
+data = swagger_client.AuthToken() # AuthToken | 
 
 try:
-    api_instance.user_token_create()
+    api_response = api_instance.user_token_create(data)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->user_token_create: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**AuthToken**](AuthToken.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**Token**](Token.md)
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 

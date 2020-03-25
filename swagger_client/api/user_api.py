@@ -3,7 +3,7 @@
 """
     Squac API
 
-    Test description  # noqa: E501
+    API for accessing squac data  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@snippets.local
@@ -114,7 +114,7 @@ class UserApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/user/create/', 'POST',
@@ -213,7 +213,7 @@ class UserApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/user/me/', 'PATCH',
@@ -304,7 +304,7 @@ class UserApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/user/me/', 'GET',
@@ -403,7 +403,7 @@ class UserApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/user/me/', 'PUT',
@@ -421,43 +421,45 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def user_token_create(self, **kwargs):  # noqa: E501
+    def user_token_create(self, data, **kwargs):  # noqa: E501
         """user_token_create  # noqa: E501
 
         create a new auth token for user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.user_token_create(async_req=True)
+        >>> thread = api.user_token_create(data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: None
+        :param AuthToken data: (required)
+        :return: Token
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.user_token_create_with_http_info(**kwargs)  # noqa: E501
+            return self.user_token_create_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.user_token_create_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.user_token_create_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def user_token_create_with_http_info(self, **kwargs):  # noqa: E501
+    def user_token_create_with_http_info(self, data, **kwargs):  # noqa: E501
         """user_token_create  # noqa: E501
 
         create a new auth token for user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.user_token_create_with_http_info(async_req=True)
+        >>> thread = api.user_token_create_with_http_info(data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: None
+        :param AuthToken data: (required)
+        :return: Token
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -472,6 +474,10 @@ class UserApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `user_token_create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -485,6 +491,8 @@ class UserApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -494,7 +502,7 @@ class UserApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/user/token/', 'POST',
@@ -504,7 +512,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='Token',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

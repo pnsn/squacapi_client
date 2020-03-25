@@ -4,7 +4,7 @@
 """
     Squac API
 
-    Test description  # noqa: E501
+    API for accessing squac data  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@snippets.local
@@ -16,6 +16,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from swagger_client.models.archive import Archive
+from swagger_client.models.auth_token import AuthToken
 from swagger_client.models.channel import Channel
 from swagger_client.models.dashboard import Dashboard
 from swagger_client.models.dashboard_detail import DashboardDetail

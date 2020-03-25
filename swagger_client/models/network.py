@@ -3,7 +3,7 @@
 """
     Squac API
 
-    Test description  # noqa: E501
+    API for accessing squac data  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@snippets.local

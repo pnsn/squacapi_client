@@ -3,7 +3,7 @@
 """
     Squac API
 
-    Test description  # noqa: E501
+    API for accessing squac data  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@snippets.local
@@ -114,7 +114,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/dashboards/', 'POST',
@@ -213,7 +213,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/dashboards/{id}/', 'DELETE',
@@ -304,7 +304,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/dashboards/', 'GET',
@@ -411,7 +411,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/dashboards/{id}/', 'PATCH',
@@ -510,7 +510,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/dashboards/{id}/', 'GET',
@@ -617,7 +617,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/dashboards/{id}/', 'PUT',
@@ -716,7 +716,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgets/', 'POST',
@@ -815,7 +815,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgets/{id}/', 'DELETE',
@@ -906,7 +906,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgets/', 'GET',
@@ -1013,7 +1013,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgets/{id}/', 'PATCH',
@@ -1112,7 +1112,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgets/{id}/', 'GET',
@@ -1219,7 +1219,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgets/{id}/', 'PUT',
@@ -1318,7 +1318,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgettypes/', 'POST',
@@ -1417,7 +1417,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgettypes/{id}/', 'DELETE',
@@ -1508,7 +1508,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgettypes/', 'GET',
@@ -1615,7 +1615,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgettypes/{id}/', 'PATCH',
@@ -1714,7 +1714,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgettypes/{id}/', 'GET',
@@ -1821,7 +1821,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/dashboard/widgettypes/{id}/', 'PUT',
@@ -1912,7 +1912,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/', 'GET',
@@ -2023,7 +2023,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/archives/', 'GET',
@@ -2122,7 +2122,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/archives/{id}/', 'GET',
@@ -2221,7 +2221,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/measurements/', 'POST',
@@ -2320,7 +2320,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/measurements/{id}/', 'DELETE',
@@ -2427,7 +2427,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/measurements/', 'GET',
@@ -2534,7 +2534,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/measurements/{id}/', 'PATCH',
@@ -2633,7 +2633,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/measurements/{id}/', 'GET',
@@ -2740,7 +2740,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/measurements/{id}/', 'PUT',
@@ -2839,7 +2839,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/metrics/', 'POST',
@@ -2938,7 +2938,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/metrics/{id}/', 'DELETE',
@@ -3033,7 +3033,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/metrics/', 'GET',
@@ -3140,7 +3140,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/metrics/{id}/', 'PATCH',
@@ -3239,7 +3239,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/metrics/{id}/', 'GET',
@@ -3346,7 +3346,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/metrics/{id}/', 'PUT',
@@ -3445,7 +3445,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/thresholds/', 'POST',
@@ -3544,7 +3544,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/thresholds/{id}/', 'DELETE',
@@ -3643,7 +3643,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/thresholds/', 'GET',
@@ -3750,7 +3750,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/thresholds/{id}/', 'PATCH',
@@ -3849,7 +3849,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/thresholds/{id}/', 'GET',
@@ -3956,7 +3956,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/measurement/thresholds/{id}/', 'PUT',
@@ -4055,7 +4055,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/channels/', 'POST',
@@ -4154,7 +4154,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/channels/{id}/', 'DELETE',
@@ -4297,7 +4297,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/channels/', 'GET',
@@ -4404,7 +4404,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/channels/{id}/', 'PATCH',
@@ -4503,7 +4503,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/channels/{id}/', 'GET',
@@ -4610,7 +4610,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/channels/{id}/', 'PUT',
@@ -4709,7 +4709,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/groups/', 'POST',
@@ -4808,7 +4808,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/groups/{id}/', 'DELETE',
@@ -4899,7 +4899,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/groups/', 'GET',
@@ -5006,7 +5006,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/groups/{id}/', 'PATCH',
@@ -5105,7 +5105,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/groups/{id}/', 'GET',
@@ -5212,7 +5212,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/groups/{id}/', 'PUT',
@@ -5311,7 +5311,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/networks/', 'POST',
@@ -5410,7 +5410,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/networks/{code}/', 'DELETE',
@@ -5509,7 +5509,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/networks/', 'GET',
@@ -5616,7 +5616,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/networks/{code}/', 'PATCH',
@@ -5715,7 +5715,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/networks/{code}/', 'GET',
@@ -5822,7 +5822,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/nslc/networks/{code}/', 'PUT',
@@ -5921,7 +5921,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/password_reset/confirm/', 'POST',
@@ -6020,7 +6020,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/password_reset/', 'POST',
@@ -6119,7 +6119,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/password_reset/validate_token/', 'POST',
@@ -6218,7 +6218,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/user/create/', 'POST',
@@ -6317,7 +6317,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/user/me/', 'PATCH',
@@ -6408,7 +6408,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/user/me/', 'GET',
@@ -6507,7 +6507,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/user/me/', 'PUT',
@@ -6525,43 +6525,45 @@ class V10Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_0_user_token_create(self, **kwargs):  # noqa: E501
+    def v1_0_user_token_create(self, data, **kwargs):  # noqa: E501
         """v1_0_user_token_create  # noqa: E501
 
         create a new auth token for user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_0_user_token_create(async_req=True)
+        >>> thread = api.v1_0_user_token_create(data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: None
+        :param AuthToken data: (required)
+        :return: Token
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_0_user_token_create_with_http_info(**kwargs)  # noqa: E501
+            return self.v1_0_user_token_create_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_0_user_token_create_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.v1_0_user_token_create_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def v1_0_user_token_create_with_http_info(self, **kwargs):  # noqa: E501
+    def v1_0_user_token_create_with_http_info(self, data, **kwargs):  # noqa: E501
         """v1_0_user_token_create  # noqa: E501
 
         create a new auth token for user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_0_user_token_create_with_http_info(async_req=True)
+        >>> thread = api.v1_0_user_token_create_with_http_info(data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: None
+        :param AuthToken data: (required)
+        :return: Token
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6576,6 +6578,10 @@ class V10Api(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_token_create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -6589,6 +6595,8 @@ class V10Api(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -6598,7 +6606,7 @@ class V10Api(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic']  # noqa: E501
+        auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/v1.0/user/token/', 'POST',
@@ -6608,7 +6616,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='Token',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

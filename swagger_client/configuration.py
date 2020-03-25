@@ -3,7 +3,7 @@
 """
     Squac API
 
-    Test description  # noqa: E501
+    API for accessing squac data  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@snippets.local
@@ -229,12 +229,12 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         return {
-            'Basic':
+            'Token':
                 {
-                    'type': 'basic',
+                    'type': 'api_key',
                     'in': 'header',
                     'key': 'Authorization',
-                    'value': self.get_basic_auth_token()
+                    'value': self.get_api_key_with_prefix('Authorization')
                 },
 
         }
