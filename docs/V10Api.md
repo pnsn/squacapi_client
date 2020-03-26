@@ -72,7 +72,7 @@ Method | HTTP request | Description
 
 
 # **v1_0_dashboard_dashboards_create**
-> Dashboard v1_0_dashboard_dashboards_create(data)
+> ReadOnlyDashboardSerializer v1_0_dashboard_dashboards_create(data)
 
 
 
@@ -94,7 +94,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Dashboard() # Dashboard | 
+data = swagger_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_create(data)
@@ -107,11 +107,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Dashboard**](Dashboard.md)|  | 
+ **data** | [**WriteOnlyDashboardSerializer**](WriteOnlyDashboardSerializer.md)|  | 
 
 ### Return type
 
-[**Dashboard**](Dashboard.md)
+[**ReadOnlyDashboardSerializer**](ReadOnlyDashboardSerializer.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_dashboards_list**
-> list[Dashboard] v1_0_dashboard_dashboards_list()
+> list[ReadOnlyDashboardSerializer] v1_0_dashboard_dashboards_list()
 
 
 
@@ -212,7 +212,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[Dashboard]**](Dashboard.md)
+[**list[ReadOnlyDashboardSerializer]**](ReadOnlyDashboardSerializer.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_dashboards_partial_update**
-> Dashboard v1_0_dashboard_dashboards_partial_update(id, data)
+> ReadOnlyDashboardSerializer v1_0_dashboard_dashboards_partial_update(id, data)
 
 
 
@@ -249,7 +249,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this dashboard.
-data = swagger_client.Dashboard() # Dashboard | 
+data = swagger_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_partial_update(id, data)
@@ -263,11 +263,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this dashboard. | 
- **data** | [**Dashboard**](Dashboard.md)|  | 
+ **data** | [**WriteOnlyDashboardSerializer**](WriteOnlyDashboardSerializer.md)|  | 
 
 ### Return type
 
-[**Dashboard**](Dashboard.md)
+[**ReadOnlyDashboardSerializer**](ReadOnlyDashboardSerializer.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_dashboards_read**
-> DashboardDetail v1_0_dashboard_dashboards_read(id)
+> ReadOnlyDashboardDetailSerializer v1_0_dashboard_dashboards_read(id)
 
 
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DashboardDetail**](DashboardDetail.md)
+[**ReadOnlyDashboardDetailSerializer**](ReadOnlyDashboardDetailSerializer.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_dashboards_update**
-> Dashboard v1_0_dashboard_dashboards_update(id, data)
+> ReadOnlyDashboardSerializer v1_0_dashboard_dashboards_update(id, data)
 
 
 
@@ -357,7 +357,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this dashboard.
-data = swagger_client.Dashboard() # Dashboard | 
+data = swagger_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_update(id, data)
@@ -371,11 +371,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this dashboard. | 
- **data** | [**Dashboard**](Dashboard.md)|  | 
+ **data** | [**WriteOnlyDashboardSerializer**](WriteOnlyDashboardSerializer.md)|  | 
 
 ### Return type
 
-[**Dashboard**](Dashboard.md)
+[**ReadOnlyDashboardSerializer**](ReadOnlyDashboardSerializer.md)
 
 ### Authorization
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgets_create**
-> Widget v1_0_dashboard_widgets_create(data)
+> ReadOnlyWidgetSerializer v1_0_dashboard_widgets_create(data)
 
 
 
@@ -411,7 +411,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Widget() # Widget | 
+data = swagger_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_create(data)
@@ -424,11 +424,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Widget**](Widget.md)|  | 
+ **data** | [**WriteOnlyWidgetSerializer**](WriteOnlyWidgetSerializer.md)|  | 
 
 ### Return type
 
-[**Widget**](Widget.md)
+[**ReadOnlyWidgetSerializer**](ReadOnlyWidgetSerializer.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgets_list**
-> list[WidgetDetail] v1_0_dashboard_widgets_list()
+> list[ReadOnlyWidgetDetailSerializer] v1_0_dashboard_widgets_list()
 
 
 
@@ -529,7 +529,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[WidgetDetail]**](WidgetDetail.md)
+[**list[ReadOnlyWidgetDetailSerializer]**](ReadOnlyWidgetDetailSerializer.md)
 
 ### Authorization
 
@@ -543,7 +543,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgets_partial_update**
-> Widget v1_0_dashboard_widgets_partial_update(id, data)
+> ReadOnlyWidgetSerializer v1_0_dashboard_widgets_partial_update(id, data)
 
 
 
@@ -566,7 +566,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget.
-data = swagger_client.Widget() # Widget | 
+data = swagger_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_partial_update(id, data)
@@ -580,11 +580,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this widget. | 
- **data** | [**Widget**](Widget.md)|  | 
+ **data** | [**WriteOnlyWidgetSerializer**](WriteOnlyWidgetSerializer.md)|  | 
 
 ### Return type
 
-[**Widget**](Widget.md)
+[**ReadOnlyWidgetSerializer**](ReadOnlyWidgetSerializer.md)
 
 ### Authorization
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgets_read**
-> WidgetDetail v1_0_dashboard_widgets_read(id)
+> ReadOnlyWidgetDetailSerializer v1_0_dashboard_widgets_read(id)
 
 
 
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WidgetDetail**](WidgetDetail.md)
+[**ReadOnlyWidgetDetailSerializer**](ReadOnlyWidgetDetailSerializer.md)
 
 ### Authorization
 
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgets_update**
-> Widget v1_0_dashboard_widgets_update(id, data)
+> ReadOnlyWidgetSerializer v1_0_dashboard_widgets_update(id, data)
 
 
 
@@ -674,7 +674,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget.
-data = swagger_client.Widget() # Widget | 
+data = swagger_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_update(id, data)
@@ -688,11 +688,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this widget. | 
- **data** | [**Widget**](Widget.md)|  | 
+ **data** | [**WriteOnlyWidgetSerializer**](WriteOnlyWidgetSerializer.md)|  | 
 
 ### Return type
 
-[**Widget**](Widget.md)
+[**ReadOnlyWidgetSerializer**](ReadOnlyWidgetSerializer.md)
 
 ### Authorization
 
@@ -706,7 +706,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgettypes_create**
-> WidgetType v1_0_dashboard_widgettypes_create(data)
+> ReadOnlyWidgetTypeSerializer v1_0_dashboard_widgettypes_create(data)
 
 
 
@@ -728,7 +728,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WidgetType() # WidgetType | 
+data = swagger_client.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_create(data)
@@ -741,11 +741,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**WidgetType**](WidgetType.md)|  | 
+ **data** | [**WriteOnlyWidgetTypeSerializer**](WriteOnlyWidgetTypeSerializer.md)|  | 
 
 ### Return type
 
-[**WidgetType**](WidgetType.md)
+[**ReadOnlyWidgetTypeSerializer**](ReadOnlyWidgetTypeSerializer.md)
 
 ### Authorization
 
@@ -811,7 +811,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgettypes_list**
-> list[WidgetType] v1_0_dashboard_widgettypes_list()
+> list[ReadOnlyWidgetTypeSerializer] v1_0_dashboard_widgettypes_list()
 
 
 
@@ -846,7 +846,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[WidgetType]**](WidgetType.md)
+[**list[ReadOnlyWidgetTypeSerializer]**](ReadOnlyWidgetTypeSerializer.md)
 
 ### Authorization
 
@@ -860,7 +860,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgettypes_partial_update**
-> WidgetType v1_0_dashboard_widgettypes_partial_update(id, data)
+> ReadOnlyWidgetTypeSerializer v1_0_dashboard_widgettypes_partial_update(id, data)
 
 
 
@@ -883,7 +883,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget type.
-data = swagger_client.WidgetType() # WidgetType | 
+data = swagger_client.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_partial_update(id, data)
@@ -897,11 +897,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this widget type. | 
- **data** | [**WidgetType**](WidgetType.md)|  | 
+ **data** | [**WriteOnlyWidgetTypeSerializer**](WriteOnlyWidgetTypeSerializer.md)|  | 
 
 ### Return type
 
-[**WidgetType**](WidgetType.md)
+[**ReadOnlyWidgetTypeSerializer**](ReadOnlyWidgetTypeSerializer.md)
 
 ### Authorization
 
@@ -915,7 +915,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgettypes_read**
-> WidgetType v1_0_dashboard_widgettypes_read(id)
+> ReadOnlyWidgetTypeSerializer v1_0_dashboard_widgettypes_read(id)
 
 
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WidgetType**](WidgetType.md)
+[**ReadOnlyWidgetTypeSerializer**](ReadOnlyWidgetTypeSerializer.md)
 
 ### Authorization
 
@@ -968,7 +968,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgettypes_update**
-> WidgetType v1_0_dashboard_widgettypes_update(id, data)
+> ReadOnlyWidgetTypeSerializer v1_0_dashboard_widgettypes_update(id, data)
 
 
 
@@ -991,7 +991,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget type.
-data = swagger_client.WidgetType() # WidgetType | 
+data = swagger_client.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_update(id, data)
@@ -1005,11 +1005,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this widget type. | 
- **data** | [**WidgetType**](WidgetType.md)|  | 
+ **data** | [**WriteOnlyWidgetTypeSerializer**](WriteOnlyWidgetTypeSerializer.md)|  | 
 
 ### Return type
 
-[**WidgetType**](WidgetType.md)
+[**ReadOnlyWidgetTypeSerializer**](ReadOnlyWidgetTypeSerializer.md)
 
 ### Authorization
 
@@ -1071,7 +1071,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_archives_list**
-> list[Archive] v1_0_measurement_archives_list(metric=metric, channel=channel, archive_type=archive_type, starttime=starttime, endtime=endtime)
+> list[ReadOnlyArchiveSerializer] v1_0_measurement_archives_list(metric=metric, channel=channel, archive_type=archive_type, starttime=starttime, endtime=endtime)
 
 Viewset that provides access to Archive data
 
@@ -1119,7 +1119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Archive]**](Archive.md)
+[**list[ReadOnlyArchiveSerializer]**](ReadOnlyArchiveSerializer.md)
 
 ### Authorization
 
@@ -1133,7 +1133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_archives_read**
-> Archive v1_0_measurement_archives_read(id)
+> ReadOnlyArchiveSerializer v1_0_measurement_archives_read(id)
 
 Viewset that provides access to Archive data
 
@@ -1173,7 +1173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Archive**](Archive.md)
+[**ReadOnlyArchiveSerializer**](ReadOnlyArchiveSerializer.md)
 
 ### Authorization
 
@@ -1187,7 +1187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_create**
-> Measurement v1_0_measurement_measurements_create(data)
+> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_create(data)
 
 
 
@@ -1209,7 +1209,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Measurement() # Measurement | 
+data = swagger_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_create(data)
@@ -1222,11 +1222,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Measurement**](Measurement.md)|  | 
+ **data** | [**WriteOnlyMeasurementSerializer**](WriteOnlyMeasurementSerializer.md)|  | 
 
 ### Return type
 
-[**Measurement**](Measurement.md)
+[**ReadOnlyMeasurementSerializer**](ReadOnlyMeasurementSerializer.md)
 
 ### Authorization
 
@@ -1292,7 +1292,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_list**
-> list[Measurement] v1_0_measurement_measurements_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel)
+> list[ReadOnlyMeasurementSerializer] v1_0_measurement_measurements_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel)
 
 
 
@@ -1337,7 +1337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Measurement]**](Measurement.md)
+[**list[ReadOnlyMeasurementSerializer]**](ReadOnlyMeasurementSerializer.md)
 
 ### Authorization
 
@@ -1351,7 +1351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_partial_update**
-> Measurement v1_0_measurement_measurements_partial_update(id, data)
+> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_partial_update(id, data)
 
 
 
@@ -1374,7 +1374,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this measurement.
-data = swagger_client.Measurement() # Measurement | 
+data = swagger_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_partial_update(id, data)
@@ -1388,11 +1388,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this measurement. | 
- **data** | [**Measurement**](Measurement.md)|  | 
+ **data** | [**WriteOnlyMeasurementSerializer**](WriteOnlyMeasurementSerializer.md)|  | 
 
 ### Return type
 
-[**Measurement**](Measurement.md)
+[**ReadOnlyMeasurementSerializer**](ReadOnlyMeasurementSerializer.md)
 
 ### Authorization
 
@@ -1406,7 +1406,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_read**
-> Measurement v1_0_measurement_measurements_read(id)
+> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_read(id)
 
 
 
@@ -1445,7 +1445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Measurement**](Measurement.md)
+[**ReadOnlyMeasurementSerializer**](ReadOnlyMeasurementSerializer.md)
 
 ### Authorization
 
@@ -1459,7 +1459,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_update**
-> Measurement v1_0_measurement_measurements_update(id, data)
+> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_update(id, data)
 
 
 
@@ -1482,7 +1482,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this measurement.
-data = swagger_client.Measurement() # Measurement | 
+data = swagger_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_update(id, data)
@@ -1496,11 +1496,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this measurement. | 
- **data** | [**Measurement**](Measurement.md)|  | 
+ **data** | [**WriteOnlyMeasurementSerializer**](WriteOnlyMeasurementSerializer.md)|  | 
 
 ### Return type
 
-[**Measurement**](Measurement.md)
+[**ReadOnlyMeasurementSerializer**](ReadOnlyMeasurementSerializer.md)
 
 ### Authorization
 
@@ -1514,7 +1514,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_metrics_create**
-> Metric v1_0_measurement_metrics_create(data)
+> ReadOnlyMetricSerializer v1_0_measurement_metrics_create(data)
 
 
 
@@ -1536,7 +1536,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Metric() # Metric | 
+data = swagger_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_metrics_create(data)
@@ -1549,11 +1549,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Metric**](Metric.md)|  | 
+ **data** | [**WriteOnlyMetricSerializer**](WriteOnlyMetricSerializer.md)|  | 
 
 ### Return type
 
-[**Metric**](Metric.md)
+[**ReadOnlyMetricSerializer**](ReadOnlyMetricSerializer.md)
 
 ### Authorization
 
@@ -1619,7 +1619,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_metrics_list**
-> list[Metric] v1_0_measurement_metrics_list(name=name)
+> list[ReadOnlyMetricSerializer] v1_0_measurement_metrics_list(name=name)
 
 
 
@@ -1658,7 +1658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Metric]**](Metric.md)
+[**list[ReadOnlyMetricSerializer]**](ReadOnlyMetricSerializer.md)
 
 ### Authorization
 
@@ -1672,7 +1672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_metrics_partial_update**
-> Metric v1_0_measurement_metrics_partial_update(id, data)
+> ReadOnlyMetricSerializer v1_0_measurement_metrics_partial_update(id, data)
 
 
 
@@ -1695,7 +1695,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this metric.
-data = swagger_client.Metric() # Metric | 
+data = swagger_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_metrics_partial_update(id, data)
@@ -1709,11 +1709,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this metric. | 
- **data** | [**Metric**](Metric.md)|  | 
+ **data** | [**WriteOnlyMetricSerializer**](WriteOnlyMetricSerializer.md)|  | 
 
 ### Return type
 
-[**Metric**](Metric.md)
+[**ReadOnlyMetricSerializer**](ReadOnlyMetricSerializer.md)
 
 ### Authorization
 
@@ -1727,7 +1727,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_metrics_read**
-> Metric v1_0_measurement_metrics_read(id)
+> ReadOnlyMetricSerializer v1_0_measurement_metrics_read(id)
 
 
 
@@ -1766,7 +1766,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Metric**](Metric.md)
+[**ReadOnlyMetricSerializer**](ReadOnlyMetricSerializer.md)
 
 ### Authorization
 
@@ -1780,7 +1780,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_metrics_update**
-> Metric v1_0_measurement_metrics_update(id, data)
+> ReadOnlyMetricSerializer v1_0_measurement_metrics_update(id, data)
 
 
 
@@ -1803,7 +1803,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this metric.
-data = swagger_client.Metric() # Metric | 
+data = swagger_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_metrics_update(id, data)
@@ -1817,11 +1817,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this metric. | 
- **data** | [**Metric**](Metric.md)|  | 
+ **data** | [**WriteOnlyMetricSerializer**](WriteOnlyMetricSerializer.md)|  | 
 
 ### Return type
 
-[**Metric**](Metric.md)
+[**ReadOnlyMetricSerializer**](ReadOnlyMetricSerializer.md)
 
 ### Authorization
 
@@ -1835,7 +1835,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_thresholds_create**
-> Threshold v1_0_measurement_thresholds_create(data)
+> ReadOnlyThresholdSerializer v1_0_measurement_thresholds_create(data)
 
 
 
@@ -1857,7 +1857,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Threshold() # Threshold | 
+data = swagger_client.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_thresholds_create(data)
@@ -1870,11 +1870,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Threshold**](Threshold.md)|  | 
+ **data** | [**WriteOnlyThresholdSerializer**](WriteOnlyThresholdSerializer.md)|  | 
 
 ### Return type
 
-[**Threshold**](Threshold.md)
+[**ReadOnlyThresholdSerializer**](ReadOnlyThresholdSerializer.md)
 
 ### Authorization
 
@@ -1940,7 +1940,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_thresholds_list**
-> list[Threshold] v1_0_measurement_thresholds_list(metric=metric, widget=widget)
+> list[ReadOnlyThresholdSerializer] v1_0_measurement_thresholds_list(metric=metric, widget=widget)
 
 
 
@@ -1981,7 +1981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Threshold]**](Threshold.md)
+[**list[ReadOnlyThresholdSerializer]**](ReadOnlyThresholdSerializer.md)
 
 ### Authorization
 
@@ -1995,7 +1995,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_thresholds_partial_update**
-> Threshold v1_0_measurement_thresholds_partial_update(id, data)
+> ReadOnlyThresholdSerializer v1_0_measurement_thresholds_partial_update(id, data)
 
 
 
@@ -2018,7 +2018,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this threshold.
-data = swagger_client.Threshold() # Threshold | 
+data = swagger_client.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_thresholds_partial_update(id, data)
@@ -2032,11 +2032,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this threshold. | 
- **data** | [**Threshold**](Threshold.md)|  | 
+ **data** | [**WriteOnlyThresholdSerializer**](WriteOnlyThresholdSerializer.md)|  | 
 
 ### Return type
 
-[**Threshold**](Threshold.md)
+[**ReadOnlyThresholdSerializer**](ReadOnlyThresholdSerializer.md)
 
 ### Authorization
 
@@ -2050,7 +2050,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_thresholds_read**
-> Threshold v1_0_measurement_thresholds_read(id)
+> ReadOnlyThresholdSerializer v1_0_measurement_thresholds_read(id)
 
 
 
@@ -2089,7 +2089,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Threshold**](Threshold.md)
+[**ReadOnlyThresholdSerializer**](ReadOnlyThresholdSerializer.md)
 
 ### Authorization
 
@@ -2103,7 +2103,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_thresholds_update**
-> Threshold v1_0_measurement_thresholds_update(id, data)
+> ReadOnlyThresholdSerializer v1_0_measurement_thresholds_update(id, data)
 
 
 
@@ -2126,7 +2126,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this threshold.
-data = swagger_client.Threshold() # Threshold | 
+data = swagger_client.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_thresholds_update(id, data)
@@ -2140,11 +2140,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this threshold. | 
- **data** | [**Threshold**](Threshold.md)|  | 
+ **data** | [**WriteOnlyThresholdSerializer**](WriteOnlyThresholdSerializer.md)|  | 
 
 ### Return type
 
-[**Threshold**](Threshold.md)
+[**ReadOnlyThresholdSerializer**](ReadOnlyThresholdSerializer.md)
 
 ### Authorization
 
@@ -2158,7 +2158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_create**
-> Channel v1_0_nslc_channels_create(data)
+> ReadOnlyChannelSerializer v1_0_nslc_channels_create(data)
 
 
 
@@ -2180,7 +2180,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Channel() # Channel | 
+data = swagger_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_channels_create(data)
@@ -2193,11 +2193,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Channel**](Channel.md)|  | 
+ **data** | [**WriteOnlyChannelSerializer**](WriteOnlyChannelSerializer.md)|  | 
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**ReadOnlyChannelSerializer**](ReadOnlyChannelSerializer.md)
 
 ### Authorization
 
@@ -2263,7 +2263,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_list**
-> list[Channel] v1_0_nslc_channels_list(network=network, channel=channel, chan_search=chan_search, station=station, location=location, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
+> list[ReadOnlyChannelSerializer] v1_0_nslc_channels_list(network=network, channel=channel, chan_search=chan_search, station=station, location=location, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
 
 
 
@@ -2288,7 +2288,7 @@ api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 network = 'network_example' # str | Multiple values may be separated by commas. (optional)
 channel = 'channel_example' # str | Multiple values may be separated by commas. (optional)
 chan_search = 'chan_search_example' # str |  (optional)
-station = 'station_example' # str |  (optional)
+station = 'station_example' # str | Multiple values may be separated by commas. (optional)
 location = 'location_example' # str |  (optional)
 startafter = 'startafter_example' # str |  (optional)
 startbefore = 'startbefore_example' # str |  (optional)
@@ -2313,7 +2313,7 @@ Name | Type | Description  | Notes
  **network** | **str**| Multiple values may be separated by commas. | [optional] 
  **channel** | **str**| Multiple values may be separated by commas. | [optional] 
  **chan_search** | **str**|  | [optional] 
- **station** | **str**|  | [optional] 
+ **station** | **str**| Multiple values may be separated by commas. | [optional] 
  **location** | **str**|  | [optional] 
  **startafter** | **str**|  | [optional] 
  **startbefore** | **str**|  | [optional] 
@@ -2326,7 +2326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Channel]**](Channel.md)
+[**list[ReadOnlyChannelSerializer]**](ReadOnlyChannelSerializer.md)
 
 ### Authorization
 
@@ -2340,7 +2340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_partial_update**
-> Channel v1_0_nslc_channels_partial_update(id, data)
+> ReadOnlyChannelSerializer v1_0_nslc_channels_partial_update(id, data)
 
 
 
@@ -2363,7 +2363,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this channel.
-data = swagger_client.Channel() # Channel | 
+data = swagger_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_channels_partial_update(id, data)
@@ -2377,11 +2377,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this channel. | 
- **data** | [**Channel**](Channel.md)|  | 
+ **data** | [**WriteOnlyChannelSerializer**](WriteOnlyChannelSerializer.md)|  | 
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**ReadOnlyChannelSerializer**](ReadOnlyChannelSerializer.md)
 
 ### Authorization
 
@@ -2395,7 +2395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_read**
-> Channel v1_0_nslc_channels_read(id)
+> ReadOnlyChannelSerializer v1_0_nslc_channels_read(id)
 
 
 
@@ -2434,7 +2434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**ReadOnlyChannelSerializer**](ReadOnlyChannelSerializer.md)
 
 ### Authorization
 
@@ -2448,7 +2448,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_update**
-> Channel v1_0_nslc_channels_update(id, data)
+> ReadOnlyChannelSerializer v1_0_nslc_channels_update(id, data)
 
 
 
@@ -2471,7 +2471,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this channel.
-data = swagger_client.Channel() # Channel | 
+data = swagger_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_channels_update(id, data)
@@ -2485,11 +2485,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this channel. | 
- **data** | [**Channel**](Channel.md)|  | 
+ **data** | [**WriteOnlyChannelSerializer**](WriteOnlyChannelSerializer.md)|  | 
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**ReadOnlyChannelSerializer**](ReadOnlyChannelSerializer.md)
 
 ### Authorization
 
@@ -2503,7 +2503,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_groups_create**
-> NslcGroup v1_0_nslc_groups_create(data)
+> ReadOnlyGroupSerializer v1_0_nslc_groups_create(data)
 
 
 
@@ -2525,7 +2525,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.NslcGroup() # NslcGroup | 
+data = swagger_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_groups_create(data)
@@ -2538,11 +2538,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**NslcGroup**](NslcGroup.md)|  | 
+ **data** | [**WriteOnlyGroupSerializer**](WriteOnlyGroupSerializer.md)|  | 
 
 ### Return type
 
-[**NslcGroup**](NslcGroup.md)
+[**ReadOnlyGroupSerializer**](ReadOnlyGroupSerializer.md)
 
 ### Authorization
 
@@ -2608,7 +2608,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_groups_list**
-> list[NslcGroup] v1_0_nslc_groups_list()
+> list[ReadOnlyGroupSerializer] v1_0_nslc_groups_list()
 
 
 
@@ -2643,7 +2643,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[NslcGroup]**](NslcGroup.md)
+[**list[ReadOnlyGroupSerializer]**](ReadOnlyGroupSerializer.md)
 
 ### Authorization
 
@@ -2657,7 +2657,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_groups_partial_update**
-> NslcGroup v1_0_nslc_groups_partial_update(id, data)
+> ReadOnlyGroupSerializer v1_0_nslc_groups_partial_update(id, data)
 
 
 
@@ -2680,7 +2680,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this group.
-data = swagger_client.NslcGroup() # NslcGroup | 
+data = swagger_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_groups_partial_update(id, data)
@@ -2694,11 +2694,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this group. | 
- **data** | [**NslcGroup**](NslcGroup.md)|  | 
+ **data** | [**WriteOnlyGroupSerializer**](WriteOnlyGroupSerializer.md)|  | 
 
 ### Return type
 
-[**NslcGroup**](NslcGroup.md)
+[**ReadOnlyGroupSerializer**](ReadOnlyGroupSerializer.md)
 
 ### Authorization
 
@@ -2712,7 +2712,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_groups_read**
-> GroupDetail v1_0_nslc_groups_read(id)
+> ReadOnlyGroupDetailSerializer v1_0_nslc_groups_read(id)
 
 
 
@@ -2751,7 +2751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GroupDetail**](GroupDetail.md)
+[**ReadOnlyGroupDetailSerializer**](ReadOnlyGroupDetailSerializer.md)
 
 ### Authorization
 
@@ -2765,7 +2765,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_groups_update**
-> NslcGroup v1_0_nslc_groups_update(id, data)
+> ReadOnlyGroupSerializer v1_0_nslc_groups_update(id, data)
 
 
 
@@ -2788,7 +2788,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this group.
-data = swagger_client.NslcGroup() # NslcGroup | 
+data = swagger_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_groups_update(id, data)
@@ -2802,11 +2802,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this group. | 
- **data** | [**NslcGroup**](NslcGroup.md)|  | 
+ **data** | [**WriteOnlyGroupSerializer**](WriteOnlyGroupSerializer.md)|  | 
 
 ### Return type
 
-[**NslcGroup**](NslcGroup.md)
+[**ReadOnlyGroupSerializer**](ReadOnlyGroupSerializer.md)
 
 ### Authorization
 
@@ -2820,7 +2820,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_networks_create**
-> Network v1_0_nslc_networks_create(data)
+> ReadOnlyNetworkSerializer v1_0_nslc_networks_create(data)
 
 
 
@@ -2842,7 +2842,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Network() # Network | 
+data = swagger_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_networks_create(data)
@@ -2855,11 +2855,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Network**](Network.md)|  | 
+ **data** | [**WriteOnlyNetworkSerializer**](WriteOnlyNetworkSerializer.md)|  | 
 
 ### Return type
 
-[**Network**](Network.md)
+[**ReadOnlyNetworkSerializer**](ReadOnlyNetworkSerializer.md)
 
 ### Authorization
 
@@ -2925,7 +2925,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_networks_list**
-> list[Network] v1_0_nslc_networks_list(network=network, channel=channel)
+> list[ReadOnlyNetworkSerializer] v1_0_nslc_networks_list(network=network, channel=channel)
 
 
 
@@ -2966,7 +2966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Network]**](Network.md)
+[**list[ReadOnlyNetworkSerializer]**](ReadOnlyNetworkSerializer.md)
 
 ### Authorization
 
@@ -2980,7 +2980,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_networks_partial_update**
-> Network v1_0_nslc_networks_partial_update(code, data)
+> ReadOnlyNetworkSerializer v1_0_nslc_networks_partial_update(code, data)
 
 
 
@@ -3003,7 +3003,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 code = 'code_example' # str | A unique value identifying this network.
-data = swagger_client.Network() # Network | 
+data = swagger_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_networks_partial_update(code, data)
@@ -3017,11 +3017,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code** | **str**| A unique value identifying this network. | 
- **data** | [**Network**](Network.md)|  | 
+ **data** | [**WriteOnlyNetworkSerializer**](WriteOnlyNetworkSerializer.md)|  | 
 
 ### Return type
 
-[**Network**](Network.md)
+[**ReadOnlyNetworkSerializer**](ReadOnlyNetworkSerializer.md)
 
 ### Authorization
 
@@ -3035,7 +3035,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_networks_read**
-> Network v1_0_nslc_networks_read(code)
+> ReadOnlyNetworkSerializer v1_0_nslc_networks_read(code)
 
 
 
@@ -3074,7 +3074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Network**](Network.md)
+[**ReadOnlyNetworkSerializer**](ReadOnlyNetworkSerializer.md)
 
 ### Authorization
 
@@ -3088,7 +3088,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_networks_update**
-> Network v1_0_nslc_networks_update(code, data)
+> ReadOnlyNetworkSerializer v1_0_nslc_networks_update(code, data)
 
 
 
@@ -3111,7 +3111,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
 code = 'code_example' # str | A unique value identifying this network.
-data = swagger_client.Network() # Network | 
+data = swagger_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_networks_update(code, data)
@@ -3125,11 +3125,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code** | **str**| A unique value identifying this network. | 
- **data** | [**Network**](Network.md)|  | 
+ **data** | [**WriteOnlyNetworkSerializer**](WriteOnlyNetworkSerializer.md)|  | 
 
 ### Return type
 
-[**Network**](Network.md)
+[**ReadOnlyNetworkSerializer**](ReadOnlyNetworkSerializer.md)
 
 ### Authorization
 
@@ -3143,7 +3143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_password_reset_confirm_create**
-> PasswordToken v1_0_password_reset_confirm_create(data)
+> ReadOnlyPasswordTokenSerializer v1_0_password_reset_confirm_create(data)
 
 
 
@@ -3165,7 +3165,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.PasswordToken() # PasswordToken | 
+data = swagger_client.WriteOnlyPasswordTokenSerializer() # WriteOnlyPasswordTokenSerializer | 
 
 try:
     api_response = api_instance.v1_0_password_reset_confirm_create(data)
@@ -3178,11 +3178,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**PasswordToken**](PasswordToken.md)|  | 
+ **data** | [**WriteOnlyPasswordTokenSerializer**](WriteOnlyPasswordTokenSerializer.md)|  | 
 
 ### Return type
 
-[**PasswordToken**](PasswordToken.md)
+[**ReadOnlyPasswordTokenSerializer**](ReadOnlyPasswordTokenSerializer.md)
 
 ### Authorization
 
@@ -3196,7 +3196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_password_reset_create**
-> Email v1_0_password_reset_create(data)
+> ReadOnlyEmailSerializer v1_0_password_reset_create(data)
 
 An Api View which provides a method to request a password reset token based on an e-mail address
 
@@ -3218,7 +3218,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Email() # Email | 
+data = swagger_client.WriteOnlyEmailSerializer() # WriteOnlyEmailSerializer | 
 
 try:
     # An Api View which provides a method to request a password reset token based on an e-mail address
@@ -3232,11 +3232,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Email**](Email.md)|  | 
+ **data** | [**WriteOnlyEmailSerializer**](WriteOnlyEmailSerializer.md)|  | 
 
 ### Return type
 
-[**Email**](Email.md)
+[**ReadOnlyEmailSerializer**](ReadOnlyEmailSerializer.md)
 
 ### Authorization
 
@@ -3250,7 +3250,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_password_reset_validate_token_create**
-> Token v1_0_password_reset_validate_token_create(data)
+> ReadOnlyTokenSerializer v1_0_password_reset_validate_token_create(data)
 
 
 
@@ -3272,7 +3272,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.Token() # Token | 
+data = swagger_client.WriteOnlyTokenSerializer() # WriteOnlyTokenSerializer | 
 
 try:
     api_response = api_instance.v1_0_password_reset_validate_token_create(data)
@@ -3285,11 +3285,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Token**](Token.md)|  | 
+ **data** | [**WriteOnlyTokenSerializer**](WriteOnlyTokenSerializer.md)|  | 
 
 ### Return type
 
-[**Token**](Token.md)
+[**ReadOnlyTokenSerializer**](ReadOnlyTokenSerializer.md)
 
 ### Authorization
 
@@ -3303,7 +3303,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_user_create_create**
-> User v1_0_user_create_create(data)
+> ReadOnlyUserSerializer v1_0_user_create_create(data)
 
 
 
@@ -3325,7 +3325,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.User() # User | 
+data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.v1_0_user_create_create(data)
@@ -3338,11 +3338,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**User**](User.md)|  | 
+ **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -3356,7 +3356,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_user_me_partial_update**
-> User v1_0_user_me_partial_update(data)
+> ReadOnlyUserSerializer v1_0_user_me_partial_update(data)
 
 
 
@@ -3378,7 +3378,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.User() # User | 
+data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.v1_0_user_me_partial_update(data)
@@ -3391,11 +3391,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**User**](User.md)|  | 
+ **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -3409,7 +3409,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_user_me_read**
-> User v1_0_user_me_read()
+> ReadOnlyUserSerializer v1_0_user_me_read()
 
 
 
@@ -3444,7 +3444,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -3458,7 +3458,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_user_me_update**
-> User v1_0_user_me_update(data)
+> ReadOnlyUserSerializer v1_0_user_me_update(data)
 
 
 
@@ -3480,7 +3480,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.User() # User | 
+data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.v1_0_user_me_update(data)
@@ -3493,11 +3493,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**User**](User.md)|  | 
+ **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 

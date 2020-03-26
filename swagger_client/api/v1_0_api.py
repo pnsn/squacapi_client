@@ -43,8 +43,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Dashboard data: (required)
-        :return: Dashboard
+        :param WriteOnlyDashboardSerializer data: (required)
+        :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,8 +65,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Dashboard data: (required)
-        :return: Dashboard
+        :param WriteOnlyDashboardSerializer data: (required)
+        :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -124,7 +124,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Dashboard',  # noqa: E501
+            response_type='ReadOnlyDashboardSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -241,7 +241,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[Dashboard]
+        :return: list[ReadOnlyDashboardSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -262,7 +262,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[Dashboard]
+        :return: list[ReadOnlyDashboardSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -314,7 +314,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Dashboard]',  # noqa: E501
+            response_type='list[ReadOnlyDashboardSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -333,8 +333,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this dashboard. (required)
-        :param Dashboard data: (required)
-        :return: Dashboard
+        :param WriteOnlyDashboardSerializer data: (required)
+        :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -356,8 +356,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this dashboard. (required)
-        :param Dashboard data: (required)
-        :return: Dashboard
+        :param WriteOnlyDashboardSerializer data: (required)
+        :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -421,7 +421,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Dashboard',  # noqa: E501
+            response_type='ReadOnlyDashboardSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -440,7 +440,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this dashboard. (required)
-        :return: DashboardDetail
+        :return: ReadOnlyDashboardDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -462,7 +462,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this dashboard. (required)
-        :return: DashboardDetail
+        :return: ReadOnlyDashboardDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -520,7 +520,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DashboardDetail',  # noqa: E501
+            response_type='ReadOnlyDashboardDetailSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -539,8 +539,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this dashboard. (required)
-        :param Dashboard data: (required)
-        :return: Dashboard
+        :param WriteOnlyDashboardSerializer data: (required)
+        :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -562,8 +562,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this dashboard. (required)
-        :param Dashboard data: (required)
-        :return: Dashboard
+        :param WriteOnlyDashboardSerializer data: (required)
+        :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -627,7 +627,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Dashboard',  # noqa: E501
+            response_type='ReadOnlyDashboardSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -645,8 +645,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Widget data: (required)
-        :return: Widget
+        :param WriteOnlyWidgetSerializer data: (required)
+        :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -667,8 +667,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Widget data: (required)
-        :return: Widget
+        :param WriteOnlyWidgetSerializer data: (required)
+        :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -726,7 +726,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Widget',  # noqa: E501
+            response_type='ReadOnlyWidgetSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -843,7 +843,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[WidgetDetail]
+        :return: list[ReadOnlyWidgetDetailSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -864,7 +864,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[WidgetDetail]
+        :return: list[ReadOnlyWidgetDetailSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -916,7 +916,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[WidgetDetail]',  # noqa: E501
+            response_type='list[ReadOnlyWidgetDetailSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -935,8 +935,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget. (required)
-        :param Widget data: (required)
-        :return: Widget
+        :param WriteOnlyWidgetSerializer data: (required)
+        :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -958,8 +958,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget. (required)
-        :param Widget data: (required)
-        :return: Widget
+        :param WriteOnlyWidgetSerializer data: (required)
+        :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1023,7 +1023,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Widget',  # noqa: E501
+            response_type='ReadOnlyWidgetSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1042,7 +1042,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget. (required)
-        :return: WidgetDetail
+        :return: ReadOnlyWidgetDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1064,7 +1064,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget. (required)
-        :return: WidgetDetail
+        :return: ReadOnlyWidgetDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1122,7 +1122,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WidgetDetail',  # noqa: E501
+            response_type='ReadOnlyWidgetDetailSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1141,8 +1141,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget. (required)
-        :param Widget data: (required)
-        :return: Widget
+        :param WriteOnlyWidgetSerializer data: (required)
+        :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1164,8 +1164,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget. (required)
-        :param Widget data: (required)
-        :return: Widget
+        :param WriteOnlyWidgetSerializer data: (required)
+        :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1229,7 +1229,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Widget',  # noqa: E501
+            response_type='ReadOnlyWidgetSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1247,8 +1247,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WidgetType data: (required)
-        :return: WidgetType
+        :param WriteOnlyWidgetTypeSerializer data: (required)
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1269,8 +1269,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WidgetType data: (required)
-        :return: WidgetType
+        :param WriteOnlyWidgetTypeSerializer data: (required)
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1328,7 +1328,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WidgetType',  # noqa: E501
+            response_type='ReadOnlyWidgetTypeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1445,7 +1445,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[WidgetType]
+        :return: list[ReadOnlyWidgetTypeSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1466,7 +1466,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[WidgetType]
+        :return: list[ReadOnlyWidgetTypeSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1518,7 +1518,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[WidgetType]',  # noqa: E501
+            response_type='list[ReadOnlyWidgetTypeSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1537,8 +1537,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget type. (required)
-        :param WidgetType data: (required)
-        :return: WidgetType
+        :param WriteOnlyWidgetTypeSerializer data: (required)
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1560,8 +1560,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget type. (required)
-        :param WidgetType data: (required)
-        :return: WidgetType
+        :param WriteOnlyWidgetTypeSerializer data: (required)
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1625,7 +1625,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WidgetType',  # noqa: E501
+            response_type='ReadOnlyWidgetTypeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1644,7 +1644,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget type. (required)
-        :return: WidgetType
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1666,7 +1666,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget type. (required)
-        :return: WidgetType
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1724,7 +1724,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WidgetType',  # noqa: E501
+            response_type='ReadOnlyWidgetTypeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1743,8 +1743,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget type. (required)
-        :param WidgetType data: (required)
-        :return: WidgetType
+        :param WriteOnlyWidgetTypeSerializer data: (required)
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1766,8 +1766,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this widget type. (required)
-        :param WidgetType data: (required)
-        :return: WidgetType
+        :param WriteOnlyWidgetTypeSerializer data: (required)
+        :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1831,7 +1831,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='WidgetType',  # noqa: E501
+            response_type='ReadOnlyWidgetTypeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1945,7 +1945,7 @@ class V10Api(object):
         :param str archive_type: 
         :param str starttime: 
         :param str endtime: 
-        :return: list[Archive]
+        :return: list[ReadOnlyArchiveSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1971,7 +1971,7 @@ class V10Api(object):
         :param str archive_type: 
         :param str starttime: 
         :param str endtime: 
-        :return: list[Archive]
+        :return: list[ReadOnlyArchiveSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2033,7 +2033,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Archive]',  # noqa: E501
+            response_type='list[ReadOnlyArchiveSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2052,7 +2052,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this archive. (required)
-        :return: Archive
+        :return: ReadOnlyArchiveSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2074,7 +2074,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this archive. (required)
-        :return: Archive
+        :return: ReadOnlyArchiveSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2132,7 +2132,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Archive',  # noqa: E501
+            response_type='ReadOnlyArchiveSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2150,8 +2150,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Measurement data: (required)
-        :return: Measurement
+        :param WriteOnlyMeasurementSerializer data: (required)
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2172,8 +2172,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Measurement data: (required)
-        :return: Measurement
+        :param WriteOnlyMeasurementSerializer data: (required)
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2231,7 +2231,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Measurement',  # noqa: E501
+            response_type='ReadOnlyMeasurementSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2352,7 +2352,7 @@ class V10Api(object):
         :param str endtime: 
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
-        :return: list[Measurement]
+        :return: list[ReadOnlyMeasurementSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2377,7 +2377,7 @@ class V10Api(object):
         :param str endtime: 
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
-        :return: list[Measurement]
+        :return: list[ReadOnlyMeasurementSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2437,7 +2437,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Measurement]',  # noqa: E501
+            response_type='list[ReadOnlyMeasurementSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2456,8 +2456,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this measurement. (required)
-        :param Measurement data: (required)
-        :return: Measurement
+        :param WriteOnlyMeasurementSerializer data: (required)
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2479,8 +2479,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this measurement. (required)
-        :param Measurement data: (required)
-        :return: Measurement
+        :param WriteOnlyMeasurementSerializer data: (required)
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2544,7 +2544,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Measurement',  # noqa: E501
+            response_type='ReadOnlyMeasurementSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2563,7 +2563,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this measurement. (required)
-        :return: Measurement
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2585,7 +2585,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this measurement. (required)
-        :return: Measurement
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2643,7 +2643,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Measurement',  # noqa: E501
+            response_type='ReadOnlyMeasurementSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2662,8 +2662,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this measurement. (required)
-        :param Measurement data: (required)
-        :return: Measurement
+        :param WriteOnlyMeasurementSerializer data: (required)
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2685,8 +2685,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this measurement. (required)
-        :param Measurement data: (required)
-        :return: Measurement
+        :param WriteOnlyMeasurementSerializer data: (required)
+        :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2750,7 +2750,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Measurement',  # noqa: E501
+            response_type='ReadOnlyMeasurementSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2768,8 +2768,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Metric data: (required)
-        :return: Metric
+        :param WriteOnlyMetricSerializer data: (required)
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2790,8 +2790,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Metric data: (required)
-        :return: Metric
+        :param WriteOnlyMetricSerializer data: (required)
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2849,7 +2849,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Metric',  # noqa: E501
+            response_type='ReadOnlyMetricSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2967,7 +2967,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str name: Multiple values may be separated by commas.
-        :return: list[Metric]
+        :return: list[ReadOnlyMetricSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2989,7 +2989,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str name: Multiple values may be separated by commas.
-        :return: list[Metric]
+        :return: list[ReadOnlyMetricSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3043,7 +3043,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Metric]',  # noqa: E501
+            response_type='list[ReadOnlyMetricSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3062,8 +3062,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this metric. (required)
-        :param Metric data: (required)
-        :return: Metric
+        :param WriteOnlyMetricSerializer data: (required)
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3085,8 +3085,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this metric. (required)
-        :param Metric data: (required)
-        :return: Metric
+        :param WriteOnlyMetricSerializer data: (required)
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3150,7 +3150,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Metric',  # noqa: E501
+            response_type='ReadOnlyMetricSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3169,7 +3169,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this metric. (required)
-        :return: Metric
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3191,7 +3191,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this metric. (required)
-        :return: Metric
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3249,7 +3249,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Metric',  # noqa: E501
+            response_type='ReadOnlyMetricSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3268,8 +3268,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this metric. (required)
-        :param Metric data: (required)
-        :return: Metric
+        :param WriteOnlyMetricSerializer data: (required)
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3291,8 +3291,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this metric. (required)
-        :param Metric data: (required)
-        :return: Metric
+        :param WriteOnlyMetricSerializer data: (required)
+        :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3356,7 +3356,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Metric',  # noqa: E501
+            response_type='ReadOnlyMetricSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3374,8 +3374,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Threshold data: (required)
-        :return: Threshold
+        :param WriteOnlyThresholdSerializer data: (required)
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3396,8 +3396,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Threshold data: (required)
-        :return: Threshold
+        :param WriteOnlyThresholdSerializer data: (required)
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3455,7 +3455,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Threshold',  # noqa: E501
+            response_type='ReadOnlyThresholdSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3574,7 +3574,7 @@ class V10Api(object):
         :param async_req bool
         :param str metric: 
         :param str widget: 
-        :return: list[Threshold]
+        :return: list[ReadOnlyThresholdSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3597,7 +3597,7 @@ class V10Api(object):
         :param async_req bool
         :param str metric: 
         :param str widget: 
-        :return: list[Threshold]
+        :return: list[ReadOnlyThresholdSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3653,7 +3653,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Threshold]',  # noqa: E501
+            response_type='list[ReadOnlyThresholdSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3672,8 +3672,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this threshold. (required)
-        :param Threshold data: (required)
-        :return: Threshold
+        :param WriteOnlyThresholdSerializer data: (required)
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3695,8 +3695,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this threshold. (required)
-        :param Threshold data: (required)
-        :return: Threshold
+        :param WriteOnlyThresholdSerializer data: (required)
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3760,7 +3760,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Threshold',  # noqa: E501
+            response_type='ReadOnlyThresholdSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3779,7 +3779,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this threshold. (required)
-        :return: Threshold
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3801,7 +3801,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this threshold. (required)
-        :return: Threshold
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3859,7 +3859,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Threshold',  # noqa: E501
+            response_type='ReadOnlyThresholdSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3878,8 +3878,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this threshold. (required)
-        :param Threshold data: (required)
-        :return: Threshold
+        :param WriteOnlyThresholdSerializer data: (required)
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3901,8 +3901,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this threshold. (required)
-        :param Threshold data: (required)
-        :return: Threshold
+        :param WriteOnlyThresholdSerializer data: (required)
+        :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3966,7 +3966,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Threshold',  # noqa: E501
+            response_type='ReadOnlyThresholdSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3984,8 +3984,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Channel data: (required)
-        :return: Channel
+        :param WriteOnlyChannelSerializer data: (required)
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4006,8 +4006,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Channel data: (required)
-        :return: Channel
+        :param WriteOnlyChannelSerializer data: (required)
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4065,7 +4065,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Channel',  # noqa: E501
+            response_type='ReadOnlyChannelSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4185,7 +4185,7 @@ class V10Api(object):
         :param str network: Multiple values may be separated by commas.
         :param str channel: Multiple values may be separated by commas.
         :param str chan_search: 
-        :param str station: 
+        :param str station: Multiple values may be separated by commas.
         :param str location: 
         :param str startafter: 
         :param str startbefore: 
@@ -4195,7 +4195,7 @@ class V10Api(object):
         :param float lat_max: 
         :param float lon_min: 
         :param float lon_max: 
-        :return: list[Channel]
+        :return: list[ReadOnlyChannelSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4219,7 +4219,7 @@ class V10Api(object):
         :param str network: Multiple values may be separated by commas.
         :param str channel: Multiple values may be separated by commas.
         :param str chan_search: 
-        :param str station: 
+        :param str station: Multiple values may be separated by commas.
         :param str location: 
         :param str startafter: 
         :param str startbefore: 
@@ -4229,7 +4229,7 @@ class V10Api(object):
         :param float lat_max: 
         :param float lon_min: 
         :param float lon_max: 
-        :return: list[Channel]
+        :return: list[ReadOnlyChannelSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4307,7 +4307,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Channel]',  # noqa: E501
+            response_type='list[ReadOnlyChannelSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4326,8 +4326,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this channel. (required)
-        :param Channel data: (required)
-        :return: Channel
+        :param WriteOnlyChannelSerializer data: (required)
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4349,8 +4349,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this channel. (required)
-        :param Channel data: (required)
-        :return: Channel
+        :param WriteOnlyChannelSerializer data: (required)
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4414,7 +4414,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Channel',  # noqa: E501
+            response_type='ReadOnlyChannelSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4433,7 +4433,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this channel. (required)
-        :return: Channel
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4455,7 +4455,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this channel. (required)
-        :return: Channel
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4513,7 +4513,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Channel',  # noqa: E501
+            response_type='ReadOnlyChannelSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4532,8 +4532,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this channel. (required)
-        :param Channel data: (required)
-        :return: Channel
+        :param WriteOnlyChannelSerializer data: (required)
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4555,8 +4555,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this channel. (required)
-        :param Channel data: (required)
-        :return: Channel
+        :param WriteOnlyChannelSerializer data: (required)
+        :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4620,7 +4620,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Channel',  # noqa: E501
+            response_type='ReadOnlyChannelSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4638,8 +4638,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param NslcGroup data: (required)
-        :return: NslcGroup
+        :param WriteOnlyGroupSerializer data: (required)
+        :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4660,8 +4660,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param NslcGroup data: (required)
-        :return: NslcGroup
+        :param WriteOnlyGroupSerializer data: (required)
+        :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4719,7 +4719,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NslcGroup',  # noqa: E501
+            response_type='ReadOnlyGroupSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4836,7 +4836,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[NslcGroup]
+        :return: list[ReadOnlyGroupSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4857,7 +4857,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[NslcGroup]
+        :return: list[ReadOnlyGroupSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4909,7 +4909,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[NslcGroup]',  # noqa: E501
+            response_type='list[ReadOnlyGroupSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4928,8 +4928,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this group. (required)
-        :param NslcGroup data: (required)
-        :return: NslcGroup
+        :param WriteOnlyGroupSerializer data: (required)
+        :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4951,8 +4951,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this group. (required)
-        :param NslcGroup data: (required)
-        :return: NslcGroup
+        :param WriteOnlyGroupSerializer data: (required)
+        :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5016,7 +5016,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NslcGroup',  # noqa: E501
+            response_type='ReadOnlyGroupSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5035,7 +5035,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this group. (required)
-        :return: GroupDetail
+        :return: ReadOnlyGroupDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5057,7 +5057,7 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this group. (required)
-        :return: GroupDetail
+        :return: ReadOnlyGroupDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5115,7 +5115,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='GroupDetail',  # noqa: E501
+            response_type='ReadOnlyGroupDetailSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5134,8 +5134,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this group. (required)
-        :param NslcGroup data: (required)
-        :return: NslcGroup
+        :param WriteOnlyGroupSerializer data: (required)
+        :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5157,8 +5157,8 @@ class V10Api(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this group. (required)
-        :param NslcGroup data: (required)
-        :return: NslcGroup
+        :param WriteOnlyGroupSerializer data: (required)
+        :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5222,7 +5222,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='NslcGroup',  # noqa: E501
+            response_type='ReadOnlyGroupSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5240,8 +5240,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Network data: (required)
-        :return: Network
+        :param WriteOnlyNetworkSerializer data: (required)
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5262,8 +5262,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Network data: (required)
-        :return: Network
+        :param WriteOnlyNetworkSerializer data: (required)
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5321,7 +5321,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Network',  # noqa: E501
+            response_type='ReadOnlyNetworkSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5440,7 +5440,7 @@ class V10Api(object):
         :param async_req bool
         :param str network: Multiple values may be separated by commas.
         :param str channel: 
-        :return: list[Network]
+        :return: list[ReadOnlyNetworkSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5463,7 +5463,7 @@ class V10Api(object):
         :param async_req bool
         :param str network: Multiple values may be separated by commas.
         :param str channel: 
-        :return: list[Network]
+        :return: list[ReadOnlyNetworkSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5519,7 +5519,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Network]',  # noqa: E501
+            response_type='list[ReadOnlyNetworkSerializer]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5538,8 +5538,8 @@ class V10Api(object):
 
         :param async_req bool
         :param str code: A unique value identifying this network. (required)
-        :param Network data: (required)
-        :return: Network
+        :param WriteOnlyNetworkSerializer data: (required)
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5561,8 +5561,8 @@ class V10Api(object):
 
         :param async_req bool
         :param str code: A unique value identifying this network. (required)
-        :param Network data: (required)
-        :return: Network
+        :param WriteOnlyNetworkSerializer data: (required)
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5626,7 +5626,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Network',  # noqa: E501
+            response_type='ReadOnlyNetworkSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5645,7 +5645,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str code: A unique value identifying this network. (required)
-        :return: Network
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5667,7 +5667,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str code: A unique value identifying this network. (required)
-        :return: Network
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5725,7 +5725,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Network',  # noqa: E501
+            response_type='ReadOnlyNetworkSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5744,8 +5744,8 @@ class V10Api(object):
 
         :param async_req bool
         :param str code: A unique value identifying this network. (required)
-        :param Network data: (required)
-        :return: Network
+        :param WriteOnlyNetworkSerializer data: (required)
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5767,8 +5767,8 @@ class V10Api(object):
 
         :param async_req bool
         :param str code: A unique value identifying this network. (required)
-        :param Network data: (required)
-        :return: Network
+        :param WriteOnlyNetworkSerializer data: (required)
+        :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5832,7 +5832,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Network',  # noqa: E501
+            response_type='ReadOnlyNetworkSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5850,8 +5850,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param PasswordToken data: (required)
-        :return: PasswordToken
+        :param WriteOnlyPasswordTokenSerializer data: (required)
+        :return: ReadOnlyPasswordTokenSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5872,8 +5872,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param PasswordToken data: (required)
-        :return: PasswordToken
+        :param WriteOnlyPasswordTokenSerializer data: (required)
+        :return: ReadOnlyPasswordTokenSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5931,7 +5931,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='PasswordToken',  # noqa: E501
+            response_type='ReadOnlyPasswordTokenSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5949,8 +5949,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Email data: (required)
-        :return: Email
+        :param WriteOnlyEmailSerializer data: (required)
+        :return: ReadOnlyEmailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5971,8 +5971,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Email data: (required)
-        :return: Email
+        :param WriteOnlyEmailSerializer data: (required)
+        :return: ReadOnlyEmailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6030,7 +6030,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Email',  # noqa: E501
+            response_type='ReadOnlyEmailSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6048,8 +6048,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Token data: (required)
-        :return: Token
+        :param WriteOnlyTokenSerializer data: (required)
+        :return: ReadOnlyTokenSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6070,8 +6070,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param Token data: (required)
-        :return: Token
+        :param WriteOnlyTokenSerializer data: (required)
+        :return: ReadOnlyTokenSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6129,7 +6129,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Token',  # noqa: E501
+            response_type='ReadOnlyTokenSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6147,8 +6147,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param User data: (required)
-        :return: User
+        :param WriteOnlyUserSerializer data: (required)
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6169,8 +6169,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param User data: (required)
-        :return: User
+        :param WriteOnlyUserSerializer data: (required)
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6228,7 +6228,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='User',  # noqa: E501
+            response_type='ReadOnlyUserSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6246,8 +6246,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param User data: (required)
-        :return: User
+        :param WriteOnlyUserSerializer data: (required)
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6268,8 +6268,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param User data: (required)
-        :return: User
+        :param WriteOnlyUserSerializer data: (required)
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6327,7 +6327,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='User',  # noqa: E501
+            response_type='ReadOnlyUserSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6345,7 +6345,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: User
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6366,7 +6366,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: User
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6418,7 +6418,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='User',  # noqa: E501
+            response_type='ReadOnlyUserSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6436,8 +6436,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param User data: (required)
-        :return: User
+        :param WriteOnlyUserSerializer data: (required)
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6458,8 +6458,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param User data: (required)
-        :return: User
+        :param WriteOnlyUserSerializer data: (required)
+        :return: ReadOnlyUserSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6517,7 +6517,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='User',  # noqa: E501
+            response_type='ReadOnlyUserSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

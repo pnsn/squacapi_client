@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **user_create_create**
-> User user_create_create(data)
+> ReadOnlyUserSerializer user_create_create(data)
 
 
 
@@ -34,7 +34,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
-data = swagger_client.User() # User | 
+data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.user_create_create(data)
@@ -47,11 +47,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**User**](User.md)|  | 
+ **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_me_partial_update**
-> User user_me_partial_update(data)
+> ReadOnlyUserSerializer user_me_partial_update(data)
 
 
 
@@ -87,7 +87,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
-data = swagger_client.User() # User | 
+data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.user_me_partial_update(data)
@@ -100,11 +100,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**User**](User.md)|  | 
+ **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_me_read**
-> User user_me_read()
+> ReadOnlyUserSerializer user_me_read()
 
 
 
@@ -153,7 +153,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_me_update**
-> User user_me_update(data)
+> ReadOnlyUserSerializer user_me_update(data)
 
 
 
@@ -189,7 +189,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.UserApi(swagger_client.ApiClient(configuration))
-data = swagger_client.User() # User | 
+data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.user_me_update(data)
@@ -202,11 +202,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**User**](User.md)|  | 
+ **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
