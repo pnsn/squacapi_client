@@ -148,8 +148,6 @@ class WriteOnlyMetricSerializer(object):
         """
         if url is not None and len(url) > 255:
             raise ValueError("Invalid value for `url`, length must be less than or equal to `255`")  # noqa: E501
-        if url is not None and len(url) < 1:
-            raise ValueError("Invalid value for `url`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._url = url
 
