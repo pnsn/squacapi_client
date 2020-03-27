@@ -38,7 +38,7 @@ class ReadOnlyNetworkSerializer(object):
         'description': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user': 'str'
+        'user_id': 'str'
     }
 
     attribute_map = {
@@ -49,10 +49,10 @@ class ReadOnlyNetworkSerializer(object):
         'description': 'description',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user': 'user'
+        'user_id': 'user_id'
     }
 
-    def __init__(self, class_name=None, code=None, name=None, url=None, description=None, created_at=None, updated_at=None, user=None):  # noqa: E501
+    def __init__(self, class_name=None, code=None, name=None, url=None, description=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
         """ReadOnlyNetworkSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._class_name = None
@@ -62,7 +62,7 @@ class ReadOnlyNetworkSerializer(object):
         self._description = None
         self._created_at = None
         self._updated_at = None
-        self._user = None
+        self._user_id = None
         self.discriminator = None
 
         if class_name is not None:
@@ -77,8 +77,8 @@ class ReadOnlyNetworkSerializer(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if user is not None:
-            self.user = user
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def class_name(self):
@@ -242,25 +242,25 @@ class ReadOnlyNetworkSerializer(object):
         self._updated_at = updated_at
 
     @property
-    def user(self):
-        """Gets the user of this ReadOnlyNetworkSerializer.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this ReadOnlyNetworkSerializer.  # noqa: E501
 
 
-        :return: The user of this ReadOnlyNetworkSerializer.  # noqa: E501
+        :return: The user_id of this ReadOnlyNetworkSerializer.  # noqa: E501
         :rtype: str
         """
-        return self._user
+        return self._user_id
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this ReadOnlyNetworkSerializer.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this ReadOnlyNetworkSerializer.
 
 
-        :param user: The user of this ReadOnlyNetworkSerializer.  # noqa: E501
+        :param user_id: The user_id of this ReadOnlyNetworkSerializer.  # noqa: E501
         :type: str
         """
 
-        self._user = user
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

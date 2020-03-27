@@ -32,48 +32,48 @@ class ReadOnlyDashboardDetailSerializer(object):
     """
     swagger_types = {
         'id': 'int',
-        'name': 'str',
         'description': 'str',
+        'name': 'str',
         'widgets': 'list[int]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user': 'str'
+        'user_id': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'name': 'name',
         'description': 'description',
+        'name': 'name',
         'widgets': 'widgets',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user': 'user'
+        'user_id': 'user_id'
     }
 
-    def __init__(self, id=None, name=None, description=None, widgets=None, created_at=None, updated_at=None, user=None):  # noqa: E501
+    def __init__(self, id=None, description=None, name=None, widgets=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
         """ReadOnlyDashboardDetailSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._name = None
         self._description = None
+        self._name = None
         self._widgets = None
         self._created_at = None
         self._updated_at = None
-        self._user = None
+        self._user_id = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        self.name = name
         if description is not None:
             self.description = description
+        self.name = name
         self.widgets = widgets
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if user is not None:
-            self.user = user
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def id(self):
@@ -95,6 +95,29 @@ class ReadOnlyDashboardDetailSerializer(object):
         """
 
         self._id = id
+
+    @property
+    def description(self):
+        """Gets the description of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+
+
+        :return: The description of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this ReadOnlyDashboardDetailSerializer.
+
+
+        :param description: The description of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :type: str
+        """
+        if description is not None and len(description) > 255:
+            raise ValueError("Invalid value for `description`, length must be less than or equal to `255`")  # noqa: E501
+
+        self._description = description
 
     @property
     def name(self):
@@ -122,29 +145,6 @@ class ReadOnlyDashboardDetailSerializer(object):
             raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
-
-
-        :return: The description of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this ReadOnlyDashboardDetailSerializer.
-
-
-        :param description: The description of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
-        :type: str
-        """
-        if description is not None and len(description) > 255:
-            raise ValueError("Invalid value for `description`, length must be less than or equal to `255`")  # noqa: E501
-
-        self._description = description
 
     @property
     def widgets(self):
@@ -212,25 +212,25 @@ class ReadOnlyDashboardDetailSerializer(object):
         self._updated_at = updated_at
 
     @property
-    def user(self):
-        """Gets the user of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
 
 
-        :return: The user of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :return: The user_id of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
         :rtype: str
         """
-        return self._user
+        return self._user_id
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this ReadOnlyDashboardDetailSerializer.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this ReadOnlyDashboardDetailSerializer.
 
 
-        :param user: The user of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :param user_id: The user_id of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
         :type: str
         """
 
-        self._user = user
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

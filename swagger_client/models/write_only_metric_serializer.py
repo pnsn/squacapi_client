@@ -33,7 +33,6 @@ class WriteOnlyMetricSerializer(object):
     swagger_types = {
         'name': 'str',
         'code': 'str',
-        'url': 'str',
         'description': 'str',
         'unit': 'str',
         'default_minval': 'float',
@@ -43,19 +42,17 @@ class WriteOnlyMetricSerializer(object):
     attribute_map = {
         'name': 'name',
         'code': 'code',
-        'url': 'url',
         'description': 'description',
         'unit': 'unit',
         'default_minval': 'default_minval',
         'default_maxval': 'default_maxval'
     }
 
-    def __init__(self, name=None, code=None, url=None, description=None, unit=None, default_minval=None, default_maxval=None):  # noqa: E501
+    def __init__(self, name=None, code=None, description=None, unit=None, default_minval=None, default_maxval=None):  # noqa: E501
         """WriteOnlyMetricSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
         self._code = None
-        self._url = None
         self._description = None
         self._unit = None
         self._default_minval = None
@@ -64,8 +61,6 @@ class WriteOnlyMetricSerializer(object):
 
         self.name = name
         self.code = code
-        if url is not None:
-            self.url = url
         if description is not None:
             self.description = description
         self.unit = unit
@@ -127,29 +122,6 @@ class WriteOnlyMetricSerializer(object):
             raise ValueError("Invalid value for `code`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._code = code
-
-    @property
-    def url(self):
-        """Gets the url of this WriteOnlyMetricSerializer.  # noqa: E501
-
-
-        :return: The url of this WriteOnlyMetricSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this WriteOnlyMetricSerializer.
-
-
-        :param url: The url of this WriteOnlyMetricSerializer.  # noqa: E501
-        :type: str
-        """
-        if url is not None and len(url) > 255:
-            raise ValueError("Invalid value for `url`, length must be less than or equal to `255`")  # noqa: E501
-
-        self._url = url
 
     @property
     def description(self):

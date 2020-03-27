@@ -39,7 +39,7 @@ class ReadOnlyGroupDetailSerializer(object):
         'is_public': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user': 'str'
+        'user_id': 'str'
     }
 
     attribute_map = {
@@ -51,10 +51,10 @@ class ReadOnlyGroupDetailSerializer(object):
         'is_public': 'is_public',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user': 'user'
+        'user_id': 'user_id'
     }
 
-    def __init__(self, name=None, id=None, url=None, description=None, channels=None, is_public=None, created_at=None, updated_at=None, user=None):  # noqa: E501
+    def __init__(self, name=None, id=None, url=None, description=None, channels=None, is_public=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
         """ReadOnlyGroupDetailSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
@@ -65,7 +65,7 @@ class ReadOnlyGroupDetailSerializer(object):
         self._is_public = None
         self._created_at = None
         self._updated_at = None
-        self._user = None
+        self._user_id = None
         self.discriminator = None
 
         self.name = name
@@ -83,8 +83,8 @@ class ReadOnlyGroupDetailSerializer(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if user is not None:
-            self.user = user
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def name(self):
@@ -263,25 +263,25 @@ class ReadOnlyGroupDetailSerializer(object):
         self._updated_at = updated_at
 
     @property
-    def user(self):
-        """Gets the user of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this ReadOnlyGroupDetailSerializer.  # noqa: E501
 
 
-        :return: The user of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :return: The user_id of this ReadOnlyGroupDetailSerializer.  # noqa: E501
         :rtype: str
         """
-        return self._user
+        return self._user_id
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this ReadOnlyGroupDetailSerializer.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this ReadOnlyGroupDetailSerializer.
 
 
-        :param user: The user of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :param user_id: The user_id of this ReadOnlyGroupDetailSerializer.  # noqa: E501
         :type: str
         """
 
-        self._user = user
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

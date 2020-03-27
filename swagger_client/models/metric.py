@@ -41,7 +41,7 @@ class Metric(object):
         'updated_at': 'datetime',
         'default_minval': 'float',
         'default_maxval': 'float',
-        'user': 'str'
+        'user_id': 'str'
     }
 
     attribute_map = {
@@ -55,10 +55,10 @@ class Metric(object):
         'updated_at': 'updated_at',
         'default_minval': 'default_minval',
         'default_maxval': 'default_maxval',
-        'user': 'user'
+        'user_id': 'user_id'
     }
 
-    def __init__(self, id=None, name=None, code=None, url=None, description=None, unit=None, created_at=None, updated_at=None, default_minval=None, default_maxval=None, user=None):  # noqa: E501
+    def __init__(self, id=None, name=None, code=None, url=None, description=None, unit=None, created_at=None, updated_at=None, default_minval=None, default_maxval=None, user_id=None):  # noqa: E501
         """Metric - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -71,7 +71,7 @@ class Metric(object):
         self._updated_at = None
         self._default_minval = None
         self._default_maxval = None
-        self._user = None
+        self._user_id = None
         self.discriminator = None
 
         if id is not None:
@@ -91,8 +91,8 @@ class Metric(object):
             self.default_minval = default_minval
         if default_maxval is not None:
             self.default_maxval = default_maxval
-        if user is not None:
-            self.user = user
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def id(self):
@@ -187,8 +187,6 @@ class Metric(object):
         :param url: The url of this Metric.  # noqa: E501
         :type: str
         """
-        if url is not None and len(url) > 255:
-            raise ValueError("Invalid value for `url`, length must be less than or equal to `255`")  # noqa: E501
 
         self._url = url
 
@@ -327,25 +325,25 @@ class Metric(object):
         self._default_maxval = default_maxval
 
     @property
-    def user(self):
-        """Gets the user of this Metric.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this Metric.  # noqa: E501
 
 
-        :return: The user of this Metric.  # noqa: E501
+        :return: The user_id of this Metric.  # noqa: E501
         :rtype: str
         """
-        return self._user
+        return self._user_id
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this Metric.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this Metric.
 
 
-        :param user: The user of this Metric.  # noqa: E501
+        :param user_id: The user_id of this Metric.  # noqa: E501
         :type: str
         """
 
-        self._user = user
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

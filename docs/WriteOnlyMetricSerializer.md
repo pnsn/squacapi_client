@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
 **code** | **str** |  | 
-**url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **unit** | **str** |  | 
 **default_minval** | **float** |  | [optional] 

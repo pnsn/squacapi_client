@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **code** | **str** |  | 
 **name** | **str** |  | 
 **station_code** | **str** |  | 
-**station_name** | **str** |  | 
+**station_name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **sample_rate** | **float** |  | [optional] 
 **network** | **str** |  | 

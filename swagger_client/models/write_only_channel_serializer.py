@@ -77,7 +77,8 @@ class WriteOnlyChannelSerializer(object):
         self.code = code
         self.name = name
         self.station_code = station_code
-        self.station_name = station_name
+        if station_name is not None:
+            self.station_name = station_name
         if description is not None:
             self.description = description
         if sample_rate is not None:
@@ -188,12 +189,8 @@ class WriteOnlyChannelSerializer(object):
         :param station_name: The station_name of this WriteOnlyChannelSerializer.  # noqa: E501
         :type: str
         """
-        if station_name is None:
-            raise ValueError("Invalid value for `station_name`, must not be `None`")  # noqa: E501
         if station_name is not None and len(station_name) > 255:
             raise ValueError("Invalid value for `station_name`, length must be less than or equal to `255`")  # noqa: E501
-        if station_name is not None and len(station_name) < 1:
-            raise ValueError("Invalid value for `station_name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._station_name = station_name
 

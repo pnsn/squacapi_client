@@ -36,7 +36,8 @@ class ReadOnlyUserSerializer(object):
         'lastname': 'str',
         'is_staff': 'bool',
         'organization': 'str',
-        'groups': 'list[Group]'
+        'groups': 'list[Group]',
+        'id': 'int'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class ReadOnlyUserSerializer(object):
         'lastname': 'lastname',
         'is_staff': 'is_staff',
         'organization': 'organization',
-        'groups': 'groups'
+        'groups': 'groups',
+        'id': 'id'
     }
 
-    def __init__(self, email=None, firstname=None, lastname=None, is_staff=None, organization=None, groups=None):  # noqa: E501
+    def __init__(self, email=None, firstname=None, lastname=None, is_staff=None, organization=None, groups=None, id=None):  # noqa: E501
         """ReadOnlyUserSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._email = None
@@ -57,6 +59,7 @@ class ReadOnlyUserSerializer(object):
         self._is_staff = None
         self._organization = None
         self._groups = None
+        self._id = None
         self.discriminator = None
 
         self.email = email
@@ -67,6 +70,8 @@ class ReadOnlyUserSerializer(object):
         self.organization = organization
         if groups is not None:
             self.groups = groups
+        if id is not None:
+            self.id = id
 
     @property
     def email(self):
@@ -217,6 +222,27 @@ class ReadOnlyUserSerializer(object):
         """
 
         self._groups = groups
+
+    @property
+    def id(self):
+        """Gets the id of this ReadOnlyUserSerializer.  # noqa: E501
+
+
+        :return: The id of this ReadOnlyUserSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ReadOnlyUserSerializer.
+
+
+        :param id: The id of this ReadOnlyUserSerializer.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

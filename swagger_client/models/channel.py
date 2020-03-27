@@ -47,7 +47,7 @@ class Channel(object):
         'elev': 'float',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user': 'str'
+        'user_id': 'str'
     }
 
     attribute_map = {
@@ -67,10 +67,10 @@ class Channel(object):
         'elev': 'elev',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user': 'user'
+        'user_id': 'user_id'
     }
 
-    def __init__(self, id=None, class_name=None, code=None, name=None, station_code=None, station_name=None, url=None, description=None, sample_rate=None, network=None, loc='--', lat=None, lon=None, elev=None, created_at=None, updated_at=None, user=None):  # noqa: E501
+    def __init__(self, id=None, class_name=None, code=None, name=None, station_code=None, station_name=None, url=None, description=None, sample_rate=None, network=None, loc='--', lat=None, lon=None, elev=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
         """Channel - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -89,7 +89,7 @@ class Channel(object):
         self._elev = None
         self._created_at = None
         self._updated_at = None
-        self._user = None
+        self._user_id = None
         self.discriminator = None
 
         if id is not None:
@@ -99,7 +99,8 @@ class Channel(object):
         self.code = code
         self.name = name
         self.station_code = station_code
-        self.station_name = station_name
+        if station_name is not None:
+            self.station_name = station_name
         if url is not None:
             self.url = url
         if description is not None:
@@ -116,8 +117,8 @@ class Channel(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if user is not None:
-            self.user = user
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def id(self):
@@ -260,12 +261,8 @@ class Channel(object):
         :param station_name: The station_name of this Channel.  # noqa: E501
         :type: str
         """
-        if station_name is None:
-            raise ValueError("Invalid value for `station_name`, must not be `None`")  # noqa: E501
         if station_name is not None and len(station_name) > 255:
             raise ValueError("Invalid value for `station_name`, length must be less than or equal to `255`")  # noqa: E501
-        if station_name is not None and len(station_name) < 1:
-            raise ValueError("Invalid value for `station_name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._station_name = station_name
 
@@ -494,25 +491,25 @@ class Channel(object):
         self._updated_at = updated_at
 
     @property
-    def user(self):
-        """Gets the user of this Channel.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this Channel.  # noqa: E501
 
 
-        :return: The user of this Channel.  # noqa: E501
+        :return: The user_id of this Channel.  # noqa: E501
         :rtype: str
         """
-        return self._user
+        return self._user_id
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this Channel.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this Channel.
 
 
-        :param user: The user of this Channel.  # noqa: E501
+        :param user_id: The user_id of this Channel.  # noqa: E501
         :type: str
         """
 
-        self._user = user
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

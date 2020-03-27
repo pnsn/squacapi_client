@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **code** | **str** |  | 
 **name** | **str** |  | 
 **station_code** | **str** |  | 
-**station_name** | **str** |  | 
+**station_name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **sample_rate** | **float** |  | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **elev** | **float** |  | 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**user** | **str** |  | [optional] 
+**user_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

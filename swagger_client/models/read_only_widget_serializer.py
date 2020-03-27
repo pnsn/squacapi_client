@@ -45,7 +45,7 @@ class ReadOnlyWidgetSerializer(object):
         'x_position': 'int',
         'y_position': 'int',
         'channel_group': 'int',
-        'user': 'str'
+        'user_id': 'str'
     }
 
     attribute_map = {
@@ -63,10 +63,10 @@ class ReadOnlyWidgetSerializer(object):
         'x_position': 'x_position',
         'y_position': 'y_position',
         'channel_group': 'channel_group',
-        'user': 'user'
+        'user_id': 'user_id'
     }
 
-    def __init__(self, id=None, name=None, dashboard=None, widgettype=None, description=None, metrics=None, created_at=None, updated_at=None, stattype=None, columns=None, rows=None, x_position=None, y_position=None, channel_group=None, user=None):  # noqa: E501
+    def __init__(self, id=None, name=None, dashboard=None, widgettype=None, description=None, metrics=None, created_at=None, updated_at=None, stattype=None, columns=None, rows=None, x_position=None, y_position=None, channel_group=None, user_id=None):  # noqa: E501
         """ReadOnlyWidgetSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -83,7 +83,7 @@ class ReadOnlyWidgetSerializer(object):
         self._x_position = None
         self._y_position = None
         self._channel_group = None
-        self._user = None
+        self._user_id = None
         self.discriminator = None
 
         if id is not None:
@@ -104,8 +104,8 @@ class ReadOnlyWidgetSerializer(object):
         self.x_position = x_position
         self.y_position = y_position
         self.channel_group = channel_group
-        if user is not None:
-            self.user = user
+        if user_id is not None:
+            self.user_id = user_id
 
     @property
     def id(self):
@@ -444,25 +444,25 @@ class ReadOnlyWidgetSerializer(object):
         self._channel_group = channel_group
 
     @property
-    def user(self):
-        """Gets the user of this ReadOnlyWidgetSerializer.  # noqa: E501
+    def user_id(self):
+        """Gets the user_id of this ReadOnlyWidgetSerializer.  # noqa: E501
 
 
-        :return: The user of this ReadOnlyWidgetSerializer.  # noqa: E501
+        :return: The user_id of this ReadOnlyWidgetSerializer.  # noqa: E501
         :rtype: str
         """
-        return self._user
+        return self._user_id
 
-    @user.setter
-    def user(self, user):
-        """Sets the user of this ReadOnlyWidgetSerializer.
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this ReadOnlyWidgetSerializer.
 
 
-        :param user: The user of this ReadOnlyWidgetSerializer.  # noqa: E501
+        :param user_id: The user_id of this ReadOnlyWidgetSerializer.  # noqa: E501
         :type: str
         """
 
-        self._user = user
+        self._user_id = user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
