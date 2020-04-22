@@ -23,7 +23,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import squacapi 
+import squacapi_client 
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import squacapi
+import squacapi_client
 ```
 
 ## Getting Started
@@ -47,18 +47,18 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.DefaultApi(squacapi.ApiClient(configuration))
+api_instance = squacapi_client.DefaultApi(squacapi_client.ApiClient(configuration))
 
 try:
     api_instance.list()

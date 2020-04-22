@@ -1,4 +1,4 @@
-# squacapi.UserApi
+# squacapi_client.UserApi
 
 All URIs are relative to *http://squacapi.pnsn.org*
 
@@ -22,19 +22,19 @@ create a new user in the system
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.UserApi(squacapi.ApiClient(configuration))
-data = squacapi.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+data = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.user_create_create(data)
@@ -75,19 +75,19 @@ Manage the authenticated user
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.UserApi(squacapi.ApiClient(configuration))
-data = squacapi.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+data = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.user_me_partial_update(data)
@@ -128,18 +128,18 @@ Manage the authenticated user
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.UserApi(squacapi.ApiClient(configuration))
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
 
 try:
     api_response = api_instance.user_me_read()
@@ -177,19 +177,19 @@ Manage the authenticated user
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.UserApi(squacapi.ApiClient(configuration))
-data = squacapi.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+data = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.user_me_update(data)
@@ -230,19 +230,19 @@ create a new auth token for user
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.UserApi(squacapi.ApiClient(configuration))
-data = squacapi.AuthToken() # AuthToken | 
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+data = squacapi_client.AuthToken() # AuthToken | 
 
 try:
     api_response = api_instance.user_token_create(data)

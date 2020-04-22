@@ -6,5 +6,5 @@ docker run -v ${PWD}:/local/ --rm swaggerapi/swagger-codegen-cli \
 		-l python \
 		-c /local/config.json \
 		-o /local 
-mv ./squacapi/api/_api.py ./squacapi/api/default_api.py
-sed -i '' 's/http:\/\/squacapi/https:\/\/squacapi/g' ./squacapi/configuration.py
+mv ./squacapi_client/api/_api.py ./squacapi_client/api/default_api.py
+sed -i '' 's/http:\/\/squacapi/https:\/\/squacapi/g' ./squacapi_client/configuration.py

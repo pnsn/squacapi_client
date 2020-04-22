@@ -1,4 +1,4 @@
-# squacapi.DefaultApi
+# squacapi_client.DefaultApi
 
 All URIs are relative to *http://squacapi.pnsn.org*
 
@@ -18,18 +18,18 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import squacapi
-from squacapi.rest import ApiException
+import squacapi_client
+from squacapi_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = squacapi.Configuration()
+configuration = squacapi_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi.DefaultApi(squacapi.ApiClient(configuration))
+api_instance = squacapi_client.DefaultApi(squacapi_client.ApiClient(configuration))
 
 try:
     api_instance.list()
