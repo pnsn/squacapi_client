@@ -1,4 +1,4 @@
-# swagger_client.V10Api
+# squacapi.V10Api
 
 All URIs are relative to *http://squacapi.pnsn.org*
 
@@ -82,19 +82,19 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_create(data)
@@ -135,18 +135,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this dashboard.
 
 try:
@@ -187,18 +187,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_list()
@@ -236,20 +236,20 @@ This endpoint does not need any parameter.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this dashboard.
-data = swagger_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
+data = squacapi.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_partial_update(id, data)
@@ -291,18 +291,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this dashboard.
 
 try:
@@ -344,20 +344,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this dashboard.
-data = swagger_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
+data = squacapi.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_dashboards_update(id, data)
@@ -399,19 +399,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_create(data)
@@ -452,18 +452,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget.
 
 try:
@@ -504,18 +504,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_list()
@@ -553,20 +553,20 @@ This endpoint does not need any parameter.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget.
-data = swagger_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
+data = squacapi.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_partial_update(id, data)
@@ -608,18 +608,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget.
 
 try:
@@ -661,20 +661,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget.
-data = swagger_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
+data = squacapi.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgets_update(id, data)
@@ -716,19 +716,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_create(data)
@@ -769,18 +769,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget type.
 
 try:
@@ -821,18 +821,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_list()
@@ -870,20 +870,20 @@ This endpoint does not need any parameter.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget type.
-data = swagger_client.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
+data = squacapi.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_partial_update(id, data)
@@ -925,18 +925,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget type.
 
 try:
@@ -978,20 +978,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this widget type.
-data = swagger_client.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
+data = squacapi.WriteOnlyWidgetTypeSerializer() # WriteOnlyWidgetTypeSerializer | 
 
 try:
     api_response = api_instance.v1_0_dashboard_widgettypes_update(id, data)
@@ -1033,18 +1033,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 
 try:
     api_instance.v1_0_list()
@@ -1081,18 +1081,18 @@ since there is not a user set on archive, all permissions will be model
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 metric = 'metric_example' # str |  (optional)
 channel = 'channel_example' # str |  (optional)
 archive_type = 'archive_type_example' # str |  (optional)
@@ -1143,18 +1143,18 @@ since there is not a user set on archive, all permissions will be model
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this archive.
 
 try:
@@ -1197,19 +1197,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_create(data)
@@ -1250,18 +1250,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this measurement.
 
 try:
@@ -1302,18 +1302,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
 endtime = 'endtime_example' # str |  (optional)
 metric = 8.14 # float | Multiple values may be separated by commas. (optional)
@@ -1361,20 +1361,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this measurement.
-data = swagger_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
+data = squacapi.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_partial_update(id, data)
@@ -1416,18 +1416,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this measurement.
 
 try:
@@ -1469,20 +1469,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this measurement.
-data = swagger_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
+data = squacapi.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_update(id, data)
@@ -1524,19 +1524,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_metrics_create(data)
@@ -1577,18 +1577,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this metric.
 
 try:
@@ -1629,18 +1629,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 name = 'name_example' # str | Multiple values may be separated by commas. (optional)
 
 try:
@@ -1682,20 +1682,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this metric.
-data = swagger_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
+data = squacapi.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_metrics_partial_update(id, data)
@@ -1737,18 +1737,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this metric.
 
 try:
@@ -1790,20 +1790,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this metric.
-data = swagger_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
+data = squacapi.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_metrics_update(id, data)
@@ -1845,19 +1845,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_thresholds_create(data)
@@ -1898,18 +1898,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this threshold.
 
 try:
@@ -1950,18 +1950,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 metric = 'metric_example' # str |  (optional)
 widget = 'widget_example' # str |  (optional)
 
@@ -2005,20 +2005,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this threshold.
-data = swagger_client.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
+data = squacapi.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_thresholds_partial_update(id, data)
@@ -2060,18 +2060,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this threshold.
 
 try:
@@ -2113,20 +2113,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this threshold.
-data = swagger_client.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
+data = squacapi.WriteOnlyThresholdSerializer() # WriteOnlyThresholdSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_thresholds_update(id, data)
@@ -2168,19 +2168,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_channels_create(data)
@@ -2221,18 +2221,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this channel.
 
 try:
@@ -2273,18 +2273,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 network = 'network_example' # str | Multiple values may be separated by commas. (optional)
 channel = 'channel_example' # str | Multiple values may be separated by commas. (optional)
 chan_search = 'chan_search_example' # str |  (optional)
@@ -2350,20 +2350,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this channel.
-data = swagger_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
+data = squacapi.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_channels_partial_update(id, data)
@@ -2405,18 +2405,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this channel.
 
 try:
@@ -2458,20 +2458,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this channel.
-data = swagger_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
+data = squacapi.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_channels_update(id, data)
@@ -2513,19 +2513,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_groups_create(data)
@@ -2566,18 +2566,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this group.
 
 try:
@@ -2618,18 +2618,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 
 try:
     api_response = api_instance.v1_0_nslc_groups_list()
@@ -2667,20 +2667,20 @@ This endpoint does not need any parameter.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this group.
-data = swagger_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
+data = squacapi.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_groups_partial_update(id, data)
@@ -2722,18 +2722,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this group.
 
 try:
@@ -2775,20 +2775,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this group.
-data = swagger_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
+data = squacapi.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_groups_update(id, data)
@@ -2830,19 +2830,19 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_networks_create(data)
@@ -2883,18 +2883,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 code = 'code_example' # str | A unique value identifying this network.
 
 try:
@@ -2935,18 +2935,18 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 network = 'network_example' # str | Multiple values may be separated by commas. (optional)
 channel = 'channel_example' # str |  (optional)
 
@@ -2990,20 +2990,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 code = 'code_example' # str | A unique value identifying this network.
-data = swagger_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
+data = squacapi.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_networks_partial_update(code, data)
@@ -3045,18 +3045,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 code = 'code_example' # str | A unique value identifying this network.
 
 try:
@@ -3098,20 +3098,20 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 code = 'code_example' # str | A unique value identifying this network.
-data = swagger_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
+data = squacapi.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
     api_response = api_instance.v1_0_nslc_networks_update(code, data)
@@ -3153,19 +3153,19 @@ An Api View which provides a method to reset a password based on a unique token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyPasswordTokenSerializer() # WriteOnlyPasswordTokenSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyPasswordTokenSerializer() # WriteOnlyPasswordTokenSerializer | 
 
 try:
     api_response = api_instance.v1_0_password_reset_confirm_create(data)
@@ -3206,19 +3206,19 @@ Sends a signal reset_password_token_created when a reset token was created
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyEmailSerializer() # WriteOnlyEmailSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyEmailSerializer() # WriteOnlyEmailSerializer | 
 
 try:
     # An Api View which provides a method to request a password reset token based on an e-mail address
@@ -3260,19 +3260,19 @@ An Api View which provides a method to verify that a token is valid
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyTokenSerializer() # WriteOnlyTokenSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyTokenSerializer() # WriteOnlyTokenSerializer | 
 
 try:
     api_response = api_instance.v1_0_password_reset_validate_token_create(data)
@@ -3313,19 +3313,19 @@ create a new user in the system
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.v1_0_user_create_create(data)
@@ -3366,19 +3366,19 @@ Manage the authenticated user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.v1_0_user_me_partial_update(data)
@@ -3419,18 +3419,18 @@ Manage the authenticated user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
 
 try:
     api_response = api_instance.v1_0_user_me_read()
@@ -3468,19 +3468,19 @@ Manage the authenticated user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.v1_0_user_me_update(data)
@@ -3521,19 +3521,19 @@ create a new auth token for user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.V10Api(swagger_client.ApiClient(configuration))
-data = swagger_client.AuthToken() # AuthToken | 
+api_instance = squacapi.V10Api(squacapi.ApiClient(configuration))
+data = squacapi.AuthToken() # AuthToken | 
 
 try:
     api_response = api_instance.v1_0_user_token_create(data)

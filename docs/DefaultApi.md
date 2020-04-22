@@ -1,4 +1,4 @@
-# swagger_client.DefaultApi
+# squacapi.DefaultApi
 
 All URIs are relative to *http://squacapi.pnsn.org*
 
@@ -18,18 +18,18 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import squacapi
+from squacapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = swagger_client.Configuration()
+configuration = squacapi.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
+api_instance = squacapi.DefaultApi(squacapi.ApiClient(configuration))
 
 try:
     api_instance.list()

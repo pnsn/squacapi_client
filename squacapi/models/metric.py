@@ -41,7 +41,8 @@ class Metric(object):
         'updated_at': 'datetime',
         'default_minval': 'float',
         'default_maxval': 'float',
-        'user_id': 'str'
+        'user_id': 'str',
+        'reference_url': 'str'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class Metric(object):
         'updated_at': 'updated_at',
         'default_minval': 'default_minval',
         'default_maxval': 'default_maxval',
-        'user_id': 'user_id'
+        'user_id': 'user_id',
+        'reference_url': 'reference_url'
     }
 
-    def __init__(self, id=None, name=None, code=None, url=None, description=None, unit=None, created_at=None, updated_at=None, default_minval=None, default_maxval=None, user_id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, code=None, url=None, description=None, unit=None, created_at=None, updated_at=None, default_minval=None, default_maxval=None, user_id=None, reference_url=None):  # noqa: E501
         """Metric - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -72,6 +74,7 @@ class Metric(object):
         self._default_minval = None
         self._default_maxval = None
         self._user_id = None
+        self._reference_url = None
         self.discriminator = None
 
         if id is not None:
@@ -93,6 +96,7 @@ class Metric(object):
             self.default_maxval = default_maxval
         if user_id is not None:
             self.user_id = user_id
+        self.reference_url = reference_url
 
     @property
     def id(self):
@@ -344,6 +348,33 @@ class Metric(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def reference_url(self):
+        """Gets the reference_url of this Metric.  # noqa: E501
+
+
+        :return: The reference_url of this Metric.  # noqa: E501
+        :rtype: str
+        """
+        return self._reference_url
+
+    @reference_url.setter
+    def reference_url(self, reference_url):
+        """Sets the reference_url of this Metric.
+
+
+        :param reference_url: The reference_url of this Metric.  # noqa: E501
+        :type: str
+        """
+        if reference_url is None:
+            raise ValueError("Invalid value for `reference_url`, must not be `None`")  # noqa: E501
+        if reference_url is not None and len(reference_url) > 255:
+            raise ValueError("Invalid value for `reference_url`, length must be less than or equal to `255`")  # noqa: E501
+        if reference_url is not None and len(reference_url) < 1:
+            raise ValueError("Invalid value for `reference_url`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._reference_url = reference_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

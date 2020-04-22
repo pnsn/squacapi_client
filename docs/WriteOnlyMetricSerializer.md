@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **unit** | **str** |  | 
 **default_minval** | **float** |  | [optional] 
 **default_maxval** | **float** |  | [optional] 
+**reference_url** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
