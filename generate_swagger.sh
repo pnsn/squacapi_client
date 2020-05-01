@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Usage: to update, checkout a branch then run. 
+# to see a list of generate args
+# docker run -v ${PWD}:/tmp --rm swaggerapi/swagger-codegen-cli help generate
 docker run -v ${PWD}:/local/ --rm swaggerapi/swagger-codegen-cli \
 	generate \
 		-i https://squacapi.pnsn.org/swagger.json \
