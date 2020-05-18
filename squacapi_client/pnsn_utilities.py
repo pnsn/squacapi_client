@@ -65,7 +65,6 @@ def perform_bulk_create(measurements, client, *args, **kwargs):
         chunk = 100
     end = chunk
     while start < len(measurements):
-        print("start:{} stop:{} ".format(start, end))
         collection = measurements[start:end]
         try:
             resp = client.v1_0_measurement_measurements_create(collection)
