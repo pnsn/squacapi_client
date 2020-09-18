@@ -37,7 +37,10 @@ class ReadOnlyDashboardDetailSerializer(object):
         'widgets': 'list[int]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user_id': 'str'
+        'user_id': 'str',
+        'share_all': 'bool',
+        'share_org': 'bool',
+        'organization': 'int'
     }
 
     attribute_map = {
@@ -47,10 +50,13 @@ class ReadOnlyDashboardDetailSerializer(object):
         'widgets': 'widgets',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user_id': 'user_id'
+        'user_id': 'user_id',
+        'share_all': 'share_all',
+        'share_org': 'share_org',
+        'organization': 'organization'
     }
 
-    def __init__(self, id=None, description=None, name=None, widgets=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
+    def __init__(self, id=None, description=None, name=None, widgets=None, created_at=None, updated_at=None, user_id=None, share_all=None, share_org=None, organization=None):  # noqa: E501
         """ReadOnlyDashboardDetailSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -60,6 +66,9 @@ class ReadOnlyDashboardDetailSerializer(object):
         self._created_at = None
         self._updated_at = None
         self._user_id = None
+        self._share_all = None
+        self._share_org = None
+        self._organization = None
         self.discriminator = None
 
         if id is not None:
@@ -74,6 +83,11 @@ class ReadOnlyDashboardDetailSerializer(object):
             self.updated_at = updated_at
         if user_id is not None:
             self.user_id = user_id
+        if share_all is not None:
+            self.share_all = share_all
+        if share_org is not None:
+            self.share_org = share_org
+        self.organization = organization
 
     @property
     def id(self):
@@ -231,6 +245,71 @@ class ReadOnlyDashboardDetailSerializer(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def share_all(self):
+        """Gets the share_all of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+
+
+        :return: The share_all of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_all
+
+    @share_all.setter
+    def share_all(self, share_all):
+        """Sets the share_all of this ReadOnlyDashboardDetailSerializer.
+
+
+        :param share_all: The share_all of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_all = share_all
+
+    @property
+    def share_org(self):
+        """Gets the share_org of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+
+
+        :return: The share_org of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_org
+
+    @share_org.setter
+    def share_org(self, share_org):
+        """Sets the share_org of this ReadOnlyDashboardDetailSerializer.
+
+
+        :param share_org: The share_org of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_org = share_org
+
+    @property
+    def organization(self):
+        """Gets the organization of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+
+
+        :return: The organization of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._organization
+
+    @organization.setter
+    def organization(self, organization):
+        """Sets the organization of this ReadOnlyDashboardDetailSerializer.
+
+
+        :param organization: The organization of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
+        :type: int
+        """
+        if organization is None:
+            raise ValueError("Invalid value for `organization`, must not be `None`")  # noqa: E501
+
+        self._organization = organization
 
     def to_dict(self):
         """Returns the model properties as a dict"""

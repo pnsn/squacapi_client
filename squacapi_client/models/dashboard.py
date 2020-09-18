@@ -36,7 +36,13 @@ class Dashboard(object):
         'description': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user_id': 'str'
+        'user_id': 'str',
+        'share_all': 'bool',
+        'share_org': 'bool',
+        'window_seconds': 'int',
+        'starttime': 'datetime',
+        'endtime': 'datetime',
+        'organization': 'int'
     }
 
     attribute_map = {
@@ -45,10 +51,16 @@ class Dashboard(object):
         'description': 'description',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user_id': 'user_id'
+        'user_id': 'user_id',
+        'share_all': 'share_all',
+        'share_org': 'share_org',
+        'window_seconds': 'window_seconds',
+        'starttime': 'starttime',
+        'endtime': 'endtime',
+        'organization': 'organization'
     }
 
-    def __init__(self, id=None, name=None, description=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, created_at=None, updated_at=None, user_id=None, share_all=None, share_org=None, window_seconds=None, starttime=None, endtime=None, organization=None):  # noqa: E501
         """Dashboard - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -57,6 +69,12 @@ class Dashboard(object):
         self._created_at = None
         self._updated_at = None
         self._user_id = None
+        self._share_all = None
+        self._share_org = None
+        self._window_seconds = None
+        self._starttime = None
+        self._endtime = None
+        self._organization = None
         self.discriminator = None
 
         if id is not None:
@@ -70,6 +88,17 @@ class Dashboard(object):
             self.updated_at = updated_at
         if user_id is not None:
             self.user_id = user_id
+        if share_all is not None:
+            self.share_all = share_all
+        if share_org is not None:
+            self.share_org = share_org
+        if window_seconds is not None:
+            self.window_seconds = window_seconds
+        if starttime is not None:
+            self.starttime = starttime
+        if endtime is not None:
+            self.endtime = endtime
+        self.organization = organization
 
     @property
     def id(self):
@@ -204,6 +233,138 @@ class Dashboard(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def share_all(self):
+        """Gets the share_all of this Dashboard.  # noqa: E501
+
+
+        :return: The share_all of this Dashboard.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_all
+
+    @share_all.setter
+    def share_all(self, share_all):
+        """Sets the share_all of this Dashboard.
+
+
+        :param share_all: The share_all of this Dashboard.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_all = share_all
+
+    @property
+    def share_org(self):
+        """Gets the share_org of this Dashboard.  # noqa: E501
+
+
+        :return: The share_org of this Dashboard.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_org
+
+    @share_org.setter
+    def share_org(self, share_org):
+        """Sets the share_org of this Dashboard.
+
+
+        :param share_org: The share_org of this Dashboard.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_org = share_org
+
+    @property
+    def window_seconds(self):
+        """Gets the window_seconds of this Dashboard.  # noqa: E501
+
+
+        :return: The window_seconds of this Dashboard.  # noqa: E501
+        :rtype: int
+        """
+        return self._window_seconds
+
+    @window_seconds.setter
+    def window_seconds(self, window_seconds):
+        """Sets the window_seconds of this Dashboard.
+
+
+        :param window_seconds: The window_seconds of this Dashboard.  # noqa: E501
+        :type: int
+        """
+        if window_seconds is not None and window_seconds > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for `window_seconds`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if window_seconds is not None and window_seconds < -2147483648:  # noqa: E501
+            raise ValueError("Invalid value for `window_seconds`, must be a value greater than or equal to `-2147483648`")  # noqa: E501
+
+        self._window_seconds = window_seconds
+
+    @property
+    def starttime(self):
+        """Gets the starttime of this Dashboard.  # noqa: E501
+
+
+        :return: The starttime of this Dashboard.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._starttime
+
+    @starttime.setter
+    def starttime(self, starttime):
+        """Sets the starttime of this Dashboard.
+
+
+        :param starttime: The starttime of this Dashboard.  # noqa: E501
+        :type: datetime
+        """
+
+        self._starttime = starttime
+
+    @property
+    def endtime(self):
+        """Gets the endtime of this Dashboard.  # noqa: E501
+
+
+        :return: The endtime of this Dashboard.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._endtime
+
+    @endtime.setter
+    def endtime(self, endtime):
+        """Sets the endtime of this Dashboard.
+
+
+        :param endtime: The endtime of this Dashboard.  # noqa: E501
+        :type: datetime
+        """
+
+        self._endtime = endtime
+
+    @property
+    def organization(self):
+        """Gets the organization of this Dashboard.  # noqa: E501
+
+
+        :return: The organization of this Dashboard.  # noqa: E501
+        :rtype: int
+        """
+        return self._organization
+
+    @organization.setter
+    def organization(self, organization):
+        """Sets the organization of this Dashboard.
+
+
+        :param organization: The organization of this Dashboard.  # noqa: E501
+        :type: int
+        """
+        if organization is None:
+            raise ValueError("Invalid value for `organization`, must not be `None`")  # noqa: E501
+
+        self._organization = organization
 
     def to_dict(self):
         """Returns the model properties as a dict"""

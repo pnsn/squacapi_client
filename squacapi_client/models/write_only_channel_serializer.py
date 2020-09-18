@@ -41,7 +41,9 @@ class WriteOnlyChannelSerializer(object):
         'loc': 'str',
         'lat': 'float',
         'lon': 'float',
-        'elev': 'float'
+        'elev': 'float',
+        'starttime': 'datetime',
+        'endtime': 'datetime'
     }
 
     attribute_map = {
@@ -55,10 +57,12 @@ class WriteOnlyChannelSerializer(object):
         'loc': 'loc',
         'lat': 'lat',
         'lon': 'lon',
-        'elev': 'elev'
+        'elev': 'elev',
+        'starttime': 'starttime',
+        'endtime': 'endtime'
     }
 
-    def __init__(self, code=None, name=None, station_code=None, station_name=None, description=None, sample_rate=None, network=None, loc='--', lat=None, lon=None, elev=None):  # noqa: E501
+    def __init__(self, code=None, name=None, station_code=None, station_name=None, description=None, sample_rate=None, network=None, loc='--', lat=None, lon=None, elev=None, starttime=None, endtime=None):  # noqa: E501
         """WriteOnlyChannelSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._code = None
@@ -72,6 +76,8 @@ class WriteOnlyChannelSerializer(object):
         self._lat = None
         self._lon = None
         self._elev = None
+        self._starttime = None
+        self._endtime = None
         self.discriminator = None
 
         self.code = code
@@ -89,6 +95,10 @@ class WriteOnlyChannelSerializer(object):
         self.lat = lat
         self.lon = lon
         self.elev = elev
+        if starttime is not None:
+            self.starttime = starttime
+        if endtime is not None:
+            self.endtime = endtime
 
     @property
     def code(self):
@@ -354,6 +364,48 @@ class WriteOnlyChannelSerializer(object):
             raise ValueError("Invalid value for `elev`, must not be `None`")  # noqa: E501
 
         self._elev = elev
+
+    @property
+    def starttime(self):
+        """Gets the starttime of this WriteOnlyChannelSerializer.  # noqa: E501
+
+
+        :return: The starttime of this WriteOnlyChannelSerializer.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._starttime
+
+    @starttime.setter
+    def starttime(self, starttime):
+        """Sets the starttime of this WriteOnlyChannelSerializer.
+
+
+        :param starttime: The starttime of this WriteOnlyChannelSerializer.  # noqa: E501
+        :type: datetime
+        """
+
+        self._starttime = starttime
+
+    @property
+    def endtime(self):
+        """Gets the endtime of this WriteOnlyChannelSerializer.  # noqa: E501
+
+
+        :return: The endtime of this WriteOnlyChannelSerializer.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._endtime
+
+    @endtime.setter
+    def endtime(self, endtime):
+        """Sets the endtime of this WriteOnlyChannelSerializer.
+
+
+        :param endtime: The endtime of this WriteOnlyChannelSerializer.  # noqa: E501
+        :type: datetime
+        """
+
+        self._endtime = endtime
 
     def to_dict(self):
         """Returns the model properties as a dict"""

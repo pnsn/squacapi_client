@@ -34,31 +34,40 @@ class WriteOnlyGroupSerializer(object):
         'name': 'str',
         'description': 'str',
         'channels': 'list[int]',
-        'is_public': 'bool'
+        'share_all': 'bool',
+        'share_org': 'bool',
+        'organization': 'int'
     }
 
     attribute_map = {
         'name': 'name',
         'description': 'description',
         'channels': 'channels',
-        'is_public': 'is_public'
+        'share_all': 'share_all',
+        'share_org': 'share_org',
+        'organization': 'organization'
     }
 
-    def __init__(self, name=None, description=None, channels=None, is_public=None):  # noqa: E501
+    def __init__(self, name=None, description=None, channels=None, share_all=None, share_org=None, organization=None):  # noqa: E501
         """WriteOnlyGroupSerializer - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
         self._description = None
         self._channels = None
-        self._is_public = None
+        self._share_all = None
+        self._share_org = None
+        self._organization = None
         self.discriminator = None
 
         self.name = name
         if description is not None:
             self.description = description
         self.channels = channels
-        if is_public is not None:
-            self.is_public = is_public
+        if share_all is not None:
+            self.share_all = share_all
+        if share_org is not None:
+            self.share_org = share_org
+        self.organization = organization
 
     @property
     def name(self):
@@ -134,25 +143,69 @@ class WriteOnlyGroupSerializer(object):
         self._channels = channels
 
     @property
-    def is_public(self):
-        """Gets the is_public of this WriteOnlyGroupSerializer.  # noqa: E501
+    def share_all(self):
+        """Gets the share_all of this WriteOnlyGroupSerializer.  # noqa: E501
 
 
-        :return: The is_public of this WriteOnlyGroupSerializer.  # noqa: E501
+        :return: The share_all of this WriteOnlyGroupSerializer.  # noqa: E501
         :rtype: bool
         """
-        return self._is_public
+        return self._share_all
 
-    @is_public.setter
-    def is_public(self, is_public):
-        """Sets the is_public of this WriteOnlyGroupSerializer.
+    @share_all.setter
+    def share_all(self, share_all):
+        """Sets the share_all of this WriteOnlyGroupSerializer.
 
 
-        :param is_public: The is_public of this WriteOnlyGroupSerializer.  # noqa: E501
+        :param share_all: The share_all of this WriteOnlyGroupSerializer.  # noqa: E501
         :type: bool
         """
 
-        self._is_public = is_public
+        self._share_all = share_all
+
+    @property
+    def share_org(self):
+        """Gets the share_org of this WriteOnlyGroupSerializer.  # noqa: E501
+
+
+        :return: The share_org of this WriteOnlyGroupSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_org
+
+    @share_org.setter
+    def share_org(self, share_org):
+        """Sets the share_org of this WriteOnlyGroupSerializer.
+
+
+        :param share_org: The share_org of this WriteOnlyGroupSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_org = share_org
+
+    @property
+    def organization(self):
+        """Gets the organization of this WriteOnlyGroupSerializer.  # noqa: E501
+
+
+        :return: The organization of this WriteOnlyGroupSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._organization
+
+    @organization.setter
+    def organization(self, organization):
+        """Sets the organization of this WriteOnlyGroupSerializer.
+
+
+        :param organization: The organization of this WriteOnlyGroupSerializer.  # noqa: E501
+        :type: int
+        """
+        if organization is None:
+            raise ValueError("Invalid value for `organization`, must not be `None`")  # noqa: E501
+
+        self._organization = organization
 
     def to_dict(self):
         """Returns the model properties as a dict"""

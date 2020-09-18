@@ -17,9 +17,7 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/pnsn/squacpi_client.git
-or at a tag
-pip intall git+https://github.com/pnsn/squacapi_client.git@v1.0
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 ```
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
@@ -77,6 +75,12 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**list**](docs/DefaultApi.md#list) | **GET** / | 
 *UserApi* | [**user_create_create**](docs/UserApi.md#user_create_create) | **POST** /user/create/ | 
+*UserApi* | [**user_groups_create**](docs/UserApi.md#user_groups_create) | **POST** /user/groups/ | 
+*UserApi* | [**user_groups_delete**](docs/UserApi.md#user_groups_delete) | **DELETE** /user/groups/{id}/ | 
+*UserApi* | [**user_groups_list**](docs/UserApi.md#user_groups_list) | **GET** /user/groups/ | 
+*UserApi* | [**user_groups_partial_update**](docs/UserApi.md#user_groups_partial_update) | **PATCH** /user/groups/{id}/ | 
+*UserApi* | [**user_groups_read**](docs/UserApi.md#user_groups_read) | **GET** /user/groups/{id}/ | 
+*UserApi* | [**user_groups_update**](docs/UserApi.md#user_groups_update) | **PUT** /user/groups/{id}/ | 
 *UserApi* | [**user_me_partial_update**](docs/UserApi.md#user_me_partial_update) | **PATCH** /user/me/ | 
 *UserApi* | [**user_me_read**](docs/UserApi.md#user_me_read) | **GET** /user/me/ | 
 *UserApi* | [**user_me_update**](docs/UserApi.md#user_me_update) | **PUT** /user/me/ | 
@@ -87,6 +91,8 @@ Class | Method | HTTP request | Description
 *V10Api* | [**v1_0_dashboard_dashboards_partial_update**](docs/V10Api.md#v1_0_dashboard_dashboards_partial_update) | **PATCH** /v1.0/dashboard/dashboards/{id}/ | 
 *V10Api* | [**v1_0_dashboard_dashboards_read**](docs/V10Api.md#v1_0_dashboard_dashboards_read) | **GET** /v1.0/dashboard/dashboards/{id}/ | 
 *V10Api* | [**v1_0_dashboard_dashboards_update**](docs/V10Api.md#v1_0_dashboard_dashboards_update) | **PUT** /v1.0/dashboard/dashboards/{id}/ | 
+*V10Api* | [**v1_0_dashboard_stattype_list**](docs/V10Api.md#v1_0_dashboard_stattype_list) | **GET** /v1.0/dashboard/stattype/ | 
+*V10Api* | [**v1_0_dashboard_stattype_read**](docs/V10Api.md#v1_0_dashboard_stattype_read) | **GET** /v1.0/dashboard/stattype/{id}/ | 
 *V10Api* | [**v1_0_dashboard_widgets_create**](docs/V10Api.md#v1_0_dashboard_widgets_create) | **POST** /v1.0/dashboard/widgets/ | 
 *V10Api* | [**v1_0_dashboard_widgets_delete**](docs/V10Api.md#v1_0_dashboard_widgets_delete) | **DELETE** /v1.0/dashboard/widgets/{id}/ | 
 *V10Api* | [**v1_0_dashboard_widgets_list**](docs/V10Api.md#v1_0_dashboard_widgets_list) | **GET** /v1.0/dashboard/widgets/ | 
@@ -99,6 +105,8 @@ Class | Method | HTTP request | Description
 *V10Api* | [**v1_0_dashboard_widgettypes_partial_update**](docs/V10Api.md#v1_0_dashboard_widgettypes_partial_update) | **PATCH** /v1.0/dashboard/widgettypes/{id}/ | 
 *V10Api* | [**v1_0_dashboard_widgettypes_read**](docs/V10Api.md#v1_0_dashboard_widgettypes_read) | **GET** /v1.0/dashboard/widgettypes/{id}/ | 
 *V10Api* | [**v1_0_dashboard_widgettypes_update**](docs/V10Api.md#v1_0_dashboard_widgettypes_update) | **PUT** /v1.0/dashboard/widgettypes/{id}/ | 
+*V10Api* | [**v1_0_invite_invite_create**](docs/V10Api.md#v1_0_invite_invite_create) | **POST** /v1.0/invite/invite/ | 
+*V10Api* | [**v1_0_invite_register_create**](docs/V10Api.md#v1_0_invite_register_create) | **POST** /v1.0/invite/register/ | 
 *V10Api* | [**v1_0_list**](docs/V10Api.md#v1_0_list) | **GET** /v1.0/ | 
 *V10Api* | [**v1_0_measurement_archives_list**](docs/V10Api.md#v1_0_measurement_archives_list) | **GET** /v1.0/measurement/archives/ | Viewset that provides access to Archive data
 *V10Api* | [**v1_0_measurement_archives_read**](docs/V10Api.md#v1_0_measurement_archives_read) | **GET** /v1.0/measurement/archives/{id}/ | Viewset that provides access to Archive data
@@ -138,10 +146,28 @@ Class | Method | HTTP request | Description
 *V10Api* | [**v1_0_nslc_networks_partial_update**](docs/V10Api.md#v1_0_nslc_networks_partial_update) | **PATCH** /v1.0/nslc/networks/{code}/ | 
 *V10Api* | [**v1_0_nslc_networks_read**](docs/V10Api.md#v1_0_nslc_networks_read) | **GET** /v1.0/nslc/networks/{code}/ | 
 *V10Api* | [**v1_0_nslc_networks_update**](docs/V10Api.md#v1_0_nslc_networks_update) | **PUT** /v1.0/nslc/networks/{code}/ | 
+*V10Api* | [**v1_0_organization_organizations_create**](docs/V10Api.md#v1_0_organization_organizations_create) | **POST** /v1.0/organization/organizations/ | 
+*V10Api* | [**v1_0_organization_organizations_delete**](docs/V10Api.md#v1_0_organization_organizations_delete) | **DELETE** /v1.0/organization/organizations/{id}/ | 
+*V10Api* | [**v1_0_organization_organizations_list**](docs/V10Api.md#v1_0_organization_organizations_list) | **GET** /v1.0/organization/organizations/ | 
+*V10Api* | [**v1_0_organization_organizations_partial_update**](docs/V10Api.md#v1_0_organization_organizations_partial_update) | **PATCH** /v1.0/organization/organizations/{id}/ | 
+*V10Api* | [**v1_0_organization_organizations_read**](docs/V10Api.md#v1_0_organization_organizations_read) | **GET** /v1.0/organization/organizations/{id}/ | 
+*V10Api* | [**v1_0_organization_organizations_update**](docs/V10Api.md#v1_0_organization_organizations_update) | **PUT** /v1.0/organization/organizations/{id}/ | 
+*V10Api* | [**v1_0_organization_users_create**](docs/V10Api.md#v1_0_organization_users_create) | **POST** /v1.0/organization/users/ | 
+*V10Api* | [**v1_0_organization_users_delete**](docs/V10Api.md#v1_0_organization_users_delete) | **DELETE** /v1.0/organization/users/{id}/ | 
+*V10Api* | [**v1_0_organization_users_list**](docs/V10Api.md#v1_0_organization_users_list) | **GET** /v1.0/organization/users/ | 
+*V10Api* | [**v1_0_organization_users_partial_update**](docs/V10Api.md#v1_0_organization_users_partial_update) | **PATCH** /v1.0/organization/users/{id}/ | 
+*V10Api* | [**v1_0_organization_users_read**](docs/V10Api.md#v1_0_organization_users_read) | **GET** /v1.0/organization/users/{id}/ | 
+*V10Api* | [**v1_0_organization_users_update**](docs/V10Api.md#v1_0_organization_users_update) | **PUT** /v1.0/organization/users/{id}/ | 
 *V10Api* | [**v1_0_password_reset_confirm_create**](docs/V10Api.md#v1_0_password_reset_confirm_create) | **POST** /v1.0/password_reset/confirm/ | 
 *V10Api* | [**v1_0_password_reset_create**](docs/V10Api.md#v1_0_password_reset_create) | **POST** /v1.0/password_reset/ | An Api View which provides a method to request a password reset token based on an e-mail address
 *V10Api* | [**v1_0_password_reset_validate_token_create**](docs/V10Api.md#v1_0_password_reset_validate_token_create) | **POST** /v1.0/password_reset/validate_token/ | 
 *V10Api* | [**v1_0_user_create_create**](docs/V10Api.md#v1_0_user_create_create) | **POST** /v1.0/user/create/ | 
+*V10Api* | [**v1_0_user_groups_create**](docs/V10Api.md#v1_0_user_groups_create) | **POST** /v1.0/user/groups/ | 
+*V10Api* | [**v1_0_user_groups_delete**](docs/V10Api.md#v1_0_user_groups_delete) | **DELETE** /v1.0/user/groups/{id}/ | 
+*V10Api* | [**v1_0_user_groups_list**](docs/V10Api.md#v1_0_user_groups_list) | **GET** /v1.0/user/groups/ | 
+*V10Api* | [**v1_0_user_groups_partial_update**](docs/V10Api.md#v1_0_user_groups_partial_update) | **PATCH** /v1.0/user/groups/{id}/ | 
+*V10Api* | [**v1_0_user_groups_read**](docs/V10Api.md#v1_0_user_groups_read) | **GET** /v1.0/user/groups/{id}/ | 
+*V10Api* | [**v1_0_user_groups_update**](docs/V10Api.md#v1_0_user_groups_update) | **PUT** /v1.0/user/groups/{id}/ | 
 *V10Api* | [**v1_0_user_me_partial_update**](docs/V10Api.md#v1_0_user_me_partial_update) | **PATCH** /v1.0/user/me/ | 
 *V10Api* | [**v1_0_user_me_read**](docs/V10Api.md#v1_0_user_me_read) | **GET** /v1.0/user/me/ | 
 *V10Api* | [**v1_0_user_me_update**](docs/V10Api.md#v1_0_user_me_update) | **PUT** /v1.0/user/me/ | 
@@ -162,31 +188,44 @@ Class | Method | HTTP request | Description
  - [ReadOnlyEmailSerializer](docs/ReadOnlyEmailSerializer.md)
  - [ReadOnlyGroupDetailSerializer](docs/ReadOnlyGroupDetailSerializer.md)
  - [ReadOnlyGroupSerializer](docs/ReadOnlyGroupSerializer.md)
+ - [ReadOnlyInviteRegisterSerializer](docs/ReadOnlyInviteRegisterSerializer.md)
+ - [ReadOnlyInviteTokenSerializer](docs/ReadOnlyInviteTokenSerializer.md)
  - [ReadOnlyMeasurementSerializer](docs/ReadOnlyMeasurementSerializer.md)
  - [ReadOnlyMetricSerializer](docs/ReadOnlyMetricSerializer.md)
  - [ReadOnlyNetworkSerializer](docs/ReadOnlyNetworkSerializer.md)
+ - [ReadOnlyOrganizationSerializer](docs/ReadOnlyOrganizationSerializer.md)
  - [ReadOnlyPasswordTokenSerializer](docs/ReadOnlyPasswordTokenSerializer.md)
+ - [ReadOnlyStatTypeSerializer](docs/ReadOnlyStatTypeSerializer.md)
  - [ReadOnlyThresholdSerializer](docs/ReadOnlyThresholdSerializer.md)
  - [ReadOnlyTokenSerializer](docs/ReadOnlyTokenSerializer.md)
- - [ReadOnlyUserSerializer](docs/ReadOnlyUserSerializer.md)
+ - [ReadOnlyUserGroupSerializer](docs/ReadOnlyUserGroupSerializer.md)
+ - [ReadOnlyUserMeSerializer](docs/ReadOnlyUserMeSerializer.md)
+ - [ReadOnlyUserReadSerializer](docs/ReadOnlyUserReadSerializer.md)
+ - [ReadOnlyUserWriteSerializer](docs/ReadOnlyUserWriteSerializer.md)
  - [ReadOnlyWidgetDetailSerializer](docs/ReadOnlyWidgetDetailSerializer.md)
  - [ReadOnlyWidgetSerializer](docs/ReadOnlyWidgetSerializer.md)
  - [ReadOnlyWidgetTypeSerializer](docs/ReadOnlyWidgetTypeSerializer.md)
  - [StatType](docs/StatType.md)
  - [Threshold](docs/Threshold.md)
  - [Token](docs/Token.md)
+ - [UserSimple](docs/UserSimple.md)
  - [WidgetType](docs/WidgetType.md)
  - [WriteOnlyChannelSerializer](docs/WriteOnlyChannelSerializer.md)
  - [WriteOnlyDashboardSerializer](docs/WriteOnlyDashboardSerializer.md)
  - [WriteOnlyEmailSerializer](docs/WriteOnlyEmailSerializer.md)
  - [WriteOnlyGroupSerializer](docs/WriteOnlyGroupSerializer.md)
+ - [WriteOnlyInviteRegisterSerializer](docs/WriteOnlyInviteRegisterSerializer.md)
+ - [WriteOnlyInviteTokenSerializer](docs/WriteOnlyInviteTokenSerializer.md)
  - [WriteOnlyMeasurementSerializer](docs/WriteOnlyMeasurementSerializer.md)
  - [WriteOnlyMetricSerializer](docs/WriteOnlyMetricSerializer.md)
  - [WriteOnlyNetworkSerializer](docs/WriteOnlyNetworkSerializer.md)
+ - [WriteOnlyOrganizationSerializer](docs/WriteOnlyOrganizationSerializer.md)
  - [WriteOnlyPasswordTokenSerializer](docs/WriteOnlyPasswordTokenSerializer.md)
  - [WriteOnlyThresholdSerializer](docs/WriteOnlyThresholdSerializer.md)
  - [WriteOnlyTokenSerializer](docs/WriteOnlyTokenSerializer.md)
- - [WriteOnlyUserSerializer](docs/WriteOnlyUserSerializer.md)
+ - [WriteOnlyUserGroupSerializer](docs/WriteOnlyUserGroupSerializer.md)
+ - [WriteOnlyUserMeSerializer](docs/WriteOnlyUserMeSerializer.md)
+ - [WriteOnlyUserWriteSerializer](docs/WriteOnlyUserWriteSerializer.md)
  - [WriteOnlyWidgetSerializer](docs/WriteOnlyWidgetSerializer.md)
  - [WriteOnlyWidgetTypeSerializer](docs/WriteOnlyWidgetTypeSerializer.md)
 

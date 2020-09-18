@@ -142,7 +142,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -164,7 +164,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -332,7 +332,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :param WriteOnlyDashboardSerializer data: (required)
         :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
@@ -355,7 +355,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :param WriteOnlyDashboardSerializer data: (required)
         :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
@@ -439,7 +439,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :return: ReadOnlyDashboardDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -461,7 +461,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :return: ReadOnlyDashboardDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -538,7 +538,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :param WriteOnlyDashboardSerializer data: (required)
         :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
@@ -561,7 +561,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this dashboard. (required)
+        :param str id: (required)
         :param WriteOnlyDashboardSerializer data: (required)
         :return: ReadOnlyDashboardSerializer
                  If the method is called asynchronously,
@@ -628,6 +628,196 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyDashboardSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_dashboard_stattype_list(self, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_list  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyStatTypeSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_dashboard_stattype_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_dashboard_stattype_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_dashboard_stattype_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_list  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyStatTypeSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_dashboard_stattype_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/dashboard/stattype/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyStatTypeSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_dashboard_stattype_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_read  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_dashboard_stattype_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_dashboard_stattype_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_dashboard_stattype_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_read  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_dashboard_stattype_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_stattype_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/dashboard/stattype/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyStatTypeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -744,7 +934,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -766,7 +956,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -934,7 +1124,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetSerializer data: (required)
         :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
@@ -957,7 +1147,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetSerializer data: (required)
         :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
@@ -1041,7 +1231,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :return: ReadOnlyWidgetDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1063,7 +1253,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :return: ReadOnlyWidgetDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1140,7 +1330,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetSerializer data: (required)
         :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
@@ -1163,7 +1353,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetSerializer data: (required)
         :return: ReadOnlyWidgetSerializer
                  If the method is called asynchronously,
@@ -1346,7 +1536,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1368,7 +1558,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1536,7 +1726,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetTypeSerializer data: (required)
         :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
@@ -1559,7 +1749,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetTypeSerializer data: (required)
         :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
@@ -1643,7 +1833,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1665,7 +1855,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1742,7 +1932,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetTypeSerializer data: (required)
         :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
@@ -1765,7 +1955,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this widget type. (required)
+        :param str id: (required)
         :param WriteOnlyWidgetTypeSerializer data: (required)
         :return: ReadOnlyWidgetTypeSerializer
                  If the method is called asynchronously,
@@ -1832,6 +2022,204 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyWidgetTypeSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_invite_invite_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_invite_invite_create  # noqa: E501
+
+        Endpoint to invite an inactive user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_invite_invite_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyInviteTokenSerializer data: (required)
+        :return: ReadOnlyInviteTokenSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_invite_invite_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_invite_invite_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_invite_invite_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_invite_invite_create  # noqa: E501
+
+        Endpoint to invite an inactive user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_invite_invite_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyInviteTokenSerializer data: (required)
+        :return: ReadOnlyInviteTokenSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_invite_invite_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_invite_invite_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/invite/invite/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyInviteTokenSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_invite_register_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_invite_register_create  # noqa: E501
+
+        called when invited user authenticates with token and sets password  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_invite_register_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyInviteRegisterSerializer data: (required)
+        :return: ReadOnlyInviteRegisterSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_invite_register_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_invite_register_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_invite_register_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_invite_register_create  # noqa: E501
+
+        called when invited user authenticates with token and sets password  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_invite_register_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyInviteRegisterSerializer data: (required)
+        :return: ReadOnlyInviteRegisterSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_invite_register_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_invite_register_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/invite/register/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyInviteRegisterSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2051,7 +2439,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this archive. (required)
+        :param str id: (required)
         :return: ReadOnlyArchiveSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2073,7 +2461,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this archive. (required)
+        :param str id: (required)
         :return: ReadOnlyArchiveSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2143,7 +2531,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_create(self, data, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_create  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_create(data, async_req=True)
@@ -2165,7 +2553,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_create_with_http_info(self, data, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_create  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_create_with_http_info(data, async_req=True)
@@ -2242,14 +2630,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_delete(self, id, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_delete  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_delete(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2264,14 +2652,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_delete_with_http_info(self, id, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_delete  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_delete_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2341,7 +2729,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_list(self, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_list  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_list(async_req=True)
@@ -2366,7 +2754,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_list_with_http_info(self, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_list  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_list_with_http_info(async_req=True)
@@ -2448,14 +2836,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_partial_update(self, id, data, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_partial_update  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_partial_update(id, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :param WriteOnlyMeasurementSerializer data: (required)
         :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
@@ -2471,14 +2859,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_partial_update  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_partial_update_with_http_info(id, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :param WriteOnlyMeasurementSerializer data: (required)
         :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
@@ -2555,14 +2943,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_read(self, id, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_read  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_read(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2577,14 +2965,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_read_with_http_info(self, id, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_read  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_read_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2654,14 +3042,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_update(self, id, data, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_update  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_update(id, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :param WriteOnlyMeasurementSerializer data: (required)
         :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
@@ -2677,14 +3065,14 @@ class V10Api(object):
     def v1_0_measurement_measurements_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_update  # noqa: E501
 
-          # noqa: E501
+        end point for using channel filter  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_update_with_http_info(id, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this measurement. (required)
+        :param str id: (required)
         :param WriteOnlyMeasurementSerializer data: (required)
         :return: ReadOnlyMeasurementSerializer
                  If the method is called asynchronously,
@@ -2867,7 +3255,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2889,7 +3277,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3061,7 +3449,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :param WriteOnlyMetricSerializer data: (required)
         :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
@@ -3084,7 +3472,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :param WriteOnlyMetricSerializer data: (required)
         :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
@@ -3168,7 +3556,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3190,7 +3578,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3267,7 +3655,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :param WriteOnlyMetricSerializer data: (required)
         :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
@@ -3290,7 +3678,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this metric. (required)
+        :param str id: (required)
         :param WriteOnlyMetricSerializer data: (required)
         :return: ReadOnlyMetricSerializer
                  If the method is called asynchronously,
@@ -3473,7 +3861,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3495,7 +3883,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3671,7 +4059,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :param WriteOnlyThresholdSerializer data: (required)
         :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
@@ -3694,7 +4082,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :param WriteOnlyThresholdSerializer data: (required)
         :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
@@ -3778,7 +4166,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3800,7 +4188,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3877,7 +4265,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :param WriteOnlyThresholdSerializer data: (required)
         :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
@@ -3900,7 +4288,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this threshold. (required)
+        :param str id: (required)
         :param WriteOnlyThresholdSerializer data: (required)
         :return: ReadOnlyThresholdSerializer
                  If the method is called asynchronously,
@@ -4083,7 +4471,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4105,7 +4493,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4325,7 +4713,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :param WriteOnlyChannelSerializer data: (required)
         :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
@@ -4348,7 +4736,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :param WriteOnlyChannelSerializer data: (required)
         :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
@@ -4432,7 +4820,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4454,7 +4842,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4531,7 +4919,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :param WriteOnlyChannelSerializer data: (required)
         :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
@@ -4554,7 +4942,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this channel. (required)
+        :param str id: (required)
         :param WriteOnlyChannelSerializer data: (required)
         :return: ReadOnlyChannelSerializer
                  If the method is called asynchronously,
@@ -4737,7 +5125,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4759,7 +5147,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4927,7 +5315,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :param WriteOnlyGroupSerializer data: (required)
         :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
@@ -4950,7 +5338,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :param WriteOnlyGroupSerializer data: (required)
         :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
@@ -5034,7 +5422,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :return: ReadOnlyGroupDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5056,7 +5444,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :return: ReadOnlyGroupDetailSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5133,7 +5521,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :param WriteOnlyGroupSerializer data: (required)
         :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
@@ -5156,7 +5544,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int id: A unique integer value identifying this group. (required)
+        :param str id: (required)
         :param WriteOnlyGroupSerializer data: (required)
         :return: ReadOnlyGroupSerializer
                  If the method is called asynchronously,
@@ -5339,7 +5727,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5361,7 +5749,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5537,7 +5925,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :param WriteOnlyNetworkSerializer data: (required)
         :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
@@ -5560,7 +5948,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :param WriteOnlyNetworkSerializer data: (required)
         :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
@@ -5644,7 +6032,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5666,7 +6054,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5743,7 +6131,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :param WriteOnlyNetworkSerializer data: (required)
         :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
@@ -5766,7 +6154,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str code: A unique value identifying this network. (required)
+        :param str code: (required)
         :param WriteOnlyNetworkSerializer data: (required)
         :return: ReadOnlyNetworkSerializer
                  If the method is called asynchronously,
@@ -5833,6 +6221,1214 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyNetworkSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_organizations_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyOrganizationSerializer data: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_organizations_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_organizations_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_organizations_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyOrganizationSerializer data: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_organizations_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_organizations_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/organizations/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyOrganizationSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_organizations_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_organizations_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_organizations_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_organizations_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_organizations_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/organizations/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_organizations_list(self, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyOrganizationSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_organizations_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_organizations_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_organizations_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyOrganizationSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_organizations_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/organizations/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyOrganizationSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_organizations_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyOrganizationSerializer data: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_organizations_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_organizations_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_organizations_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyOrganizationSerializer data: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_organizations_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_organizations_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/organizations/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyOrganizationSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_organizations_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_organizations_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_organizations_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_organizations_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_organizations_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/organizations/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyOrganizationSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_organizations_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyOrganizationSerializer data: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_organizations_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_organizations_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_organizations_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_organizations_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_organizations_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyOrganizationSerializer data: (required)
+        :return: ReadOnlyOrganizationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_organizations_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_organizations_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/organizations/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyOrganizationSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_users_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_organization_users_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_users_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_users_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_users_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_organization_users_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_users_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_users_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/users/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserWriteSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_users_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_users_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_users_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_users_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_users_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_users_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_users_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/users/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_users_list(self, **kwargs):  # noqa: E501
+        """v1_0_organization_users_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str organization: 
+        :return: list[ReadOnlyUserWriteSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_users_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_users_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_users_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_organization_users_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str organization: 
+        :return: list[ReadOnlyUserWriteSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['organization']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_users_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'organization' in params:
+            query_params.append(('organization', params['organization']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/users/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyUserWriteSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_users_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_users_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_users_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_users_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_users_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_users_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_users_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_users_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/users/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserWriteSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_users_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_users_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyUserReadSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_users_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_users_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_users_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_organization_users_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyUserReadSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_users_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/users/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserReadSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_organization_users_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_users_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_organization_users_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_organization_users_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_organization_users_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_organization_users_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_organization_users_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_organization_users_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_users_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/organization/users/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserWriteSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6147,8 +7743,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyUserSerializer data: (required)
-        :return: ReadOnlyUserSerializer
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6169,8 +7765,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyUserSerializer data: (required)
-        :return: ReadOnlyUserSerializer
+        :param WriteOnlyUserWriteSerializer data: (required)
+        :return: ReadOnlyUserWriteSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6228,7 +7824,609 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ReadOnlyUserSerializer',  # noqa: E501
+            response_type='ReadOnlyUserWriteSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_groups_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_user_groups_create  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyUserGroupSerializer data: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_groups_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_groups_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_groups_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_user_groups_create  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyUserGroupSerializer data: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_groups_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_groups_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/groups/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserGroupSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_groups_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_groups_delete  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_groups_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_groups_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_groups_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_groups_delete  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_groups_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/groups/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_groups_list(self, **kwargs):  # noqa: E501
+        """v1_0_user_groups_list  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyUserGroupSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_groups_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_groups_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_groups_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_user_groups_list  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyUserGroupSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_groups_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/groups/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyUserGroupSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_groups_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_groups_partial_update  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserGroupSerializer data: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_groups_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_groups_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_groups_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_groups_partial_update  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserGroupSerializer data: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_groups_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_groups_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/groups/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserGroupSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_groups_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_groups_read  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_groups_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_groups_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_groups_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_groups_read  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_groups_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/groups/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserGroupSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_groups_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_groups_update  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserGroupSerializer data: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_groups_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_groups_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_groups_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_groups_update  # noqa: E501
+
+        Manage the authenticated user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_groups_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyUserGroupSerializer data: (required)
+        :return: ReadOnlyUserGroupSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_groups_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_groups_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/groups/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyUserGroupSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6246,8 +8444,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyUserSerializer data: (required)
-        :return: ReadOnlyUserSerializer
+        :param WriteOnlyUserMeSerializer data: (required)
+        :return: ReadOnlyUserMeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6268,8 +8466,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyUserSerializer data: (required)
-        :return: ReadOnlyUserSerializer
+        :param WriteOnlyUserMeSerializer data: (required)
+        :return: ReadOnlyUserMeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6327,7 +8525,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ReadOnlyUserSerializer',  # noqa: E501
+            response_type='ReadOnlyUserMeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6345,7 +8543,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: ReadOnlyUserSerializer
+        :return: ReadOnlyUserMeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6366,7 +8564,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: ReadOnlyUserSerializer
+        :return: ReadOnlyUserMeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6418,7 +8616,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ReadOnlyUserSerializer',  # noqa: E501
+            response_type='ReadOnlyUserMeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6436,8 +8634,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyUserSerializer data: (required)
-        :return: ReadOnlyUserSerializer
+        :param WriteOnlyUserMeSerializer data: (required)
+        :return: ReadOnlyUserMeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6458,8 +8656,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyUserSerializer data: (required)
-        :return: ReadOnlyUserSerializer
+        :param WriteOnlyUserMeSerializer data: (required)
+        :return: ReadOnlyUserMeSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6517,7 +8715,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ReadOnlyUserSerializer',  # noqa: E501
+            response_type='ReadOnlyUserMeSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -47,7 +47,9 @@ class Channel(object):
         'elev': 'float',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user_id': 'str'
+        'user_id': 'str',
+        'starttime': 'datetime',
+        'endtime': 'datetime'
     }
 
     attribute_map = {
@@ -67,10 +69,12 @@ class Channel(object):
         'elev': 'elev',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'user_id': 'user_id'
+        'user_id': 'user_id',
+        'starttime': 'starttime',
+        'endtime': 'endtime'
     }
 
-    def __init__(self, id=None, class_name=None, code=None, name=None, station_code=None, station_name=None, url=None, description=None, sample_rate=None, network=None, loc='--', lat=None, lon=None, elev=None, created_at=None, updated_at=None, user_id=None):  # noqa: E501
+    def __init__(self, id=None, class_name=None, code=None, name=None, station_code=None, station_name=None, url=None, description=None, sample_rate=None, network=None, loc='--', lat=None, lon=None, elev=None, created_at=None, updated_at=None, user_id=None, starttime=None, endtime=None):  # noqa: E501
         """Channel - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -90,6 +94,8 @@ class Channel(object):
         self._created_at = None
         self._updated_at = None
         self._user_id = None
+        self._starttime = None
+        self._endtime = None
         self.discriminator = None
 
         if id is not None:
@@ -119,6 +125,10 @@ class Channel(object):
             self.updated_at = updated_at
         if user_id is not None:
             self.user_id = user_id
+        if starttime is not None:
+            self.starttime = starttime
+        if endtime is not None:
+            self.endtime = endtime
 
     @property
     def id(self):
@@ -510,6 +520,48 @@ class Channel(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def starttime(self):
+        """Gets the starttime of this Channel.  # noqa: E501
+
+
+        :return: The starttime of this Channel.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._starttime
+
+    @starttime.setter
+    def starttime(self, starttime):
+        """Sets the starttime of this Channel.
+
+
+        :param starttime: The starttime of this Channel.  # noqa: E501
+        :type: datetime
+        """
+
+        self._starttime = starttime
+
+    @property
+    def endtime(self):
+        """Gets the endtime of this Channel.  # noqa: E501
+
+
+        :return: The endtime of this Channel.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._endtime
+
+    @endtime.setter
+    def endtime(self, endtime):
+        """Sets the endtime of this Channel.
+
+
+        :param endtime: The endtime of this Channel.  # noqa: E501
+        :type: datetime
+        """
+
+        self._endtime = endtime
 
     def to_dict(self):
         """Returns the model properties as a dict"""

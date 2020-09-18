@@ -5,6 +5,12 @@ All URIs are relative to *http://squacapi.pnsn.org*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**user_create_create**](UserApi.md#user_create_create) | **POST** /user/create/ | 
+[**user_groups_create**](UserApi.md#user_groups_create) | **POST** /user/groups/ | 
+[**user_groups_delete**](UserApi.md#user_groups_delete) | **DELETE** /user/groups/{id}/ | 
+[**user_groups_list**](UserApi.md#user_groups_list) | **GET** /user/groups/ | 
+[**user_groups_partial_update**](UserApi.md#user_groups_partial_update) | **PATCH** /user/groups/{id}/ | 
+[**user_groups_read**](UserApi.md#user_groups_read) | **GET** /user/groups/{id}/ | 
+[**user_groups_update**](UserApi.md#user_groups_update) | **PUT** /user/groups/{id}/ | 
 [**user_me_partial_update**](UserApi.md#user_me_partial_update) | **PATCH** /user/me/ | 
 [**user_me_read**](UserApi.md#user_me_read) | **GET** /user/me/ | 
 [**user_me_update**](UserApi.md#user_me_update) | **PUT** /user/me/ | 
@@ -12,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **user_create_create**
-> ReadOnlyUserSerializer user_create_create(data)
+> ReadOnlyUserWriteSerializer user_create_create(data)
 
 
 
@@ -34,7 +40,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
-data = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+data = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
 
 try:
     api_response = api_instance.user_create_create(data)
@@ -47,11 +53,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
+ **data** | [**WriteOnlyUserWriteSerializer**](WriteOnlyUserWriteSerializer.md)|  | 
 
 ### Return type
 
-[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
+[**ReadOnlyUserWriteSerializer**](ReadOnlyUserWriteSerializer.md)
 
 ### Authorization
 
@@ -64,8 +70,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **user_me_partial_update**
-> ReadOnlyUserSerializer user_me_partial_update(data)
+# **user_groups_create**
+> ReadOnlyUserGroupSerializer user_groups_create(data)
 
 
 
@@ -87,7 +93,324 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
-data = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+data = squacapi_client.WriteOnlyUserGroupSerializer() # WriteOnlyUserGroupSerializer | 
+
+try:
+    api_response = api_instance.user_groups_create(data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->user_groups_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**WriteOnlyUserGroupSerializer**](WriteOnlyUserGroupSerializer.md)|  | 
+
+### Return type
+
+[**ReadOnlyUserGroupSerializer**](ReadOnlyUserGroupSerializer.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **user_groups_delete**
+> user_groups_delete(id)
+
+
+
+Manage the authenticated user
+
+### Example
+```python
+from __future__ import print_function
+import time
+import squacapi_client
+from squacapi_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = squacapi_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    api_instance.user_groups_delete(id)
+except ApiException as e:
+    print("Exception when calling UserApi->user_groups_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **user_groups_list**
+> list[ReadOnlyUserGroupSerializer] user_groups_list()
+
+
+
+Manage the authenticated user
+
+### Example
+```python
+from __future__ import print_function
+import time
+import squacapi_client
+from squacapi_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = squacapi_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+
+try:
+    api_response = api_instance.user_groups_list()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->user_groups_list: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[ReadOnlyUserGroupSerializer]**](ReadOnlyUserGroupSerializer.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **user_groups_partial_update**
+> ReadOnlyUserGroupSerializer user_groups_partial_update(id, data)
+
+
+
+Manage the authenticated user
+
+### Example
+```python
+from __future__ import print_function
+import time
+import squacapi_client
+from squacapi_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = squacapi_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+id = 'id_example' # str | 
+data = squacapi_client.WriteOnlyUserGroupSerializer() # WriteOnlyUserGroupSerializer | 
+
+try:
+    api_response = api_instance.user_groups_partial_update(id, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->user_groups_partial_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+ **data** | [**WriteOnlyUserGroupSerializer**](WriteOnlyUserGroupSerializer.md)|  | 
+
+### Return type
+
+[**ReadOnlyUserGroupSerializer**](ReadOnlyUserGroupSerializer.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **user_groups_read**
+> ReadOnlyUserGroupSerializer user_groups_read(id)
+
+
+
+Manage the authenticated user
+
+### Example
+```python
+from __future__ import print_function
+import time
+import squacapi_client
+from squacapi_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = squacapi_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    api_response = api_instance.user_groups_read(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->user_groups_read: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+[**ReadOnlyUserGroupSerializer**](ReadOnlyUserGroupSerializer.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **user_groups_update**
+> ReadOnlyUserGroupSerializer user_groups_update(id, data)
+
+
+
+Manage the authenticated user
+
+### Example
+```python
+from __future__ import print_function
+import time
+import squacapi_client
+from squacapi_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = squacapi_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+id = 'id_example' # str | 
+data = squacapi_client.WriteOnlyUserGroupSerializer() # WriteOnlyUserGroupSerializer | 
+
+try:
+    api_response = api_instance.user_groups_update(id, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->user_groups_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+ **data** | [**WriteOnlyUserGroupSerializer**](WriteOnlyUserGroupSerializer.md)|  | 
+
+### Return type
+
+[**ReadOnlyUserGroupSerializer**](ReadOnlyUserGroupSerializer.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **user_me_partial_update**
+> ReadOnlyUserMeSerializer user_me_partial_update(data)
+
+
+
+Manage the authenticated user
+
+### Example
+```python
+from __future__ import print_function
+import time
+import squacapi_client
+from squacapi_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = squacapi_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
+data = squacapi_client.WriteOnlyUserMeSerializer() # WriteOnlyUserMeSerializer | 
 
 try:
     api_response = api_instance.user_me_partial_update(data)
@@ -100,11 +423,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
+ **data** | [**WriteOnlyUserMeSerializer**](WriteOnlyUserMeSerializer.md)|  | 
 
 ### Return type
 
-[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
+[**ReadOnlyUserMeSerializer**](ReadOnlyUserMeSerializer.md)
 
 ### Authorization
 
@@ -118,7 +441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_me_read**
-> ReadOnlyUserSerializer user_me_read()
+> ReadOnlyUserMeSerializer user_me_read()
 
 
 
@@ -153,7 +476,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
+[**ReadOnlyUserMeSerializer**](ReadOnlyUserMeSerializer.md)
 
 ### Authorization
 
@@ -167,7 +490,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_me_update**
-> ReadOnlyUserSerializer user_me_update(data)
+> ReadOnlyUserMeSerializer user_me_update(data)
 
 
 
@@ -189,7 +512,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.UserApi(squacapi_client.ApiClient(configuration))
-data = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
+data = squacapi_client.WriteOnlyUserMeSerializer() # WriteOnlyUserMeSerializer | 
 
 try:
     api_response = api_instance.user_me_update(data)
@@ -202,11 +525,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
+ **data** | [**WriteOnlyUserMeSerializer**](WriteOnlyUserMeSerializer.md)|  | 
 
 ### Return type
 
-[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
+[**ReadOnlyUserMeSerializer**](ReadOnlyUserMeSerializer.md)
 
 ### Authorization
 
