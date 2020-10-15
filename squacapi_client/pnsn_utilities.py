@@ -69,7 +69,9 @@ def perform_bulk_create(measurements, client, *args, **kwargs):
         try:
             resp = client.v1_0_measurement_measurements_create(collection)
         except ApiException as e:
-            errors.append(resp, e)
+            errors.append(e)
+            if resp: 
+                errors.append(resp)
         start += chunk
         end += chunk
         response += resp
