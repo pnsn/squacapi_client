@@ -23,7 +23,7 @@ VERSION = "1.1"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
-    "certifi>=2017.4.17",
+    "certifi>=14.4.14",
     "python-dateutil>=2.1",
     "six>=1.10",
     "urllib3>=1.23"
