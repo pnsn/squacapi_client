@@ -8,13 +8,10 @@ from squacapi_client import Configuration, ApiClient, \
 
 
 
-def get_client(user, passwd, host):
+def get_client(user, passwd):
     '''authenticate user'''
     conf = Configuration()
     api_client = ApiClient(conf)
-    # set host here
-    api_client.configuration.host = host
-    print(api_client.configuration.host)
     user_client = UserApi(ApiClient())
     auth_token = AuthToken(email=user, password=passwd)
     token = user_client.user_token_create(auth_token)
@@ -68,11 +65,15 @@ def perform_bulk_create(measurements, client, *args, **kwargs):
         collection = measurements[start:end]
         try:
             resp = client.v1_0_measurement_measurements_create(collection)
+            response += resp
         except ApiException as e:
-            errors.append(e)
-            if resp: 
-                errors.append(resp)
+            error = {
+                'reason': e.reason,
+                'body': e.body,
+                'status': e.status,
+                'headers': e.headers
+            }
+            errors.append(error)
         start += chunk
         end += chunk
-        response += resp
     return response, errors

@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "squacapi_client"
-VERSION = "1.1"
+VERSION = "1.3.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,7 +23,7 @@ VERSION = "1.1"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
-    "certifi>=14.4.14",
+    "certifi>=2017.4.17",
     "python-dateutil>=2.1",
     "six>=1.10",
     "urllib3>=1.23"

@@ -75,6 +75,7 @@ class ApiClient(object):
         self.cookie = cookie
         # Set default User-Agent.
         self.user_agent = 'Swagger-Codegen/1.0.0/python'
+        self.client_side_validation = configuration.client_side_validation
 
     def __del__(self):
         if self._pool is not None:
@@ -161,10 +162,10 @@ class ApiClient(object):
             _request_timeout=_request_timeout)
 
         self.last_response = response_data
+
         if response_data.data.startswith('[') and not response_type.startswith('list['):
             response_type = 'list[' + response_type + ']'
-
-
+        
         return_data = response_data
         if _preload_content:
             # deserialize response data

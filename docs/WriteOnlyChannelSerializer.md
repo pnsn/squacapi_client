@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **lat** | **float** |  | 
 **lon** | **float** |  | 
 **elev** | **float** |  | 
+**azimuth** | **float** |  | [optional] 
+**dip** | **float** |  | [optional] 
 **starttime** | **datetime** |  | [optional] 
 **endtime** | **datetime** |  | [optional] 
 

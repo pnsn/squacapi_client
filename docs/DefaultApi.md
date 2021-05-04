@@ -1,6 +1,6 @@
 # squacapi_client.DefaultApi
 
-All URIs are relative to *http://squacapi.pnsn.org*
+All URIs are relative to *https://squacapi.pnsn.org*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

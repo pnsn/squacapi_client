@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **channels** | **list[int]** |  | 
-**share_all** | **bool** |  | [optional] 
-**share_org** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **user_id** | **str** |  | [optional] 

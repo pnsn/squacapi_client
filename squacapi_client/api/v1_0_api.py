@@ -87,8 +87,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_dashboards_create`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_dashboards_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -378,12 +378,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_dashboards_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_dashboards_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -483,8 +483,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_dashboards_read`")  # noqa: E501
 
         collection_formats = {}
@@ -584,12 +584,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_dashboards_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_dashboards_update`")  # noqa: E501
 
         collection_formats = {}
@@ -628,6 +628,204 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyDashboardSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_dashboard_stattype_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_create  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyStatTypeSerializer data: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_dashboard_stattype_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_dashboard_stattype_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_dashboard_stattype_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_create  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyStatTypeSerializer data: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_dashboard_stattype_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_stattype_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/dashboard/stattype/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyStatTypeSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_dashboard_stattype_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_delete  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_dashboard_stattype_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_dashboard_stattype_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_dashboard_stattype_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_delete  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_dashboard_stattype_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_stattype_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/dashboard/stattype/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -726,6 +924,113 @@ class V10Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def v1_0_dashboard_stattype_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_partial_update  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyStatTypeSerializer data: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_dashboard_stattype_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_dashboard_stattype_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_dashboard_stattype_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_partial_update  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyStatTypeSerializer data: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_dashboard_stattype_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_stattype_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_stattype_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/dashboard/stattype/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyStatTypeSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def v1_0_dashboard_stattype_read(self, id, **kwargs):  # noqa: E501
         """v1_0_dashboard_stattype_read  # noqa: E501
 
@@ -780,8 +1085,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_stattype_read`")  # noqa: E501
 
         collection_formats = {}
@@ -811,6 +1116,113 @@ class V10Api(object):
 
         return self.api_client.call_api(
             '/v1.0/dashboard/stattype/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyStatTypeSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_dashboard_stattype_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_update  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyStatTypeSerializer data: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_dashboard_stattype_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_dashboard_stattype_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_dashboard_stattype_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_dashboard_stattype_update  # noqa: E501
+
+        we only want readonly through api  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_dashboard_stattype_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyStatTypeSerializer data: (required)
+        :return: ReadOnlyStatTypeSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_dashboard_stattype_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_stattype_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_stattype_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/dashboard/stattype/{id}/', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -879,8 +1291,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_widgets_create`")  # noqa: E501
 
         collection_formats = {}
@@ -978,8 +1390,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgets_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -1170,12 +1582,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgets_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_widgets_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -1275,8 +1687,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgets_read`")  # noqa: E501
 
         collection_formats = {}
@@ -1376,12 +1788,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgets_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_widgets_update`")  # noqa: E501
 
         collection_formats = {}
@@ -1481,8 +1893,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_widgettypes_create`")  # noqa: E501
 
         collection_formats = {}
@@ -1580,8 +1992,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgettypes_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -1772,12 +2184,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgettypes_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_widgettypes_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -1877,8 +2289,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgettypes_read`")  # noqa: E501
 
         collection_formats = {}
@@ -1978,12 +2390,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_dashboard_widgettypes_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_dashboard_widgettypes_update`")  # noqa: E501
 
         collection_formats = {}
@@ -2083,8 +2495,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_invite_invite_create`")  # noqa: E501
 
         collection_formats = {}
@@ -2182,8 +2594,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_invite_register_create`")  # noqa: E501
 
         collection_formats = {}
@@ -2318,53 +2730,43 @@ class V10Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_0_measurement_archives_list(self, **kwargs):  # noqa: E501
-        """Viewset that provides access to Archive data  # noqa: E501
+    def v1_0_measurement_aggregated_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_aggregated_list  # noqa: E501
 
-        since there is not a user set on archive, all permissions will be model  # noqa: E501
+        calculate aggregates from raw data this is NOT a model viewset so filter_class and serializer_class cannot be used  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_0_measurement_archives_list(async_req=True)
+        >>> thread = api.v1_0_measurement_aggregated_list(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str metric: 
-        :param str channel: 
-        :param str archive_type: 
-        :param str starttime: 
-        :param str endtime: 
-        :return: list[ReadOnlyArchiveSerializer]
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_0_measurement_archives_list_with_http_info(**kwargs)  # noqa: E501
+            return self.v1_0_measurement_aggregated_list_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.v1_0_measurement_archives_list_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.v1_0_measurement_aggregated_list_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def v1_0_measurement_archives_list_with_http_info(self, **kwargs):  # noqa: E501
-        """Viewset that provides access to Archive data  # noqa: E501
+    def v1_0_measurement_aggregated_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_aggregated_list  # noqa: E501
 
-        since there is not a user set on archive, all permissions will be model  # noqa: E501
+        calculate aggregates from raw data this is NOT a model viewset so filter_class and serializer_class cannot be used  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_0_measurement_archives_list_with_http_info(async_req=True)
+        >>> thread = api.v1_0_measurement_aggregated_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str metric: 
-        :param str channel: 
-        :param str archive_type: 
-        :param str starttime: 
-        :param str endtime: 
-        :return: list[ReadOnlyArchiveSerializer]
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['metric', 'channel', 'archive_type', 'starttime', 'endtime']  # noqa: E501
+        all_params = []  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2375,7 +2777,7 @@ class V10Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_0_measurement_archives_list" % key
+                    " to method v1_0_measurement_aggregated_list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -2385,16 +2787,6 @@ class V10Api(object):
         path_params = {}
 
         query_params = []
-        if 'metric' in params:
-            query_params.append(('metric', params['metric']))  # noqa: E501
-        if 'channel' in params:
-            query_params.append(('channel', params['channel']))  # noqa: E501
-        if 'archive_type' in params:
-            query_params.append(('archive_type', params['archive_type']))  # noqa: E501
-        if 'starttime' in params:
-            query_params.append(('starttime', params['starttime']))  # noqa: E501
-        if 'endtime' in params:
-            query_params.append(('endtime', params['endtime']))  # noqa: E501
 
         header_params = {}
 
@@ -2414,14 +2806,14 @@ class V10Api(object):
         auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1.0/measurement/archives/', 'GET',
+            '/v1.0/measurement/aggregated/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ReadOnlyArchiveSerializer]',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2429,40 +2821,139 @@ class V10Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def v1_0_measurement_archives_read(self, id, **kwargs):  # noqa: E501
-        """Viewset that provides access to Archive data  # noqa: E501
+    def v1_0_measurement_alerts_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_create  # noqa: E501
 
-        since there is not a user set on archive, all permissions will be model  # noqa: E501
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_0_measurement_archives_read(id, async_req=True)
+        >>> thread = api.v1_0_measurement_alerts_create(data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
-        :return: ReadOnlyArchiveSerializer
+        :param WriteOnlyAlertSerializer data: (required)
+        :return: ReadOnlyAlertSerializer
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.v1_0_measurement_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+            return self.v1_0_measurement_alerts_create_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.v1_0_measurement_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.v1_0_measurement_alerts_create_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def v1_0_measurement_archives_read_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Viewset that provides access to Archive data  # noqa: E501
+    def v1_0_measurement_alerts_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_create  # noqa: E501
 
-        since there is not a user set on archive, all permissions will be model  # noqa: E501
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.v1_0_measurement_archives_read_with_http_info(id, async_req=True)
+        >>> thread = api.v1_0_measurement_alerts_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyAlertSerializer data: (required)
+        :return: ReadOnlyAlertSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_alerts_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_alerts_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/alerts/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyAlertSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_alerts_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_delete(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: (required)
-        :return: ReadOnlyArchiveSerializer
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_alerts_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_alerts_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_alerts_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2478,14 +2969,14 @@ class V10Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method v1_0_measurement_archives_read" % key
+                    " to method v1_0_measurement_alerts_delete" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_archives_read`")  # noqa: E501
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_alerts_delete`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2513,14 +3004,846 @@ class V10Api(object):
         auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/v1.0/measurement/archives/{id}/', 'GET',
+            '/v1.0/measurement/alerts/{id}/', 'DELETE',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ReadOnlyArchiveSerializer',  # noqa: E501
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_alerts_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str trigger: 
+        :param str in_alarm: 
+        :return: list[ReadOnlyAlertDetailSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_alerts_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_alerts_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_alerts_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str trigger: 
+        :param str in_alarm: 
+        :return: list[ReadOnlyAlertDetailSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['trigger', 'in_alarm']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_alerts_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'trigger' in params:
+            query_params.append(('trigger', params['trigger']))  # noqa: E501
+        if 'in_alarm' in params:
+            query_params.append(('in_alarm', params['in_alarm']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/alerts/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyAlertDetailSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_alerts_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyAlertSerializer data: (required)
+        :return: ReadOnlyAlertSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_alerts_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_alerts_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_alerts_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyAlertSerializer data: (required)
+        :return: ReadOnlyAlertSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_alerts_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_alerts_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_alerts_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/alerts/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyAlertSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_alerts_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyAlertDetailSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_alerts_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_alerts_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_alerts_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyAlertDetailSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_alerts_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_alerts_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/alerts/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyAlertDetailSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_alerts_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyAlertSerializer data: (required)
+        :return: ReadOnlyAlertSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_alerts_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_alerts_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_alerts_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_alerts_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_alerts_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyAlertSerializer data: (required)
+        :return: ReadOnlyAlertSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_alerts_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_alerts_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_alerts_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/alerts/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyAlertSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_day_archives_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_day_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_day_archives_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveDaySerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_day_archives_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_day_archives_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_day_archives_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_day_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_day_archives_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveDaySerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_day_archives_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'starttime' in params:
+            query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'endtime' in params:
+            query_params.append(('endtime', params['endtime']))  # noqa: E501
+        if 'metric' in params:
+            query_params.append(('metric', params['metric']))  # noqa: E501
+        if 'channel' in params:
+            query_params.append(('channel', params['channel']))  # noqa: E501
+        if 'group' in params:
+            query_params.append(('group', params['group']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/day-archives/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyArchiveDaySerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_day_archives_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_day_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_day_archives_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveDaySerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_day_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_day_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_day_archives_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_day_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_day_archives_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveDaySerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_day_archives_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_day_archives_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/day-archives/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyArchiveDaySerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_hour_archives_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_hour_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_hour_archives_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveHourSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_hour_archives_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_hour_archives_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_hour_archives_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_hour_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_hour_archives_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveHourSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_hour_archives_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'starttime' in params:
+            query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'endtime' in params:
+            query_params.append(('endtime', params['endtime']))  # noqa: E501
+        if 'metric' in params:
+            query_params.append(('metric', params['metric']))  # noqa: E501
+        if 'channel' in params:
+            query_params.append(('channel', params['channel']))  # noqa: E501
+        if 'group' in params:
+            query_params.append(('group', params['group']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/hour-archives/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyArchiveHourSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_hour_archives_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_hour_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_hour_archives_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveHourSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_hour_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_hour_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_hour_archives_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_hour_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_hour_archives_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveHourSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_hour_archives_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_hour_archives_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/hour-archives/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyArchiveHourSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2582,8 +3905,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_measurements_create`")  # noqa: E501
 
         collection_formats = {}
@@ -2681,8 +4004,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_measurements_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -2729,7 +4052,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_list(self, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_list  # noqa: E501
 
-        end point for using channel filter  # noqa: E501
+        We want to be carful about large querries so require params  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_list(async_req=True)
@@ -2740,6 +4063,7 @@ class V10Api(object):
         :param str endtime: 
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
         :return: list[ReadOnlyMeasurementSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2754,7 +4078,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_list_with_http_info(self, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_list  # noqa: E501
 
-        end point for using channel filter  # noqa: E501
+        We want to be carful about large querries so require params  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_list_with_http_info(async_req=True)
@@ -2765,12 +4089,13 @@ class V10Api(object):
         :param str endtime: 
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
         :return: list[ReadOnlyMeasurementSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['starttime', 'endtime', 'metric', 'channel']  # noqa: E501
+        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2799,6 +4124,8 @@ class V10Api(object):
             query_params.append(('metric', params['metric']))  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
+        if 'group' in params:
+            query_params.append(('group', params['group']))  # noqa: E501
 
         header_params = {}
 
@@ -2889,12 +4216,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_measurements_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_measurements_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -2994,8 +4321,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_measurements_read`")  # noqa: E501
 
         collection_formats = {}
@@ -3095,12 +4422,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_measurements_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_measurements_update`")  # noqa: E501
 
         collection_formats = {}
@@ -3200,8 +4527,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_metrics_create`")  # noqa: E501
 
         collection_formats = {}
@@ -3299,8 +4626,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_metrics_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -3495,12 +4822,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_metrics_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_metrics_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -3600,8 +4927,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_metrics_read`")  # noqa: E501
 
         collection_formats = {}
@@ -3701,12 +5028,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_metrics_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_metrics_update`")  # noqa: E501
 
         collection_formats = {}
@@ -3745,6 +5072,826 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyMetricSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_monitors_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyMonitorSerializer data: (required)
+        :return: ReadOnlyMonitorSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_monitors_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_monitors_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_monitors_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyMonitorSerializer data: (required)
+        :return: ReadOnlyMonitorSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_monitors_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_monitors_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/monitors/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyMonitorSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_monitors_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_monitors_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_monitors_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_monitors_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_monitors_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_monitors_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/monitors/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_monitors_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str channel_group: 
+        :param str metric: 
+        :return: list[ReadOnlyMonitorDetailSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_monitors_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_monitors_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_monitors_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str channel_group: 
+        :param str metric: 
+        :return: list[ReadOnlyMonitorDetailSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['channel_group', 'metric']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_monitors_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'channel_group' in params:
+            query_params.append(('channel_group', params['channel_group']))  # noqa: E501
+        if 'metric' in params:
+            query_params.append(('metric', params['metric']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/monitors/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyMonitorDetailSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_monitors_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyMonitorSerializer data: (required)
+        :return: ReadOnlyMonitorSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_monitors_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_monitors_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_monitors_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyMonitorSerializer data: (required)
+        :return: ReadOnlyMonitorSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_monitors_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_monitors_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_monitors_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/monitors/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyMonitorSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_monitors_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyMonitorDetailSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_monitors_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_monitors_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_monitors_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyMonitorDetailSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_monitors_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_monitors_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/monitors/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyMonitorDetailSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_monitors_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyMonitorSerializer data: (required)
+        :return: ReadOnlyMonitorSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_monitors_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_monitors_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_monitors_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_monitors_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_monitors_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyMonitorSerializer data: (required)
+        :return: ReadOnlyMonitorSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_monitors_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_monitors_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_monitors_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/monitors/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyMonitorSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_month_archives_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_month_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_month_archives_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveMonthSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_month_archives_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_month_archives_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_month_archives_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_month_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_month_archives_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveMonthSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_month_archives_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'starttime' in params:
+            query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'endtime' in params:
+            query_params.append(('endtime', params['endtime']))  # noqa: E501
+        if 'metric' in params:
+            query_params.append(('metric', params['metric']))  # noqa: E501
+        if 'channel' in params:
+            query_params.append(('channel', params['channel']))  # noqa: E501
+        if 'group' in params:
+            query_params.append(('group', params['group']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/month-archives/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyArchiveMonthSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_month_archives_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_month_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_month_archives_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveMonthSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_month_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_month_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_month_archives_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_month_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_month_archives_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveMonthSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_month_archives_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_month_archives_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/month-archives/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyArchiveMonthSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3806,8 +5953,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_thresholds_create`")  # noqa: E501
 
         collection_formats = {}
@@ -3905,8 +6052,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_thresholds_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -4105,12 +6252,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_thresholds_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_thresholds_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -4210,8 +6357,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_thresholds_read`")  # noqa: E501
 
         collection_formats = {}
@@ -4311,12 +6458,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_thresholds_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_thresholds_update`")  # noqa: E501
 
         collection_formats = {}
@@ -4355,6 +6502,822 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyThresholdSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_triggers_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyTriggerSerializer data: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_triggers_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_triggers_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_triggers_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_create  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyTriggerSerializer data: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_triggers_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_triggers_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/triggers/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyTriggerSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_triggers_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_triggers_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_triggers_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_triggers_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_delete  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_triggers_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_triggers_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/triggers/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_triggers_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str monitor: 
+        :return: list[ReadOnlyTriggerSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_triggers_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_triggers_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_triggers_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str monitor: 
+        :return: list[ReadOnlyTriggerSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['monitor']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_triggers_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'monitor' in params:
+            query_params.append(('monitor', params['monitor']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/triggers/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyTriggerSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_triggers_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyTriggerSerializer data: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_triggers_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_triggers_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_triggers_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_partial_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyTriggerSerializer data: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_triggers_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_triggers_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_triggers_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/triggers/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyTriggerSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_triggers_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_triggers_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_triggers_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_triggers_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_triggers_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_triggers_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/triggers/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyTriggerSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_triggers_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyTriggerSerializer data: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_triggers_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_triggers_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_triggers_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_measurement_triggers_update  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_triggers_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyTriggerSerializer data: (required)
+        :return: ReadOnlyTriggerSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_triggers_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_triggers_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_measurement_triggers_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/triggers/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyTriggerSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_week_archives_list(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_week_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_week_archives_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveWeekSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_week_archives_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_week_archives_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_week_archives_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_measurement_week_archives_list  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_week_archives_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str starttime: 
+        :param str endtime: 
+        :param float metric: Multiple values may be separated by commas.
+        :param float channel: Multiple values may be separated by commas.
+        :param float group: Multiple values may be separated by commas.
+        :return: list[ReadOnlyArchiveWeekSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_week_archives_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'starttime' in params:
+            query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'endtime' in params:
+            query_params.append(('endtime', params['endtime']))  # noqa: E501
+        if 'metric' in params:
+            query_params.append(('metric', params['metric']))  # noqa: E501
+        if 'channel' in params:
+            query_params.append(('channel', params['channel']))  # noqa: E501
+        if 'group' in params:
+            query_params.append(('group', params['group']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/week-archives/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyArchiveWeekSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_measurement_week_archives_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_week_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_week_archives_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveWeekSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_measurement_week_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_measurement_week_archives_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_measurement_week_archives_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_measurement_week_archives_read  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_measurement_week_archives_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyArchiveWeekSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_measurement_week_archives_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_measurement_week_archives_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/measurement/week-archives/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyArchiveWeekSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4416,8 +7379,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_channels_create`")  # noqa: E501
 
         collection_formats = {}
@@ -4515,8 +7478,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_channels_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -4759,12 +7722,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_channels_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_channels_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -4864,8 +7827,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_channels_read`")  # noqa: E501
 
         collection_formats = {}
@@ -4965,12 +7928,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_channels_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_channels_update`")  # noqa: E501
 
         collection_formats = {}
@@ -5070,8 +8033,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_groups_create`")  # noqa: E501
 
         collection_formats = {}
@@ -5169,8 +8132,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_groups_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -5224,6 +8187,8 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str name: 
+        :param str organization: 
         :return: list[ReadOnlyGroupSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5245,12 +8210,14 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str name: 
+        :param str organization: 
         :return: list[ReadOnlyGroupSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['name', 'organization']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5271,6 +8238,10 @@ class V10Api(object):
         path_params = {}
 
         query_params = []
+        if 'name' in params:
+            query_params.append(('name', params['name']))  # noqa: E501
+        if 'organization' in params:
+            query_params.append(('organization', params['organization']))  # noqa: E501
 
         header_params = {}
 
@@ -5361,12 +8332,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_groups_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_groups_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -5466,8 +8437,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_groups_read`")  # noqa: E501
 
         collection_formats = {}
@@ -5567,12 +8538,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_nslc_groups_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_groups_update`")  # noqa: E501
 
         collection_formats = {}
@@ -5672,8 +8643,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_networks_create`")  # noqa: E501
 
         collection_formats = {}
@@ -5771,8 +8742,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'code' is set
-        if ('code' not in params or
-                params['code'] is None):
+        if self.api_client.client_side_validation and ('code' not in params or
+                                                       params['code'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `code` when calling `v1_0_nslc_networks_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -5971,12 +8942,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'code' is set
-        if ('code' not in params or
-                params['code'] is None):
+        if self.api_client.client_side_validation and ('code' not in params or
+                                                       params['code'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `code` when calling `v1_0_nslc_networks_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_networks_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -6076,8 +9047,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'code' is set
-        if ('code' not in params or
-                params['code'] is None):
+        if self.api_client.client_side_validation and ('code' not in params or
+                                                       params['code'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `code` when calling `v1_0_nslc_networks_read`")  # noqa: E501
 
         collection_formats = {}
@@ -6177,12 +9148,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'code' is set
-        if ('code' not in params or
-                params['code'] is None):
+        if self.api_client.client_side_validation and ('code' not in params or
+                                                       params['code'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `code` when calling `v1_0_nslc_networks_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_nslc_networks_update`")  # noqa: E501
 
         collection_formats = {}
@@ -6282,8 +9253,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_organizations_create`")  # noqa: E501
 
         collection_formats = {}
@@ -6381,8 +9352,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -6436,6 +9407,7 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str name: 
         :return: list[ReadOnlyOrganizationSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6457,12 +9429,13 @@ class V10Api(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str name: 
         :return: list[ReadOnlyOrganizationSerializer]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['name']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6483,6 +9456,8 @@ class V10Api(object):
         path_params = {}
 
         query_params = []
+        if 'name' in params:
+            query_params.append(('name', params['name']))  # noqa: E501
 
         header_params = {}
 
@@ -6573,12 +9548,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_organizations_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -6678,8 +9653,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_read`")  # noqa: E501
 
         collection_formats = {}
@@ -6779,12 +9754,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_organizations_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_organizations_update`")  # noqa: E501
 
         collection_formats = {}
@@ -6884,8 +9859,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_users_create`")  # noqa: E501
 
         collection_formats = {}
@@ -6983,8 +9958,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -7179,12 +10154,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_users_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -7284,8 +10259,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_read`")  # noqa: E501
 
         collection_formats = {}
@@ -7385,12 +10360,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_organization_users_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_organization_users_update`")  # noqa: E501
 
         collection_formats = {}
@@ -7490,8 +10465,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_password_reset_confirm_create`")  # noqa: E501
 
         collection_formats = {}
@@ -7589,8 +10564,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_password_reset_create`")  # noqa: E501
 
         collection_formats = {}
@@ -7688,8 +10663,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_password_reset_validate_token_create`")  # noqa: E501
 
         collection_formats = {}
@@ -7726,6 +10701,608 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyTokenSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_contacts_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_create  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyContactSerializer data: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_contacts_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_contacts_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_contacts_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_create  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyContactSerializer data: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_contacts_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_contacts_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/contacts/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyContactSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_contacts_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_delete  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_contacts_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_contacts_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_contacts_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_delete  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_contacts_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_contacts_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/contacts/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_contacts_list(self, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_list  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyContactSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_contacts_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_contacts_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_contacts_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_list  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyContactSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_contacts_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/contacts/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyContactSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_contacts_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_partial_update  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyContactSerializer data: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_contacts_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_contacts_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_contacts_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_partial_update  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyContactSerializer data: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_contacts_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_contacts_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_contacts_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/contacts/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyContactSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_contacts_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_read  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_contacts_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_contacts_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_contacts_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_read  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_contacts_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_contacts_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/contacts/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyContactSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_contacts_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_update  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyContactSerializer data: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_contacts_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_contacts_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_contacts_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_contacts_update  # noqa: E501
+
+        Manage contact info  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_contacts_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyContactSerializer data: (required)
+        :return: ReadOnlyContactSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_contacts_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_contacts_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_contacts_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/contacts/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyContactSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -7787,8 +11364,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_create_create`")  # noqa: E501
 
         collection_formats = {}
@@ -7886,8 +11463,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_groups_create`")  # noqa: E501
 
         collection_formats = {}
@@ -7985,8 +11562,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -8177,12 +11754,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_partial_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_groups_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -8282,8 +11859,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_read`")  # noqa: E501
 
         collection_formats = {}
@@ -8383,12 +11960,12 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `id` when calling `v1_0_user_groups_update`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_groups_update`")  # noqa: E501
 
         collection_formats = {}
@@ -8488,8 +12065,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_me_partial_update`")  # noqa: E501
 
         collection_formats = {}
@@ -8678,8 +12255,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_me_update`")  # noqa: E501
 
         collection_formats = {}
@@ -8716,6 +12293,608 @@ class V10Api(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ReadOnlyUserMeSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_notifications_create(self, data, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_create  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_create(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyNotificationSerializer data: (required)
+        :return: ReadOnlyNotificationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_notifications_create_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_notifications_create_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_notifications_create_with_http_info(self, data, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_create  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_create_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param WriteOnlyNotificationSerializer data: (required)
+        :return: ReadOnlyNotificationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_notifications_create" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_notifications_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/notifications/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyNotificationSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_notifications_delete(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_delete  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_notifications_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_notifications_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_notifications_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_delete  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_notifications_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_notifications_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/notifications/{id}/', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_notifications_list(self, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_list  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyNotificationDetailSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_notifications_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_notifications_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_notifications_list_with_http_info(self, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_list  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: list[ReadOnlyNotificationDetailSerializer]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_notifications_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/notifications/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ReadOnlyNotificationDetailSerializer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_notifications_partial_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_partial_update  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_partial_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyNotificationSerializer data: (required)
+        :return: ReadOnlyNotificationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_notifications_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_notifications_partial_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_notifications_partial_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_partial_update  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_partial_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyNotificationSerializer data: (required)
+        :return: ReadOnlyNotificationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_notifications_partial_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_notifications_partial_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_notifications_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/notifications/{id}/', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyNotificationSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_notifications_read(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_read  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_read(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyNotificationDetailSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_notifications_read_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_notifications_read_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_notifications_read_with_http_info(self, id, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_read  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_read_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :return: ReadOnlyNotificationDetailSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_notifications_read" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_notifications_read`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/notifications/{id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyNotificationDetailSerializer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def v1_0_user_notifications_update(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_update  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_update(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyNotificationSerializer data: (required)
+        :return: ReadOnlyNotificationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.v1_0_user_notifications_update_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.v1_0_user_notifications_update_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def v1_0_user_notifications_update_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """v1_0_user_notifications_update  # noqa: E501
+
+        Manage user notifications  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_0_user_notifications_update_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param WriteOnlyNotificationSerializer data: (required)
+        :return: ReadOnlyNotificationSerializer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_0_user_notifications_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in params or
+                                                       params['id'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `v1_0_user_notifications_update`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
+            raise ValueError("Missing the required parameter `data` when calling `v1_0_user_notifications_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/v1.0/user/notifications/{id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ReadOnlyNotificationSerializer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -8777,8 +12956,8 @@ class V10Api(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in params or
+                                                       params['data'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `data` when calling `v1_0_user_token_create`")  # noqa: E501
 
         collection_formats = {}
