@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **lat** | **float** |  | 
 **lon** | **float** |  | 
 **elev** | **float** |  | 
+**azimuth** | **float** |  | [optional] 
+**dip** | **float** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **user_id** | **str** |  | [optional] 

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# Usage: to update, checkout a branch then run. 
+# Usage:
+#   checkout a branch then run. 
+# 	TOKEN=supersecret ./generate_swagger.sh
+# To get token go to https://squacapi.pnsn.org/v1.0/user/token/
 # to see a list of generate args
 #TOKEN=supersecrettoken docker run -v ${PWD}:/tmp --rm swaggerapi/swagger-codegen-cli help generate
 docker run -v ${PWD}:/local/ --rm swaggerapi/swagger-codegen-cli \
