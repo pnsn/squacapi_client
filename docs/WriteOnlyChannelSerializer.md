@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **str** |  | 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **station_code** | **str** |  | 
 **station_name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 

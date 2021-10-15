@@ -18,7 +18,6 @@ from __future__ import absolute_import
 from squacapi_client.models.auth_token import AuthToken
 from squacapi_client.models.channel import Channel
 from squacapi_client.models.contact import Contact
-from squacapi_client.models.dashboard import Dashboard
 from squacapi_client.models.group import Group
 from squacapi_client.models.metric import Metric
 from squacapi_client.models.nslc_group import NslcGroup

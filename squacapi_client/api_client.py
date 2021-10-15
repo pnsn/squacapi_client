@@ -163,9 +163,6 @@ class ApiClient(object):
 
         self.last_response = response_data
 
-        if response_data.data.startswith('[') and not response_type.startswith('list['):
-            response_type = 'list[' + response_type + ']'
-        
         return_data = response_data
         if _preload_content:
             # deserialize response data
@@ -537,7 +534,7 @@ class ApiClient(object):
                                  content_disposition).group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
-        with open(path, "wb") as f:
+        with open(path, "w") as f:
             f.write(response.data)
 
         return path

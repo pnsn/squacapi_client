@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **interval_count** | **int** |  | 
 **num_channels** | **int** |  | 
 **stat** | **str** |  | [optional] 
+**invert_monitor** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

@@ -35,7 +35,7 @@ class ReadOnlyWidgetDetailSerializer(object):
     swagger_types = {
         'id': 'int',
         'name': 'str',
-        'dashboard': 'Dashboard',
+        'dashboard': 'int',
         'description': 'str',
         'widgettype': 'WidgetType',
         'metrics': 'list[Metric]',
@@ -100,8 +100,7 @@ class ReadOnlyWidgetDetailSerializer(object):
         if id is not None:
             self.id = id
         self.name = name
-        if dashboard is not None:
-            self.dashboard = dashboard
+        self.dashboard = dashboard
         if description is not None:
             self.description = description
         if widgettype is not None:
@@ -182,7 +181,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :return: The dashboard of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :rtype: Dashboard
+        :rtype: int
         """
         return self._dashboard
 
@@ -192,8 +191,10 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :param dashboard: The dashboard of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :type: Dashboard
+        :type: int
         """
+        if self._configuration.client_side_validation and dashboard is None:
+            raise ValueError("Invalid value for `dashboard`, must not be `None`")  # noqa: E501
 
         self._dashboard = dashboard
 

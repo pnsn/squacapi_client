@@ -114,7 +114,8 @@ class ReadOnlyChannelSerializer(object):
         if class_name is not None:
             self.class_name = class_name
         self.code = code
-        self.name = name
+        if name is not None:
+            self.name = name
         self.station_code = station_code
         if station_name is not None:
             self.station_name = station_name
@@ -234,14 +235,9 @@ class ReadOnlyChannelSerializer(object):
         :param name: The name of this ReadOnlyChannelSerializer.  # noqa: E501
         :type: str
         """
-        if self._configuration.client_side_validation and name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         if (self._configuration.client_side_validation and
                 name is not None and len(name) > 255):
             raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
-        if (self._configuration.client_side_validation and
-                name is not None and len(name) < 1):
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 

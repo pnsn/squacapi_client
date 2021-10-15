@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **class_name** | **str** |  | [optional] 
 **code** | **str** |  | 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **station_code** | **str** |  | 
 **station_name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
