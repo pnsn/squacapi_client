@@ -39,6 +39,7 @@ class WriteOnlyMonitorSerializer(object):
         'interval_count': 'int',
         'num_channels': 'int',
         'stat': 'str',
+        'invert_monitor': 'bool',
         'name': 'str'
     }
 
@@ -49,10 +50,11 @@ class WriteOnlyMonitorSerializer(object):
         'interval_count': 'interval_count',
         'num_channels': 'num_channels',
         'stat': 'stat',
+        'invert_monitor': 'invert_monitor',
         'name': 'name'
     }
 
-    def __init__(self, channel_group=None, metric=None, interval_type=None, interval_count=None, num_channels=None, stat=None, name=None, _configuration=None):  # noqa: E501
+    def __init__(self, channel_group=None, metric=None, interval_type=None, interval_count=None, num_channels=None, stat=None, invert_monitor=None, name=None, _configuration=None):  # noqa: E501
         """WriteOnlyMonitorSerializer - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -64,6 +66,7 @@ class WriteOnlyMonitorSerializer(object):
         self._interval_count = None
         self._num_channels = None
         self._stat = None
+        self._invert_monitor = None
         self._name = None
         self.discriminator = None
 
@@ -75,6 +78,8 @@ class WriteOnlyMonitorSerializer(object):
         self.num_channels = num_channels
         if stat is not None:
             self.stat = stat
+        if invert_monitor is not None:
+            self.invert_monitor = invert_monitor
         if name is not None:
             self.name = name
 
@@ -237,6 +242,27 @@ class WriteOnlyMonitorSerializer(object):
             )
 
         self._stat = stat
+
+    @property
+    def invert_monitor(self):
+        """Gets the invert_monitor of this WriteOnlyMonitorSerializer.  # noqa: E501
+
+
+        :return: The invert_monitor of this WriteOnlyMonitorSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._invert_monitor
+
+    @invert_monitor.setter
+    def invert_monitor(self, invert_monitor):
+        """Sets the invert_monitor of this WriteOnlyMonitorSerializer.
+
+
+        :param invert_monitor: The invert_monitor of this WriteOnlyMonitorSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._invert_monitor = invert_monitor
 
     @property
     def name(self):

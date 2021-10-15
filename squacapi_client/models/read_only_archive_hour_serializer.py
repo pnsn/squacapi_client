@@ -35,6 +35,8 @@ class ReadOnlyArchiveHourSerializer(object):
     swagger_types = {
         'channel': 'int',
         'metric': 'int',
+        'minabs': 'str',
+        'maxabs': 'str',
         'id': 'str',
         'min': 'float',
         'max': 'float',
@@ -55,6 +57,8 @@ class ReadOnlyArchiveHourSerializer(object):
     attribute_map = {
         'channel': 'channel',
         'metric': 'metric',
+        'minabs': 'minabs',
+        'maxabs': 'maxabs',
         'id': 'id',
         'min': 'min',
         'max': 'max',
@@ -72,7 +76,7 @@ class ReadOnlyArchiveHourSerializer(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, channel=None, metric=None, id=None, min=None, max=None, mean=None, median=None, stdev=None, num_samps=None, p05=None, p10=None, p90=None, p95=None, starttime=None, endtime=None, created_at=None, updated_at=None, _configuration=None):  # noqa: E501
+    def __init__(self, channel=None, metric=None, minabs=None, maxabs=None, id=None, min=None, max=None, mean=None, median=None, stdev=None, num_samps=None, p05=None, p10=None, p90=None, p95=None, starttime=None, endtime=None, created_at=None, updated_at=None, _configuration=None):  # noqa: E501
         """ReadOnlyArchiveHourSerializer - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -80,6 +84,8 @@ class ReadOnlyArchiveHourSerializer(object):
 
         self._channel = None
         self._metric = None
+        self._minabs = None
+        self._maxabs = None
         self._id = None
         self._min = None
         self._max = None
@@ -99,6 +105,10 @@ class ReadOnlyArchiveHourSerializer(object):
 
         self.channel = channel
         self.metric = metric
+        if minabs is not None:
+            self.minabs = minabs
+        if maxabs is not None:
+            self.maxabs = maxabs
         if id is not None:
             self.id = id
         self.min = min
@@ -163,6 +173,48 @@ class ReadOnlyArchiveHourSerializer(object):
             raise ValueError("Invalid value for `metric`, must not be `None`")  # noqa: E501
 
         self._metric = metric
+
+    @property
+    def minabs(self):
+        """Gets the minabs of this ReadOnlyArchiveHourSerializer.  # noqa: E501
+
+
+        :return: The minabs of this ReadOnlyArchiveHourSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._minabs
+
+    @minabs.setter
+    def minabs(self, minabs):
+        """Sets the minabs of this ReadOnlyArchiveHourSerializer.
+
+
+        :param minabs: The minabs of this ReadOnlyArchiveHourSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._minabs = minabs
+
+    @property
+    def maxabs(self):
+        """Gets the maxabs of this ReadOnlyArchiveHourSerializer.  # noqa: E501
+
+
+        :return: The maxabs of this ReadOnlyArchiveHourSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._maxabs
+
+    @maxabs.setter
+    def maxabs(self, maxabs):
+        """Sets the maxabs of this ReadOnlyArchiveHourSerializer.
+
+
+        :param maxabs: The maxabs of this ReadOnlyArchiveHourSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._maxabs = maxabs
 
     @property
     def id(self):

@@ -41,6 +41,7 @@ class ReadOnlyMonitorDetailSerializer(object):
         'interval_count': 'int',
         'num_channels': 'int',
         'stat': 'str',
+        'invert_monitor': 'bool',
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -57,6 +58,7 @@ class ReadOnlyMonitorDetailSerializer(object):
         'interval_count': 'interval_count',
         'num_channels': 'num_channels',
         'stat': 'stat',
+        'invert_monitor': 'invert_monitor',
         'name': 'name',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
@@ -64,7 +66,7 @@ class ReadOnlyMonitorDetailSerializer(object):
         'triggers': 'triggers'
     }
 
-    def __init__(self, id=None, url=None, channel_group=None, metric=None, interval_type=None, interval_count=None, num_channels=None, stat=None, name=None, created_at=None, updated_at=None, user_id=None, triggers=None, _configuration=None):  # noqa: E501
+    def __init__(self, id=None, url=None, channel_group=None, metric=None, interval_type=None, interval_count=None, num_channels=None, stat=None, invert_monitor=None, name=None, created_at=None, updated_at=None, user_id=None, triggers=None, _configuration=None):  # noqa: E501
         """ReadOnlyMonitorDetailSerializer - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -78,6 +80,7 @@ class ReadOnlyMonitorDetailSerializer(object):
         self._interval_count = None
         self._num_channels = None
         self._stat = None
+        self._invert_monitor = None
         self._name = None
         self._created_at = None
         self._updated_at = None
@@ -99,6 +102,8 @@ class ReadOnlyMonitorDetailSerializer(object):
         self.num_channels = num_channels
         if stat is not None:
             self.stat = stat
+        if invert_monitor is not None:
+            self.invert_monitor = invert_monitor
         if name is not None:
             self.name = name
         if created_at is not None:
@@ -307,6 +312,27 @@ class ReadOnlyMonitorDetailSerializer(object):
             )
 
         self._stat = stat
+
+    @property
+    def invert_monitor(self):
+        """Gets the invert_monitor of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+
+
+        :return: The invert_monitor of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._invert_monitor
+
+    @invert_monitor.setter
+    def invert_monitor(self, invert_monitor):
+        """Sets the invert_monitor of this ReadOnlyMonitorDetailSerializer.
+
+
+        :param invert_monitor: The invert_monitor of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._invert_monitor = invert_monitor
 
     @property
     def name(self):

@@ -2265,7 +2265,7 @@ void (empty response body)
 
 
 
-We want to be carful about large querries so require params
+We want to be careful about large queries so require params
 
 ### Example
 ```python
@@ -4106,7 +4106,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_list**
-> list[ReadOnlyChannelSerializer] v1_0_nslc_channels_list(network=network, channel=channel, chan_search=chan_search, station=station, location=location, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
+> list[ReadOnlyChannelSerializer] v1_0_nslc_channels_list(network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
 
 
 
@@ -4129,10 +4129,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
 network = 'network_example' # str | Multiple values may be separated by commas. (optional)
+net_search = 'net_search_example' # str |  (optional)
 channel = 'channel_example' # str | Multiple values may be separated by commas. (optional)
 chan_search = 'chan_search_example' # str |  (optional)
 station = 'station_example' # str | Multiple values may be separated by commas. (optional)
+sta_search = 'sta_search_example' # str |  (optional)
 location = 'location_example' # str |  (optional)
+loc_search = 'loc_search_example' # str |  (optional)
 startafter = 'startafter_example' # str |  (optional)
 startbefore = 'startbefore_example' # str |  (optional)
 endafter = 'endafter_example' # str |  (optional)
@@ -4143,7 +4146,7 @@ lon_min = 8.14 # float |  (optional)
 lon_max = 8.14 # float |  (optional)
 
 try:
-    api_response = api_instance.v1_0_nslc_channels_list(network=network, channel=channel, chan_search=chan_search, station=station, location=location, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
+    api_response = api_instance.v1_0_nslc_channels_list(network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling V10Api->v1_0_nslc_channels_list: %s\n" % e)
@@ -4154,10 +4157,13 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network** | **str**| Multiple values may be separated by commas. | [optional] 
+ **net_search** | **str**|  | [optional] 
  **channel** | **str**| Multiple values may be separated by commas. | [optional] 
  **chan_search** | **str**|  | [optional] 
  **station** | **str**| Multiple values may be separated by commas. | [optional] 
+ **sta_search** | **str**|  | [optional] 
  **location** | **str**|  | [optional] 
+ **loc_search** | **str**|  | [optional] 
  **startafter** | **str**|  | [optional] 
  **startbefore** | **str**|  | [optional] 
  **endafter** | **str**|  | [optional] 

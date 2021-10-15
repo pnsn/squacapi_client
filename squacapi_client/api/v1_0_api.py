@@ -4052,7 +4052,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_list(self, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_list  # noqa: E501
 
-        We want to be carful about large querries so require params  # noqa: E501
+        We want to be careful about large queries so require params  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_list(async_req=True)
@@ -4078,7 +4078,7 @@ class V10Api(object):
     def v1_0_measurement_measurements_list_with_http_info(self, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_list  # noqa: E501
 
-        We want to be carful about large querries so require params  # noqa: E501
+        We want to be careful about large queries so require params  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_list_with_http_info(async_req=True)
@@ -7534,10 +7534,13 @@ class V10Api(object):
 
         :param async_req bool
         :param str network: Multiple values may be separated by commas.
+        :param str net_search: 
         :param str channel: Multiple values may be separated by commas.
         :param str chan_search: 
         :param str station: Multiple values may be separated by commas.
+        :param str sta_search: 
         :param str location: 
+        :param str loc_search: 
         :param str startafter: 
         :param str startbefore: 
         :param str endafter: 
@@ -7568,10 +7571,13 @@ class V10Api(object):
 
         :param async_req bool
         :param str network: Multiple values may be separated by commas.
+        :param str net_search: 
         :param str channel: Multiple values may be separated by commas.
         :param str chan_search: 
         :param str station: Multiple values may be separated by commas.
+        :param str sta_search: 
         :param str location: 
+        :param str loc_search: 
         :param str startafter: 
         :param str startbefore: 
         :param str endafter: 
@@ -7585,7 +7591,7 @@ class V10Api(object):
                  returns the request thread.
         """
 
-        all_params = ['network', 'channel', 'chan_search', 'station', 'location', 'startafter', 'startbefore', 'endafter', 'endbefore', 'lat_min', 'lat_max', 'lon_min', 'lon_max']  # noqa: E501
+        all_params = ['network', 'net_search', 'channel', 'chan_search', 'station', 'sta_search', 'location', 'loc_search', 'startafter', 'startbefore', 'endafter', 'endbefore', 'lat_min', 'lat_max', 'lon_min', 'lon_max']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7608,14 +7614,20 @@ class V10Api(object):
         query_params = []
         if 'network' in params:
             query_params.append(('network', params['network']))  # noqa: E501
+        if 'net_search' in params:
+            query_params.append(('net_search', params['net_search']))  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
         if 'chan_search' in params:
             query_params.append(('chan_search', params['chan_search']))  # noqa: E501
         if 'station' in params:
             query_params.append(('station', params['station']))  # noqa: E501
+        if 'sta_search' in params:
+            query_params.append(('sta_search', params['sta_search']))  # noqa: E501
         if 'location' in params:
             query_params.append(('location', params['location']))  # noqa: E501
+        if 'loc_search' in params:
+            query_params.append(('loc_search', params['loc_search']))  # noqa: E501
         if 'startafter' in params:
             query_params.append(('startafter', params['startafter']))  # noqa: E501
         if 'startbefore' in params:

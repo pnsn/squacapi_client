@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **name** | **str** |  | 
-**dashboard** | [**Dashboard**](Dashboard.md) |  | [optional] 
+**dashboard** | **int** |  | 
 **description** | **str** |  | [optional] 
 **widgettype** | [**WidgetType**](WidgetType.md) |  | [optional] 
 **metrics** | [**list[Metric]**](Metric.md) |  | [optional] 
