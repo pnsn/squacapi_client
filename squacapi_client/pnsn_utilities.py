@@ -61,10 +61,16 @@ def perform_bulk_create(measurements, client, *args, **kwargs):
     else:
         chunk = 100
     end = chunk
+
+    if 'async_req' in kwargs:
+        async_req = kwargs['async_req']
+    else:
+        async_req = False
+
     while start < len(measurements):
         collection = measurements[start:end]
         try:
-            resp = client.v1_0_measurement_measurements_create(collection)
+            resp = client.v1_0_measurement_measurements_create(collection, async_req)
             response += resp
         except ApiException as e:
             error = {
