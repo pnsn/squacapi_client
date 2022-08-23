@@ -1,13 +1,11 @@
 # ReadOnlyArchiveHourSerializer
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **channel** | **int** |  | 
 **metric** | **int** |  | 
-**minabs** | **str** |  | [optional] 
-**maxabs** | **str** |  | [optional] 
-**id** | **str** |  | [optional] 
 **min** | **float** |  | 
 **max** | **float** |  | 
 **mean** | **float** |  | 
@@ -20,8 +18,12 @@ Name | Type | Description | Notes
 **p95** | **float** |  | 
 **starttime** | **datetime** |  | 
 **endtime** | **datetime** |  | 
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
+**minabs** | **str** |  | [optional] [readonly] 
+**maxabs** | **str** |  | [optional] [readonly] 
+**id** | **str** |  | [optional] [readonly] 
+**created_at** | **datetime** |  | [optional] [readonly] 
+**updated_at** | **datetime** |  | [optional] [readonly] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

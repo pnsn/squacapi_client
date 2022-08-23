@@ -1,21 +1,21 @@
 # ReadOnlyMonitorSerializer
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**url** | **str** |  | [optional] 
 **channel_group** | **int** |  | 
 **metric** | **int** |  | 
-**interval_type** | **str** |  | [optional] 
 **interval_count** | **int** |  | 
-**num_channels** | **int** |  | 
+**id** | **int** |  | [optional] [readonly] 
+**url** | **str** |  | [optional] [readonly] 
+**interval_type** | **str** |  | [optional] 
 **stat** | **str** |  | [optional] 
-**invert_monitor** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
-**user_id** | **str** |  | [optional] 
+**created_at** | **datetime** |  | [optional] [readonly] 
+**updated_at** | **datetime** |  | [optional] [readonly] 
+**user_id** | **str** |  | [optional] [readonly] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

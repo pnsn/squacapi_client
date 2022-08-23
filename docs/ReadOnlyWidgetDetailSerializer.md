@@ -1,25 +1,20 @@
 # ReadOnlyWidgetDetailSerializer
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **dashboard** | **int** |  | 
-**description** | **str** |  | [optional] 
-**widgettype** | [**WidgetType**](WidgetType.md) |  | [optional] 
-**metrics** | [**list[Metric]**](Metric.md) |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
-**thresholds** | [**list[Threshold]**](Threshold.md) |  | [optional] 
-**columns** | **int** |  | 
-**rows** | **int** |  | 
-**x_position** | **int** |  | 
-**y_position** | **int** |  | 
-**stattype** | [**StatType**](StatType.md) |  | [optional] 
-**channel_group** | **int** |  | 
-**user_id** | **str** |  | [optional] 
-**color_pallet** | **str** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
+**metrics** | [**[Metric]**](Metric.md) |  | [optional] [readonly] 
+**thresholds** | **str, none_type** |  | [optional] 
+**user_id** | **str** |  | [optional] [readonly] 
+**type** | **str, none_type** |  | [optional] 
+**stat** | **str, none_type** |  | [optional] 
+**properties** | **str, none_type** |  | [optional] 
+**layout** | **str, none_type** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
