@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
-**channel_group** | **int** |  | 
 **organization** | **int** |  | 
 **id** | **int** |  | [optional] [readonly] 
 **description** | **str** |  | [optional] 
+**channel_group** | **int** |  | [optional] 
 **user** | **int** |  | [optional] [readonly] 
 **share_all** | **bool** |  | [optional] 
 **share_org** | **bool** |  | [optional] 

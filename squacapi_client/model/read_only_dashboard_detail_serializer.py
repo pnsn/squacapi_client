@@ -93,10 +93,10 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
         return {
             'name': (str,),  # noqa: E501
             'widgets': ([int],),  # noqa: E501
-            'channel_group': (int,),  # noqa: E501
             'organization': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'channel_group': (int,),  # noqa: E501
             'user': (int,),  # noqa: E501
             'share_all': (bool,),  # noqa: E501
             'share_org': (bool,),  # noqa: E501
@@ -111,10 +111,10 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
     attribute_map = {
         'name': 'name',  # noqa: E501
         'widgets': 'widgets',  # noqa: E501
-        'channel_group': 'channel_group',  # noqa: E501
         'organization': 'organization',  # noqa: E501
         'id': 'id',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'channel_group': 'channel_group',  # noqa: E501
         'user': 'user',  # noqa: E501
         'share_all': 'share_all',  # noqa: E501
         'share_org': 'share_org',  # noqa: E501
@@ -130,13 +130,12 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, name, widgets, channel_group, organization, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, name, widgets, organization, *args, **kwargs):  # noqa: E501
         """ReadOnlyDashboardDetailSerializer - a model defined in OpenAPI
 
         Args:
             name (str):
             widgets ([int]):
-            channel_group (int):
             organization (int):
 
         Keyword Args:
@@ -172,6 +171,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            channel_group (int): [optional]  # noqa: E501
             user (int): [optional]  # noqa: E501
             share_all (bool): [optional]  # noqa: E501
             share_org (bool): [optional]  # noqa: E501
@@ -209,7 +209,6 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
 
         self.name = name
         self.widgets = widgets
-        self.channel_group = channel_group
         self.organization = organization
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -231,13 +230,12 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, name, widgets, channel_group, organization, *args, **kwargs):  # noqa: E501
+    def __init__(self, name, widgets, organization, *args, **kwargs):  # noqa: E501
         """ReadOnlyDashboardDetailSerializer - a model defined in OpenAPI
 
         Args:
             name (str):
             widgets ([int]):
-            channel_group (int):
             organization (int):
 
         Keyword Args:
@@ -273,6 +271,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
+            channel_group (int): [optional]  # noqa: E501
             user (int): [optional]  # noqa: E501
             share_all (bool): [optional]  # noqa: E501
             share_org (bool): [optional]  # noqa: E501
@@ -308,7 +307,6 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
 
         self.name = name
         self.widgets = widgets
-        self.channel_group = channel_group
         self.organization = organization
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

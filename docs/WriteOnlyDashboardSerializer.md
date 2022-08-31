@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
-**channel_group** | **int** |  | 
 **organization** | **int** |  | 
 **description** | **str** |  | [optional] 
+**channel_group** | **int** |  | [optional] 
 **share_all** | **bool** |  | [optional] 
 **share_org** | **bool** |  | [optional] 
 **properties** | **str, none_type** |  | [optional] 
