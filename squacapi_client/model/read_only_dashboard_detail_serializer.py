@@ -97,7 +97,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
             'organization': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'description': (str,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'share_all': (bool,),  # noqa: E501
             'share_org': (bool,),  # noqa: E501
             'properties': (str, none_type,),  # noqa: E501
@@ -115,7 +115,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
         'organization': 'organization',  # noqa: E501
         'id': 'id',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'share_all': 'share_all',  # noqa: E501
         'share_org': 'share_org',  # noqa: E501
         'properties': 'properties',  # noqa: E501
@@ -123,7 +123,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -172,7 +172,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             share_all (bool): [optional]  # noqa: E501
             share_org (bool): [optional]  # noqa: E501
             properties (str, none_type): [optional]  # noqa: E501
@@ -273,7 +273,7 @@ class ReadOnlyDashboardDetailSerializer(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             share_all (bool): [optional]  # noqa: E501
             share_org (bool): [optional]  # noqa: E501
             properties (str, none_type): [optional]  # noqa: E501

@@ -105,7 +105,6 @@ class ReadOnlyTriggerSerializer(ModelNormal):
             'monitor': (int,),  # noqa: E501
             'val1': (float,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'val2': (float, none_type,),  # noqa: E501
             'value_operator': (str,),  # noqa: E501
             'num_channels': (int, none_type,),  # noqa: E501
@@ -113,7 +112,7 @@ class ReadOnlyTriggerSerializer(ModelNormal):
             'email_list': (str, none_type,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'alert_on_out_of_alarm': (bool,),  # noqa: E501
         }
 
@@ -126,7 +125,6 @@ class ReadOnlyTriggerSerializer(ModelNormal):
         'monitor': 'monitor',  # noqa: E501
         'val1': 'val1',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'val2': 'val2',  # noqa: E501
         'value_operator': 'value_operator',  # noqa: E501
         'num_channels': 'num_channels',  # noqa: E501
@@ -134,16 +132,15 @@ class ReadOnlyTriggerSerializer(ModelNormal):
         'email_list': 'email_list',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'alert_on_out_of_alarm': 'alert_on_out_of_alarm',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'url',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -189,7 +186,6 @@ class ReadOnlyTriggerSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             val2 (float, none_type): [optional]  # noqa: E501
             value_operator (str): [optional]  # noqa: E501
             num_channels (int, none_type): [optional]  # noqa: E501
@@ -197,7 +193,7 @@ class ReadOnlyTriggerSerializer(ModelNormal):
             email_list (str, none_type): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             alert_on_out_of_alarm (bool): [optional]  # noqa: E501
         """
 
@@ -291,7 +287,6 @@ class ReadOnlyTriggerSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             val2 (float, none_type): [optional]  # noqa: E501
             value_operator (str): [optional]  # noqa: E501
             num_channels (int, none_type): [optional]  # noqa: E501
@@ -299,7 +294,7 @@ class ReadOnlyTriggerSerializer(ModelNormal):
             email_list (str, none_type): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             alert_on_out_of_alarm (bool): [optional]  # noqa: E501
         """
 

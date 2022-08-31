@@ -114,7 +114,6 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
         return {
             'interval_count': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'channel_group': (NslcGroup,),  # noqa: E501
             'metric': (Metric,),  # noqa: E501
             'interval_type': (str,),  # noqa: E501
@@ -122,7 +121,7 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
             'name': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'triggers': ([Trigger],),  # noqa: E501
         }
 
@@ -134,7 +133,6 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
     attribute_map = {
         'interval_count': 'interval_count',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'channel_group': 'channel_group',  # noqa: E501
         'metric': 'metric',  # noqa: E501
         'interval_type': 'interval_type',  # noqa: E501
@@ -142,16 +140,15 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
         'name': 'name',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'triggers': 'triggers',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'url',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
         'triggers',  # noqa: E501
     }
 
@@ -197,7 +194,6 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             channel_group (NslcGroup): [optional]  # noqa: E501
             metric (Metric): [optional]  # noqa: E501
             interval_type (str): [optional]  # noqa: E501
@@ -205,7 +201,7 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
             name (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             triggers ([Trigger]): [optional]  # noqa: E501
         """
 
@@ -297,7 +293,6 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             channel_group (NslcGroup): [optional]  # noqa: E501
             metric (Metric): [optional]  # noqa: E501
             interval_type (str): [optional]  # noqa: E501
@@ -305,7 +300,7 @@ class ReadOnlyMonitorDetailSerializer(ModelNormal):
             name (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             triggers ([Trigger]): [optional]  # noqa: E501
         """
 

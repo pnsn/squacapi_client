@@ -89,7 +89,7 @@ class ReadOnlyMeasurementSerializer(ModelNormal):
             'endtime': (datetime,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -105,13 +105,13 @@ class ReadOnlyMeasurementSerializer(ModelNormal):
         'endtime': 'endtime',  # noqa: E501
         'id': 'id',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
         'created_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -161,7 +161,7 @@ class ReadOnlyMeasurementSerializer(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -261,7 +261,7 @@ class ReadOnlyMeasurementSerializer(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

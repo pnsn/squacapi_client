@@ -95,13 +95,12 @@ class ReadOnlyAlertDetailSerializer(ModelNormal):
             'timestamp': (datetime,),  # noqa: E501
             'message': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'trigger': (Trigger,),  # noqa: E501
             'in_alarm': (bool,),  # noqa: E501
             'breaching_channels': (str, none_type,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -113,21 +112,19 @@ class ReadOnlyAlertDetailSerializer(ModelNormal):
         'timestamp': 'timestamp',  # noqa: E501
         'message': 'message',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'trigger': 'trigger',  # noqa: E501
         'in_alarm': 'in_alarm',  # noqa: E501
         'breaching_channels': 'breaching_channels',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'url',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -173,13 +170,12 @@ class ReadOnlyAlertDetailSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             trigger (Trigger): [optional]  # noqa: E501
             in_alarm (bool): [optional]  # noqa: E501
             breaching_channels (str, none_type): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -272,13 +268,12 @@ class ReadOnlyAlertDetailSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             trigger (Trigger): [optional]  # noqa: E501
             in_alarm (bool): [optional]  # noqa: E501
             breaching_channels (str, none_type): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

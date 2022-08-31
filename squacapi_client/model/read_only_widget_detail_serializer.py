@@ -105,7 +105,7 @@ class ReadOnlyWidgetDetailSerializer(ModelNormal):
             'id': (int,),  # noqa: E501
             'metrics': ([Metric],),  # noqa: E501
             'thresholds': (str, none_type,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'type': (str, none_type,),  # noqa: E501
             'stat': (str, none_type,),  # noqa: E501
             'properties': (str, none_type,),  # noqa: E501
@@ -123,7 +123,7 @@ class ReadOnlyWidgetDetailSerializer(ModelNormal):
         'id': 'id',  # noqa: E501
         'metrics': 'metrics',  # noqa: E501
         'thresholds': 'thresholds',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'type': 'type',  # noqa: E501
         'stat': 'stat',  # noqa: E501
         'properties': 'properties',  # noqa: E501
@@ -133,7 +133,7 @@ class ReadOnlyWidgetDetailSerializer(ModelNormal):
     read_only_vars = {
         'id',  # noqa: E501
         'metrics',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -181,7 +181,7 @@ class ReadOnlyWidgetDetailSerializer(ModelNormal):
             id (int): [optional]  # noqa: E501
             metrics ([Metric]): [optional]  # noqa: E501
             thresholds (str, none_type): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             type (str, none_type): [optional]  # noqa: E501
             stat (str, none_type): [optional]  # noqa: E501
             properties (str, none_type): [optional]  # noqa: E501
@@ -280,7 +280,7 @@ class ReadOnlyWidgetDetailSerializer(ModelNormal):
             id (int): [optional]  # noqa: E501
             metrics ([Metric]): [optional]  # noqa: E501
             thresholds (str, none_type): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             type (str, none_type): [optional]  # noqa: E501
             stat (str, none_type): [optional]  # noqa: E501
             properties (str, none_type): [optional]  # noqa: E501

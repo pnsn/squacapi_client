@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **organization** | **int** |  | 
 **id** | **int** |  | [optional] [readonly] 
 **description** | **str** |  | [optional] 
-**user_id** | **str** |  | [optional] [readonly] 
+**user** | **int** |  | [optional] [readonly] 
 **share_all** | **bool** |  | [optional] 
 **share_org** | **bool** |  | [optional] 
 **properties** | **str, none_type** |  | [optional] 

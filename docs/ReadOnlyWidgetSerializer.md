@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **dashboard** | **int** |  | 
 **metrics** | **[int]** |  | 
 **id** | **int** |  | [optional] [readonly] 
-**user_id** | **str** |  | [optional] [readonly] 
+**user** | **int** |  | [optional] [readonly] 
 **layout** | **str, none_type** |  | [optional] 
 **type** | **str, none_type** |  | [optional] 
 **properties** | **str, none_type** |  | [optional] 

@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **class_name** | **str** |  | [optional] [readonly] 
 **name** | **str** |  | [optional] 
 **station_name** | **str** |  | [optional] 
-**url** | **str** |  | [optional] [readonly] 
 **description** | **str, none_type** |  | [optional] 
 **sample_rate** | **float, none_type** |  | [optional] 
 **loc** | **str** |  | [optional]  if omitted the server will use the default value of "--"
@@ -22,7 +21,7 @@ Name | Type | Description | Notes
 **dip** | **float** |  | [optional] 
 **created_at** | **datetime** |  | [optional] [readonly] 
 **updated_at** | **datetime** |  | [optional] [readonly] 
-**user_id** | **str** |  | [optional] [readonly] 
+**user** | **int** |  | [optional] [readonly] 
 **starttime** | **datetime** |  | [optional] 
 **endtime** | **datetime** |  | [optional] 
 **nslc** | **str** |  | [optional] [readonly] 

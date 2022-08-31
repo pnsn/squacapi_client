@@ -101,11 +101,10 @@ class ReadOnlyGroupSerializer(ModelNormal):
             'auto_include_channels': ([int],),  # noqa: E501
             'auto_exclude_channels': ([int],),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -120,19 +119,17 @@ class ReadOnlyGroupSerializer(ModelNormal):
         'auto_include_channels': 'auto_include_channels',  # noqa: E501
         'auto_exclude_channels': 'auto_exclude_channels',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'description': 'description',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'url',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -181,11 +178,10 @@ class ReadOnlyGroupSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -284,11 +280,10 @@ class ReadOnlyGroupSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

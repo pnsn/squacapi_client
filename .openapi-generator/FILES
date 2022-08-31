@@ -128,8 +128,4 @@ squacapi_client/models/__init__.py
 squacapi_client/rest.py
 test-requirements.txt
 test/__init__.py
-test/test_default_api.py
-test/test_read_only_matching_rule_serializer.py
-test/test_v10_api.py
-test/test_write_only_matching_rule_serializer.py
 tox.ini

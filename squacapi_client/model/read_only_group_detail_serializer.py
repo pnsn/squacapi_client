@@ -98,12 +98,11 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
             'name': (str,),  # noqa: E501
             'organization': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'description': (str,),  # noqa: E501
             'channels': ([Channel],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'auto_include_channels': ([Channel],),  # noqa: E501
             'auto_exclude_channels': ([Channel],),  # noqa: E501
         }
@@ -117,23 +116,21 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
         'name': 'name',  # noqa: E501
         'organization': 'organization',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'description': 'description',  # noqa: E501
         'channels': 'channels',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'auto_include_channels': 'auto_include_channels',  # noqa: E501
         'auto_exclude_channels': 'auto_exclude_channels',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'url',  # noqa: E501
         'channels',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
         'auto_include_channels',  # noqa: E501
         'auto_exclude_channels',  # noqa: E501
     }
@@ -181,12 +178,11 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             channels ([Channel]): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             auto_include_channels ([Channel]): [optional]  # noqa: E501
             auto_exclude_channels ([Channel]): [optional]  # noqa: E501
         """
@@ -281,12 +277,11 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             description (str): [optional]  # noqa: E501
             channels ([Channel]): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             auto_include_channels ([Channel]): [optional]  # noqa: E501
             auto_exclude_channels ([Channel]): [optional]  # noqa: E501
         """

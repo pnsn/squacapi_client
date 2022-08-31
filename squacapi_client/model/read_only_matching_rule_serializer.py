@@ -102,9 +102,8 @@ class ReadOnlyMatchingRuleSerializer(ModelNormal):
             'channel_regex': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'is_include': (bool,),  # noqa: E501
-            'url': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -121,17 +120,15 @@ class ReadOnlyMatchingRuleSerializer(ModelNormal):
         'channel_regex': 'channel_regex',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'is_include': 'is_include',  # noqa: E501
-        'url': 'url',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
-        'url',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -182,9 +179,8 @@ class ReadOnlyMatchingRuleSerializer(ModelNormal):
             channel_regex (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             is_include (bool): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -281,9 +277,8 @@ class ReadOnlyMatchingRuleSerializer(ModelNormal):
             channel_regex (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             is_include (bool): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -116,7 +116,6 @@ class Channel(ModelNormal):
             'class_name': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'station_name': (str,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'sample_rate': (float, none_type,),  # noqa: E501
             'loc': (str,),  # noqa: E501
@@ -124,7 +123,7 @@ class Channel(ModelNormal):
             'dip': (float,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
             'starttime': (datetime,),  # noqa: E501
             'endtime': (datetime,),  # noqa: E501
             'nslc': (str,),  # noqa: E501
@@ -146,7 +145,6 @@ class Channel(ModelNormal):
         'class_name': 'class_name',  # noqa: E501
         'name': 'name',  # noqa: E501
         'station_name': 'station_name',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'description': 'description',  # noqa: E501
         'sample_rate': 'sample_rate',  # noqa: E501
         'loc': 'loc',  # noqa: E501
@@ -154,7 +152,7 @@ class Channel(ModelNormal):
         'dip': 'dip',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
         'starttime': 'starttime',  # noqa: E501
         'endtime': 'endtime',  # noqa: E501
         'nslc': 'nslc',  # noqa: E501
@@ -163,10 +161,9 @@ class Channel(ModelNormal):
     read_only_vars = {
         'id',  # noqa: E501
         'class_name',  # noqa: E501
-        'url',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
         'nslc',  # noqa: E501
     }
 
@@ -220,7 +217,6 @@ class Channel(ModelNormal):
             class_name (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             station_name (str): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             sample_rate (float, none_type): [optional]  # noqa: E501
             loc (str): [optional] if omitted the server will use the default value of "--"  # noqa: E501
@@ -228,7 +224,7 @@ class Channel(ModelNormal):
             dip (float): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             starttime (datetime): [optional]  # noqa: E501
             endtime (datetime): [optional]  # noqa: E501
             nslc (str): [optional]  # noqa: E501
@@ -335,7 +331,6 @@ class Channel(ModelNormal):
             class_name (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             station_name (str): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             sample_rate (float, none_type): [optional]  # noqa: E501
             loc (str): [optional] if omitted the server will use the default value of "--"  # noqa: E501
@@ -343,7 +338,7 @@ class Channel(ModelNormal):
             dip (float): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
             starttime (datetime): [optional]  # noqa: E501
             endtime (datetime): [optional]  # noqa: E501
             nslc (str): [optional]  # noqa: E501

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] [readonly] 
 **metrics** | [**[Metric]**](Metric.md) |  | [optional] [readonly] 
 **thresholds** | **str, none_type** |  | [optional] 
-**user_id** | **str** |  | [optional] [readonly] 
+**user** | **int** |  | [optional] [readonly] 
 **type** | **str, none_type** |  | [optional] 
 **stat** | **str, none_type** |  | [optional] 
 **properties** | **str, none_type** |  | [optional] 

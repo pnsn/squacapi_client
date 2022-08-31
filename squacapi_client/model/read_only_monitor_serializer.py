@@ -106,13 +106,12 @@ class ReadOnlyMonitorSerializer(ModelNormal):
             'metric': (int,),  # noqa: E501
             'interval_count': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
-            'url': (str,),  # noqa: E501
             'interval_type': (str,),  # noqa: E501
             'stat': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user_id': (str,),  # noqa: E501
+            'user': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -125,21 +124,19 @@ class ReadOnlyMonitorSerializer(ModelNormal):
         'metric': 'metric',  # noqa: E501
         'interval_count': 'interval_count',  # noqa: E501
         'id': 'id',  # noqa: E501
-        'url': 'url',  # noqa: E501
         'interval_type': 'interval_type',  # noqa: E501
         'stat': 'stat',  # noqa: E501
         'name': 'name',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
-        'user_id': 'user_id',  # noqa: E501
+        'user': 'user',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
-        'url',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
-        'user_id',  # noqa: E501
+        'user',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -186,13 +183,12 @@ class ReadOnlyMonitorSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             interval_type (str): [optional]  # noqa: E501
             stat (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -287,13 +283,12 @@ class ReadOnlyMonitorSerializer(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): [optional]  # noqa: E501
-            url (str): [optional]  # noqa: E501
             interval_type (str): [optional]  # noqa: E501
             stat (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user_id (str): [optional]  # noqa: E501
+            user (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

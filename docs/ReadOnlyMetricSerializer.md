@@ -9,13 +9,12 @@ Name | Type | Description | Notes
 **unit** | **str** |  | 
 **reference_url** | **str** |  | 
 **id** | **int** |  | [optional] [readonly] 
-**url** | **str** |  | [optional] [readonly] 
 **description** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] [readonly] 
 **updated_at** | **datetime** |  | [optional] [readonly] 
 **default_minval** | **float, none_type** |  | [optional] 
 **default_maxval** | **float, none_type** |  | [optional] 
-**user_id** | **str** |  | [optional] [readonly] 
+**user** | **int** |  | [optional] [readonly] 
 **sample_rate** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
