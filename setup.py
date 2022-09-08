@@ -12,7 +12,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "squacapi_client"
-VERSION = "1.0.0"
+VERSION = "2.1.0"
 # To install the library, run the following
 #
 # python setup.py install
