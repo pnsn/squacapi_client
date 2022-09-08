@@ -1,22 +1,20 @@
 '''utility functions for uploading bulk measurments'''
 
 from squacapi_client.rest import ApiException
-from squacapi_client import Configuration, ApiClient, \
-    UserApi, AuthToken, V10Api
-
+from squacapi_client import Configuration, ApiClient
+from squacapi_client.apis import UserApi, V10Api
+from squacapi_client.models import AuthToken
 # always default to a staging/test env
 
-
-
-def get_client(user, passwd):
+def get_client(user, passwd, host):
     '''authenticate user'''
-    conf = Configuration()
-    api_client = ApiClient(conf)
+    conf = Configuration(host=host)
     user_client = UserApi(ApiClient())
     auth_token = AuthToken(email=user, password=passwd)
     token = user_client.user_token_create(auth_token)
-    conf.api_key['Authorization'] = token.token
-    conf.api_key_prefix['Authorization'] = 'Token'
+    conf.api_key['Token'] = token.token
+    conf.api_key_prefix['Token'] = 'Token'
+    api_client = ApiClient(conf)
     return V10Api(api_client)
 
 
