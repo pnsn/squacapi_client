@@ -104,7 +104,7 @@ class NslcGroup(ModelNormal):
             'description': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user': (int,),  # noqa: E501
+            'user': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -181,7 +181,7 @@ class NslcGroup(ModelNormal):
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user (int): [optional]  # noqa: E501
+            user (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -283,7 +283,7 @@ class NslcGroup(ModelNormal):
             description (str): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user (int): [optional]  # noqa: E501
+            user (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

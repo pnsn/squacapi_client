@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **channels** | [**[Channel]**](Channel.md) |  | [optional] [readonly] 
 **created_at** | **datetime** |  | [optional] [readonly] 
 **updated_at** | **datetime** |  | [optional] [readonly] 
-**user** | **int** |  | [optional] [readonly] 
+**user** | **str** |  | [optional] [readonly] 
 **auto_include_channels** | [**[Channel]**](Channel.md) |  | [optional] [readonly] 
 **auto_exclude_channels** | [**[Channel]**](Channel.md) |  | [optional] [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

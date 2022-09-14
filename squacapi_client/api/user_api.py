@@ -26,6 +26,7 @@ from squacapi_client.model.auth_token import AuthToken
 from squacapi_client.model.read_only_user_me_serializer import ReadOnlyUserMeSerializer
 from squacapi_client.model.read_only_user_write_serializer import ReadOnlyUserWriteSerializer
 from squacapi_client.model.token import Token
+from squacapi_client.model.user_groups_list200_response import UserGroupsList200Response
 from squacapi_client.model.write_only_user_me_serializer import WriteOnlyUserMeSerializer
 from squacapi_client.model.write_only_user_write_serializer import WriteOnlyUserWriteSerializer
 
@@ -196,7 +197,7 @@ class UserApi(object):
         )
         self.user_groups_list_endpoint = _Endpoint(
             settings={
-                'response_type': ([dict],),
+                'response_type': (UserGroupsList200Response,),
                 'auth': [
                     'Token'
                 ],
@@ -207,6 +208,8 @@ class UserApi(object):
             },
             params_map={
                 'all': [
+                    'limit',
+                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -222,10 +225,18 @@ class UserApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
+                    'limit':
+                        (int,),
+                    'offset':
+                        (int,),
                 },
                 'attribute_map': {
+                    'limit': 'limit',
+                    'offset': 'offset',
                 },
                 'location_map': {
+                    'limit': 'query',
+                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -870,6 +881,8 @@ class UserApi(object):
 
 
         Keyword Args:
+            limit (int): Number of results to return per page.. [optional]
+            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -902,7 +915,7 @@ class UserApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [dict]
+            UserGroupsList200Response
                 If the method is called asynchronously, returns the request
                 thread.
         """

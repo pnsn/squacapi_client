@@ -93,7 +93,7 @@ class ReadOnlyDashboardSerializer(ModelNormal):
             'organization': (int,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'description': (str,),  # noqa: E501
-            'channel_group': (int, none_type),  # noqa: E501
+            'channel_group': (int,),  # noqa: E501
             'user': (int,),  # noqa: E501
             'share_all': (bool,),  # noqa: E501
             'share_org': (bool,),  # noqa: E501

@@ -268,7 +268,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_dashboards_list**
-> [ReadOnlyDashboardSerializer] v1_0_dashboard_dashboards_list()
+> V10DashboardDashboardsList200Response v1_0_dashboard_dashboards_list()
 
 
 
@@ -280,7 +280,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_dashboard_serializer import ReadOnlyDashboardSerializer
+from squacapi_client.model.v10_dashboard_dashboards_list200_response import V10DashboardDashboardsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -303,10 +303,18 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
+    user = "user_example" # str |  (optional)
+    organization = "organization_example" # str |  (optional)
+    share_all = "share_all_example" # str |  (optional)
+    share_org = "share_org_example" # str |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.v1_0_dashboard_dashboards_list()
+        api_response = api_instance.v1_0_dashboard_dashboards_list(user=user, organization=organization, share_all=share_all, share_org=share_org, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_dashboard_dashboards_list: %s\n" % e)
@@ -314,11 +322,20 @@ with squacapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user** | **str**|  | [optional]
+ **organization** | **str**|  | [optional]
+ **share_all** | **str**|  | [optional]
+ **share_org** | **str**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyDashboardSerializer]**](ReadOnlyDashboardSerializer.md)
+[**V10DashboardDashboardsList200Response**](V10DashboardDashboardsList200Response.md)
 
 ### Authorization
 
@@ -746,7 +763,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_dashboard_widgets_list**
-> [ReadOnlyWidgetDetailSerializer] v1_0_dashboard_widgets_list()
+> V10DashboardWidgetsList200Response v1_0_dashboard_widgets_list()
 
 
 
@@ -758,7 +775,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_widget_detail_serializer import ReadOnlyWidgetDetailSerializer
+from squacapi_client.model.v10_dashboard_widgets_list200_response import V10DashboardWidgetsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -781,10 +798,13 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.v1_0_dashboard_widgets_list()
+        api_response = api_instance.v1_0_dashboard_widgets_list(limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_dashboard_widgets_list: %s\n" % e)
@@ -792,11 +812,15 @@ with squacapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyWidgetDetailSerializer]**](ReadOnlyWidgetDetailSerializer.md)
+[**V10DashboardWidgetsList200Response**](V10DashboardWidgetsList200Response.md)
 
 ### Authorization
 
@@ -1517,7 +1541,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_alerts_list**
-> [ReadOnlyAlertDetailSerializer] v1_0_measurement_alerts_list()
+> V10MeasurementAlertsList200Response v1_0_measurement_alerts_list()
 
 
 
@@ -1529,7 +1553,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_alert_detail_serializer import ReadOnlyAlertDetailSerializer
+from squacapi_client.model.v10_measurement_alerts_list200_response import V10MeasurementAlertsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -1556,11 +1580,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     in_alarm = "in_alarm_example" # str |  (optional)
     timestamp_gte = "timestamp_gte_example" # str |  (optional)
     timestamp_lt = "timestamp_lt_example" # str |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_alerts_list(trigger=trigger, in_alarm=in_alarm, timestamp_gte=timestamp_gte, timestamp_lt=timestamp_lt)
+        api_response = api_instance.v1_0_measurement_alerts_list(trigger=trigger, in_alarm=in_alarm, timestamp_gte=timestamp_gte, timestamp_lt=timestamp_lt, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_alerts_list: %s\n" % e)
@@ -1575,10 +1602,13 @@ Name | Type | Description  | Notes
  **in_alarm** | **str**|  | [optional]
  **timestamp_gte** | **str**|  | [optional]
  **timestamp_lt** | **str**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyAlertDetailSerializer]**](ReadOnlyAlertDetailSerializer.md)
+[**V10MeasurementAlertsList200Response**](V10MeasurementAlertsList200Response.md)
 
 ### Authorization
 
@@ -1842,7 +1872,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_day_archives_list**
-> [ReadOnlyArchiveDaySerializer] v1_0_measurement_day_archives_list()
+> V10MeasurementDayArchivesList200Response v1_0_measurement_day_archives_list()
 
 
 
@@ -1854,7 +1884,7 @@ Name | Type | Description  | Notes
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_archive_day_serializer import ReadOnlyArchiveDaySerializer
+from squacapi_client.model.v10_measurement_day_archives_list200_response import V10MeasurementDayArchivesList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -1882,11 +1912,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     metric = 3.14 # float | Multiple values may be separated by commas. (optional)
     channel = 3.14 # float | Multiple values may be separated by commas. (optional)
     group = 3.14 # float | Multiple values may be separated by commas. (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_day_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group)
+        api_response = api_instance.v1_0_measurement_day_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_day_archives_list: %s\n" % e)
@@ -1902,10 +1935,13 @@ Name | Type | Description  | Notes
  **metric** | **float**| Multiple values may be separated by commas. | [optional]
  **channel** | **float**| Multiple values may be separated by commas. | [optional]
  **group** | **float**| Multiple values may be separated by commas. | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyArchiveDaySerializer]**](ReadOnlyArchiveDaySerializer.md)
+[**V10MeasurementDayArchivesList200Response**](V10MeasurementDayArchivesList200Response.md)
 
 ### Authorization
 
@@ -2001,7 +2037,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_hour_archives_list**
-> [ReadOnlyArchiveHourSerializer] v1_0_measurement_hour_archives_list()
+> V10MeasurementHourArchivesList200Response v1_0_measurement_hour_archives_list()
 
 
 
@@ -2013,7 +2049,7 @@ Name | Type | Description  | Notes
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_archive_hour_serializer import ReadOnlyArchiveHourSerializer
+from squacapi_client.model.v10_measurement_hour_archives_list200_response import V10MeasurementHourArchivesList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -2041,11 +2077,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     metric = 3.14 # float | Multiple values may be separated by commas. (optional)
     channel = 3.14 # float | Multiple values may be separated by commas. (optional)
     group = 3.14 # float | Multiple values may be separated by commas. (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_hour_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group)
+        api_response = api_instance.v1_0_measurement_hour_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_hour_archives_list: %s\n" % e)
@@ -2061,10 +2100,13 @@ Name | Type | Description  | Notes
  **metric** | **float**| Multiple values may be separated by commas. | [optional]
  **channel** | **float**| Multiple values may be separated by commas. | [optional]
  **group** | **float**| Multiple values may be separated by commas. | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyArchiveHourSerializer]**](ReadOnlyArchiveHourSerializer.md)
+[**V10MeasurementHourArchivesList200Response**](V10MeasurementHourArchivesList200Response.md)
 
 ### Authorization
 
@@ -2164,7 +2206,7 @@ Name | Type | Description  | Notes
 
 
 
-end point for using channel filter
+post list of measuremetns
 
 ### Example
 
@@ -2175,7 +2217,7 @@ import time
 import squacapi_client
 from squacapi_client.api import v10_api
 from squacapi_client.model.read_only_measurement_serializer import ReadOnlyMeasurementSerializer
-from squacapi_client.model.write_only_measurement_serializer import WriteOnlyMeasurementSerializer
+from squacapi_client.model.measurement import Measurement
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -2198,13 +2240,15 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
-    data = WriteOnlyMeasurementSerializer(
-        metric=1,
-        channel=1,
-        value=3.14,
-        starttime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        endtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
-    ) # WriteOnlyMeasurementSerializer | 
+    data = [
+        Measurement(
+            metric=1,
+            channel=1,
+            value=3.14,
+            starttime=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            endtime=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        ),
+    ] # [Measurement] | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -2219,7 +2263,7 @@ with squacapi_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**WriteOnlyMeasurementSerializer**](WriteOnlyMeasurementSerializer.md)|  |
+ **data** | [**[Measurement]**](Measurement.md)|  |
 
 ### Return type
 
@@ -2319,7 +2363,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_list**
-> [ReadOnlyMeasurementSerializer] v1_0_measurement_measurements_list()
+> V10MeasurementMeasurementsList200Response v1_0_measurement_measurements_list()
 
 
 
@@ -2333,7 +2377,7 @@ We want to be careful about large queries so require params
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_measurement_serializer import ReadOnlyMeasurementSerializer
+from squacapi_client.model.v10_measurement_measurements_list200_response import V10MeasurementMeasurementsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -2361,11 +2405,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     metric = 3.14 # float | Multiple values may be separated by commas. (optional)
     channel = 3.14 # float | Multiple values may be separated by commas. (optional)
     group = 3.14 # float | Multiple values may be separated by commas. (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_measurements_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group)
+        api_response = api_instance.v1_0_measurement_measurements_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_measurements_list: %s\n" % e)
@@ -2381,10 +2428,13 @@ Name | Type | Description  | Notes
  **metric** | **float**| Multiple values may be separated by commas. | [optional]
  **channel** | **float**| Multiple values may be separated by commas. | [optional]
  **group** | **float**| Multiple values may be separated by commas. | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyMeasurementSerializer]**](ReadOnlyMeasurementSerializer.md)
+[**V10MeasurementMeasurementsList200Response**](V10MeasurementMeasurementsList200Response.md)
 
 ### Authorization
 
@@ -2812,7 +2862,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_metrics_list**
-> [ReadOnlyMetricSerializer] v1_0_measurement_metrics_list()
+> V10MeasurementMetricsList200Response v1_0_measurement_metrics_list()
 
 
 
@@ -2824,7 +2874,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_metric_serializer import ReadOnlyMetricSerializer
+from squacapi_client.model.v10_measurement_metrics_list200_response import V10MeasurementMetricsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -2848,11 +2898,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
     name = "name_example" # str | Multiple values may be separated by commas. (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_metrics_list(name=name)
+        api_response = api_instance.v1_0_measurement_metrics_list(name=name, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_metrics_list: %s\n" % e)
@@ -2864,10 +2917,13 @@ with squacapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Multiple values may be separated by commas. | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyMetricSerializer]**](ReadOnlyMetricSerializer.md)
+[**V10MeasurementMetricsList200Response**](V10MeasurementMetricsList200Response.md)
 
 ### Authorization
 
@@ -3293,7 +3349,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_monitors_list**
-> [ReadOnlyMonitorDetailSerializer] v1_0_measurement_monitors_list()
+> V10MeasurementMonitorsList200Response v1_0_measurement_monitors_list()
 
 
 
@@ -3305,7 +3361,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_monitor_detail_serializer import ReadOnlyMonitorDetailSerializer
+from squacapi_client.model.v10_measurement_monitors_list200_response import V10MeasurementMonitorsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -3330,11 +3386,13 @@ with squacapi_client.ApiClient(configuration) as api_client:
     api_instance = v10_api.V10Api(api_client)
     channel_group = "channel_group_example" # str |  (optional)
     metric = "metric_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_monitors_list(channel_group=channel_group, metric=metric)
+        api_response = api_instance.v1_0_measurement_monitors_list(channel_group=channel_group, metric=metric, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_monitors_list: %s\n" % e)
@@ -3347,10 +3405,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **channel_group** | **str**|  | [optional]
  **metric** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyMonitorDetailSerializer]**](ReadOnlyMonitorDetailSerializer.md)
+[**V10MeasurementMonitorsList200Response**](V10MeasurementMonitorsList200Response.md)
 
 ### Authorization
 
@@ -3616,7 +3676,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_month_archives_list**
-> [ReadOnlyArchiveMonthSerializer] v1_0_measurement_month_archives_list()
+> V10MeasurementMonthArchivesList200Response v1_0_measurement_month_archives_list()
 
 
 
@@ -3628,7 +3688,7 @@ Name | Type | Description  | Notes
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_archive_month_serializer import ReadOnlyArchiveMonthSerializer
+from squacapi_client.model.v10_measurement_month_archives_list200_response import V10MeasurementMonthArchivesList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -3656,11 +3716,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     metric = 3.14 # float | Multiple values may be separated by commas. (optional)
     channel = 3.14 # float | Multiple values may be separated by commas. (optional)
     group = 3.14 # float | Multiple values may be separated by commas. (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_month_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group)
+        api_response = api_instance.v1_0_measurement_month_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_month_archives_list: %s\n" % e)
@@ -3676,10 +3739,13 @@ Name | Type | Description  | Notes
  **metric** | **float**| Multiple values may be separated by commas. | [optional]
  **channel** | **float**| Multiple values may be separated by commas. | [optional]
  **group** | **float**| Multiple values may be separated by commas. | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyArchiveMonthSerializer]**](ReadOnlyArchiveMonthSerializer.md)
+[**V10MeasurementMonthArchivesList200Response**](V10MeasurementMonthArchivesList200Response.md)
 
 ### Authorization
 
@@ -3933,7 +3999,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_triggers_list**
-> [ReadOnlyTriggerSerializer] v1_0_measurement_triggers_list()
+> V10MeasurementTriggersList200Response v1_0_measurement_triggers_list()
 
 
 
@@ -3945,7 +4011,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_trigger_serializer import ReadOnlyTriggerSerializer
+from squacapi_client.model.v10_measurement_triggers_list200_response import V10MeasurementTriggersList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -3969,11 +4035,13 @@ with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
     monitor = "monitor_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_triggers_list(monitor=monitor)
+        api_response = api_instance.v1_0_measurement_triggers_list(monitor=monitor, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_triggers_list: %s\n" % e)
@@ -3985,10 +4053,12 @@ with squacapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **monitor** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyTriggerSerializer]**](ReadOnlyTriggerSerializer.md)
+[**V10MeasurementTriggersList200Response**](V10MeasurementTriggersList200Response.md)
 
 ### Authorization
 
@@ -4258,7 +4328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_week_archives_list**
-> [ReadOnlyArchiveWeekSerializer] v1_0_measurement_week_archives_list()
+> V10MeasurementWeekArchivesList200Response v1_0_measurement_week_archives_list()
 
 
 
@@ -4270,7 +4340,7 @@ Name | Type | Description  | Notes
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_archive_week_serializer import ReadOnlyArchiveWeekSerializer
+from squacapi_client.model.v10_measurement_week_archives_list200_response import V10MeasurementWeekArchivesList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -4298,11 +4368,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     metric = 3.14 # float | Multiple values may be separated by commas. (optional)
     channel = 3.14 # float | Multiple values may be separated by commas. (optional)
     group = 3.14 # float | Multiple values may be separated by commas. (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_measurement_week_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group)
+        api_response = api_instance.v1_0_measurement_week_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_measurement_week_archives_list: %s\n" % e)
@@ -4318,10 +4391,13 @@ Name | Type | Description  | Notes
  **metric** | **float**| Multiple values may be separated by commas. | [optional]
  **channel** | **float**| Multiple values may be separated by commas. | [optional]
  **group** | **float**| Multiple values may be separated by commas. | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyArchiveWeekSerializer]**](ReadOnlyArchiveWeekSerializer.md)
+[**V10MeasurementWeekArchivesList200Response**](V10MeasurementWeekArchivesList200Response.md)
 
 ### Authorization
 
@@ -4582,7 +4658,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_channels_list**
-> [ReadOnlyChannelSerializer] v1_0_nslc_channels_list()
+> V10NslcChannelsList200Response v1_0_nslc_channels_list()
 
 
 
@@ -4594,7 +4670,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_channel_serializer import ReadOnlyChannelSerializer
+from squacapi_client.model.v10_nslc_channels_list200_response import V10NslcChannelsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -4634,11 +4710,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     lat_max = 3.14 # float |  (optional)
     lon_min = 3.14 # float |  (optional)
     lon_max = 3.14 # float |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_nslc_channels_list(nslc=nslc, network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max)
+        api_response = api_instance.v1_0_nslc_channels_list(nslc=nslc, network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_nslc_channels_list: %s\n" % e)
@@ -4666,10 +4745,13 @@ Name | Type | Description  | Notes
  **lat_max** | **float**|  | [optional]
  **lon_min** | **float**|  | [optional]
  **lon_max** | **float**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyChannelSerializer]**](ReadOnlyChannelSerializer.md)
+[**V10NslcChannelsList200Response**](V10NslcChannelsList200Response.md)
 
 ### Authorization
 
@@ -5115,7 +5197,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_groups_list**
-> [ReadOnlyGroupSerializer] v1_0_nslc_groups_list()
+> V10NslcGroupsList200Response v1_0_nslc_groups_list()
 
 
 
@@ -5127,7 +5209,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_group_serializer import ReadOnlyGroupSerializer
+from squacapi_client.model.v10_nslc_groups_list200_response import V10NslcGroupsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -5152,11 +5234,15 @@ with squacapi_client.ApiClient(configuration) as api_client:
     api_instance = v10_api.V10Api(api_client)
     name = "name_example" # str |  (optional)
     organization = "organization_example" # str |  (optional)
+    user = "user_example" # str |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_nslc_groups_list(name=name, organization=organization)
+        api_response = api_instance.v1_0_nslc_groups_list(name=name, organization=organization, user=user, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_nslc_groups_list: %s\n" % e)
@@ -5169,10 +5255,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | [optional]
  **organization** | **str**|  | [optional]
+ **user** | **str**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyGroupSerializer]**](ReadOnlyGroupSerializer.md)
+[**V10NslcGroupsList200Response**](V10NslcGroupsList200Response.md)
 
 ### Authorization
 
@@ -5606,7 +5696,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_matching_rules_list**
-> [ReadOnlyMatchingRuleSerializer] v1_0_nslc_matching_rules_list()
+> V10NslcMatchingRulesList200Response v1_0_nslc_matching_rules_list()
 
 
 
@@ -5618,7 +5708,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_matching_rule_serializer import ReadOnlyMatchingRuleSerializer
+from squacapi_client.model.v10_nslc_matching_rules_list200_response import V10NslcMatchingRulesList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -5641,10 +5731,13 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.v1_0_nslc_matching_rules_list()
+        api_response = api_instance.v1_0_nslc_matching_rules_list(limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_nslc_matching_rules_list: %s\n" % e)
@@ -5652,11 +5745,15 @@ with squacapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyMatchingRuleSerializer]**](ReadOnlyMatchingRuleSerializer.md)
+[**V10NslcMatchingRulesList200Response**](V10NslcMatchingRulesList200Response.md)
 
 ### Authorization
 
@@ -6075,7 +6172,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_nslc_networks_list**
-> [ReadOnlyNetworkSerializer] v1_0_nslc_networks_list()
+> V10NslcNetworksList200Response v1_0_nslc_networks_list()
 
 
 
@@ -6087,7 +6184,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_network_serializer import ReadOnlyNetworkSerializer
+from squacapi_client.model.v10_nslc_networks_list200_response import V10NslcNetworksList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -6112,11 +6209,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     api_instance = v10_api.V10Api(api_client)
     network = "network_example" # str | Multiple values may be separated by commas. (optional)
     channel = "channel_example" # str |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_nslc_networks_list(network=network, channel=channel)
+        api_response = api_instance.v1_0_nslc_networks_list(network=network, channel=channel, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_nslc_networks_list: %s\n" % e)
@@ -6129,10 +6229,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network** | **str**| Multiple values may be separated by commas. | [optional]
  **channel** | **str**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyNetworkSerializer]**](ReadOnlyNetworkSerializer.md)
+[**V10NslcNetworksList200Response**](V10NslcNetworksList200Response.md)
 
 ### Authorization
 
@@ -6558,7 +6661,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_organization_organizations_list**
-> [ReadOnlyOrganizationSerializer] v1_0_organization_organizations_list()
+> V10OrganizationOrganizationsList200Response v1_0_organization_organizations_list()
 
 
 
@@ -6570,7 +6673,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_organization_serializer import ReadOnlyOrganizationSerializer
+from squacapi_client.model.v10_organization_organizations_list200_response import V10OrganizationOrganizationsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -6594,11 +6697,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
     name = "name_example" # str |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_organization_organizations_list(name=name)
+        api_response = api_instance.v1_0_organization_organizations_list(name=name, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_organization_organizations_list: %s\n" % e)
@@ -6610,10 +6716,13 @@ with squacapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyOrganizationSerializer]**](ReadOnlyOrganizationSerializer.md)
+[**V10OrganizationOrganizationsList200Response**](V10OrganizationOrganizationsList200Response.md)
 
 ### Authorization
 
@@ -7060,7 +7169,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_organization_users_list**
-> [ReadOnlyUserWriteSerializer] v1_0_organization_users_list()
+> V10OrganizationUsersList200Response v1_0_organization_users_list()
 
 
 
@@ -7072,7 +7181,7 @@ void (empty response body)
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
-from squacapi_client.model.read_only_user_write_serializer import ReadOnlyUserWriteSerializer
+from squacapi_client.model.v10_organization_users_list200_response import V10OrganizationUsersList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -7096,11 +7205,14 @@ with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
     organization = "organization_example" # str |  (optional)
+    order = "order_example" # str |  (optional)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.v1_0_organization_users_list(organization=organization)
+        api_response = api_instance.v1_0_organization_users_list(organization=organization, order=order, limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_organization_users_list: %s\n" % e)
@@ -7112,10 +7224,13 @@ with squacapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organization** | **str**|  | [optional]
+ **order** | **str**|  | [optional]
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-[**[ReadOnlyUserWriteSerializer]**](ReadOnlyUserWriteSerializer.md)
+[**V10OrganizationUsersList200Response**](V10OrganizationUsersList200Response.md)
 
 ### Authorization
 
@@ -7874,7 +7989,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_user_groups_list**
-> [dict] v1_0_user_groups_list()
+> UserGroupsList200Response v1_0_user_groups_list()
 
 
 
@@ -7888,6 +8003,7 @@ Manage the authenticated user
 import time
 import squacapi_client
 from squacapi_client.api import v10_api
+from squacapi_client.model.user_groups_list200_response import UserGroupsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -7910,10 +8026,13 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v10_api.V10Api(api_client)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.v1_0_user_groups_list()
+        api_response = api_instance.v1_0_user_groups_list(limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling V10Api->v1_0_user_groups_list: %s\n" % e)
@@ -7921,11 +8040,15 @@ with squacapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-**[dict]**
+[**UserGroupsList200Response**](UserGroupsList200Response.md)
 
 ### Authorization
 

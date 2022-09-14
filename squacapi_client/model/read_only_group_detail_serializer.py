@@ -102,7 +102,7 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
             'channels': ([Channel],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'user': (int,),  # noqa: E501
+            'user': (str,),  # noqa: E501
             'auto_include_channels': ([Channel],),  # noqa: E501
             'auto_exclude_channels': ([Channel],),  # noqa: E501
         }
@@ -182,7 +182,7 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
             channels ([Channel]): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user (int): [optional]  # noqa: E501
+            user (str): [optional]  # noqa: E501
             auto_include_channels ([Channel]): [optional]  # noqa: E501
             auto_exclude_channels ([Channel]): [optional]  # noqa: E501
         """
@@ -281,7 +281,7 @@ class ReadOnlyGroupDetailSerializer(ModelNormal):
             channels ([Channel]): [optional]  # noqa: E501
             created_at (datetime): [optional]  # noqa: E501
             updated_at (datetime): [optional]  # noqa: E501
-            user (int): [optional]  # noqa: E501
+            user (str): [optional]  # noqa: E501
             auto_include_channels ([Channel]): [optional]  # noqa: E501
             auto_exclude_channels ([Channel]): [optional]  # noqa: E501
         """

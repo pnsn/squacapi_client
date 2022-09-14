@@ -259,7 +259,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_groups_list**
-> [dict] user_groups_list()
+> UserGroupsList200Response user_groups_list()
 
 
 
@@ -273,6 +273,7 @@ Manage the authenticated user
 import time
 import squacapi_client
 from squacapi_client.api import user_api
+from squacapi_client.model.user_groups_list200_response import UserGroupsList200Response
 from pprint import pprint
 # Defining the host is optional and defaults to https://staging-squacapi.pnsn.org
 # See configuration.py for a list of all supported configuration parameters.
@@ -295,10 +296,13 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with squacapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = user_api.UserApi(api_client)
+    limit = 1 # int | Number of results to return per page. (optional)
+    offset = 1 # int | The initial index from which to return the results. (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.user_groups_list()
+        api_response = api_instance.user_groups_list(limit=limit, offset=offset)
         pprint(api_response)
     except squacapi_client.ApiException as e:
         print("Exception when calling UserApi->user_groups_list: %s\n" % e)
@@ -306,11 +310,15 @@ with squacapi_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Number of results to return per page. | [optional]
+ **offset** | **int**| The initial index from which to return the results. | [optional]
 
 ### Return type
 
-**[dict]**
+[**UserGroupsList200Response**](UserGroupsList200Response.md)
 
 ### Authorization
 

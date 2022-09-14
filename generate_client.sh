@@ -19,7 +19,7 @@ do
 			break ;;
 
 		"local")
-			HOST="localhost:8000"
+			HOST="127.0.0.1:8000"
 			break ;;
 
 		*)
