@@ -52,24 +52,6 @@ from squacapi_client.model.read_only_user_write_serializer import ReadOnlyUserWr
 from squacapi_client.model.read_only_widget_detail_serializer import ReadOnlyWidgetDetailSerializer
 from squacapi_client.model.read_only_widget_serializer import ReadOnlyWidgetSerializer
 from squacapi_client.model.token import Token
-from squacapi_client.model.user_groups_list200_response import UserGroupsList200Response
-from squacapi_client.model.v10_dashboard_dashboards_list200_response import V10DashboardDashboardsList200Response
-from squacapi_client.model.v10_dashboard_widgets_list200_response import V10DashboardWidgetsList200Response
-from squacapi_client.model.v10_measurement_alerts_list200_response import V10MeasurementAlertsList200Response
-from squacapi_client.model.v10_measurement_day_archives_list200_response import V10MeasurementDayArchivesList200Response
-from squacapi_client.model.v10_measurement_hour_archives_list200_response import V10MeasurementHourArchivesList200Response
-from squacapi_client.model.v10_measurement_measurements_list200_response import V10MeasurementMeasurementsList200Response
-from squacapi_client.model.v10_measurement_metrics_list200_response import V10MeasurementMetricsList200Response
-from squacapi_client.model.v10_measurement_monitors_list200_response import V10MeasurementMonitorsList200Response
-from squacapi_client.model.v10_measurement_month_archives_list200_response import V10MeasurementMonthArchivesList200Response
-from squacapi_client.model.v10_measurement_triggers_list200_response import V10MeasurementTriggersList200Response
-from squacapi_client.model.v10_measurement_week_archives_list200_response import V10MeasurementWeekArchivesList200Response
-from squacapi_client.model.v10_nslc_channels_list200_response import V10NslcChannelsList200Response
-from squacapi_client.model.v10_nslc_groups_list200_response import V10NslcGroupsList200Response
-from squacapi_client.model.v10_nslc_matching_rules_list200_response import V10NslcMatchingRulesList200Response
-from squacapi_client.model.v10_nslc_networks_list200_response import V10NslcNetworksList200Response
-from squacapi_client.model.v10_organization_organizations_list200_response import V10OrganizationOrganizationsList200Response
-from squacapi_client.model.v10_organization_users_list200_response import V10OrganizationUsersList200Response
 from squacapi_client.model.write_only_alert_serializer import WriteOnlyAlertSerializer
 from squacapi_client.model.write_only_channel_serializer import WriteOnlyChannelSerializer
 from squacapi_client.model.write_only_dashboard_serializer import WriteOnlyDashboardSerializer
@@ -203,7 +185,7 @@ class V10Api(object):
         )
         self.v1_0_dashboard_dashboards_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10DashboardDashboardsList200Response,),
+                'response_type': ([ReadOnlyDashboardSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -219,8 +201,6 @@ class V10Api(object):
                     'share_all',
                     'share_org',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -246,10 +226,6 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'user': 'user',
@@ -257,8 +233,6 @@ class V10Api(object):
                     'share_all': 'share_all',
                     'share_org': 'share_org',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'user': 'query',
@@ -266,8 +240,6 @@ class V10Api(object):
                     'share_all': 'query',
                     'share_org': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -550,7 +522,7 @@ class V10Api(object):
         )
         self.v1_0_dashboard_widgets_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10DashboardWidgetsList200Response,),
+                'response_type': ([ReadOnlyWidgetDetailSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -561,8 +533,6 @@ class V10Api(object):
             },
             params_map={
                 'all': [
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -578,18 +548,10 @@ class V10Api(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1060,7 +1022,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_alerts_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementAlertsList200Response,),
+                'response_type': ([ReadOnlyAlertDetailSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -1076,8 +1038,6 @@ class V10Api(object):
                     'timestamp_gte',
                     'timestamp_lt',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -1103,10 +1063,6 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'trigger': 'trigger',
@@ -1114,8 +1070,6 @@ class V10Api(object):
                     'timestamp_gte': 'timestamp_gte',
                     'timestamp_lt': 'timestamp_lt',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'trigger': 'query',
@@ -1123,8 +1077,6 @@ class V10Api(object):
                     'timestamp_gte': 'query',
                     'timestamp_lt': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1306,7 +1258,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_day_archives_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementDayArchivesList200Response,),
+                'response_type': ([ReadOnlyArchiveDaySerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -1323,8 +1275,6 @@ class V10Api(object):
                     'channel',
                     'group',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -1352,10 +1302,6 @@ class V10Api(object):
                         (float,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'starttime': 'starttime',
@@ -1364,8 +1310,6 @@ class V10Api(object):
                     'channel': 'channel',
                     'group': 'group',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'starttime': 'query',
@@ -1374,8 +1318,6 @@ class V10Api(object):
                     'channel': 'query',
                     'group': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1441,7 +1383,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_hour_archives_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementHourArchivesList200Response,),
+                'response_type': ([ReadOnlyArchiveHourSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -1458,8 +1400,6 @@ class V10Api(object):
                     'channel',
                     'group',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -1487,10 +1427,6 @@ class V10Api(object):
                         (float,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'starttime': 'starttime',
@@ -1499,8 +1435,6 @@ class V10Api(object):
                     'channel': 'channel',
                     'group': 'group',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'starttime': 'query',
@@ -1509,8 +1443,6 @@ class V10Api(object):
                     'channel': 'query',
                     'group': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1677,7 +1609,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_measurements_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementMeasurementsList200Response,),
+                'response_type': ([ReadOnlyMeasurementSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -1694,8 +1626,6 @@ class V10Api(object):
                     'channel',
                     'group',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -1723,10 +1653,6 @@ class V10Api(object):
                         (float,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'starttime': 'starttime',
@@ -1735,8 +1661,6 @@ class V10Api(object):
                     'channel': 'channel',
                     'group': 'group',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'starttime': 'query',
@@ -1745,8 +1669,6 @@ class V10Api(object):
                     'channel': 'query',
                     'group': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2029,7 +1951,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_metrics_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementMetricsList200Response,),
+                'response_type': ([ReadOnlyMetricSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -2042,8 +1964,6 @@ class V10Api(object):
                 'all': [
                     'name',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -2063,22 +1983,14 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'name': 'name',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'name': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2361,7 +2273,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_monitors_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementMonitorsList200Response,),
+                'response_type': ([ReadOnlyMonitorDetailSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -2374,8 +2286,6 @@ class V10Api(object):
                 'all': [
                     'channel_group',
                     'metric',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -2395,22 +2305,14 @@ class V10Api(object):
                         (str,),
                     'metric':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'channel_group': 'channel_group',
                     'metric': 'metric',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'channel_group': 'query',
                     'metric': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2592,7 +2494,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_month_archives_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementMonthArchivesList200Response,),
+                'response_type': ([ReadOnlyArchiveMonthSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -2609,8 +2511,6 @@ class V10Api(object):
                     'channel',
                     'group',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -2638,10 +2538,6 @@ class V10Api(object):
                         (float,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'starttime': 'starttime',
@@ -2650,8 +2546,6 @@ class V10Api(object):
                     'channel': 'channel',
                     'group': 'group',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'starttime': 'query',
@@ -2660,8 +2554,6 @@ class V10Api(object):
                     'channel': 'query',
                     'group': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2828,7 +2720,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_triggers_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementTriggersList200Response,),
+                'response_type': ([ReadOnlyTriggerSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -2840,8 +2732,6 @@ class V10Api(object):
             params_map={
                 'all': [
                     'monitor',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -2859,20 +2749,12 @@ class V10Api(object):
                 'openapi_types': {
                     'monitor':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'monitor': 'monitor',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'monitor': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -3054,7 +2936,7 @@ class V10Api(object):
         )
         self.v1_0_measurement_week_archives_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10MeasurementWeekArchivesList200Response,),
+                'response_type': ([ReadOnlyArchiveWeekSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -3071,8 +2953,6 @@ class V10Api(object):
                     'channel',
                     'group',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -3100,10 +2980,6 @@ class V10Api(object):
                         (float,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'starttime': 'starttime',
@@ -3112,8 +2988,6 @@ class V10Api(object):
                     'channel': 'channel',
                     'group': 'group',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'starttime': 'query',
@@ -3122,8 +2996,6 @@ class V10Api(object):
                     'channel': 'query',
                     'group': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -3290,7 +3162,7 @@ class V10Api(object):
         )
         self.v1_0_nslc_channels_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10NslcChannelsList200Response,),
+                'response_type': ([ReadOnlyChannelSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -3319,8 +3191,6 @@ class V10Api(object):
                     'lon_min',
                     'lon_max',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -3372,10 +3242,6 @@ class V10Api(object):
                         (float,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'nslc': 'nslc',
@@ -3396,8 +3262,6 @@ class V10Api(object):
                     'lon_min': 'lon_min',
                     'lon_max': 'lon_max',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'nslc': 'query',
@@ -3418,8 +3282,6 @@ class V10Api(object):
                     'lon_min': 'query',
                     'lon_max': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -3702,7 +3564,7 @@ class V10Api(object):
         )
         self.v1_0_nslc_groups_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10NslcGroupsList200Response,),
+                'response_type': ([ReadOnlyGroupSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -3717,8 +3579,6 @@ class V10Api(object):
                     'organization',
                     'user',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -3742,26 +3602,18 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'name': 'name',
                     'organization': 'organization',
                     'user': 'user',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'name': 'query',
                     'organization': 'query',
                     'user': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -4044,7 +3896,7 @@ class V10Api(object):
         )
         self.v1_0_nslc_matching_rules_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10NslcMatchingRulesList200Response,),
+                'response_type': ([ReadOnlyMatchingRuleSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -4055,8 +3907,6 @@ class V10Api(object):
             },
             params_map={
                 'all': [
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -4072,18 +3922,10 @@ class V10Api(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -4366,7 +4208,7 @@ class V10Api(object):
         )
         self.v1_0_nslc_networks_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10NslcNetworksList200Response,),
+                'response_type': ([ReadOnlyNetworkSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -4380,8 +4222,6 @@ class V10Api(object):
                     'network',
                     'channel',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -4403,24 +4243,16 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'network': 'network',
                     'channel': 'channel',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'network': 'query',
                     'channel': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -4703,7 +4535,7 @@ class V10Api(object):
         )
         self.v1_0_organization_organizations_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10OrganizationOrganizationsList200Response,),
+                'response_type': ([ReadOnlyOrganizationSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -4716,8 +4548,6 @@ class V10Api(object):
                 'all': [
                     'name',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -4737,22 +4567,14 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'name': 'name',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'name': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -5035,7 +4857,7 @@ class V10Api(object):
         )
         self.v1_0_organization_users_list_endpoint = _Endpoint(
             settings={
-                'response_type': (V10OrganizationUsersList200Response,),
+                'response_type': ([ReadOnlyUserWriteSerializer],),
                 'auth': [
                     'Token'
                 ],
@@ -5048,8 +4870,6 @@ class V10Api(object):
                 'all': [
                     'organization',
                     'order',
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -5069,22 +4889,14 @@ class V10Api(object):
                         (str,),
                     'order':
                         (str,),
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
                     'organization': 'organization',
                     'order': 'order',
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
                     'organization': 'query',
                     'order': 'query',
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -5575,7 +5387,7 @@ class V10Api(object):
         )
         self.v1_0_user_groups_list_endpoint = _Endpoint(
             settings={
-                'response_type': (UserGroupsList200Response,),
+                'response_type': ([dict],),
                 'auth': [
                     'Token'
                 ],
@@ -5586,8 +5398,6 @@ class V10Api(object):
             },
             params_map={
                 'all': [
-                    'limit',
-                    'offset',
                 ],
                 'required': [],
                 'nullable': [
@@ -5603,18 +5413,10 @@ class V10Api(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'limit':
-                        (int,),
-                    'offset':
-                        (int,),
                 },
                 'attribute_map': {
-                    'limit': 'limit',
-                    'offset': 'offset',
                 },
                 'location_map': {
-                    'limit': 'query',
-                    'offset': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -6178,8 +5980,6 @@ class V10Api(object):
             share_all (str): [optional]
             share_org (str): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6212,7 +6012,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10DashboardDashboardsList200Response
+            [ReadOnlyDashboardSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -6675,8 +6475,6 @@ class V10Api(object):
 
 
         Keyword Args:
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6709,7 +6507,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10DashboardWidgetsList200Response
+            [ReadOnlyWidgetDetailSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -7498,8 +7296,6 @@ class V10Api(object):
             timestamp_gte (str): [optional]
             timestamp_lt (str): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7532,7 +7328,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementAlertsList200Response
+            [ReadOnlyAlertDetailSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -7837,8 +7633,6 @@ class V10Api(object):
             channel (float): Multiple values may be separated by commas.. [optional]
             group (float): Multiple values may be separated by commas.. [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7871,7 +7665,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementDayArchivesList200Response
+            [ReadOnlyArchiveDaySerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -8004,8 +7798,6 @@ class V10Api(object):
             channel (float): Multiple values may be separated by commas.. [optional]
             group (float): Multiple values may be separated by commas.. [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8038,7 +7830,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementHourArchivesList200Response
+            [ReadOnlyArchiveHourSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -8338,8 +8130,6 @@ class V10Api(object):
             channel (float): Multiple values may be separated by commas.. [optional]
             group (float): Multiple values may be separated by commas.. [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8372,7 +8162,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementMeasurementsList200Response
+            [ReadOnlyMeasurementSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -8840,8 +8630,6 @@ class V10Api(object):
         Keyword Args:
             name (str): Multiple values may be separated by commas.. [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8874,7 +8662,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementMetricsList200Response
+            [ReadOnlyMetricSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -9339,8 +9127,6 @@ class V10Api(object):
         Keyword Args:
             channel_group (str): [optional]
             metric (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -9373,7 +9159,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementMonitorsList200Response
+            [ReadOnlyMonitorDetailSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -9678,8 +9464,6 @@ class V10Api(object):
             channel (float): Multiple values may be separated by commas.. [optional]
             group (float): Multiple values may be separated by commas.. [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -9712,7 +9496,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementMonthArchivesList200Response
+            [ReadOnlyArchiveMonthSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -10004,8 +9788,6 @@ class V10Api(object):
 
         Keyword Args:
             monitor (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -10038,7 +9820,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementTriggersList200Response
+            [ReadOnlyTriggerSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -10343,8 +10125,6 @@ class V10Api(object):
             channel (float): Multiple values may be separated by commas.. [optional]
             group (float): Multiple values may be separated by commas.. [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -10377,7 +10157,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10MeasurementWeekArchivesList200Response
+            [ReadOnlyArchiveWeekSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -10686,8 +10466,6 @@ class V10Api(object):
             lon_min (float): [optional]
             lon_max (float): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -10720,7 +10498,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10NslcChannelsList200Response
+            [ReadOnlyChannelSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -11187,8 +10965,6 @@ class V10Api(object):
             organization (str): [optional]
             user (str): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -11221,7 +10997,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10NslcGroupsList200Response
+            [ReadOnlyGroupSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -11684,8 +11460,6 @@ class V10Api(object):
 
 
         Keyword Args:
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -11718,7 +11492,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10NslcMatchingRulesList200Response
+            [ReadOnlyMatchingRuleSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -12184,8 +11958,6 @@ class V10Api(object):
             network (str): Multiple values may be separated by commas.. [optional]
             channel (str): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -12218,7 +11990,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10NslcNetworksList200Response
+            [ReadOnlyNetworkSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -12683,8 +12455,6 @@ class V10Api(object):
         Keyword Args:
             name (str): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -12717,7 +12487,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10OrganizationOrganizationsList200Response
+            [ReadOnlyOrganizationSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -13182,8 +12952,6 @@ class V10Api(object):
         Keyword Args:
             organization (str): [optional]
             order (str): [optional]
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -13216,7 +12984,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            V10OrganizationUsersList200Response
+            [ReadOnlyUserWriteSerializer]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -14014,8 +13782,6 @@ class V10Api(object):
 
 
         Keyword Args:
-            limit (int): Number of results to return per page.. [optional]
-            offset (int): The initial index from which to return the results.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -14048,7 +13814,7 @@ class V10Api(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            UserGroupsList200Response
+            [dict]
                 If the method is called asynchronously, returns the request
                 thread.
         """
