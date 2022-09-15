@@ -194,7 +194,6 @@ Class | Method | HTTP request | Description
  - [AuthToken](docs/AuthToken.md)
  - [Channel](docs/Channel.md)
  - [Group](docs/Group.md)
- - [Measurement](docs/Measurement.md)
  - [Metric](docs/Metric.md)
  - [NslcGroup](docs/NslcGroup.md)
  - [ReadOnlyAlertDetailSerializer](docs/ReadOnlyAlertDetailSerializer.md)

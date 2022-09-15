@@ -17,7 +17,6 @@ from __future__ import absolute_import
 from squacapi_client.models.auth_token import AuthToken
 from squacapi_client.models.channel import Channel
 from squacapi_client.models.group import Group
-from squacapi_client.models.measurement import Measurement
 from squacapi_client.models.metric import Metric
 from squacapi_client.models.nslc_group import NslcGroup
 from squacapi_client.models.read_only_alert_detail_serializer import ReadOnlyAlertDetailSerializer

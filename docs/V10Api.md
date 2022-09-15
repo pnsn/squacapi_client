@@ -1477,7 +1477,7 @@ Name | Type | Description  | Notes
 
 
 
-post list of measuremetns
+end point for using channel filter
 
 ### Example
 ```python
@@ -1495,7 +1495,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
-body = [squacapi_client.Measurement()] # list[Measurement] | 
+body = squacapi_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_create(body)
@@ -1508,7 +1508,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**list[Measurement]**](Measurement.md)|  | 
+ **body** | [**WriteOnlyMeasurementSerializer**](WriteOnlyMeasurementSerializer.md)|  | 
 
 ### Return type
 
