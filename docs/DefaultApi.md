@@ -1,16 +1,13 @@
 # squacapi_client.DefaultApi
 
-All URIs are relative to *https://squacapi.pnsn.org*
+All URIs are relative to *https://staging-squacapi.pnsn.org/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**list**](DefaultApi.md#list) | **GET** / | 
 
-
 # **list**
 > list()
-
-
 
 
 
@@ -50,8 +47,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

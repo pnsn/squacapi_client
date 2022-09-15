@@ -10,8 +10,7 @@ Name | Type | Description | Notes
 **starttime** | **datetime** |  | 
 **endtime** | **datetime** |  | 
 **created_at** | **datetime** |  | [optional] 
-**user_id** | **str** |  | [optional] 
+**user** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 
