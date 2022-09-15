@@ -1473,11 +1473,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_create**
-> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_create(body)
+> list[Measurement] v1_0_measurement_measurements_create(body)
 
 
 
-end point for using channel filter
+post list of measurements
 
 ### Example
 ```python
@@ -1495,7 +1495,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
+body = [squacapi_client.Measurement()] # list[Measurement] | 
 
 try:
     api_response = api_instance.v1_0_measurement_measurements_create(body)
@@ -1508,11 +1508,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyMeasurementSerializer**](WriteOnlyMeasurementSerializer.md)|  | 
+ **body** | [**list[Measurement]**](Measurement.md)|  | 
 
 ### Return type
 
-[**ReadOnlyMeasurementSerializer**](ReadOnlyMeasurementSerializer.md)
+[**list[Measurement]**](Measurement.md)
 
 ### Authorization
 

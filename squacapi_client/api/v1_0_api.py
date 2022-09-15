@@ -2563,15 +2563,15 @@ class V10Api(object):
     def v1_0_measurement_measurements_create(self, body, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_create  # noqa: E501
 
-        end point for using channel filter  # noqa: E501
+        post list of measurements  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_create(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyMeasurementSerializer body: (required)
-        :return: ReadOnlyMeasurementSerializer
+        :param list[Measurement] body: (required)
+        :return: list[Measurement]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2585,15 +2585,15 @@ class V10Api(object):
     def v1_0_measurement_measurements_create_with_http_info(self, body, **kwargs):  # noqa: E501
         """v1_0_measurement_measurements_create  # noqa: E501
 
-        end point for using channel filter  # noqa: E501
+        post list of measurements  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.v1_0_measurement_measurements_create_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param WriteOnlyMeasurementSerializer body: (required)
-        :return: ReadOnlyMeasurementSerializer
+        :param list[Measurement] body: (required)
+        :return: list[Measurement]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2651,7 +2651,7 @@ class V10Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ReadOnlyMeasurementSerializer',  # noqa: E501
+            response_type='list[Measurement]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
