@@ -34,8 +34,11 @@ class ReadOnlyGroupDetailSerializer(object):
         'channels': 'list[Channel]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'user': 'str',
+        'user': 'int',
         'organization': 'int',
+        'share_all': 'bool',
+        'share_org': 'bool',
+        'channels_count': 'int',
         'auto_include_channels': 'list[Channel]',
         'auto_exclude_channels': 'list[Channel]'
     }
@@ -49,11 +52,14 @@ class ReadOnlyGroupDetailSerializer(object):
         'updated_at': 'updated_at',
         'user': 'user',
         'organization': 'organization',
+        'share_all': 'share_all',
+        'share_org': 'share_org',
+        'channels_count': 'channels_count',
         'auto_include_channels': 'auto_include_channels',
         'auto_exclude_channels': 'auto_exclude_channels'
     }
 
-    def __init__(self, name=None, id=None, description=None, channels=None, created_at=None, updated_at=None, user=None, organization=None, auto_include_channels=None, auto_exclude_channels=None):  # noqa: E501
+    def __init__(self, name=None, id=None, description=None, channels=None, created_at=None, updated_at=None, user=None, organization=None, share_all=None, share_org=None, channels_count=None, auto_include_channels=None, auto_exclude_channels=None):  # noqa: E501
         """ReadOnlyGroupDetailSerializer - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._id = None
@@ -63,6 +69,9 @@ class ReadOnlyGroupDetailSerializer(object):
         self._updated_at = None
         self._user = None
         self._organization = None
+        self._share_all = None
+        self._share_org = None
+        self._channels_count = None
         self._auto_include_channels = None
         self._auto_exclude_channels = None
         self.discriminator = None
@@ -80,6 +89,12 @@ class ReadOnlyGroupDetailSerializer(object):
         if user is not None:
             self.user = user
         self.organization = organization
+        if share_all is not None:
+            self.share_all = share_all
+        if share_org is not None:
+            self.share_org = share_org
+        if channels_count is not None:
+            self.channels_count = channels_count
         if auto_include_channels is not None:
             self.auto_include_channels = auto_include_channels
         if auto_exclude_channels is not None:
@@ -219,7 +234,7 @@ class ReadOnlyGroupDetailSerializer(object):
 
 
         :return: The user of this ReadOnlyGroupDetailSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._user
 
@@ -229,7 +244,7 @@ class ReadOnlyGroupDetailSerializer(object):
 
 
         :param user: The user of this ReadOnlyGroupDetailSerializer.  # noqa: E501
-        :type: str
+        :type: int
         """
 
         self._user = user
@@ -256,6 +271,69 @@ class ReadOnlyGroupDetailSerializer(object):
             raise ValueError("Invalid value for `organization`, must not be `None`")  # noqa: E501
 
         self._organization = organization
+
+    @property
+    def share_all(self):
+        """Gets the share_all of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+
+
+        :return: The share_all of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_all
+
+    @share_all.setter
+    def share_all(self, share_all):
+        """Sets the share_all of this ReadOnlyGroupDetailSerializer.
+
+
+        :param share_all: The share_all of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_all = share_all
+
+    @property
+    def share_org(self):
+        """Gets the share_org of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+
+
+        :return: The share_org of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._share_org
+
+    @share_org.setter
+    def share_org(self, share_org):
+        """Sets the share_org of this ReadOnlyGroupDetailSerializer.
+
+
+        :param share_org: The share_org of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._share_org = share_org
+
+    @property
+    def channels_count(self):
+        """Gets the channels_count of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+
+
+        :return: The channels_count of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._channels_count
+
+    @channels_count.setter
+    def channels_count(self, channels_count):
+        """Sets the channels_count of this ReadOnlyGroupDetailSerializer.
+
+
+        :param channels_count: The channels_count of this ReadOnlyGroupDetailSerializer.  # noqa: E501
+        :type: int
+        """
+
+        self._channels_count = channels_count
 
     @property
     def auto_include_channels(self):

@@ -9,8 +9,11 @@ Name | Type | Description | Notes
 **channels** | [**list[Channel]**](Channel.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**user** | **str** |  | [optional] 
+**user** | **int** |  | [optional] 
 **organization** | **int** |  | 
+**share_all** | **bool** |  | [optional] 
+**share_org** | **bool** |  | [optional] 
+**channels_count** | **int** |  | [optional] 
 **auto_include_channels** | [**list[Channel]**](Channel.md) |  | [optional] 
 **auto_exclude_channels** | [**list[Channel]**](Channel.md) |  | [optional] 
 

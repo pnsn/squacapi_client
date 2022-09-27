@@ -2166,6 +2166,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -2192,6 +2193,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -2202,7 +2204,7 @@ class V10Api(object):
                  returns the request thread.
         """
 
-        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
+        all_params = ['starttime', 'nslc', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2225,6 +2227,8 @@ class V10Api(object):
         query_params = []
         if 'starttime' in params:
             query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'nslc' in params:
+            query_params.append(('nslc', params['nslc']))  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
@@ -2368,6 +2372,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -2394,6 +2399,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -2404,7 +2410,7 @@ class V10Api(object):
                  returns the request thread.
         """
 
-        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
+        all_params = ['starttime', 'nslc', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2427,6 +2433,8 @@ class V10Api(object):
         query_params = []
         if 'starttime' in params:
             query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'nslc' in params:
+            query_params.append(('nslc', params['nslc']))  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
@@ -2761,6 +2769,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -2788,6 +2797,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -2798,7 +2808,7 @@ class V10Api(object):
                  returns the request thread.
         """
 
-        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
+        all_params = ['starttime', 'nslc', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2821,6 +2831,8 @@ class V10Api(object):
         query_params = []
         if 'starttime' in params:
             query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'nslc' in params:
+            query_params.append(('nslc', params['nslc']))  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
@@ -4344,6 +4356,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -4370,6 +4383,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -4380,7 +4394,7 @@ class V10Api(object):
                  returns the request thread.
         """
 
-        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
+        all_params = ['starttime', 'nslc', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4403,6 +4417,8 @@ class V10Api(object):
         query_params = []
         if 'starttime' in params:
             query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'nslc' in params:
+            query_params.append(('nslc', params['nslc']))  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
@@ -5124,6 +5140,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -5150,6 +5167,7 @@ class V10Api(object):
 
         :param async_req bool
         :param str starttime:
+        :param str nslc: Multiple values may be separated by commas.
         :param str endtime:
         :param float metric: Multiple values may be separated by commas.
         :param float channel: Multiple values may be separated by commas.
@@ -5160,7 +5178,7 @@ class V10Api(object):
                  returns the request thread.
         """
 
-        all_params = ['starttime', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
+        all_params = ['starttime', 'nslc', 'endtime', 'metric', 'channel', 'group', 'order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5183,6 +5201,8 @@ class V10Api(object):
         query_params = []
         if 'starttime' in params:
             query_params.append(('starttime', params['starttime']))  # noqa: E501
+        if 'nslc' in params:
+            query_params.append(('nslc', params['nslc']))  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:

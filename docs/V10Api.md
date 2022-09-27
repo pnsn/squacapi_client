@@ -1,6 +1,6 @@
 # squacapi_client.V10Api
 
-All URIs are relative to *https://staging-squacapi.pnsn.org/*
+All URIs are relative to *https://squacapi.pnsn.org/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -1249,7 +1249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_day_archives_list**
-> list[ReadOnlyArchiveDaySerializer] v1_0_measurement_day_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+> list[ReadOnlyArchiveDaySerializer] v1_0_measurement_day_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -1270,6 +1270,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
+nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
 metric = 1.2 # float | Multiple values may be separated by commas. (optional)
 channel = 1.2 # float | Multiple values may be separated by commas. (optional)
@@ -1277,7 +1278,7 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_day_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.v1_0_measurement_day_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling V10Api->v1_0_measurement_day_archives_list: %s\n" % e)
@@ -1288,6 +1289,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
+ **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
  **endtime** | **str**|  | [optional] 
  **metric** | **float**| Multiple values may be separated by commas. | [optional] 
  **channel** | **float**| Multiple values may be separated by commas. | [optional] 
@@ -1361,7 +1363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_hour_archives_list**
-> list[ReadOnlyArchiveHourSerializer] v1_0_measurement_hour_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+> list[ReadOnlyArchiveHourSerializer] v1_0_measurement_hour_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -1382,6 +1384,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
+nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
 metric = 1.2 # float | Multiple values may be separated by commas. (optional)
 channel = 1.2 # float | Multiple values may be separated by commas. (optional)
@@ -1389,7 +1392,7 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_hour_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.v1_0_measurement_hour_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling V10Api->v1_0_measurement_hour_archives_list: %s\n" % e)
@@ -1400,6 +1403,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
+ **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
  **endtime** | **str**|  | [optional] 
  **metric** | **float**| Multiple values may be separated by commas. | [optional] 
  **channel** | **float**| Multiple values may be separated by commas. | [optional] 
@@ -1578,7 +1582,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_measurements_list**
-> list[ReadOnlyMeasurementSerializer] v1_0_measurement_measurements_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+> list[ReadOnlyMeasurementSerializer] v1_0_measurement_measurements_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -1601,6 +1605,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
+nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
 metric = 1.2 # float | Multiple values may be separated by commas. (optional)
 channel = 1.2 # float | Multiple values may be separated by commas. (optional)
@@ -1608,7 +1613,7 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_measurements_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.v1_0_measurement_measurements_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling V10Api->v1_0_measurement_measurements_list: %s\n" % e)
@@ -1619,6 +1624,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
+ **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
  **endtime** | **str**|  | [optional] 
  **metric** | **float**| Multiple values may be separated by commas. | [optional] 
  **channel** | **float**| Multiple values may be separated by commas. | [optional] 
@@ -2426,7 +2432,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_month_archives_list**
-> list[ReadOnlyArchiveMonthSerializer] v1_0_measurement_month_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+> list[ReadOnlyArchiveMonthSerializer] v1_0_measurement_month_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -2447,6 +2453,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
+nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
 metric = 1.2 # float | Multiple values may be separated by commas. (optional)
 channel = 1.2 # float | Multiple values may be separated by commas. (optional)
@@ -2454,7 +2461,7 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_month_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.v1_0_measurement_month_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling V10Api->v1_0_measurement_month_archives_list: %s\n" % e)
@@ -2465,6 +2472,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
+ **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
  **endtime** | **str**|  | [optional] 
  **metric** | **float**| Multiple values may be separated by commas. | [optional] 
  **channel** | **float**| Multiple values may be separated by commas. | [optional] 
@@ -2847,7 +2855,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_0_measurement_week_archives_list**
-> list[ReadOnlyArchiveWeekSerializer] v1_0_measurement_week_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+> list[ReadOnlyArchiveWeekSerializer] v1_0_measurement_week_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -2868,6 +2876,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
+nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
 metric = 1.2 # float | Multiple values may be separated by commas. (optional)
 channel = 1.2 # float | Multiple values may be separated by commas. (optional)
@@ -2875,7 +2884,7 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_week_archives_list(starttime=starttime, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.v1_0_measurement_week_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling V10Api->v1_0_measurement_week_archives_list: %s\n" % e)
@@ -2886,6 +2895,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
+ **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
  **endtime** | **str**|  | [optional] 
  **metric** | **float**| Multiple values may be separated by commas. | [optional] 
  **channel** | **float**| Multiple values may be separated by commas. | [optional] 
