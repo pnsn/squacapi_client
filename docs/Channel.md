@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **station_code** | **str** |  | 
 **station_name** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **sample_rate** | **float** |  | [optional] 
 **network** | **str** |  | 
@@ -21,10 +20,10 @@ Name | Type | Description | Notes
 **dip** | **float** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**user_id** | **str** |  | [optional] 
+**user** | **int** |  | [optional] 
 **starttime** | **datetime** |  | [optional] 
 **endtime** | **datetime** |  | [optional] 
+**nslc** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

@@ -1,20 +1,18 @@
-# NslcGroup
+# ReadOnlyMatchingRuleSerializer
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | 
 **id** | **int** |  | [optional] 
-**description** | **str** |  | [optional] 
+**network_regex** | **str** |  | [optional] 
+**station_regex** | **str** |  | [optional] 
+**location_regex** | **str** |  | [optional] 
+**channel_regex** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **user** | **int** |  | [optional] 
-**organization** | **int** |  | 
-**share_all** | **bool** |  | [optional] 
-**share_org** | **bool** |  | [optional] 
-**channels_count** | **int** |  | [optional] 
-**auto_include_channels** | **list[int]** |  | 
-**auto_exclude_channels** | **list[int]** |  | 
+**group** | **int** |  | 
+**is_include** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
