@@ -8,7 +8,7 @@ from squacapi_client import Configuration, ApiClient, \
 
 
 
-def get_client(user, passwd):
+def get_client(user, passwd, *args, **kwargs):
     '''authenticate user'''
     conf = Configuration()
     api_client = ApiClient(conf)
@@ -17,6 +17,9 @@ def get_client(user, passwd):
     token = user_client.user_token_create(auth_token)
     conf.api_key['Authorization'] = token.token
     conf.api_key_prefix['Authorization'] = 'Token'
+
+    if 'host' in kwargs:
+        conf.host = kwargs['host']
     return V10Api(api_client)
 
 
