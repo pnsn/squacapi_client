@@ -16,8 +16,8 @@ from __future__ import absolute_import
 
 # import apis into sdk package
 from squacapi_client.api._api import DefaultApi
-from squacapi_client.api.user_api import UserApi
-from squacapi_client.api.v1_0_api import V10Api
+from squacapi_client.api.api_api import ApiApi
+from squacapi_client.api.invite_api import InviteApi
 # import ApiClient
 from squacapi_client.api_client import ApiClient
 from squacapi_client.configuration import Configuration

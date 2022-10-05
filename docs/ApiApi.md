@@ -1,116 +1,114 @@
-# squacapi_client.V10Api
+# squacapi_client.ApiApi
 
-All URIs are relative to *https://squacapi.pnsn.org/*
+All URIs are relative to *https://staging-squacapi.pnsn.org/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_0_dashboard_dashboards_create**](V10Api.md#v1_0_dashboard_dashboards_create) | **POST** /v1.0/dashboard/dashboards/ | 
-[**v1_0_dashboard_dashboards_delete**](V10Api.md#v1_0_dashboard_dashboards_delete) | **DELETE** /v1.0/dashboard/dashboards/{id}/ | 
-[**v1_0_dashboard_dashboards_list**](V10Api.md#v1_0_dashboard_dashboards_list) | **GET** /v1.0/dashboard/dashboards/ | 
-[**v1_0_dashboard_dashboards_partial_update**](V10Api.md#v1_0_dashboard_dashboards_partial_update) | **PATCH** /v1.0/dashboard/dashboards/{id}/ | 
-[**v1_0_dashboard_dashboards_read**](V10Api.md#v1_0_dashboard_dashboards_read) | **GET** /v1.0/dashboard/dashboards/{id}/ | 
-[**v1_0_dashboard_dashboards_update**](V10Api.md#v1_0_dashboard_dashboards_update) | **PUT** /v1.0/dashboard/dashboards/{id}/ | 
-[**v1_0_dashboard_widgets_create**](V10Api.md#v1_0_dashboard_widgets_create) | **POST** /v1.0/dashboard/widgets/ | 
-[**v1_0_dashboard_widgets_delete**](V10Api.md#v1_0_dashboard_widgets_delete) | **DELETE** /v1.0/dashboard/widgets/{id}/ | 
-[**v1_0_dashboard_widgets_list**](V10Api.md#v1_0_dashboard_widgets_list) | **GET** /v1.0/dashboard/widgets/ | 
-[**v1_0_dashboard_widgets_partial_update**](V10Api.md#v1_0_dashboard_widgets_partial_update) | **PATCH** /v1.0/dashboard/widgets/{id}/ | 
-[**v1_0_dashboard_widgets_read**](V10Api.md#v1_0_dashboard_widgets_read) | **GET** /v1.0/dashboard/widgets/{id}/ | 
-[**v1_0_dashboard_widgets_update**](V10Api.md#v1_0_dashboard_widgets_update) | **PUT** /v1.0/dashboard/widgets/{id}/ | 
-[**v1_0_invite_invite_create**](V10Api.md#v1_0_invite_invite_create) | **POST** /v1.0/invite/invite/ | 
-[**v1_0_invite_register_create**](V10Api.md#v1_0_invite_register_create) | **POST** /v1.0/invite/register/ | 
-[**v1_0_list**](V10Api.md#v1_0_list) | **GET** /v1.0/ | 
-[**v1_0_measurement_aggregated_list**](V10Api.md#v1_0_measurement_aggregated_list) | **GET** /v1.0/measurement/aggregated/ | 
-[**v1_0_measurement_alerts_create**](V10Api.md#v1_0_measurement_alerts_create) | **POST** /v1.0/measurement/alerts/ | 
-[**v1_0_measurement_alerts_delete**](V10Api.md#v1_0_measurement_alerts_delete) | **DELETE** /v1.0/measurement/alerts/{id}/ | 
-[**v1_0_measurement_alerts_list**](V10Api.md#v1_0_measurement_alerts_list) | **GET** /v1.0/measurement/alerts/ | 
-[**v1_0_measurement_alerts_partial_update**](V10Api.md#v1_0_measurement_alerts_partial_update) | **PATCH** /v1.0/measurement/alerts/{id}/ | 
-[**v1_0_measurement_alerts_read**](V10Api.md#v1_0_measurement_alerts_read) | **GET** /v1.0/measurement/alerts/{id}/ | 
-[**v1_0_measurement_alerts_update**](V10Api.md#v1_0_measurement_alerts_update) | **PUT** /v1.0/measurement/alerts/{id}/ | 
-[**v1_0_measurement_day_archives_list**](V10Api.md#v1_0_measurement_day_archives_list) | **GET** /v1.0/measurement/day-archives/ | 
-[**v1_0_measurement_day_archives_read**](V10Api.md#v1_0_measurement_day_archives_read) | **GET** /v1.0/measurement/day-archives/{id}/ | 
-[**v1_0_measurement_hour_archives_list**](V10Api.md#v1_0_measurement_hour_archives_list) | **GET** /v1.0/measurement/hour-archives/ | 
-[**v1_0_measurement_hour_archives_read**](V10Api.md#v1_0_measurement_hour_archives_read) | **GET** /v1.0/measurement/hour-archives/{id}/ | 
-[**v1_0_measurement_measurements_create**](V10Api.md#v1_0_measurement_measurements_create) | **POST** /v1.0/measurement/measurements/ | 
-[**v1_0_measurement_measurements_delete**](V10Api.md#v1_0_measurement_measurements_delete) | **DELETE** /v1.0/measurement/measurements/{id}/ | 
-[**v1_0_measurement_measurements_list**](V10Api.md#v1_0_measurement_measurements_list) | **GET** /v1.0/measurement/measurements/ | 
-[**v1_0_measurement_measurements_partial_update**](V10Api.md#v1_0_measurement_measurements_partial_update) | **PATCH** /v1.0/measurement/measurements/{id}/ | 
-[**v1_0_measurement_measurements_read**](V10Api.md#v1_0_measurement_measurements_read) | **GET** /v1.0/measurement/measurements/{id}/ | 
-[**v1_0_measurement_measurements_update**](V10Api.md#v1_0_measurement_measurements_update) | **PUT** /v1.0/measurement/measurements/{id}/ | 
-[**v1_0_measurement_metrics_create**](V10Api.md#v1_0_measurement_metrics_create) | **POST** /v1.0/measurement/metrics/ | 
-[**v1_0_measurement_metrics_delete**](V10Api.md#v1_0_measurement_metrics_delete) | **DELETE** /v1.0/measurement/metrics/{id}/ | 
-[**v1_0_measurement_metrics_list**](V10Api.md#v1_0_measurement_metrics_list) | **GET** /v1.0/measurement/metrics/ | 
-[**v1_0_measurement_metrics_partial_update**](V10Api.md#v1_0_measurement_metrics_partial_update) | **PATCH** /v1.0/measurement/metrics/{id}/ | 
-[**v1_0_measurement_metrics_read**](V10Api.md#v1_0_measurement_metrics_read) | **GET** /v1.0/measurement/metrics/{id}/ | 
-[**v1_0_measurement_metrics_update**](V10Api.md#v1_0_measurement_metrics_update) | **PUT** /v1.0/measurement/metrics/{id}/ | 
-[**v1_0_measurement_monitors_create**](V10Api.md#v1_0_measurement_monitors_create) | **POST** /v1.0/measurement/monitors/ | 
-[**v1_0_measurement_monitors_delete**](V10Api.md#v1_0_measurement_monitors_delete) | **DELETE** /v1.0/measurement/monitors/{id}/ | 
-[**v1_0_measurement_monitors_list**](V10Api.md#v1_0_measurement_monitors_list) | **GET** /v1.0/measurement/monitors/ | 
-[**v1_0_measurement_monitors_partial_update**](V10Api.md#v1_0_measurement_monitors_partial_update) | **PATCH** /v1.0/measurement/monitors/{id}/ | 
-[**v1_0_measurement_monitors_read**](V10Api.md#v1_0_measurement_monitors_read) | **GET** /v1.0/measurement/monitors/{id}/ | 
-[**v1_0_measurement_monitors_update**](V10Api.md#v1_0_measurement_monitors_update) | **PUT** /v1.0/measurement/monitors/{id}/ | 
-[**v1_0_measurement_month_archives_list**](V10Api.md#v1_0_measurement_month_archives_list) | **GET** /v1.0/measurement/month-archives/ | 
-[**v1_0_measurement_month_archives_read**](V10Api.md#v1_0_measurement_month_archives_read) | **GET** /v1.0/measurement/month-archives/{id}/ | 
-[**v1_0_measurement_triggers_create**](V10Api.md#v1_0_measurement_triggers_create) | **POST** /v1.0/measurement/triggers/ | 
-[**v1_0_measurement_triggers_delete**](V10Api.md#v1_0_measurement_triggers_delete) | **DELETE** /v1.0/measurement/triggers/{id}/ | 
-[**v1_0_measurement_triggers_list**](V10Api.md#v1_0_measurement_triggers_list) | **GET** /v1.0/measurement/triggers/ | 
-[**v1_0_measurement_triggers_partial_update**](V10Api.md#v1_0_measurement_triggers_partial_update) | **PATCH** /v1.0/measurement/triggers/{id}/ | 
-[**v1_0_measurement_triggers_read**](V10Api.md#v1_0_measurement_triggers_read) | **GET** /v1.0/measurement/triggers/{id}/ | 
-[**v1_0_measurement_triggers_update**](V10Api.md#v1_0_measurement_triggers_update) | **PUT** /v1.0/measurement/triggers/{id}/ | 
-[**v1_0_measurement_week_archives_list**](V10Api.md#v1_0_measurement_week_archives_list) | **GET** /v1.0/measurement/week-archives/ | 
-[**v1_0_measurement_week_archives_read**](V10Api.md#v1_0_measurement_week_archives_read) | **GET** /v1.0/measurement/week-archives/{id}/ | 
-[**v1_0_nslc_channels_create**](V10Api.md#v1_0_nslc_channels_create) | **POST** /v1.0/nslc/channels/ | 
-[**v1_0_nslc_channels_delete**](V10Api.md#v1_0_nslc_channels_delete) | **DELETE** /v1.0/nslc/channels/{id}/ | 
-[**v1_0_nslc_channels_list**](V10Api.md#v1_0_nslc_channels_list) | **GET** /v1.0/nslc/channels/ | 
-[**v1_0_nslc_channels_partial_update**](V10Api.md#v1_0_nslc_channels_partial_update) | **PATCH** /v1.0/nslc/channels/{id}/ | 
-[**v1_0_nslc_channels_read**](V10Api.md#v1_0_nslc_channels_read) | **GET** /v1.0/nslc/channels/{id}/ | 
-[**v1_0_nslc_channels_update**](V10Api.md#v1_0_nslc_channels_update) | **PUT** /v1.0/nslc/channels/{id}/ | 
-[**v1_0_nslc_groups_create**](V10Api.md#v1_0_nslc_groups_create) | **POST** /v1.0/nslc/groups/ | 
-[**v1_0_nslc_groups_delete**](V10Api.md#v1_0_nslc_groups_delete) | **DELETE** /v1.0/nslc/groups/{id}/ | 
-[**v1_0_nslc_groups_list**](V10Api.md#v1_0_nslc_groups_list) | **GET** /v1.0/nslc/groups/ | 
-[**v1_0_nslc_groups_partial_update**](V10Api.md#v1_0_nslc_groups_partial_update) | **PATCH** /v1.0/nslc/groups/{id}/ | 
-[**v1_0_nslc_groups_read**](V10Api.md#v1_0_nslc_groups_read) | **GET** /v1.0/nslc/groups/{id}/ | 
-[**v1_0_nslc_groups_update**](V10Api.md#v1_0_nslc_groups_update) | **PUT** /v1.0/nslc/groups/{id}/ | 
-[**v1_0_nslc_matching_rules_create**](V10Api.md#v1_0_nslc_matching_rules_create) | **POST** /v1.0/nslc/matching-rules/ | 
-[**v1_0_nslc_matching_rules_delete**](V10Api.md#v1_0_nslc_matching_rules_delete) | **DELETE** /v1.0/nslc/matching-rules/{id}/ | 
-[**v1_0_nslc_matching_rules_list**](V10Api.md#v1_0_nslc_matching_rules_list) | **GET** /v1.0/nslc/matching-rules/ | 
-[**v1_0_nslc_matching_rules_partial_update**](V10Api.md#v1_0_nslc_matching_rules_partial_update) | **PATCH** /v1.0/nslc/matching-rules/{id}/ | 
-[**v1_0_nslc_matching_rules_read**](V10Api.md#v1_0_nslc_matching_rules_read) | **GET** /v1.0/nslc/matching-rules/{id}/ | 
-[**v1_0_nslc_matching_rules_update**](V10Api.md#v1_0_nslc_matching_rules_update) | **PUT** /v1.0/nslc/matching-rules/{id}/ | 
-[**v1_0_nslc_networks_create**](V10Api.md#v1_0_nslc_networks_create) | **POST** /v1.0/nslc/networks/ | 
-[**v1_0_nslc_networks_delete**](V10Api.md#v1_0_nslc_networks_delete) | **DELETE** /v1.0/nslc/networks/{code}/ | 
-[**v1_0_nslc_networks_list**](V10Api.md#v1_0_nslc_networks_list) | **GET** /v1.0/nslc/networks/ | 
-[**v1_0_nslc_networks_partial_update**](V10Api.md#v1_0_nslc_networks_partial_update) | **PATCH** /v1.0/nslc/networks/{code}/ | 
-[**v1_0_nslc_networks_read**](V10Api.md#v1_0_nslc_networks_read) | **GET** /v1.0/nslc/networks/{code}/ | 
-[**v1_0_nslc_networks_update**](V10Api.md#v1_0_nslc_networks_update) | **PUT** /v1.0/nslc/networks/{code}/ | 
-[**v1_0_organization_organizations_create**](V10Api.md#v1_0_organization_organizations_create) | **POST** /v1.0/organization/organizations/ | 
-[**v1_0_organization_organizations_delete**](V10Api.md#v1_0_organization_organizations_delete) | **DELETE** /v1.0/organization/organizations/{id}/ | 
-[**v1_0_organization_organizations_list**](V10Api.md#v1_0_organization_organizations_list) | **GET** /v1.0/organization/organizations/ | 
-[**v1_0_organization_organizations_partial_update**](V10Api.md#v1_0_organization_organizations_partial_update) | **PATCH** /v1.0/organization/organizations/{id}/ | 
-[**v1_0_organization_organizations_read**](V10Api.md#v1_0_organization_organizations_read) | **GET** /v1.0/organization/organizations/{id}/ | 
-[**v1_0_organization_organizations_update**](V10Api.md#v1_0_organization_organizations_update) | **PUT** /v1.0/organization/organizations/{id}/ | 
-[**v1_0_organization_users_create**](V10Api.md#v1_0_organization_users_create) | **POST** /v1.0/organization/users/ | 
-[**v1_0_organization_users_delete**](V10Api.md#v1_0_organization_users_delete) | **DELETE** /v1.0/organization/users/{id}/ | 
-[**v1_0_organization_users_list**](V10Api.md#v1_0_organization_users_list) | **GET** /v1.0/organization/users/ | 
-[**v1_0_organization_users_partial_update**](V10Api.md#v1_0_organization_users_partial_update) | **PATCH** /v1.0/organization/users/{id}/ | 
-[**v1_0_organization_users_read**](V10Api.md#v1_0_organization_users_read) | **GET** /v1.0/organization/users/{id}/ | 
-[**v1_0_organization_users_update**](V10Api.md#v1_0_organization_users_update) | **PUT** /v1.0/organization/users/{id}/ | 
-[**v1_0_password_reset_confirm_create**](V10Api.md#v1_0_password_reset_confirm_create) | **POST** /v1.0/password_reset/confirm/ | 
-[**v1_0_password_reset_create**](V10Api.md#v1_0_password_reset_create) | **POST** /v1.0/password_reset/ | An Api View which provides a method to request a password reset token based on an e-mail address
-[**v1_0_password_reset_validate_token_create**](V10Api.md#v1_0_password_reset_validate_token_create) | **POST** /v1.0/password_reset/validate_token/ | 
-[**v1_0_user_create_create**](V10Api.md#v1_0_user_create_create) | **POST** /v1.0/user/create/ | 
-[**v1_0_user_groups_create**](V10Api.md#v1_0_user_groups_create) | **POST** /v1.0/user/groups/ | 
-[**v1_0_user_groups_delete**](V10Api.md#v1_0_user_groups_delete) | **DELETE** /v1.0/user/groups/{id}/ | 
-[**v1_0_user_groups_list**](V10Api.md#v1_0_user_groups_list) | **GET** /v1.0/user/groups/ | 
-[**v1_0_user_groups_partial_update**](V10Api.md#v1_0_user_groups_partial_update) | **PATCH** /v1.0/user/groups/{id}/ | 
-[**v1_0_user_groups_read**](V10Api.md#v1_0_user_groups_read) | **GET** /v1.0/user/groups/{id}/ | 
-[**v1_0_user_groups_update**](V10Api.md#v1_0_user_groups_update) | **PUT** /v1.0/user/groups/{id}/ | 
-[**v1_0_user_me_partial_update**](V10Api.md#v1_0_user_me_partial_update) | **PATCH** /v1.0/user/me/ | 
-[**v1_0_user_me_read**](V10Api.md#v1_0_user_me_read) | **GET** /v1.0/user/me/ | 
-[**v1_0_user_me_update**](V10Api.md#v1_0_user_me_update) | **PUT** /v1.0/user/me/ | 
-[**v1_0_user_token_create**](V10Api.md#v1_0_user_token_create) | **POST** /v1.0/user/token/ | 
+[**api_dashboard_dashboards_create**](ApiApi.md#api_dashboard_dashboards_create) | **POST** /api/dashboard/dashboards/ | 
+[**api_dashboard_dashboards_delete**](ApiApi.md#api_dashboard_dashboards_delete) | **DELETE** /api/dashboard/dashboards/{id}/ | 
+[**api_dashboard_dashboards_list**](ApiApi.md#api_dashboard_dashboards_list) | **GET** /api/dashboard/dashboards/ | 
+[**api_dashboard_dashboards_partial_update**](ApiApi.md#api_dashboard_dashboards_partial_update) | **PATCH** /api/dashboard/dashboards/{id}/ | 
+[**api_dashboard_dashboards_read**](ApiApi.md#api_dashboard_dashboards_read) | **GET** /api/dashboard/dashboards/{id}/ | 
+[**api_dashboard_dashboards_update**](ApiApi.md#api_dashboard_dashboards_update) | **PUT** /api/dashboard/dashboards/{id}/ | 
+[**api_dashboard_widgets_create**](ApiApi.md#api_dashboard_widgets_create) | **POST** /api/dashboard/widgets/ | 
+[**api_dashboard_widgets_delete**](ApiApi.md#api_dashboard_widgets_delete) | **DELETE** /api/dashboard/widgets/{id}/ | 
+[**api_dashboard_widgets_list**](ApiApi.md#api_dashboard_widgets_list) | **GET** /api/dashboard/widgets/ | 
+[**api_dashboard_widgets_partial_update**](ApiApi.md#api_dashboard_widgets_partial_update) | **PATCH** /api/dashboard/widgets/{id}/ | 
+[**api_dashboard_widgets_read**](ApiApi.md#api_dashboard_widgets_read) | **GET** /api/dashboard/widgets/{id}/ | 
+[**api_dashboard_widgets_update**](ApiApi.md#api_dashboard_widgets_update) | **PUT** /api/dashboard/widgets/{id}/ | 
+[**api_list**](ApiApi.md#api_list) | **GET** /api/ | 
+[**api_measurement_aggregated_list**](ApiApi.md#api_measurement_aggregated_list) | **GET** /api/measurement/aggregated/ | 
+[**api_measurement_alerts_create**](ApiApi.md#api_measurement_alerts_create) | **POST** /api/measurement/alerts/ | 
+[**api_measurement_alerts_delete**](ApiApi.md#api_measurement_alerts_delete) | **DELETE** /api/measurement/alerts/{id}/ | 
+[**api_measurement_alerts_list**](ApiApi.md#api_measurement_alerts_list) | **GET** /api/measurement/alerts/ | 
+[**api_measurement_alerts_partial_update**](ApiApi.md#api_measurement_alerts_partial_update) | **PATCH** /api/measurement/alerts/{id}/ | 
+[**api_measurement_alerts_read**](ApiApi.md#api_measurement_alerts_read) | **GET** /api/measurement/alerts/{id}/ | 
+[**api_measurement_alerts_update**](ApiApi.md#api_measurement_alerts_update) | **PUT** /api/measurement/alerts/{id}/ | 
+[**api_measurement_day_archives_list**](ApiApi.md#api_measurement_day_archives_list) | **GET** /api/measurement/day-archives/ | 
+[**api_measurement_day_archives_read**](ApiApi.md#api_measurement_day_archives_read) | **GET** /api/measurement/day-archives/{id}/ | 
+[**api_measurement_hour_archives_list**](ApiApi.md#api_measurement_hour_archives_list) | **GET** /api/measurement/hour-archives/ | 
+[**api_measurement_hour_archives_read**](ApiApi.md#api_measurement_hour_archives_read) | **GET** /api/measurement/hour-archives/{id}/ | 
+[**api_measurement_measurements_create**](ApiApi.md#api_measurement_measurements_create) | **POST** /api/measurement/measurements/ | 
+[**api_measurement_measurements_delete**](ApiApi.md#api_measurement_measurements_delete) | **DELETE** /api/measurement/measurements/{id}/ | 
+[**api_measurement_measurements_list**](ApiApi.md#api_measurement_measurements_list) | **GET** /api/measurement/measurements/ | 
+[**api_measurement_measurements_partial_update**](ApiApi.md#api_measurement_measurements_partial_update) | **PATCH** /api/measurement/measurements/{id}/ | 
+[**api_measurement_measurements_read**](ApiApi.md#api_measurement_measurements_read) | **GET** /api/measurement/measurements/{id}/ | 
+[**api_measurement_measurements_update**](ApiApi.md#api_measurement_measurements_update) | **PUT** /api/measurement/measurements/{id}/ | 
+[**api_measurement_metrics_create**](ApiApi.md#api_measurement_metrics_create) | **POST** /api/measurement/metrics/ | 
+[**api_measurement_metrics_delete**](ApiApi.md#api_measurement_metrics_delete) | **DELETE** /api/measurement/metrics/{id}/ | 
+[**api_measurement_metrics_list**](ApiApi.md#api_measurement_metrics_list) | **GET** /api/measurement/metrics/ | 
+[**api_measurement_metrics_partial_update**](ApiApi.md#api_measurement_metrics_partial_update) | **PATCH** /api/measurement/metrics/{id}/ | 
+[**api_measurement_metrics_read**](ApiApi.md#api_measurement_metrics_read) | **GET** /api/measurement/metrics/{id}/ | 
+[**api_measurement_metrics_update**](ApiApi.md#api_measurement_metrics_update) | **PUT** /api/measurement/metrics/{id}/ | 
+[**api_measurement_monitors_create**](ApiApi.md#api_measurement_monitors_create) | **POST** /api/measurement/monitors/ | 
+[**api_measurement_monitors_delete**](ApiApi.md#api_measurement_monitors_delete) | **DELETE** /api/measurement/monitors/{id}/ | 
+[**api_measurement_monitors_list**](ApiApi.md#api_measurement_monitors_list) | **GET** /api/measurement/monitors/ | 
+[**api_measurement_monitors_partial_update**](ApiApi.md#api_measurement_monitors_partial_update) | **PATCH** /api/measurement/monitors/{id}/ | 
+[**api_measurement_monitors_read**](ApiApi.md#api_measurement_monitors_read) | **GET** /api/measurement/monitors/{id}/ | 
+[**api_measurement_monitors_update**](ApiApi.md#api_measurement_monitors_update) | **PUT** /api/measurement/monitors/{id}/ | 
+[**api_measurement_month_archives_list**](ApiApi.md#api_measurement_month_archives_list) | **GET** /api/measurement/month-archives/ | 
+[**api_measurement_month_archives_read**](ApiApi.md#api_measurement_month_archives_read) | **GET** /api/measurement/month-archives/{id}/ | 
+[**api_measurement_triggers_create**](ApiApi.md#api_measurement_triggers_create) | **POST** /api/measurement/triggers/ | 
+[**api_measurement_triggers_delete**](ApiApi.md#api_measurement_triggers_delete) | **DELETE** /api/measurement/triggers/{id}/ | 
+[**api_measurement_triggers_list**](ApiApi.md#api_measurement_triggers_list) | **GET** /api/measurement/triggers/ | 
+[**api_measurement_triggers_partial_update**](ApiApi.md#api_measurement_triggers_partial_update) | **PATCH** /api/measurement/triggers/{id}/ | 
+[**api_measurement_triggers_read**](ApiApi.md#api_measurement_triggers_read) | **GET** /api/measurement/triggers/{id}/ | 
+[**api_measurement_triggers_update**](ApiApi.md#api_measurement_triggers_update) | **PUT** /api/measurement/triggers/{id}/ | 
+[**api_measurement_week_archives_list**](ApiApi.md#api_measurement_week_archives_list) | **GET** /api/measurement/week-archives/ | 
+[**api_measurement_week_archives_read**](ApiApi.md#api_measurement_week_archives_read) | **GET** /api/measurement/week-archives/{id}/ | 
+[**api_nslc_channels_create**](ApiApi.md#api_nslc_channels_create) | **POST** /api/nslc/channels/ | 
+[**api_nslc_channels_delete**](ApiApi.md#api_nslc_channels_delete) | **DELETE** /api/nslc/channels/{id}/ | 
+[**api_nslc_channels_list**](ApiApi.md#api_nslc_channels_list) | **GET** /api/nslc/channels/ | 
+[**api_nslc_channels_partial_update**](ApiApi.md#api_nslc_channels_partial_update) | **PATCH** /api/nslc/channels/{id}/ | 
+[**api_nslc_channels_read**](ApiApi.md#api_nslc_channels_read) | **GET** /api/nslc/channels/{id}/ | 
+[**api_nslc_channels_update**](ApiApi.md#api_nslc_channels_update) | **PUT** /api/nslc/channels/{id}/ | 
+[**api_nslc_groups_create**](ApiApi.md#api_nslc_groups_create) | **POST** /api/nslc/groups/ | 
+[**api_nslc_groups_delete**](ApiApi.md#api_nslc_groups_delete) | **DELETE** /api/nslc/groups/{id}/ | 
+[**api_nslc_groups_list**](ApiApi.md#api_nslc_groups_list) | **GET** /api/nslc/groups/ | 
+[**api_nslc_groups_partial_update**](ApiApi.md#api_nslc_groups_partial_update) | **PATCH** /api/nslc/groups/{id}/ | 
+[**api_nslc_groups_read**](ApiApi.md#api_nslc_groups_read) | **GET** /api/nslc/groups/{id}/ | 
+[**api_nslc_groups_update**](ApiApi.md#api_nslc_groups_update) | **PUT** /api/nslc/groups/{id}/ | 
+[**api_nslc_matching_rules_create**](ApiApi.md#api_nslc_matching_rules_create) | **POST** /api/nslc/matching-rules/ | 
+[**api_nslc_matching_rules_delete**](ApiApi.md#api_nslc_matching_rules_delete) | **DELETE** /api/nslc/matching-rules/{id}/ | 
+[**api_nslc_matching_rules_list**](ApiApi.md#api_nslc_matching_rules_list) | **GET** /api/nslc/matching-rules/ | 
+[**api_nslc_matching_rules_partial_update**](ApiApi.md#api_nslc_matching_rules_partial_update) | **PATCH** /api/nslc/matching-rules/{id}/ | 
+[**api_nslc_matching_rules_read**](ApiApi.md#api_nslc_matching_rules_read) | **GET** /api/nslc/matching-rules/{id}/ | 
+[**api_nslc_matching_rules_update**](ApiApi.md#api_nslc_matching_rules_update) | **PUT** /api/nslc/matching-rules/{id}/ | 
+[**api_nslc_networks_create**](ApiApi.md#api_nslc_networks_create) | **POST** /api/nslc/networks/ | 
+[**api_nslc_networks_delete**](ApiApi.md#api_nslc_networks_delete) | **DELETE** /api/nslc/networks/{code}/ | 
+[**api_nslc_networks_list**](ApiApi.md#api_nslc_networks_list) | **GET** /api/nslc/networks/ | 
+[**api_nslc_networks_partial_update**](ApiApi.md#api_nslc_networks_partial_update) | **PATCH** /api/nslc/networks/{code}/ | 
+[**api_nslc_networks_read**](ApiApi.md#api_nslc_networks_read) | **GET** /api/nslc/networks/{code}/ | 
+[**api_nslc_networks_update**](ApiApi.md#api_nslc_networks_update) | **PUT** /api/nslc/networks/{code}/ | 
+[**api_organization_organizations_create**](ApiApi.md#api_organization_organizations_create) | **POST** /api/organization/organizations/ | 
+[**api_organization_organizations_delete**](ApiApi.md#api_organization_organizations_delete) | **DELETE** /api/organization/organizations/{id}/ | 
+[**api_organization_organizations_list**](ApiApi.md#api_organization_organizations_list) | **GET** /api/organization/organizations/ | 
+[**api_organization_organizations_partial_update**](ApiApi.md#api_organization_organizations_partial_update) | **PATCH** /api/organization/organizations/{id}/ | 
+[**api_organization_organizations_read**](ApiApi.md#api_organization_organizations_read) | **GET** /api/organization/organizations/{id}/ | 
+[**api_organization_organizations_update**](ApiApi.md#api_organization_organizations_update) | **PUT** /api/organization/organizations/{id}/ | 
+[**api_organization_users_create**](ApiApi.md#api_organization_users_create) | **POST** /api/organization/users/ | 
+[**api_organization_users_delete**](ApiApi.md#api_organization_users_delete) | **DELETE** /api/organization/users/{id}/ | 
+[**api_organization_users_list**](ApiApi.md#api_organization_users_list) | **GET** /api/organization/users/ | 
+[**api_organization_users_partial_update**](ApiApi.md#api_organization_users_partial_update) | **PATCH** /api/organization/users/{id}/ | 
+[**api_organization_users_read**](ApiApi.md#api_organization_users_read) | **GET** /api/organization/users/{id}/ | 
+[**api_organization_users_update**](ApiApi.md#api_organization_users_update) | **PUT** /api/organization/users/{id}/ | 
+[**api_password_reset_confirm_create**](ApiApi.md#api_password_reset_confirm_create) | **POST** /api/password_reset/confirm/ | 
+[**api_password_reset_create**](ApiApi.md#api_password_reset_create) | **POST** /api/password_reset/ | An Api View which provides a method to request a password reset token based on an e-mail address
+[**api_password_reset_validate_token_create**](ApiApi.md#api_password_reset_validate_token_create) | **POST** /api/password_reset/validate_token/ | 
+[**api_user_create_create**](ApiApi.md#api_user_create_create) | **POST** /api/user/create/ | 
+[**api_user_groups_create**](ApiApi.md#api_user_groups_create) | **POST** /api/user/groups/ | 
+[**api_user_groups_delete**](ApiApi.md#api_user_groups_delete) | **DELETE** /api/user/groups/{id}/ | 
+[**api_user_groups_list**](ApiApi.md#api_user_groups_list) | **GET** /api/user/groups/ | 
+[**api_user_groups_partial_update**](ApiApi.md#api_user_groups_partial_update) | **PATCH** /api/user/groups/{id}/ | 
+[**api_user_groups_read**](ApiApi.md#api_user_groups_read) | **GET** /api/user/groups/{id}/ | 
+[**api_user_groups_update**](ApiApi.md#api_user_groups_update) | **PUT** /api/user/groups/{id}/ | 
+[**api_user_me_partial_update**](ApiApi.md#api_user_me_partial_update) | **PATCH** /api/user/me/ | 
+[**api_user_me_read**](ApiApi.md#api_user_me_read) | **GET** /api/user/me/ | 
+[**api_user_me_update**](ApiApi.md#api_user_me_update) | **PUT** /api/user/me/ | 
+[**api_user_token_create**](ApiApi.md#api_user_token_create) | **POST** /api/user/token/ | 
 
-# **v1_0_dashboard_dashboards_create**
-> ReadOnlyDashboardSerializer v1_0_dashboard_dashboards_create(body)
+# **api_dashboard_dashboards_create**
+> ReadOnlyDashboardSerializer api_dashboard_dashboards_create(body)
 
 
 
@@ -129,14 +127,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_dashboards_create(body)
+    api_response = api_instance.api_dashboard_dashboards_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_dashboards_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_dashboards_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -160,8 +158,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_dashboards_delete**
-> v1_0_dashboard_dashboards_delete(id)
+# **api_dashboard_dashboards_delete**
+> api_dashboard_dashboards_delete(id)
 
 
 
@@ -180,13 +178,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_dashboard_dashboards_delete(id)
+    api_instance.api_dashboard_dashboards_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_dashboards_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_dashboards_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -210,8 +208,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_dashboards_list**
-> list[ReadOnlyDashboardSerializer] v1_0_dashboard_dashboards_list(user=user, organization=organization, share_all=share_all, share_org=share_org, order=order)
+# **api_dashboard_dashboards_list**
+> list[ReadOnlyDashboardSerializer] api_dashboard_dashboards_list(user=user, organization=organization, share_all=share_all, share_org=share_org, order=order)
 
 
 
@@ -230,7 +228,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 user = 'user_example' # str |  (optional)
 organization = 'organization_example' # str |  (optional)
 share_all = 'share_all_example' # str |  (optional)
@@ -238,10 +236,10 @@ share_org = 'share_org_example' # str |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_dashboard_dashboards_list(user=user, organization=organization, share_all=share_all, share_org=share_org, order=order)
+    api_response = api_instance.api_dashboard_dashboards_list(user=user, organization=organization, share_all=share_all, share_org=share_org, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_dashboards_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_dashboards_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -269,8 +267,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_dashboards_partial_update**
-> ReadOnlyDashboardSerializer v1_0_dashboard_dashboards_partial_update(body, id)
+# **api_dashboard_dashboards_partial_update**
+> ReadOnlyDashboardSerializer api_dashboard_dashboards_partial_update(body, id)
 
 
 
@@ -289,15 +287,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_dashboards_partial_update(body, id)
+    api_response = api_instance.api_dashboard_dashboards_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_dashboards_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_dashboards_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -322,8 +320,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_dashboards_read**
-> ReadOnlyDashboardDetailSerializer v1_0_dashboard_dashboards_read(id)
+# **api_dashboard_dashboards_read**
+> ReadOnlyDashboardDetailSerializer api_dashboard_dashboards_read(id)
 
 
 
@@ -342,14 +340,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_dashboards_read(id)
+    api_response = api_instance.api_dashboard_dashboards_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_dashboards_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_dashboards_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -373,8 +371,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_dashboards_update**
-> ReadOnlyDashboardSerializer v1_0_dashboard_dashboards_update(body, id)
+# **api_dashboard_dashboards_update**
+> ReadOnlyDashboardSerializer api_dashboard_dashboards_update(body, id)
 
 
 
@@ -393,15 +391,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyDashboardSerializer() # WriteOnlyDashboardSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_dashboards_update(body, id)
+    api_response = api_instance.api_dashboard_dashboards_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_dashboards_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_dashboards_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -426,8 +424,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_widgets_create**
-> ReadOnlyWidgetSerializer v1_0_dashboard_widgets_create(body)
+# **api_dashboard_widgets_create**
+> ReadOnlyWidgetSerializer api_dashboard_widgets_create(body)
 
 
 
@@ -446,14 +444,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_widgets_create(body)
+    api_response = api_instance.api_dashboard_widgets_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_widgets_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_widgets_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -477,8 +475,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_widgets_delete**
-> v1_0_dashboard_widgets_delete(id)
+# **api_dashboard_widgets_delete**
+> api_dashboard_widgets_delete(id)
 
 
 
@@ -497,13 +495,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_dashboard_widgets_delete(id)
+    api_instance.api_dashboard_widgets_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_widgets_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_widgets_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -527,8 +525,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_widgets_list**
-> list[ReadOnlyWidgetDetailSerializer] v1_0_dashboard_widgets_list()
+# **api_dashboard_widgets_list**
+> list[ReadOnlyWidgetDetailSerializer] api_dashboard_widgets_list()
 
 
 
@@ -547,13 +545,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 
 try:
-    api_response = api_instance.v1_0_dashboard_widgets_list()
+    api_response = api_instance.api_dashboard_widgets_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_widgets_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_widgets_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -574,8 +572,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_widgets_partial_update**
-> ReadOnlyWidgetSerializer v1_0_dashboard_widgets_partial_update(body, id)
+# **api_dashboard_widgets_partial_update**
+> ReadOnlyWidgetSerializer api_dashboard_widgets_partial_update(body, id)
 
 
 
@@ -594,15 +592,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_widgets_partial_update(body, id)
+    api_response = api_instance.api_dashboard_widgets_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_widgets_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_widgets_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -627,8 +625,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_widgets_read**
-> ReadOnlyWidgetDetailSerializer v1_0_dashboard_widgets_read(id)
+# **api_dashboard_widgets_read**
+> ReadOnlyWidgetDetailSerializer api_dashboard_widgets_read(id)
 
 
 
@@ -647,14 +645,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_widgets_read(id)
+    api_response = api_instance.api_dashboard_widgets_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_widgets_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_widgets_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -678,8 +676,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_dashboard_widgets_update**
-> ReadOnlyWidgetSerializer v1_0_dashboard_widgets_update(body, id)
+# **api_dashboard_widgets_update**
+> ReadOnlyWidgetSerializer api_dashboard_widgets_update(body, id)
 
 
 
@@ -698,15 +696,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_dashboard_widgets_update(body, id)
+    api_response = api_instance.api_dashboard_widgets_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_dashboard_widgets_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_dashboard_widgets_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -731,114 +729,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_invite_invite_create**
-> ReadOnlyInviteTokenSerializer v1_0_invite_invite_create(body)
-
-
-
-Endpoint to invite an inactive user
-
-### Example
-```python
-from __future__ import print_function
-import time
-import squacapi_client
-from squacapi_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Token
-configuration = squacapi_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyInviteTokenSerializer() # WriteOnlyInviteTokenSerializer | 
-
-try:
-    api_response = api_instance.v1_0_invite_invite_create(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling V10Api->v1_0_invite_invite_create: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyInviteTokenSerializer**](WriteOnlyInviteTokenSerializer.md)|  | 
-
-### Return type
-
-[**ReadOnlyInviteTokenSerializer**](ReadOnlyInviteTokenSerializer.md)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **v1_0_invite_register_create**
-> ReadOnlyInviteRegisterSerializer v1_0_invite_register_create(body)
-
-
-
-called when invited user authenticates with token and sets password
-
-### Example
-```python
-from __future__ import print_function
-import time
-import squacapi_client
-from squacapi_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Token
-configuration = squacapi_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyInviteRegisterSerializer() # WriteOnlyInviteRegisterSerializer | 
-
-try:
-    api_response = api_instance.v1_0_invite_register_create(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling V10Api->v1_0_invite_register_create: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyInviteRegisterSerializer**](WriteOnlyInviteRegisterSerializer.md)|  | 
-
-### Return type
-
-[**ReadOnlyInviteRegisterSerializer**](ReadOnlyInviteRegisterSerializer.md)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **v1_0_list**
-> v1_0_list()
+# **api_list**
+> api_list()
 
 
 
@@ -857,12 +749,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 
 try:
-    api_instance.v1_0_list()
+    api_instance.api_list()
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -883,8 +775,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_aggregated_list**
-> v1_0_measurement_aggregated_list()
+# **api_measurement_aggregated_list**
+> api_measurement_aggregated_list()
 
 
 
@@ -905,12 +797,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 
 try:
-    api_instance.v1_0_measurement_aggregated_list()
+    api_instance.api_measurement_aggregated_list()
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_aggregated_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_aggregated_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -931,8 +823,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_alerts_create**
-> ReadOnlyAlertSerializer v1_0_measurement_alerts_create(body)
+# **api_measurement_alerts_create**
+> ReadOnlyAlertSerializer api_measurement_alerts_create(body)
 
 
 
@@ -951,14 +843,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyAlertSerializer() # WriteOnlyAlertSerializer | 
 
 try:
-    api_response = api_instance.v1_0_measurement_alerts_create(body)
+    api_response = api_instance.api_measurement_alerts_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_alerts_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_alerts_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -982,8 +874,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_alerts_delete**
-> v1_0_measurement_alerts_delete(id)
+# **api_measurement_alerts_delete**
+> api_measurement_alerts_delete(id)
 
 
 
@@ -1002,13 +894,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_measurement_alerts_delete(id)
+    api_instance.api_measurement_alerts_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_alerts_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_alerts_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -1032,8 +924,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_alerts_list**
-> list[ReadOnlyAlertDetailSerializer] v1_0_measurement_alerts_list(trigger=trigger, in_alarm=in_alarm, timestamp_gte=timestamp_gte, timestamp_lt=timestamp_lt, order=order)
+# **api_measurement_alerts_list**
+> list[ReadOnlyAlertDetailSerializer] api_measurement_alerts_list(trigger=trigger, in_alarm=in_alarm, timestamp_gte=timestamp_gte, timestamp_lt=timestamp_lt, order=order)
 
 
 
@@ -1052,7 +944,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 trigger = 'trigger_example' # str |  (optional)
 in_alarm = 'in_alarm_example' # str |  (optional)
 timestamp_gte = 'timestamp_gte_example' # str |  (optional)
@@ -1060,10 +952,10 @@ timestamp_lt = 'timestamp_lt_example' # str |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_alerts_list(trigger=trigger, in_alarm=in_alarm, timestamp_gte=timestamp_gte, timestamp_lt=timestamp_lt, order=order)
+    api_response = api_instance.api_measurement_alerts_list(trigger=trigger, in_alarm=in_alarm, timestamp_gte=timestamp_gte, timestamp_lt=timestamp_lt, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_alerts_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_alerts_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -1091,8 +983,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_alerts_partial_update**
-> ReadOnlyAlertSerializer v1_0_measurement_alerts_partial_update(body, id)
+# **api_measurement_alerts_partial_update**
+> ReadOnlyAlertSerializer api_measurement_alerts_partial_update(body, id)
 
 
 
@@ -1111,15 +1003,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyAlertSerializer() # WriteOnlyAlertSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_alerts_partial_update(body, id)
+    api_response = api_instance.api_measurement_alerts_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_alerts_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_alerts_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -1144,8 +1036,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_alerts_read**
-> ReadOnlyAlertDetailSerializer v1_0_measurement_alerts_read(id)
+# **api_measurement_alerts_read**
+> ReadOnlyAlertDetailSerializer api_measurement_alerts_read(id)
 
 
 
@@ -1164,14 +1056,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_alerts_read(id)
+    api_response = api_instance.api_measurement_alerts_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_alerts_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_alerts_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -1195,8 +1087,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_alerts_update**
-> ReadOnlyAlertSerializer v1_0_measurement_alerts_update(body, id)
+# **api_measurement_alerts_update**
+> ReadOnlyAlertSerializer api_measurement_alerts_update(body, id)
 
 
 
@@ -1215,15 +1107,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyAlertSerializer() # WriteOnlyAlertSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_alerts_update(body, id)
+    api_response = api_instance.api_measurement_alerts_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_alerts_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_alerts_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -1248,8 +1140,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_day_archives_list**
-> list[ReadOnlyArchiveDaySerializer] v1_0_measurement_day_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+# **api_measurement_day_archives_list**
+> list[ReadOnlyArchiveDaySerializer] api_measurement_day_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -1268,7 +1160,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
 nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
@@ -1278,10 +1170,10 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_day_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.api_measurement_day_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_day_archives_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_day_archives_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -1311,8 +1203,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_day_archives_read**
-> ReadOnlyArchiveDaySerializer v1_0_measurement_day_archives_read(id)
+# **api_measurement_day_archives_read**
+> ReadOnlyArchiveDaySerializer api_measurement_day_archives_read(id)
 
 
 
@@ -1331,14 +1223,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_day_archives_read(id)
+    api_response = api_instance.api_measurement_day_archives_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_day_archives_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_day_archives_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -1362,8 +1254,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_hour_archives_list**
-> list[ReadOnlyArchiveHourSerializer] v1_0_measurement_hour_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+# **api_measurement_hour_archives_list**
+> list[ReadOnlyArchiveHourSerializer] api_measurement_hour_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -1382,7 +1274,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
 nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
@@ -1392,10 +1284,10 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_hour_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.api_measurement_hour_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_hour_archives_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_hour_archives_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -1425,8 +1317,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_hour_archives_read**
-> ReadOnlyArchiveHourSerializer v1_0_measurement_hour_archives_read(id)
+# **api_measurement_hour_archives_read**
+> ReadOnlyArchiveHourSerializer api_measurement_hour_archives_read(id)
 
 
 
@@ -1445,14 +1337,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_hour_archives_read(id)
+    api_response = api_instance.api_measurement_hour_archives_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_hour_archives_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_hour_archives_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -1476,8 +1368,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_measurements_create**
-> list[Measurement] v1_0_measurement_measurements_create(body)
+# **api_measurement_measurements_create**
+> list[Measurement] api_measurement_measurements_create(body)
 
 
 
@@ -1498,14 +1390,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = [squacapi_client.Measurement()] # list[Measurement] | 
 
 try:
-    api_response = api_instance.v1_0_measurement_measurements_create(body)
+    api_response = api_instance.api_measurement_measurements_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_measurements_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_measurements_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -1529,8 +1421,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_measurements_delete**
-> v1_0_measurement_measurements_delete(id)
+# **api_measurement_measurements_delete**
+> api_measurement_measurements_delete(id)
 
 
 
@@ -1551,13 +1443,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_measurement_measurements_delete(id)
+    api_instance.api_measurement_measurements_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_measurements_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_measurements_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -1581,8 +1473,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_measurements_list**
-> list[ReadOnlyMeasurementSerializer] v1_0_measurement_measurements_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+# **api_measurement_measurements_list**
+> list[ReadOnlyMeasurementSerializer] api_measurement_measurements_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -1603,7 +1495,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
 nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
@@ -1613,10 +1505,10 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_measurements_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.api_measurement_measurements_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_measurements_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_measurements_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -1646,8 +1538,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_measurements_partial_update**
-> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_partial_update(body, id)
+# **api_measurement_measurements_partial_update**
+> ReadOnlyMeasurementSerializer api_measurement_measurements_partial_update(body, id)
 
 
 
@@ -1668,15 +1560,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_measurements_partial_update(body, id)
+    api_response = api_instance.api_measurement_measurements_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_measurements_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_measurements_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -1701,8 +1593,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_measurements_read**
-> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_read(id)
+# **api_measurement_measurements_read**
+> ReadOnlyMeasurementSerializer api_measurement_measurements_read(id)
 
 
 
@@ -1723,14 +1615,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_measurements_read(id)
+    api_response = api_instance.api_measurement_measurements_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_measurements_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_measurements_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -1754,8 +1646,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_measurements_update**
-> ReadOnlyMeasurementSerializer v1_0_measurement_measurements_update(body, id)
+# **api_measurement_measurements_update**
+> ReadOnlyMeasurementSerializer api_measurement_measurements_update(body, id)
 
 
 
@@ -1776,15 +1668,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMeasurementSerializer() # WriteOnlyMeasurementSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_measurements_update(body, id)
+    api_response = api_instance.api_measurement_measurements_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_measurements_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_measurements_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -1809,8 +1701,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_metrics_create**
-> ReadOnlyMetricSerializer v1_0_measurement_metrics_create(body)
+# **api_measurement_metrics_create**
+> ReadOnlyMetricSerializer api_measurement_metrics_create(body)
 
 
 
@@ -1829,14 +1721,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 
 try:
-    api_response = api_instance.v1_0_measurement_metrics_create(body)
+    api_response = api_instance.api_measurement_metrics_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_metrics_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_metrics_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -1860,8 +1752,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_metrics_delete**
-> v1_0_measurement_metrics_delete(id)
+# **api_measurement_metrics_delete**
+> api_measurement_metrics_delete(id)
 
 
 
@@ -1880,13 +1772,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_measurement_metrics_delete(id)
+    api_instance.api_measurement_metrics_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_metrics_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_metrics_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -1910,8 +1802,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_metrics_list**
-> list[ReadOnlyMetricSerializer] v1_0_measurement_metrics_list(name=name, order=order)
+# **api_measurement_metrics_list**
+> list[ReadOnlyMetricSerializer] api_measurement_metrics_list(name=name, order=order)
 
 
 
@@ -1930,15 +1822,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 name = 'name_example' # str | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_metrics_list(name=name, order=order)
+    api_response = api_instance.api_measurement_metrics_list(name=name, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_metrics_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_metrics_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -1963,8 +1855,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_metrics_partial_update**
-> ReadOnlyMetricSerializer v1_0_measurement_metrics_partial_update(body, id)
+# **api_measurement_metrics_partial_update**
+> ReadOnlyMetricSerializer api_measurement_metrics_partial_update(body, id)
 
 
 
@@ -1983,15 +1875,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_metrics_partial_update(body, id)
+    api_response = api_instance.api_measurement_metrics_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_metrics_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_metrics_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -2016,8 +1908,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_metrics_read**
-> ReadOnlyMetricSerializer v1_0_measurement_metrics_read(id)
+# **api_measurement_metrics_read**
+> ReadOnlyMetricSerializer api_measurement_metrics_read(id)
 
 
 
@@ -2036,14 +1928,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_metrics_read(id)
+    api_response = api_instance.api_measurement_metrics_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_metrics_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_metrics_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -2067,8 +1959,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_metrics_update**
-> ReadOnlyMetricSerializer v1_0_measurement_metrics_update(body, id)
+# **api_measurement_metrics_update**
+> ReadOnlyMetricSerializer api_measurement_metrics_update(body, id)
 
 
 
@@ -2087,15 +1979,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMetricSerializer() # WriteOnlyMetricSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_metrics_update(body, id)
+    api_response = api_instance.api_measurement_metrics_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_metrics_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_metrics_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -2120,8 +2012,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_monitors_create**
-> ReadOnlyMonitorSerializer v1_0_measurement_monitors_create(body)
+# **api_measurement_monitors_create**
+> ReadOnlyMonitorSerializer api_measurement_monitors_create(body)
 
 
 
@@ -2140,14 +2032,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMonitorSerializer() # WriteOnlyMonitorSerializer | 
 
 try:
-    api_response = api_instance.v1_0_measurement_monitors_create(body)
+    api_response = api_instance.api_measurement_monitors_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_monitors_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_monitors_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -2171,8 +2063,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_monitors_delete**
-> v1_0_measurement_monitors_delete(id)
+# **api_measurement_monitors_delete**
+> api_measurement_monitors_delete(id)
 
 
 
@@ -2191,13 +2083,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_measurement_monitors_delete(id)
+    api_instance.api_measurement_monitors_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_monitors_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_monitors_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -2221,8 +2113,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_monitors_list**
-> list[ReadOnlyMonitorDetailSerializer] v1_0_measurement_monitors_list(channel_group=channel_group, metric=metric)
+# **api_measurement_monitors_list**
+> list[ReadOnlyMonitorDetailSerializer] api_measurement_monitors_list(channel_group=channel_group, metric=metric)
 
 
 
@@ -2241,15 +2133,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 channel_group = 'channel_group_example' # str |  (optional)
 metric = 'metric_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_monitors_list(channel_group=channel_group, metric=metric)
+    api_response = api_instance.api_measurement_monitors_list(channel_group=channel_group, metric=metric)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_monitors_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_monitors_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -2274,8 +2166,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_monitors_partial_update**
-> ReadOnlyMonitorSerializer v1_0_measurement_monitors_partial_update(body, id)
+# **api_measurement_monitors_partial_update**
+> ReadOnlyMonitorSerializer api_measurement_monitors_partial_update(body, id)
 
 
 
@@ -2294,15 +2186,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMonitorSerializer() # WriteOnlyMonitorSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_monitors_partial_update(body, id)
+    api_response = api_instance.api_measurement_monitors_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_monitors_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_monitors_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -2327,8 +2219,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_monitors_read**
-> ReadOnlyMonitorDetailSerializer v1_0_measurement_monitors_read(id)
+# **api_measurement_monitors_read**
+> ReadOnlyMonitorDetailSerializer api_measurement_monitors_read(id)
 
 
 
@@ -2347,14 +2239,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_monitors_read(id)
+    api_response = api_instance.api_measurement_monitors_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_monitors_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_monitors_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -2378,8 +2270,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_monitors_update**
-> ReadOnlyMonitorSerializer v1_0_measurement_monitors_update(body, id)
+# **api_measurement_monitors_update**
+> ReadOnlyMonitorSerializer api_measurement_monitors_update(body, id)
 
 
 
@@ -2398,15 +2290,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMonitorSerializer() # WriteOnlyMonitorSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_monitors_update(body, id)
+    api_response = api_instance.api_measurement_monitors_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_monitors_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_monitors_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -2431,8 +2323,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_month_archives_list**
-> list[ReadOnlyArchiveMonthSerializer] v1_0_measurement_month_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+# **api_measurement_month_archives_list**
+> list[ReadOnlyArchiveMonthSerializer] api_measurement_month_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -2451,7 +2343,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
 nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
@@ -2461,10 +2353,10 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_month_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.api_measurement_month_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_month_archives_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_month_archives_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -2494,8 +2386,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_month_archives_read**
-> ReadOnlyArchiveMonthSerializer v1_0_measurement_month_archives_read(id)
+# **api_measurement_month_archives_read**
+> ReadOnlyArchiveMonthSerializer api_measurement_month_archives_read(id)
 
 
 
@@ -2514,14 +2406,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_month_archives_read(id)
+    api_response = api_instance.api_measurement_month_archives_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_month_archives_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_month_archives_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -2545,8 +2437,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_triggers_create**
-> ReadOnlyTriggerSerializer v1_0_measurement_triggers_create(body)
+# **api_measurement_triggers_create**
+> ReadOnlyTriggerSerializer api_measurement_triggers_create(body)
 
 
 
@@ -2565,14 +2457,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyTriggerSerializer() # WriteOnlyTriggerSerializer | 
 
 try:
-    api_response = api_instance.v1_0_measurement_triggers_create(body)
+    api_response = api_instance.api_measurement_triggers_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_triggers_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_triggers_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -2596,8 +2488,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_triggers_delete**
-> v1_0_measurement_triggers_delete(id)
+# **api_measurement_triggers_delete**
+> api_measurement_triggers_delete(id)
 
 
 
@@ -2616,13 +2508,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_measurement_triggers_delete(id)
+    api_instance.api_measurement_triggers_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_triggers_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_triggers_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -2646,8 +2538,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_triggers_list**
-> list[ReadOnlyTriggerSerializer] v1_0_measurement_triggers_list(monitor=monitor)
+# **api_measurement_triggers_list**
+> list[ReadOnlyTriggerSerializer] api_measurement_triggers_list(monitor=monitor)
 
 
 
@@ -2666,14 +2558,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 monitor = 'monitor_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_triggers_list(monitor=monitor)
+    api_response = api_instance.api_measurement_triggers_list(monitor=monitor)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_triggers_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_triggers_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -2697,8 +2589,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_triggers_partial_update**
-> ReadOnlyTriggerSerializer v1_0_measurement_triggers_partial_update(body, id)
+# **api_measurement_triggers_partial_update**
+> ReadOnlyTriggerSerializer api_measurement_triggers_partial_update(body, id)
 
 
 
@@ -2717,15 +2609,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyTriggerSerializer() # WriteOnlyTriggerSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_triggers_partial_update(body, id)
+    api_response = api_instance.api_measurement_triggers_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_triggers_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_triggers_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -2750,8 +2642,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_triggers_read**
-> ReadOnlyTriggerSerializer v1_0_measurement_triggers_read(id)
+# **api_measurement_triggers_read**
+> ReadOnlyTriggerSerializer api_measurement_triggers_read(id)
 
 
 
@@ -2770,14 +2662,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_triggers_read(id)
+    api_response = api_instance.api_measurement_triggers_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_triggers_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_triggers_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -2801,8 +2693,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_triggers_update**
-> ReadOnlyTriggerSerializer v1_0_measurement_triggers_update(body, id)
+# **api_measurement_triggers_update**
+> ReadOnlyTriggerSerializer api_measurement_triggers_update(body, id)
 
 
 
@@ -2821,15 +2713,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyTriggerSerializer() # WriteOnlyTriggerSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_triggers_update(body, id)
+    api_response = api_instance.api_measurement_triggers_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_triggers_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_triggers_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -2854,8 +2746,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_week_archives_list**
-> list[ReadOnlyArchiveWeekSerializer] v1_0_measurement_week_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+# **api_measurement_week_archives_list**
+> list[ReadOnlyArchiveWeekSerializer] api_measurement_week_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
 
 
 
@@ -2874,7 +2766,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
 nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 endtime = 'endtime_example' # str |  (optional)
@@ -2884,10 +2776,10 @@ group = 1.2 # float | Multiple values may be separated by commas. (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_measurement_week_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
+    api_response = api_instance.api_measurement_week_archives_list(starttime=starttime, nslc=nslc, endtime=endtime, metric=metric, channel=channel, group=group, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_week_archives_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_week_archives_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -2917,8 +2809,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_measurement_week_archives_read**
-> ReadOnlyArchiveWeekSerializer v1_0_measurement_week_archives_read(id)
+# **api_measurement_week_archives_read**
+> ReadOnlyArchiveWeekSerializer api_measurement_week_archives_read(id)
 
 
 
@@ -2937,14 +2829,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_measurement_week_archives_read(id)
+    api_response = api_instance.api_measurement_week_archives_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_measurement_week_archives_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_measurement_week_archives_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -2968,8 +2860,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_channels_create**
-> ReadOnlyChannelSerializer v1_0_nslc_channels_create(body)
+# **api_nslc_channels_create**
+> ReadOnlyChannelSerializer api_nslc_channels_create(body)
 
 
 
@@ -2988,14 +2880,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 
 try:
-    api_response = api_instance.v1_0_nslc_channels_create(body)
+    api_response = api_instance.api_nslc_channels_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_channels_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_channels_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -3019,8 +2911,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_channels_delete**
-> v1_0_nslc_channels_delete(id)
+# **api_nslc_channels_delete**
+> api_nslc_channels_delete(id)
 
 
 
@@ -3039,13 +2931,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_nslc_channels_delete(id)
+    api_instance.api_nslc_channels_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_channels_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_channels_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -3069,8 +2961,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_channels_list**
-> list[ReadOnlyChannelSerializer] v1_0_nslc_channels_list(nslc=nslc, network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max, order=order)
+# **api_nslc_channels_list**
+> list[ReadOnlyChannelSerializer] api_nslc_channels_list(nslc=nslc, network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max, order=order)
 
 
 
@@ -3089,7 +2981,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
 network = 'network_example' # str | Multiple values may be separated by commas. (optional)
 net_search = 'net_search_example' # str |  (optional)
@@ -3110,10 +3002,10 @@ lon_max = 1.2 # float |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_nslc_channels_list(nslc=nslc, network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max, order=order)
+    api_response = api_instance.api_nslc_channels_list(nslc=nslc, network=network, net_search=net_search, channel=channel, chan_search=chan_search, station=station, sta_search=sta_search, location=location, loc_search=loc_search, startafter=startafter, startbefore=startbefore, endafter=endafter, endbefore=endbefore, lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_channels_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_channels_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -3154,8 +3046,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_channels_partial_update**
-> ReadOnlyChannelSerializer v1_0_nslc_channels_partial_update(body, id)
+# **api_nslc_channels_partial_update**
+> ReadOnlyChannelSerializer api_nslc_channels_partial_update(body, id)
 
 
 
@@ -3174,15 +3066,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_channels_partial_update(body, id)
+    api_response = api_instance.api_nslc_channels_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_channels_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_channels_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -3207,8 +3099,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_channels_read**
-> ReadOnlyChannelSerializer v1_0_nslc_channels_read(id)
+# **api_nslc_channels_read**
+> ReadOnlyChannelSerializer api_nslc_channels_read(id)
 
 
 
@@ -3227,14 +3119,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_channels_read(id)
+    api_response = api_instance.api_nslc_channels_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_channels_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_channels_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -3258,8 +3150,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_channels_update**
-> ReadOnlyChannelSerializer v1_0_nslc_channels_update(body, id)
+# **api_nslc_channels_update**
+> ReadOnlyChannelSerializer api_nslc_channels_update(body, id)
 
 
 
@@ -3278,15 +3170,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyChannelSerializer() # WriteOnlyChannelSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_channels_update(body, id)
+    api_response = api_instance.api_nslc_channels_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_channels_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_channels_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -3311,8 +3203,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_groups_create**
-> ReadOnlyGroupSerializer v1_0_nslc_groups_create(body)
+# **api_nslc_groups_create**
+> ReadOnlyGroupSerializer api_nslc_groups_create(body)
 
 
 
@@ -3331,14 +3223,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 
 try:
-    api_response = api_instance.v1_0_nslc_groups_create(body)
+    api_response = api_instance.api_nslc_groups_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_groups_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_groups_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -3362,8 +3254,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_groups_delete**
-> v1_0_nslc_groups_delete(id)
+# **api_nslc_groups_delete**
+> api_nslc_groups_delete(id)
 
 
 
@@ -3382,13 +3274,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_nslc_groups_delete(id)
+    api_instance.api_nslc_groups_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_groups_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_groups_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -3412,8 +3304,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_groups_list**
-> list[ReadOnlyGroupSerializer] v1_0_nslc_groups_list(name=name, organization=organization, user=user, order=order)
+# **api_nslc_groups_list**
+> list[ReadOnlyGroupSerializer] api_nslc_groups_list(name=name, organization=organization, user=user, order=order)
 
 
 
@@ -3432,17 +3324,17 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 name = 'name_example' # str |  (optional)
 organization = 'organization_example' # str |  (optional)
 user = 'user_example' # str |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_nslc_groups_list(name=name, organization=organization, user=user, order=order)
+    api_response = api_instance.api_nslc_groups_list(name=name, organization=organization, user=user, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_groups_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_groups_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -3469,8 +3361,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_groups_partial_update**
-> ReadOnlyGroupSerializer v1_0_nslc_groups_partial_update(body, id)
+# **api_nslc_groups_partial_update**
+> ReadOnlyGroupSerializer api_nslc_groups_partial_update(body, id)
 
 
 
@@ -3489,15 +3381,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_groups_partial_update(body, id)
+    api_response = api_instance.api_nslc_groups_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_groups_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_groups_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -3522,8 +3414,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_groups_read**
-> ReadOnlyGroupDetailSerializer v1_0_nslc_groups_read(id)
+# **api_nslc_groups_read**
+> ReadOnlyGroupDetailSerializer api_nslc_groups_read(id)
 
 
 
@@ -3542,14 +3434,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_groups_read(id)
+    api_response = api_instance.api_nslc_groups_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_groups_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_groups_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -3573,8 +3465,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_groups_update**
-> ReadOnlyGroupSerializer v1_0_nslc_groups_update(body, id)
+# **api_nslc_groups_update**
+> ReadOnlyGroupSerializer api_nslc_groups_update(body, id)
 
 
 
@@ -3593,15 +3485,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyGroupSerializer() # WriteOnlyGroupSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_groups_update(body, id)
+    api_response = api_instance.api_nslc_groups_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_groups_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_groups_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -3626,8 +3518,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_matching_rules_create**
-> ReadOnlyMatchingRuleSerializer v1_0_nslc_matching_rules_create(body)
+# **api_nslc_matching_rules_create**
+> ReadOnlyMatchingRuleSerializer api_nslc_matching_rules_create(body)
 
 
 
@@ -3646,14 +3538,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMatchingRuleSerializer() # WriteOnlyMatchingRuleSerializer | 
 
 try:
-    api_response = api_instance.v1_0_nslc_matching_rules_create(body)
+    api_response = api_instance.api_nslc_matching_rules_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_matching_rules_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_matching_rules_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -3677,8 +3569,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_matching_rules_delete**
-> v1_0_nslc_matching_rules_delete(id)
+# **api_nslc_matching_rules_delete**
+> api_nslc_matching_rules_delete(id)
 
 
 
@@ -3697,13 +3589,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_nslc_matching_rules_delete(id)
+    api_instance.api_nslc_matching_rules_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_matching_rules_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_matching_rules_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -3727,8 +3619,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_matching_rules_list**
-> list[ReadOnlyMatchingRuleSerializer] v1_0_nslc_matching_rules_list()
+# **api_nslc_matching_rules_list**
+> list[ReadOnlyMatchingRuleSerializer] api_nslc_matching_rules_list()
 
 
 
@@ -3747,13 +3639,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 
 try:
-    api_response = api_instance.v1_0_nslc_matching_rules_list()
+    api_response = api_instance.api_nslc_matching_rules_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_matching_rules_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_matching_rules_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -3774,8 +3666,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_matching_rules_partial_update**
-> ReadOnlyMatchingRuleSerializer v1_0_nslc_matching_rules_partial_update(body, id)
+# **api_nslc_matching_rules_partial_update**
+> ReadOnlyMatchingRuleSerializer api_nslc_matching_rules_partial_update(body, id)
 
 
 
@@ -3794,15 +3686,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMatchingRuleSerializer() # WriteOnlyMatchingRuleSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_matching_rules_partial_update(body, id)
+    api_response = api_instance.api_nslc_matching_rules_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_matching_rules_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_matching_rules_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -3827,8 +3719,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_matching_rules_read**
-> ReadOnlyMatchingRuleSerializer v1_0_nslc_matching_rules_read(id)
+# **api_nslc_matching_rules_read**
+> ReadOnlyMatchingRuleSerializer api_nslc_matching_rules_read(id)
 
 
 
@@ -3847,14 +3739,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_matching_rules_read(id)
+    api_response = api_instance.api_nslc_matching_rules_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_matching_rules_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_matching_rules_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -3878,8 +3770,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_matching_rules_update**
-> ReadOnlyMatchingRuleSerializer v1_0_nslc_matching_rules_update(body, id)
+# **api_nslc_matching_rules_update**
+> ReadOnlyMatchingRuleSerializer api_nslc_matching_rules_update(body, id)
 
 
 
@@ -3898,15 +3790,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMatchingRuleSerializer() # WriteOnlyMatchingRuleSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_matching_rules_update(body, id)
+    api_response = api_instance.api_nslc_matching_rules_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_matching_rules_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_matching_rules_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -3931,8 +3823,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_networks_create**
-> ReadOnlyNetworkSerializer v1_0_nslc_networks_create(body)
+# **api_nslc_networks_create**
+> ReadOnlyNetworkSerializer api_nslc_networks_create(body)
 
 
 
@@ -3951,14 +3843,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 
 try:
-    api_response = api_instance.v1_0_nslc_networks_create(body)
+    api_response = api_instance.api_nslc_networks_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_networks_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_networks_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -3982,8 +3874,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_networks_delete**
-> v1_0_nslc_networks_delete(code)
+# **api_nslc_networks_delete**
+> api_nslc_networks_delete(code)
 
 
 
@@ -4002,13 +3894,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 code = 'code_example' # str | 
 
 try:
-    api_instance.v1_0_nslc_networks_delete(code)
+    api_instance.api_nslc_networks_delete(code)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_networks_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_networks_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -4032,8 +3924,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_networks_list**
-> list[ReadOnlyNetworkSerializer] v1_0_nslc_networks_list(network=network, channel=channel, order=order)
+# **api_nslc_networks_list**
+> list[ReadOnlyNetworkSerializer] api_nslc_networks_list(network=network, channel=channel, order=order)
 
 
 
@@ -4052,16 +3944,16 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 network = 'network_example' # str | Multiple values may be separated by commas. (optional)
 channel = 'channel_example' # str |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_nslc_networks_list(network=network, channel=channel, order=order)
+    api_response = api_instance.api_nslc_networks_list(network=network, channel=channel, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_networks_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_networks_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -4087,8 +3979,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_networks_partial_update**
-> ReadOnlyNetworkSerializer v1_0_nslc_networks_partial_update(body, code)
+# **api_nslc_networks_partial_update**
+> ReadOnlyNetworkSerializer api_nslc_networks_partial_update(body, code)
 
 
 
@@ -4107,15 +3999,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 code = 'code_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_networks_partial_update(body, code)
+    api_response = api_instance.api_nslc_networks_partial_update(body, code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_networks_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_networks_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -4140,8 +4032,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_networks_read**
-> ReadOnlyNetworkSerializer v1_0_nslc_networks_read(code)
+# **api_nslc_networks_read**
+> ReadOnlyNetworkSerializer api_nslc_networks_read(code)
 
 
 
@@ -4160,14 +4052,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 code = 'code_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_networks_read(code)
+    api_response = api_instance.api_nslc_networks_read(code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_networks_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_networks_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -4191,8 +4083,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_nslc_networks_update**
-> ReadOnlyNetworkSerializer v1_0_nslc_networks_update(body, code)
+# **api_nslc_networks_update**
+> ReadOnlyNetworkSerializer api_nslc_networks_update(body, code)
 
 
 
@@ -4211,15 +4103,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyNetworkSerializer() # WriteOnlyNetworkSerializer | 
 code = 'code_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_nslc_networks_update(body, code)
+    api_response = api_instance.api_nslc_networks_update(body, code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_nslc_networks_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_nslc_networks_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -4244,8 +4136,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_organizations_create**
-> ReadOnlyOrganizationSerializer v1_0_organization_organizations_create(body)
+# **api_organization_organizations_create**
+> ReadOnlyOrganizationSerializer api_organization_organizations_create(body)
 
 
 
@@ -4264,14 +4156,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyOrganizationSerializer() # WriteOnlyOrganizationSerializer | 
 
 try:
-    api_response = api_instance.v1_0_organization_organizations_create(body)
+    api_response = api_instance.api_organization_organizations_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_organizations_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_organizations_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -4295,8 +4187,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_organizations_delete**
-> v1_0_organization_organizations_delete(id)
+# **api_organization_organizations_delete**
+> api_organization_organizations_delete(id)
 
 
 
@@ -4315,13 +4207,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_organization_organizations_delete(id)
+    api_instance.api_organization_organizations_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_organizations_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_organizations_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -4345,8 +4237,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_organizations_list**
-> list[ReadOnlyOrganizationSerializer] v1_0_organization_organizations_list(name=name, order=order)
+# **api_organization_organizations_list**
+> list[ReadOnlyOrganizationSerializer] api_organization_organizations_list(name=name, order=order)
 
 
 
@@ -4365,15 +4257,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 name = 'name_example' # str |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_organization_organizations_list(name=name, order=order)
+    api_response = api_instance.api_organization_organizations_list(name=name, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_organizations_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_organizations_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -4398,8 +4290,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_organizations_partial_update**
-> ReadOnlyOrganizationSerializer v1_0_organization_organizations_partial_update(body, id)
+# **api_organization_organizations_partial_update**
+> ReadOnlyOrganizationSerializer api_organization_organizations_partial_update(body, id)
 
 
 
@@ -4418,15 +4310,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyOrganizationSerializer() # WriteOnlyOrganizationSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_organization_organizations_partial_update(body, id)
+    api_response = api_instance.api_organization_organizations_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_organizations_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_organizations_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -4451,8 +4343,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_organizations_read**
-> ReadOnlyOrganizationSerializer v1_0_organization_organizations_read(id)
+# **api_organization_organizations_read**
+> ReadOnlyOrganizationSerializer api_organization_organizations_read(id)
 
 
 
@@ -4471,14 +4363,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_organization_organizations_read(id)
+    api_response = api_instance.api_organization_organizations_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_organizations_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_organizations_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -4502,8 +4394,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_organizations_update**
-> ReadOnlyOrganizationSerializer v1_0_organization_organizations_update(body, id)
+# **api_organization_organizations_update**
+> ReadOnlyOrganizationSerializer api_organization_organizations_update(body, id)
 
 
 
@@ -4522,15 +4414,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyOrganizationSerializer() # WriteOnlyOrganizationSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_organization_organizations_update(body, id)
+    api_response = api_instance.api_organization_organizations_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_organizations_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_organizations_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -4555,8 +4447,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_users_create**
-> ReadOnlyUserWriteSerializer v1_0_organization_users_create(body)
+# **api_organization_users_create**
+> ReadOnlyUserWriteSerializer api_organization_users_create(body)
 
 
 
@@ -4575,14 +4467,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
 
 try:
-    api_response = api_instance.v1_0_organization_users_create(body)
+    api_response = api_instance.api_organization_users_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_users_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_users_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -4606,8 +4498,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_users_delete**
-> v1_0_organization_users_delete(id)
+# **api_organization_users_delete**
+> api_organization_users_delete(id)
 
 
 
@@ -4626,13 +4518,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_organization_users_delete(id)
+    api_instance.api_organization_users_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_users_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_users_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -4656,8 +4548,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_users_list**
-> list[ReadOnlyUserWriteSerializer] v1_0_organization_users_list(organization=organization, order=order)
+# **api_organization_users_list**
+> list[ReadOnlyUserWriteSerializer] api_organization_users_list(organization=organization, order=order)
 
 
 
@@ -4676,15 +4568,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 organization = 'organization_example' # str |  (optional)
 order = 'order_example' # str |  (optional)
 
 try:
-    api_response = api_instance.v1_0_organization_users_list(organization=organization, order=order)
+    api_response = api_instance.api_organization_users_list(organization=organization, order=order)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_users_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_users_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -4709,8 +4601,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_users_partial_update**
-> ReadOnlyUserWriteSerializer v1_0_organization_users_partial_update(body, id)
+# **api_organization_users_partial_update**
+> ReadOnlyUserWriteSerializer api_organization_users_partial_update(body, id)
 
 
 
@@ -4729,15 +4621,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_organization_users_partial_update(body, id)
+    api_response = api_instance.api_organization_users_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_users_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_users_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -4762,8 +4654,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_users_read**
-> ReadOnlyUserReadSerializer v1_0_organization_users_read(id)
+# **api_organization_users_read**
+> ReadOnlyUserReadSerializer api_organization_users_read(id)
 
 
 
@@ -4782,14 +4674,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_organization_users_read(id)
+    api_response = api_instance.api_organization_users_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_users_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_users_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -4813,8 +4705,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_organization_users_update**
-> ReadOnlyUserWriteSerializer v1_0_organization_users_update(body, id)
+# **api_organization_users_update**
+> ReadOnlyUserWriteSerializer api_organization_users_update(body, id)
 
 
 
@@ -4833,15 +4725,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_organization_users_update(body, id)
+    api_response = api_instance.api_organization_users_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_organization_users_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_organization_users_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -4866,8 +4758,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_password_reset_confirm_create**
-> ReadOnlyPasswordTokenSerializer v1_0_password_reset_confirm_create(body)
+# **api_password_reset_confirm_create**
+> ReadOnlyPasswordTokenSerializer api_password_reset_confirm_create(body)
 
 
 
@@ -4888,14 +4780,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyPasswordTokenSerializer() # WriteOnlyPasswordTokenSerializer | 
 
 try:
-    api_response = api_instance.v1_0_password_reset_confirm_create(body)
+    api_response = api_instance.api_password_reset_confirm_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_password_reset_confirm_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_password_reset_confirm_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -4919,8 +4811,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_password_reset_create**
-> ReadOnlyEmailSerializer v1_0_password_reset_create(body)
+# **api_password_reset_create**
+> ReadOnlyEmailSerializer api_password_reset_create(body)
 
 An Api View which provides a method to request a password reset token based on an e-mail address
 
@@ -4941,15 +4833,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyEmailSerializer() # WriteOnlyEmailSerializer | 
 
 try:
     # An Api View which provides a method to request a password reset token based on an e-mail address
-    api_response = api_instance.v1_0_password_reset_create(body)
+    api_response = api_instance.api_password_reset_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_password_reset_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_password_reset_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -4973,8 +4865,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_password_reset_validate_token_create**
-> ReadOnlyTokenSerializer v1_0_password_reset_validate_token_create(body)
+# **api_password_reset_validate_token_create**
+> ReadOnlyTokenSerializer api_password_reset_validate_token_create(body)
 
 
 
@@ -4995,14 +4887,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyTokenSerializer() # WriteOnlyTokenSerializer | 
 
 try:
-    api_response = api_instance.v1_0_password_reset_validate_token_create(body)
+    api_response = api_instance.api_password_reset_validate_token_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_password_reset_validate_token_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_password_reset_validate_token_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -5026,8 +4918,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_create_create**
-> ReadOnlyUserWriteSerializer v1_0_user_create_create(body)
+# **api_user_create_create**
+> ReadOnlyUserWriteSerializer api_user_create_create(body)
 
 
 
@@ -5048,14 +4940,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
 
 try:
-    api_response = api_instance.v1_0_user_create_create(body)
+    api_response = api_instance.api_user_create_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_create_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_create_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -5079,8 +4971,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_groups_create**
-> ReadOnlyUserGroupSerializer v1_0_user_groups_create(body)
+# **api_user_groups_create**
+> ReadOnlyUserGroupSerializer api_user_groups_create(body)
 
 
 
@@ -5101,14 +4993,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserGroupSerializer() # WriteOnlyUserGroupSerializer | 
 
 try:
-    api_response = api_instance.v1_0_user_groups_create(body)
+    api_response = api_instance.api_user_groups_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_groups_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_groups_create: %s\n" % e)
 ```
 
 ### Parameters
@@ -5132,8 +5024,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_groups_delete**
-> v1_0_user_groups_delete(id)
+# **api_user_groups_delete**
+> api_user_groups_delete(id)
 
 
 
@@ -5154,13 +5046,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_instance.v1_0_user_groups_delete(id)
+    api_instance.api_user_groups_delete(id)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_groups_delete: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_groups_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -5184,8 +5076,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_groups_list**
-> list[ReadOnlyUserGroupSerializer] v1_0_user_groups_list()
+# **api_user_groups_list**
+> list[ReadOnlyUserGroupSerializer] api_user_groups_list()
 
 
 
@@ -5206,13 +5098,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 
 try:
-    api_response = api_instance.v1_0_user_groups_list()
+    api_response = api_instance.api_user_groups_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_groups_list: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_groups_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -5233,8 +5125,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_groups_partial_update**
-> ReadOnlyUserGroupSerializer v1_0_user_groups_partial_update(body, id)
+# **api_user_groups_partial_update**
+> ReadOnlyUserGroupSerializer api_user_groups_partial_update(body, id)
 
 
 
@@ -5255,15 +5147,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserGroupSerializer() # WriteOnlyUserGroupSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_user_groups_partial_update(body, id)
+    api_response = api_instance.api_user_groups_partial_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_groups_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_groups_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -5288,8 +5180,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_groups_read**
-> ReadOnlyUserGroupSerializer v1_0_user_groups_read(id)
+# **api_user_groups_read**
+> ReadOnlyUserGroupSerializer api_user_groups_read(id)
 
 
 
@@ -5310,14 +5202,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_user_groups_read(id)
+    api_response = api_instance.api_user_groups_read(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_groups_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_groups_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -5341,8 +5233,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_groups_update**
-> ReadOnlyUserGroupSerializer v1_0_user_groups_update(body, id)
+# **api_user_groups_update**
+> ReadOnlyUserGroupSerializer api_user_groups_update(body, id)
 
 
 
@@ -5363,15 +5255,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserGroupSerializer() # WriteOnlyUserGroupSerializer | 
 id = 'id_example' # str | 
 
 try:
-    api_response = api_instance.v1_0_user_groups_update(body, id)
+    api_response = api_instance.api_user_groups_update(body, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_groups_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_groups_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -5396,8 +5288,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_me_partial_update**
-> ReadOnlyUserMeSerializer v1_0_user_me_partial_update(body)
+# **api_user_me_partial_update**
+> ReadOnlyUserMeSerializer api_user_me_partial_update(body)
 
 
 
@@ -5418,14 +5310,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserMeSerializer() # WriteOnlyUserMeSerializer | 
 
 try:
-    api_response = api_instance.v1_0_user_me_partial_update(body)
+    api_response = api_instance.api_user_me_partial_update(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_me_partial_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_me_partial_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -5449,8 +5341,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_me_read**
-> ReadOnlyUserMeSerializer v1_0_user_me_read()
+# **api_user_me_read**
+> ReadOnlyUserMeSerializer api_user_me_read()
 
 
 
@@ -5471,13 +5363,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 
 try:
-    api_response = api_instance.v1_0_user_me_read()
+    api_response = api_instance.api_user_me_read()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_me_read: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_me_read: %s\n" % e)
 ```
 
 ### Parameters
@@ -5498,8 +5390,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_me_update**
-> ReadOnlyUserMeSerializer v1_0_user_me_update(body)
+# **api_user_me_update**
+> ReadOnlyUserMeSerializer api_user_me_update(body)
 
 
 
@@ -5520,14 +5412,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyUserMeSerializer() # WriteOnlyUserMeSerializer | 
 
 try:
-    api_response = api_instance.v1_0_user_me_update(body)
+    api_response = api_instance.api_user_me_update(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_me_update: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_me_update: %s\n" % e)
 ```
 
 ### Parameters
@@ -5551,8 +5443,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_0_user_token_create**
-> Token v1_0_user_token_create(body)
+# **api_user_token_create**
+> Token api_user_token_create(body)
 
 
 
@@ -5573,14 +5465,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = squacapi_client.V10Api(squacapi_client.ApiClient(configuration))
+api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.AuthToken() # AuthToken | 
 
 try:
-    api_response = api_instance.v1_0_user_token_create(body)
+    api_response = api_instance.api_user_token_create(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling V10Api->v1_0_user_token_create: %s\n" % e)
+    print("Exception when calling ApiApi->api_user_token_create: %s\n" % e)
 ```
 
 ### Parameters
