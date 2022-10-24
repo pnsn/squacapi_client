@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Usage:
 #   checkout a branch then run. 
-# 	TOKEN=supersecret HOST=https://squacapi.pnsn.org/swagger.json ./generate_swagger.sh
+# 	TOKEN=supersecret HOST=https://squacapi.pnsn.org/api ./generate_swagger.sh
 # To get token go to https://squacapi.pnsn.org/v1.0/user/token/
 # to see a list of generate args
 echo $HOST
