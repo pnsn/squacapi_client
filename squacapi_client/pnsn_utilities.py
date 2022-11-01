@@ -1,26 +1,22 @@
 '''utility functions for uploading bulk measurments'''
 
 from squacapi_client.rest import ApiException
-from squacapi_client import Configuration, ApiClient, \
-    UserApi, AuthToken, V10Api
+from squacapi_client import Configuration, ApiClient, AuthToken, ApiApi
 
 # always default to a staging/test env
-
-
 
 def get_client(user, passwd, *args, **kwargs):
     '''authenticate user'''
     conf = Configuration()
     api_client = ApiClient(conf)
-    user_client = UserApi(ApiClient())
     auth_token = AuthToken(email=user, password=passwd)
-    token = user_client.user_token_create(auth_token)
+    token = api_client.user_token_create(auth_token)
     conf.api_key['Authorization'] = token.token
     conf.api_key_prefix['Authorization'] = 'Token'
 
     if 'host' in kwargs:
         conf.host = kwargs['host']
-    return V10Api(api_client)
+    return ApiApi(api_client)
 
 
 def make_channel_map(channels):
