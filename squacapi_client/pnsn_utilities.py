@@ -10,7 +10,9 @@ def get_client(user, passwd, *args, **kwargs):
     conf = Configuration()
     api_client = ApiClient(conf)
     auth_token = AuthToken(email=user, password=passwd)
-    token = api_client.user_token_create(auth_token)
+    api_instance = ApiApi(api_client)
+
+    token = api_instance.api_user_token_create(auth_token)
     conf.api_key['Authorization'] = token.token
     conf.api_key_prefix['Authorization'] = 'Token'
 
@@ -69,7 +71,7 @@ def perform_bulk_create(measurements, client, *args, **kwargs):
     while start < len(measurements):
         collection = measurements[start:end]
         try:
-            resp = client.v1_0_measurement_measurements_create(collection, async_req=async_req)
+            resp = client.api_measurement_measurements_create(collection, async_req=async_req)
             response += resp
         except ApiException as e:
             error = {
