@@ -8,6 +8,10 @@ from squacapi_client import Configuration, ApiClient, AuthToken, ApiApi
 def get_client(user, passwd, *args, **kwargs):
     '''authenticate user'''
     conf = Configuration()
+
+    if 'host' in kwargs:
+        conf.host = kwargs['host']
+        
     api_client = ApiClient(conf)
     auth_token = AuthToken(email=user, password=passwd)
     api_instance = ApiApi(api_client)
@@ -16,8 +20,6 @@ def get_client(user, passwd, *args, **kwargs):
     conf.api_key['Authorization'] = token.token
     conf.api_key_prefix['Authorization'] = 'Token'
 
-    if 'host' in kwargs:
-        conf.host = kwargs['host']
     return ApiApi(api_client)
 
 
