@@ -1,23 +1,26 @@
 '''utility functions for uploading bulk measurments'''
 
 from squacapi_client.rest import ApiException
-from squacapi_client import Configuration, ApiClient, \
-    UserApi, AuthToken, V10Api
+from squacapi_client import Configuration, ApiClient, AuthToken, ApiApi
 
 # always default to a staging/test env
 
-
-
-def get_client(user, passwd):
+def get_client(user, passwd, *args, **kwargs):
     '''authenticate user'''
     conf = Configuration()
+
+    if 'host' in kwargs:
+        conf.host = kwargs['host']
+        
     api_client = ApiClient(conf)
-    user_client = UserApi(ApiClient())
     auth_token = AuthToken(email=user, password=passwd)
-    token = user_client.user_token_create(auth_token)
+    api_instance = ApiApi(api_client)
+
+    token = api_instance.api_user_token_create(auth_token)
     conf.api_key['Authorization'] = token.token
     conf.api_key_prefix['Authorization'] = 'Token'
-    return V10Api(api_client)
+
+    return ApiApi(api_client)
 
 
 def make_channel_map(channels):
@@ -70,7 +73,7 @@ def perform_bulk_create(measurements, client, *args, **kwargs):
     while start < len(measurements):
         collection = measurements[start:end]
         try:
-            resp = client.v1_0_measurement_measurements_create(collection, async_req=async_req)
+            resp = client.api_measurement_measurements_create(collection, async_req=async_req)
             response += resp
         except ApiException as e:
             error = {
