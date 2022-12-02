@@ -68,7 +68,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://staging-squacapi.pnsn.org/*
+All URIs are relative to *https://squacapi.pnsn.org/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
