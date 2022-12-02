@@ -28,14 +28,67 @@ class ReadOnlyUserGroupSerializer(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'int',
+        'name': 'str'
     }
 
     attribute_map = {
+        'id': 'id',
+        'name': 'name'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, id=None, name=None):  # noqa: E501
         """ReadOnlyUserGroupSerializer - a model defined in Swagger"""  # noqa: E501
+        self._id = None
+        self._name = None
         self.discriminator = None
+        if id is not None:
+            self.id = id
+        self.name = name
+
+    @property
+    def id(self):
+        """Gets the id of this ReadOnlyUserGroupSerializer.  # noqa: E501
+
+
+        :return: The id of this ReadOnlyUserGroupSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ReadOnlyUserGroupSerializer.
+
+
+        :param id: The id of this ReadOnlyUserGroupSerializer.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this ReadOnlyUserGroupSerializer.  # noqa: E501
+
+
+        :return: The name of this ReadOnlyUserGroupSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ReadOnlyUserGroupSerializer.
+
+
+        :param name: The name of this ReadOnlyUserGroupSerializer.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

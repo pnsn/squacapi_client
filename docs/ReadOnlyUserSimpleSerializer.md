@@ -1,4 +1,4 @@
-# UserSimple
+# ReadOnlyUserSimpleSerializer
 
 ## Properties
 Name | Type | Description | Notes

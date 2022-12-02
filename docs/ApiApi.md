@@ -104,7 +104,6 @@ Method | HTTP request | Description
 [**api_user_groups_update**](ApiApi.md#api_user_groups_update) | **PUT** /api/user/groups/{id}/ | 
 [**api_user_me_partial_update**](ApiApi.md#api_user_me_partial_update) | **PATCH** /api/user/me/ | 
 [**api_user_me_read**](ApiApi.md#api_user_me_read) | **GET** /api/user/me/ | 
-[**api_user_me_update**](ApiApi.md#api_user_me_update) | **PUT** /api/user/me/ | 
 [**api_user_token_create**](ApiApi.md#api_user_token_create) | **POST** /api/user/token/ | 
 
 # **api_dashboard_dashboards_create**
@@ -496,7 +495,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this widget.
 
 try:
     api_instance.api_dashboard_widgets_delete(id)
@@ -508,7 +507,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this widget. | 
 
 ### Return type
 
@@ -526,7 +525,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_dashboard_widgets_list**
-> list[ReadOnlyWidgetDetailSerializer] api_dashboard_widgets_list()
+> list[ReadOnlyWidgetDetailSerializer] api_dashboard_widgets_list(dashboard=dashboard)
 
 
 
@@ -546,16 +545,20 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
+dashboard = 'dashboard_example' # str |  (optional)
 
 try:
-    api_response = api_instance.api_dashboard_widgets_list()
+    api_response = api_instance.api_dashboard_widgets_list(dashboard=dashboard)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ApiApi->api_dashboard_widgets_list: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dashboard** | **str**|  | [optional] 
 
 ### Return type
 
@@ -594,7 +597,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this widget.
 
 try:
     api_response = api_instance.api_dashboard_widgets_partial_update(body, id)
@@ -608,7 +611,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**WriteOnlyWidgetSerializer**](WriteOnlyWidgetSerializer.md)|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this widget. | 
 
 ### Return type
 
@@ -646,7 +649,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this widget.
 
 try:
     api_response = api_instance.api_dashboard_widgets_read(id)
@@ -659,7 +662,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this widget. | 
 
 ### Return type
 
@@ -698,7 +701,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyWidgetSerializer() # WriteOnlyWidgetSerializer | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this widget.
 
 try:
     api_response = api_instance.api_dashboard_widgets_update(body, id)
@@ -712,7 +715,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**WriteOnlyWidgetSerializer**](WriteOnlyWidgetSerializer.md)|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this widget. | 
 
 ### Return type
 
@@ -776,7 +779,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_measurement_aggregated_list**
-> api_measurement_aggregated_list()
+> api_measurement_aggregated_list(metric=metric, group=group, channel=channel, starttime=starttime, endtime=endtime, nslc=nslc)
 
 
 
@@ -798,15 +801,29 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
+metric = [56] # list[int] | Comma separated list of metric ids (optional)
+group = [56] # list[int] | Comma separated list of channel group ids (optional)
+channel = [56] # list[int] | Comma separated list of channel ids (optional)
+starttime = 'starttime_example' # str |  (optional)
+endtime = 'endtime_example' # str |  (optional)
+nslc = ['nslc_example'] # list[str] | Comma separated list of channel nslcs (optional)
 
 try:
-    api_instance.api_measurement_aggregated_list()
+    api_instance.api_measurement_aggregated_list(metric=metric, group=group, channel=channel, starttime=starttime, endtime=endtime, nslc=nslc)
 except ApiException as e:
     print("Exception when calling ApiApi->api_measurement_aggregated_list: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **metric** | [**list[int]**](int.md)| Comma separated list of metric ids | [optional] 
+ **group** | [**list[int]**](int.md)| Comma separated list of channel group ids | [optional] 
+ **channel** | [**list[int]**](int.md)| Comma separated list of channel ids | [optional] 
+ **starttime** | **str**|  | [optional] 
+ **endtime** | **str**|  | [optional] 
+ **nslc** | [**list[str]**](str.md)| Comma separated list of channel nslcs | [optional] 
 
 ### Return type
 
@@ -1162,11 +1179,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
-nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
+nslc = ['nslc_example'] # list[str] | Comma separated list of channel nslcs (optional)
 endtime = 'endtime_example' # str |  (optional)
-metric = 1.2 # float | Multiple values may be separated by commas. (optional)
-channel = 1.2 # float | Multiple values may be separated by commas. (optional)
-group = 1.2 # float | Multiple values may be separated by commas. (optional)
+metric = [56] # list[int] | Comma separated list of metric ids (optional)
+channel = [56] # list[int] | Comma separated list of channel ids (optional)
+group = [56] # list[int] | Comma separated list of channel group ids (optional)
 order = 'order_example' # str |  (optional)
 
 try:
@@ -1181,11 +1198,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
- **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
+ **nslc** | [**list[str]**](str.md)| Comma separated list of channel nslcs | [optional] 
  **endtime** | **str**|  | [optional] 
- **metric** | **float**| Multiple values may be separated by commas. | [optional] 
- **channel** | **float**| Multiple values may be separated by commas. | [optional] 
- **group** | **float**| Multiple values may be separated by commas. | [optional] 
+ **metric** | [**list[int]**](int.md)| Comma separated list of metric ids | [optional] 
+ **channel** | [**list[int]**](int.md)| Comma separated list of channel ids | [optional] 
+ **group** | [**list[int]**](int.md)| Comma separated list of channel group ids | [optional] 
  **order** | **str**|  | [optional] 
 
 ### Return type
@@ -1276,11 +1293,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
-nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
+nslc = ['nslc_example'] # list[str] | Comma separated list of channel nslcs (optional)
 endtime = 'endtime_example' # str |  (optional)
-metric = 1.2 # float | Multiple values may be separated by commas. (optional)
-channel = 1.2 # float | Multiple values may be separated by commas. (optional)
-group = 1.2 # float | Multiple values may be separated by commas. (optional)
+metric = [56] # list[int] | Comma separated list of metric ids (optional)
+channel = [56] # list[int] | Comma separated list of channel ids (optional)
+group = [56] # list[int] | Comma separated list of channel group ids (optional)
 order = 'order_example' # str |  (optional)
 
 try:
@@ -1295,11 +1312,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
- **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
+ **nslc** | [**list[str]**](str.md)| Comma separated list of channel nslcs | [optional] 
  **endtime** | **str**|  | [optional] 
- **metric** | **float**| Multiple values may be separated by commas. | [optional] 
- **channel** | **float**| Multiple values may be separated by commas. | [optional] 
- **group** | **float**| Multiple values may be separated by commas. | [optional] 
+ **metric** | [**list[int]**](int.md)| Comma separated list of metric ids | [optional] 
+ **channel** | [**list[int]**](int.md)| Comma separated list of channel ids | [optional] 
+ **group** | [**list[int]**](int.md)| Comma separated list of channel group ids | [optional] 
  **order** | **str**|  | [optional] 
 
 ### Return type
@@ -1497,11 +1514,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
-nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
+nslc = ['nslc_example'] # list[str] | Comma separated list of channel nslcs (optional)
 endtime = 'endtime_example' # str |  (optional)
-metric = 1.2 # float | Multiple values may be separated by commas. (optional)
-channel = 1.2 # float | Multiple values may be separated by commas. (optional)
-group = 1.2 # float | Multiple values may be separated by commas. (optional)
+metric = [56] # list[int] | Comma separated list of metric ids (optional)
+channel = [56] # list[int] | Comma separated list of channel ids (optional)
+group = [56] # list[int] | Comma separated list of channel group ids (optional)
 order = 'order_example' # str |  (optional)
 
 try:
@@ -1516,11 +1533,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
- **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
+ **nslc** | [**list[str]**](str.md)| Comma separated list of channel nslcs | [optional] 
  **endtime** | **str**|  | [optional] 
- **metric** | **float**| Multiple values may be separated by commas. | [optional] 
- **channel** | **float**| Multiple values may be separated by commas. | [optional] 
- **group** | **float**| Multiple values may be separated by commas. | [optional] 
+ **metric** | [**list[int]**](int.md)| Comma separated list of metric ids | [optional] 
+ **channel** | [**list[int]**](int.md)| Comma separated list of channel ids | [optional] 
+ **group** | [**list[int]**](int.md)| Comma separated list of channel group ids | [optional] 
  **order** | **str**|  | [optional] 
 
 ### Return type
@@ -2345,11 +2362,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
-nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
+nslc = ['nslc_example'] # list[str] | Comma separated list of channel nslcs (optional)
 endtime = 'endtime_example' # str |  (optional)
-metric = 1.2 # float | Multiple values may be separated by commas. (optional)
-channel = 1.2 # float | Multiple values may be separated by commas. (optional)
-group = 1.2 # float | Multiple values may be separated by commas. (optional)
+metric = [56] # list[int] | Comma separated list of metric ids (optional)
+channel = [56] # list[int] | Comma separated list of channel ids (optional)
+group = [56] # list[int] | Comma separated list of channel group ids (optional)
 order = 'order_example' # str |  (optional)
 
 try:
@@ -2364,11 +2381,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
- **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
+ **nslc** | [**list[str]**](str.md)| Comma separated list of channel nslcs | [optional] 
  **endtime** | **str**|  | [optional] 
- **metric** | **float**| Multiple values may be separated by commas. | [optional] 
- **channel** | **float**| Multiple values may be separated by commas. | [optional] 
- **group** | **float**| Multiple values may be separated by commas. | [optional] 
+ **metric** | [**list[int]**](int.md)| Comma separated list of metric ids | [optional] 
+ **channel** | [**list[int]**](int.md)| Comma separated list of channel ids | [optional] 
+ **group** | [**list[int]**](int.md)| Comma separated list of channel group ids | [optional] 
  **order** | **str**|  | [optional] 
 
 ### Return type
@@ -2768,11 +2785,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 starttime = 'starttime_example' # str |  (optional)
-nslc = 'nslc_example' # str | Multiple values may be separated by commas. (optional)
+nslc = ['nslc_example'] # list[str] | Comma separated list of channel nslcs (optional)
 endtime = 'endtime_example' # str |  (optional)
-metric = 1.2 # float | Multiple values may be separated by commas. (optional)
-channel = 1.2 # float | Multiple values may be separated by commas. (optional)
-group = 1.2 # float | Multiple values may be separated by commas. (optional)
+metric = [56] # list[int] | Comma separated list of metric ids (optional)
+channel = [56] # list[int] | Comma separated list of channel ids (optional)
+group = [56] # list[int] | Comma separated list of channel group ids (optional)
 order = 'order_example' # str |  (optional)
 
 try:
@@ -2787,11 +2804,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starttime** | **str**|  | [optional] 
- **nslc** | **str**| Multiple values may be separated by commas. | [optional] 
+ **nslc** | [**list[str]**](str.md)| Comma separated list of channel nslcs | [optional] 
  **endtime** | **str**|  | [optional] 
- **metric** | **float**| Multiple values may be separated by commas. | [optional] 
- **channel** | **float**| Multiple values may be separated by commas. | [optional] 
- **group** | **float**| Multiple values may be separated by commas. | [optional] 
+ **metric** | [**list[int]**](int.md)| Comma separated list of metric ids | [optional] 
+ **channel** | [**list[int]**](int.md)| Comma separated list of channel ids | [optional] 
+ **group** | [**list[int]**](int.md)| Comma separated list of channel group ids | [optional] 
  **order** | **str**|  | [optional] 
 
 ### Return type
@@ -3590,7 +3607,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this matching rule.
 
 try:
     api_instance.api_nslc_matching_rules_delete(id)
@@ -3602,7 +3619,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this matching rule. | 
 
 ### Return type
 
@@ -3620,7 +3637,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_nslc_matching_rules_list**
-> list[ReadOnlyMatchingRuleSerializer] api_nslc_matching_rules_list()
+> list[ReadOnlyMatchingRuleSerializer] api_nslc_matching_rules_list(group=group)
 
 
 
@@ -3640,16 +3657,20 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
+group = 'group_example' # str |  (optional)
 
 try:
-    api_response = api_instance.api_nslc_matching_rules_list()
+    api_response = api_instance.api_nslc_matching_rules_list(group=group)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ApiApi->api_nslc_matching_rules_list: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group** | **str**|  | [optional] 
 
 ### Return type
 
@@ -3688,7 +3709,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMatchingRuleSerializer() # WriteOnlyMatchingRuleSerializer | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this matching rule.
 
 try:
     api_response = api_instance.api_nslc_matching_rules_partial_update(body, id)
@@ -3702,7 +3723,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**WriteOnlyMatchingRuleSerializer**](WriteOnlyMatchingRuleSerializer.md)|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this matching rule. | 
 
 ### Return type
 
@@ -3740,7 +3761,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this matching rule.
 
 try:
     api_response = api_instance.api_nslc_matching_rules_read(id)
@@ -3753,7 +3774,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this matching rule. | 
 
 ### Return type
 
@@ -3792,7 +3813,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
 body = squacapi_client.WriteOnlyMatchingRuleSerializer() # WriteOnlyMatchingRuleSerializer | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this matching rule.
 
 try:
     api_response = api_instance.api_nslc_matching_rules_update(body, id)
@@ -3806,7 +3827,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**WriteOnlyMatchingRuleSerializer**](WriteOnlyMatchingRuleSerializer.md)|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this matching rule. | 
 
 ### Return type
 
@@ -4448,7 +4469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_organization_users_create**
-> ReadOnlyUserWriteSerializer api_organization_users_create(body)
+> ReadOnlyUserSerializer api_organization_users_create(body)
 
 
 
@@ -4468,7 +4489,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
+body = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.api_organization_users_create(body)
@@ -4481,11 +4502,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyUserWriteSerializer**](WriteOnlyUserWriteSerializer.md)|  | 
+ **body** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**ReadOnlyUserWriteSerializer**](ReadOnlyUserWriteSerializer.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -4549,7 +4570,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_organization_users_list**
-> list[ReadOnlyUserWriteSerializer] api_organization_users_list(organization=organization, order=order)
+> list[ReadOnlyUserSimpleSerializer] api_organization_users_list(organization=organization, order=order)
 
 
 
@@ -4588,7 +4609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ReadOnlyUserWriteSerializer]**](ReadOnlyUserWriteSerializer.md)
+[**list[ReadOnlyUserSimpleSerializer]**](ReadOnlyUserSimpleSerializer.md)
 
 ### Authorization
 
@@ -4602,7 +4623,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_organization_users_partial_update**
-> ReadOnlyUserWriteSerializer api_organization_users_partial_update(body, id)
+> ReadOnlyUserUpdateSerializer api_organization_users_partial_update(body, id)
 
 
 
@@ -4622,7 +4643,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
+body = squacapi_client.WriteOnlyUserUpdateSerializer() # WriteOnlyUserUpdateSerializer | 
 id = 'id_example' # str | 
 
 try:
@@ -4636,12 +4657,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyUserWriteSerializer**](WriteOnlyUserWriteSerializer.md)|  | 
+ **body** | [**WriteOnlyUserUpdateSerializer**](WriteOnlyUserUpdateSerializer.md)|  | 
  **id** | **str**|  | 
 
 ### Return type
 
-[**ReadOnlyUserWriteSerializer**](ReadOnlyUserWriteSerializer.md)
+[**ReadOnlyUserUpdateSerializer**](ReadOnlyUserUpdateSerializer.md)
 
 ### Authorization
 
@@ -4655,7 +4676,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_organization_users_read**
-> ReadOnlyUserReadSerializer api_organization_users_read(id)
+> ReadOnlyUserSimpleSerializer api_organization_users_read(id)
 
 
 
@@ -4692,7 +4713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ReadOnlyUserReadSerializer**](ReadOnlyUserReadSerializer.md)
+[**ReadOnlyUserSimpleSerializer**](ReadOnlyUserSimpleSerializer.md)
 
 ### Authorization
 
@@ -4706,7 +4727,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_organization_users_update**
-> ReadOnlyUserWriteSerializer api_organization_users_update(body, id)
+> ReadOnlyUserUpdateSerializer api_organization_users_update(body, id)
 
 
 
@@ -4726,7 +4747,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
+body = squacapi_client.WriteOnlyUserUpdateSerializer() # WriteOnlyUserUpdateSerializer | 
 id = 'id_example' # str | 
 
 try:
@@ -4740,12 +4761,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyUserWriteSerializer**](WriteOnlyUserWriteSerializer.md)|  | 
+ **body** | [**WriteOnlyUserUpdateSerializer**](WriteOnlyUserUpdateSerializer.md)|  | 
  **id** | **str**|  | 
 
 ### Return type
 
-[**ReadOnlyUserWriteSerializer**](ReadOnlyUserWriteSerializer.md)
+[**ReadOnlyUserUpdateSerializer**](ReadOnlyUserUpdateSerializer.md)
 
 ### Authorization
 
@@ -4919,7 +4940,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_user_create_create**
-> ReadOnlyUserWriteSerializer api_user_create_create(body)
+> ReadOnlyUserSerializer api_user_create_create(body)
 
 
 
@@ -4941,7 +4962,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyUserWriteSerializer() # WriteOnlyUserWriteSerializer | 
+body = squacapi_client.WriteOnlyUserSerializer() # WriteOnlyUserSerializer | 
 
 try:
     api_response = api_instance.api_user_create_create(body)
@@ -4954,11 +4975,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyUserWriteSerializer**](WriteOnlyUserWriteSerializer.md)|  | 
+ **body** | [**WriteOnlyUserSerializer**](WriteOnlyUserSerializer.md)|  | 
 
 ### Return type
 
-[**ReadOnlyUserWriteSerializer**](ReadOnlyUserWriteSerializer.md)
+[**ReadOnlyUserSerializer**](ReadOnlyUserSerializer.md)
 
 ### Authorization
 
@@ -4976,7 +4997,7 @@ Name | Type | Description  | Notes
 
 
 
-Manage the authenticated user
+Manage user permissions groups
 
 ### Example
 ```python
@@ -5029,7 +5050,7 @@ Name | Type | Description  | Notes
 
 
 
-Manage the authenticated user
+Manage user permissions groups
 
 ### Example
 ```python
@@ -5081,7 +5102,7 @@ void (empty response body)
 
 
 
-Manage the authenticated user
+Manage user permissions groups
 
 ### Example
 ```python
@@ -5130,7 +5151,7 @@ This endpoint does not need any parameter.
 
 
 
-Manage the authenticated user
+Manage user permissions groups
 
 ### Example
 ```python
@@ -5185,7 +5206,7 @@ Name | Type | Description  | Notes
 
 
 
-Manage the authenticated user
+Manage user permissions groups
 
 ### Example
 ```python
@@ -5238,7 +5259,7 @@ Name | Type | Description  | Notes
 
 
 
-Manage the authenticated user
+Manage user permissions groups
 
 ### Example
 ```python
@@ -5386,59 +5407,6 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **api_user_me_update**
-> ReadOnlyUserMeSerializer api_user_me_update(body)
-
-
-
-Manage the authenticated user
-
-### Example
-```python
-from __future__ import print_function
-import time
-import squacapi_client
-from squacapi_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Token
-configuration = squacapi_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = squacapi_client.ApiApi(squacapi_client.ApiClient(configuration))
-body = squacapi_client.WriteOnlyUserMeSerializer() # WriteOnlyUserMeSerializer | 
-
-try:
-    api_response = api_instance.api_user_me_update(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ApiApi->api_user_me_update: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**WriteOnlyUserMeSerializer**](WriteOnlyUserMeSerializer.md)|  | 
-
-### Return type
-
-[**ReadOnlyUserMeSerializer**](ReadOnlyUserMeSerializer.md)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

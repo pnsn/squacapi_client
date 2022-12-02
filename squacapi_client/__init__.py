@@ -24,7 +24,6 @@ from squacapi_client.configuration import Configuration
 # import models into sdk package
 from squacapi_client.models.auth_token import AuthToken
 from squacapi_client.models.channel import Channel
-from squacapi_client.models.group import Group
 from squacapi_client.models.measurement import Measurement
 from squacapi_client.models.metric import Metric
 from squacapi_client.models.nslc_group import NslcGroup
@@ -54,12 +53,14 @@ from squacapi_client.models.read_only_token_serializer import ReadOnlyTokenSeria
 from squacapi_client.models.read_only_trigger_serializer import ReadOnlyTriggerSerializer
 from squacapi_client.models.read_only_user_group_serializer import ReadOnlyUserGroupSerializer
 from squacapi_client.models.read_only_user_me_serializer import ReadOnlyUserMeSerializer
-from squacapi_client.models.read_only_user_read_serializer import ReadOnlyUserReadSerializer
-from squacapi_client.models.read_only_user_write_serializer import ReadOnlyUserWriteSerializer
+from squacapi_client.models.read_only_user_serializer import ReadOnlyUserSerializer
+from squacapi_client.models.read_only_user_simple_serializer import ReadOnlyUserSimpleSerializer
+from squacapi_client.models.read_only_user_update_serializer import ReadOnlyUserUpdateSerializer
 from squacapi_client.models.read_only_widget_detail_serializer import ReadOnlyWidgetDetailSerializer
 from squacapi_client.models.read_only_widget_serializer import ReadOnlyWidgetSerializer
 from squacapi_client.models.token import Token
 from squacapi_client.models.trigger import Trigger
+from squacapi_client.models.user_group import UserGroup
 from squacapi_client.models.user_simple import UserSimple
 from squacapi_client.models.write_only_alert_serializer import WriteOnlyAlertSerializer
 from squacapi_client.models.write_only_channel_serializer import WriteOnlyChannelSerializer
@@ -79,5 +80,6 @@ from squacapi_client.models.write_only_token_serializer import WriteOnlyTokenSer
 from squacapi_client.models.write_only_trigger_serializer import WriteOnlyTriggerSerializer
 from squacapi_client.models.write_only_user_group_serializer import WriteOnlyUserGroupSerializer
 from squacapi_client.models.write_only_user_me_serializer import WriteOnlyUserMeSerializer
-from squacapi_client.models.write_only_user_write_serializer import WriteOnlyUserWriteSerializer
+from squacapi_client.models.write_only_user_serializer import WriteOnlyUserSerializer
+from squacapi_client.models.write_only_user_update_serializer import WriteOnlyUserUpdateSerializer
 from squacapi_client.models.write_only_widget_serializer import WriteOnlyWidgetSerializer
