@@ -1356,20 +1356,20 @@ class ApiApi(object):
         query_params = []
         if 'metric' in params:
             query_params.append(('metric', params['metric']))  # noqa: E501
-            collection_formats['metric'] = 'multi'  # noqa: E501
+            collection_formats['metric'] = 'csv'  # noqa: E501
         if 'group' in params:
             query_params.append(('group', params['group']))  # noqa: E501
-            collection_formats['group'] = 'multi'  # noqa: E501
+            collection_formats['group'] = 'csv'  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
-            collection_formats['channel'] = 'multi'  # noqa: E501
+            collection_formats['channel'] = 'csv'  # noqa: E501
         if 'starttime' in params:
             query_params.append(('starttime', params['starttime']))  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'nslc' in params:
             query_params.append(('nslc', params['nslc']))  # noqa: E501
-            collection_formats['nslc'] = 'multi'  # noqa: E501
+            collection_formats['nslc'] = 'csv'  # noqa: E501
 
         header_params = {}
 
@@ -2063,18 +2063,18 @@ class ApiApi(object):
             query_params.append(('starttime', params['starttime']))  # noqa: E501
         if 'nslc' in params:
             query_params.append(('nslc', params['nslc']))  # noqa: E501
-            collection_formats['nslc'] = 'multi'  # noqa: E501
+            collection_formats['nslc'] = 'csv'  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
             query_params.append(('metric', params['metric']))  # noqa: E501
-            collection_formats['metric'] = 'multi'  # noqa: E501
+            collection_formats['metric'] = 'csv'  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
-            collection_formats['channel'] = 'multi'  # noqa: E501
+            collection_formats['channel'] = 'csv'  # noqa: E501
         if 'group' in params:
             query_params.append(('group', params['group']))  # noqa: E501
-            collection_formats['group'] = 'multi'  # noqa: E501
+            collection_formats['group'] = 'csv'  # noqa: E501
         if 'order' in params:
             query_params.append(('order', params['order']))  # noqa: E501
 
@@ -2273,18 +2273,18 @@ class ApiApi(object):
             query_params.append(('starttime', params['starttime']))  # noqa: E501
         if 'nslc' in params:
             query_params.append(('nslc', params['nslc']))  # noqa: E501
-            collection_formats['nslc'] = 'multi'  # noqa: E501
+            collection_formats['nslc'] = 'csv'  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
             query_params.append(('metric', params['metric']))  # noqa: E501
-            collection_formats['metric'] = 'multi'  # noqa: E501
+            collection_formats['metric'] = 'csv'  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
-            collection_formats['channel'] = 'multi'  # noqa: E501
+            collection_formats['channel'] = 'csv'  # noqa: E501
         if 'group' in params:
             query_params.append(('group', params['group']))  # noqa: E501
-            collection_formats['group'] = 'multi'  # noqa: E501
+            collection_formats['group'] = 'csv'  # noqa: E501
         if 'order' in params:
             query_params.append(('order', params['order']))  # noqa: E501
 
@@ -2675,18 +2675,18 @@ class ApiApi(object):
             query_params.append(('starttime', params['starttime']))  # noqa: E501
         if 'nslc' in params:
             query_params.append(('nslc', params['nslc']))  # noqa: E501
-            collection_formats['nslc'] = 'multi'  # noqa: E501
+            collection_formats['nslc'] = 'csv'  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
             query_params.append(('metric', params['metric']))  # noqa: E501
-            collection_formats['metric'] = 'multi'  # noqa: E501
+            collection_formats['metric'] = 'csv'  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
-            collection_formats['channel'] = 'multi'  # noqa: E501
+            collection_formats['channel'] = 'csv'  # noqa: E501
         if 'group' in params:
             query_params.append(('group', params['group']))  # noqa: E501
-            collection_formats['group'] = 'multi'  # noqa: E501
+            collection_formats['group'] = 'csv'  # noqa: E501
         if 'order' in params:
             query_params.append(('order', params['order']))  # noqa: E501
 
@@ -4265,18 +4265,18 @@ class ApiApi(object):
             query_params.append(('starttime', params['starttime']))  # noqa: E501
         if 'nslc' in params:
             query_params.append(('nslc', params['nslc']))  # noqa: E501
-            collection_formats['nslc'] = 'multi'  # noqa: E501
+            collection_formats['nslc'] = 'csv'  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
             query_params.append(('metric', params['metric']))  # noqa: E501
-            collection_formats['metric'] = 'multi'  # noqa: E501
+            collection_formats['metric'] = 'csv'  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
-            collection_formats['channel'] = 'multi'  # noqa: E501
+            collection_formats['channel'] = 'csv'  # noqa: E501
         if 'group' in params:
             query_params.append(('group', params['group']))  # noqa: E501
-            collection_formats['group'] = 'multi'  # noqa: E501
+            collection_formats['group'] = 'csv'  # noqa: E501
         if 'order' in params:
             query_params.append(('order', params['order']))  # noqa: E501
 
@@ -5053,18 +5053,18 @@ class ApiApi(object):
             query_params.append(('starttime', params['starttime']))  # noqa: E501
         if 'nslc' in params:
             query_params.append(('nslc', params['nslc']))  # noqa: E501
-            collection_formats['nslc'] = 'multi'  # noqa: E501
+            collection_formats['nslc'] = 'csv'  # noqa: E501
         if 'endtime' in params:
             query_params.append(('endtime', params['endtime']))  # noqa: E501
         if 'metric' in params:
             query_params.append(('metric', params['metric']))  # noqa: E501
-            collection_formats['metric'] = 'multi'  # noqa: E501
+            collection_formats['metric'] = 'csv'  # noqa: E501
         if 'channel' in params:
             query_params.append(('channel', params['channel']))  # noqa: E501
-            collection_formats['channel'] = 'multi'  # noqa: E501
+            collection_formats['channel'] = 'csv'  # noqa: E501
         if 'group' in params:
             query_params.append(('group', params['group']))  # noqa: E501
-            collection_formats['group'] = 'multi'  # noqa: E501
+            collection_formats['group'] = 'csv'  # noqa: E501
         if 'order' in params:
             query_params.append(('order', params['order']))  # noqa: E501
 
