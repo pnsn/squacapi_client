@@ -1,6 +1,6 @@
 # squacapi_client.InviteApi
 
-All URIs are relative to *https://squacapi.pnsn.org/*
+All URIs are relative to *http://localhost:8000/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
