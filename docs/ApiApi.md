@@ -1,6 +1,6 @@
 # squacapi_client.ApiApi
 
-All URIs are relative to *http://localhost:8000/*
+All URIs are relative to *https://squacapi.pnsn.org/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
