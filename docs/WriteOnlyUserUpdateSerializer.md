@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **firstname** | **str** |  | [optional] 
 **lastname** | **str** |  | [optional] 
 **password** | **str** |  | [optional] 
-**groups** | **list[int]** |  | 
+**groups** | **list[str]** |  | 
 **organization** | **int** |  | 
 **is_org_admin** | **bool** |  | [optional] 
 **last_login** | **datetime** |  | [optional] 

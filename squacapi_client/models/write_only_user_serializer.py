@@ -31,7 +31,7 @@ class WriteOnlyUserSerializer(object):
         'email': 'str',
         'firstname': 'str',
         'lastname': 'str',
-        'groups': 'list[int]',
+        'groups': 'list[str]',
         'organization': 'int',
         'is_org_admin': 'bool',
         'last_login': 'datetime',
@@ -147,7 +147,7 @@ class WriteOnlyUserSerializer(object):
 
 
         :return: The groups of this WriteOnlyUserSerializer.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[str]
         """
         return self._groups
 
@@ -157,7 +157,7 @@ class WriteOnlyUserSerializer(object):
 
 
         :param groups: The groups of this WriteOnlyUserSerializer.  # noqa: E501
-        :type: list[int]
+        :type: list[str]
         """
         if groups is None:
             raise ValueError("Invalid value for `groups`, must not be `None`")  # noqa: E501

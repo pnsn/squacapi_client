@@ -1,6 +1,6 @@
 # squacapi_client.InviteApi
 
-All URIs are relative to *https://squacapi.pnsn.org/*
+All URIs are relative to *https://staging-squacapi.pnsn.org/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

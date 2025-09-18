@@ -34,7 +34,7 @@ class WriteOnlyDashboardSerializer(object):
         'share_all': 'bool',
         'share_org': 'bool',
         'organization': 'int',
-        'properties': 'str'
+        'properties': 'object'
     }
 
     attribute_map = {
@@ -206,7 +206,7 @@ class WriteOnlyDashboardSerializer(object):
 
 
         :return: The properties of this WriteOnlyDashboardSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._properties
 
@@ -216,7 +216,7 @@ class WriteOnlyDashboardSerializer(object):
 
 
         :param properties: The properties of this WriteOnlyDashboardSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._properties = properties

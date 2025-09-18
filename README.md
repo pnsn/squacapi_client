@@ -68,7 +68,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://squacapi.pnsn.org/*
+All URIs are relative to *https://staging-squacapi.pnsn.org/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -122,6 +122,8 @@ Class | Method | HTTP request | Description
 *ApiApi* | [**api_measurement_triggers_list**](docs/ApiApi.md#api_measurement_triggers_list) | **GET** /api/measurement/triggers/ | 
 *ApiApi* | [**api_measurement_triggers_partial_update**](docs/ApiApi.md#api_measurement_triggers_partial_update) | **PATCH** /api/measurement/triggers/{id}/ | 
 *ApiApi* | [**api_measurement_triggers_read**](docs/ApiApi.md#api_measurement_triggers_read) | **GET** /api/measurement/triggers/{id}/ | 
+*ApiApi* | [**api_measurement_triggers_unsubscribe_create**](docs/ApiApi.md#api_measurement_triggers_unsubscribe_create) | **POST** /api/measurement/triggers/{id}/unsubscribe/{token}/ | 
+*ApiApi* | [**api_measurement_triggers_unsubscribe_read**](docs/ApiApi.md#api_measurement_triggers_unsubscribe_read) | **GET** /api/measurement/triggers/{id}/unsubscribe/{token}/ | 
 *ApiApi* | [**api_measurement_triggers_update**](docs/ApiApi.md#api_measurement_triggers_update) | **PUT** /api/measurement/triggers/{id}/ | 
 *ApiApi* | [**api_measurement_week_archives_list**](docs/ApiApi.md#api_measurement_week_archives_list) | **GET** /api/measurement/week-archives/ | 
 *ApiApi* | [**api_measurement_week_archives_read**](docs/ApiApi.md#api_measurement_week_archives_read) | **GET** /api/measurement/week-archives/{id}/ | 
@@ -179,11 +181,11 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Alert](docs/Alert.md)
  - [AuthToken](docs/AuthToken.md)
  - [Channel](docs/Channel.md)
  - [Measurement](docs/Measurement.md)
  - [Metric](docs/Metric.md)
- - [NslcGroup](docs/NslcGroup.md)
  - [ReadOnlyAlertDetailSerializer](docs/ReadOnlyAlertDetailSerializer.md)
  - [ReadOnlyAlertSerializer](docs/ReadOnlyAlertSerializer.md)
  - [ReadOnlyArchiveDaySerializer](docs/ReadOnlyArchiveDaySerializer.md)
@@ -206,8 +208,9 @@ Class | Method | HTTP request | Description
  - [ReadOnlyNetworkSerializer](docs/ReadOnlyNetworkSerializer.md)
  - [ReadOnlyOrganizationSerializer](docs/ReadOnlyOrganizationSerializer.md)
  - [ReadOnlyPasswordTokenSerializer](docs/ReadOnlyPasswordTokenSerializer.md)
- - [ReadOnlyTokenSerializer](docs/ReadOnlyTokenSerializer.md)
+ - [ReadOnlyResetTokenSerializer](docs/ReadOnlyResetTokenSerializer.md)
  - [ReadOnlyTriggerSerializer](docs/ReadOnlyTriggerSerializer.md)
+ - [ReadOnlyTriggerUnsubscribeSerializer](docs/ReadOnlyTriggerUnsubscribeSerializer.md)
  - [ReadOnlyUserGroupSerializer](docs/ReadOnlyUserGroupSerializer.md)
  - [ReadOnlyUserMeSerializer](docs/ReadOnlyUserMeSerializer.md)
  - [ReadOnlyUserSerializer](docs/ReadOnlyUserSerializer.md)
@@ -215,9 +218,8 @@ Class | Method | HTTP request | Description
  - [ReadOnlyUserUpdateSerializer](docs/ReadOnlyUserUpdateSerializer.md)
  - [ReadOnlyWidgetDetailSerializer](docs/ReadOnlyWidgetDetailSerializer.md)
  - [ReadOnlyWidgetSerializer](docs/ReadOnlyWidgetSerializer.md)
- - [Token](docs/Token.md)
+ - [ResetToken](docs/ResetToken.md)
  - [Trigger](docs/Trigger.md)
- - [UserGroup](docs/UserGroup.md)
  - [UserSimple](docs/UserSimple.md)
  - [WriteOnlyAlertSerializer](docs/WriteOnlyAlertSerializer.md)
  - [WriteOnlyChannelSerializer](docs/WriteOnlyChannelSerializer.md)
@@ -233,8 +235,9 @@ Class | Method | HTTP request | Description
  - [WriteOnlyNetworkSerializer](docs/WriteOnlyNetworkSerializer.md)
  - [WriteOnlyOrganizationSerializer](docs/WriteOnlyOrganizationSerializer.md)
  - [WriteOnlyPasswordTokenSerializer](docs/WriteOnlyPasswordTokenSerializer.md)
- - [WriteOnlyTokenSerializer](docs/WriteOnlyTokenSerializer.md)
+ - [WriteOnlyResetTokenSerializer](docs/WriteOnlyResetTokenSerializer.md)
  - [WriteOnlyTriggerSerializer](docs/WriteOnlyTriggerSerializer.md)
+ - [WriteOnlyTriggerUnsubscribeSerializer](docs/WriteOnlyTriggerUnsubscribeSerializer.md)
  - [WriteOnlyUserGroupSerializer](docs/WriteOnlyUserGroupSerializer.md)
  - [WriteOnlyUserMeSerializer](docs/WriteOnlyUserMeSerializer.md)
  - [WriteOnlyUserSerializer](docs/WriteOnlyUserSerializer.md)

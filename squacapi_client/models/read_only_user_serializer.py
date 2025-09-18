@@ -32,7 +32,7 @@ class ReadOnlyUserSerializer(object):
         'firstname': 'str',
         'lastname': 'str',
         'is_staff': 'bool',
-        'groups': 'list[int]',
+        'groups': 'list[str]',
         'id': 'int',
         'organization': 'int',
         'is_org_admin': 'bool',
@@ -178,7 +178,7 @@ class ReadOnlyUserSerializer(object):
 
 
         :return: The groups of this ReadOnlyUserSerializer.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[str]
         """
         return self._groups
 
@@ -188,7 +188,7 @@ class ReadOnlyUserSerializer(object):
 
 
         :param groups: The groups of this ReadOnlyUserSerializer.  # noqa: E501
-        :type: list[int]
+        :type: list[str]
         """
         if groups is None:
             raise ValueError("Invalid value for `groups`, must not be `None`")  # noqa: E501

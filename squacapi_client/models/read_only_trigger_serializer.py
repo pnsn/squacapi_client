@@ -35,11 +35,12 @@ class ReadOnlyTriggerSerializer(object):
         'value_operator': 'str',
         'num_channels': 'int',
         'num_channels_operator': 'str',
-        'email_list': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'user': 'int',
-        'alert_on_out_of_alarm': 'bool'
+        'emails': 'str',
+        'alert_on_out_of_alarm': 'bool',
+        'latest_alert': 'Alert'
     }
 
     attribute_map = {
@@ -50,14 +51,15 @@ class ReadOnlyTriggerSerializer(object):
         'value_operator': 'value_operator',
         'num_channels': 'num_channels',
         'num_channels_operator': 'num_channels_operator',
-        'email_list': 'email_list',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'user': 'user',
-        'alert_on_out_of_alarm': 'alert_on_out_of_alarm'
+        'emails': 'emails',
+        'alert_on_out_of_alarm': 'alert_on_out_of_alarm',
+        'latest_alert': 'latest_alert'
     }
 
-    def __init__(self, id=None, monitor=None, val1=None, val2=None, value_operator=None, num_channels=None, num_channels_operator=None, email_list=None, created_at=None, updated_at=None, user=None, alert_on_out_of_alarm=None):  # noqa: E501
+    def __init__(self, id=None, monitor=None, val1=None, val2=None, value_operator=None, num_channels=None, num_channels_operator=None, created_at=None, updated_at=None, user=None, emails=None, alert_on_out_of_alarm=None, latest_alert=None):  # noqa: E501
         """ReadOnlyTriggerSerializer - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._monitor = None
@@ -66,11 +68,12 @@ class ReadOnlyTriggerSerializer(object):
         self._value_operator = None
         self._num_channels = None
         self._num_channels_operator = None
-        self._email_list = None
         self._created_at = None
         self._updated_at = None
         self._user = None
+        self._emails = None
         self._alert_on_out_of_alarm = None
+        self._latest_alert = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -84,16 +87,18 @@ class ReadOnlyTriggerSerializer(object):
             self.num_channels = num_channels
         if num_channels_operator is not None:
             self.num_channels_operator = num_channels_operator
-        if email_list is not None:
-            self.email_list = email_list
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
         if user is not None:
             self.user = user
+        if emails is not None:
+            self.emails = emails
         if alert_on_out_of_alarm is not None:
             self.alert_on_out_of_alarm = alert_on_out_of_alarm
+        if latest_alert is not None:
+            self.latest_alert = latest_alert
 
     @property
     def id(self):
@@ -259,27 +264,6 @@ class ReadOnlyTriggerSerializer(object):
         self._num_channels_operator = num_channels_operator
 
     @property
-    def email_list(self):
-        """Gets the email_list of this ReadOnlyTriggerSerializer.  # noqa: E501
-
-
-        :return: The email_list of this ReadOnlyTriggerSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._email_list
-
-    @email_list.setter
-    def email_list(self, email_list):
-        """Sets the email_list of this ReadOnlyTriggerSerializer.
-
-
-        :param email_list: The email_list of this ReadOnlyTriggerSerializer.  # noqa: E501
-        :type: str
-        """
-
-        self._email_list = email_list
-
-    @property
     def created_at(self):
         """Gets the created_at of this ReadOnlyTriggerSerializer.  # noqa: E501
 
@@ -343,6 +327,27 @@ class ReadOnlyTriggerSerializer(object):
         self._user = user
 
     @property
+    def emails(self):
+        """Gets the emails of this ReadOnlyTriggerSerializer.  # noqa: E501
+
+
+        :return: The emails of this ReadOnlyTriggerSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._emails
+
+    @emails.setter
+    def emails(self, emails):
+        """Sets the emails of this ReadOnlyTriggerSerializer.
+
+
+        :param emails: The emails of this ReadOnlyTriggerSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._emails = emails
+
+    @property
     def alert_on_out_of_alarm(self):
         """Gets the alert_on_out_of_alarm of this ReadOnlyTriggerSerializer.  # noqa: E501
 
@@ -362,6 +367,27 @@ class ReadOnlyTriggerSerializer(object):
         """
 
         self._alert_on_out_of_alarm = alert_on_out_of_alarm
+
+    @property
+    def latest_alert(self):
+        """Gets the latest_alert of this ReadOnlyTriggerSerializer.  # noqa: E501
+
+
+        :return: The latest_alert of this ReadOnlyTriggerSerializer.  # noqa: E501
+        :rtype: Alert
+        """
+        return self._latest_alert
+
+    @latest_alert.setter
+    def latest_alert(self, latest_alert):
+        """Sets the latest_alert of this ReadOnlyTriggerSerializer.
+
+
+        :param latest_alert: The latest_alert of this ReadOnlyTriggerSerializer.  # noqa: E501
+        :type: Alert
+        """
+
+        self._latest_alert = latest_alert
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,7 +31,7 @@ class ReadOnlyUserMeSerializer(object):
         'id': 'int',
         'firstname': 'str',
         'lastname': 'str',
-        'groups': 'list[UserGroup]',
+        'groups': 'list[str]',
         'organization': 'int',
         'email': 'str',
         'is_active': 'bool',
@@ -71,7 +71,8 @@ class ReadOnlyUserMeSerializer(object):
             self.lastname = lastname
         if groups is not None:
             self.groups = groups
-        self.organization = organization
+        if organization is not None:
+            self.organization = organization
         if email is not None:
             self.email = email
         if is_active is not None:
@@ -150,7 +151,7 @@ class ReadOnlyUserMeSerializer(object):
 
 
         :return: The groups of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :rtype: list[UserGroup]
+        :rtype: list[str]
         """
         return self._groups
 
@@ -160,7 +161,7 @@ class ReadOnlyUserMeSerializer(object):
 
 
         :param groups: The groups of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :type: list[UserGroup]
+        :type: list[str]
         """
 
         self._groups = groups
@@ -183,8 +184,6 @@ class ReadOnlyUserMeSerializer(object):
         :param organization: The organization of this ReadOnlyUserMeSerializer.  # noqa: E501
         :type: int
         """
-        if organization is None:
-            raise ValueError("Invalid value for `organization`, must not be `None`")  # noqa: E501
 
         self._organization = organization
 
