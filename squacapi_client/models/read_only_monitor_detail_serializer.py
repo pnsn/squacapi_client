@@ -29,8 +29,10 @@ class ReadOnlyMonitorDetailSerializer(object):
     """
     swagger_types = {
         'id': 'int',
-        'channel_group': 'NslcGroup',
-        'metric': 'Metric',
+        'channel_group': 'int',
+        'channel_group_name': 'str',
+        'metric_name': 'str',
+        'metric': 'int',
         'interval_type': 'str',
         'interval_count': 'int',
         'stat': 'str',
@@ -38,12 +40,15 @@ class ReadOnlyMonitorDetailSerializer(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'user': 'int',
-        'triggers': 'list[Trigger]'
+        'triggers': 'list[Trigger]',
+        'do_daily_digest': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'channel_group': 'channel_group',
+        'channel_group_name': 'channel_group_name',
+        'metric_name': 'metric_name',
         'metric': 'metric',
         'interval_type': 'interval_type',
         'interval_count': 'interval_count',
@@ -52,13 +57,16 @@ class ReadOnlyMonitorDetailSerializer(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'user': 'user',
-        'triggers': 'triggers'
+        'triggers': 'triggers',
+        'do_daily_digest': 'do_daily_digest'
     }
 
-    def __init__(self, id=None, channel_group=None, metric=None, interval_type=None, interval_count=None, stat=None, name=None, created_at=None, updated_at=None, user=None, triggers=None):  # noqa: E501
+    def __init__(self, id=None, channel_group=None, channel_group_name=None, metric_name=None, metric=None, interval_type=None, interval_count=None, stat=None, name=None, created_at=None, updated_at=None, user=None, triggers=None, do_daily_digest=None):  # noqa: E501
         """ReadOnlyMonitorDetailSerializer - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._channel_group = None
+        self._channel_group_name = None
+        self._metric_name = None
         self._metric = None
         self._interval_type = None
         self._interval_count = None
@@ -68,13 +76,16 @@ class ReadOnlyMonitorDetailSerializer(object):
         self._updated_at = None
         self._user = None
         self._triggers = None
+        self._do_daily_digest = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        if channel_group is not None:
-            self.channel_group = channel_group
-        if metric is not None:
-            self.metric = metric
+        self.channel_group = channel_group
+        if channel_group_name is not None:
+            self.channel_group_name = channel_group_name
+        if metric_name is not None:
+            self.metric_name = metric_name
+        self.metric = metric
         if interval_type is not None:
             self.interval_type = interval_type
         self.interval_count = interval_count
@@ -90,6 +101,8 @@ class ReadOnlyMonitorDetailSerializer(object):
             self.user = user
         if triggers is not None:
             self.triggers = triggers
+        if do_daily_digest is not None:
+            self.do_daily_digest = do_daily_digest
 
     @property
     def id(self):
@@ -118,7 +131,7 @@ class ReadOnlyMonitorDetailSerializer(object):
 
 
         :return: The channel_group of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
-        :rtype: NslcGroup
+        :rtype: int
         """
         return self._channel_group
 
@@ -128,10 +141,54 @@ class ReadOnlyMonitorDetailSerializer(object):
 
 
         :param channel_group: The channel_group of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
-        :type: NslcGroup
+        :type: int
         """
+        if channel_group is None:
+            raise ValueError("Invalid value for `channel_group`, must not be `None`")  # noqa: E501
 
         self._channel_group = channel_group
+
+    @property
+    def channel_group_name(self):
+        """Gets the channel_group_name of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+
+
+        :return: The channel_group_name of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._channel_group_name
+
+    @channel_group_name.setter
+    def channel_group_name(self, channel_group_name):
+        """Sets the channel_group_name of this ReadOnlyMonitorDetailSerializer.
+
+
+        :param channel_group_name: The channel_group_name of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._channel_group_name = channel_group_name
+
+    @property
+    def metric_name(self):
+        """Gets the metric_name of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+
+
+        :return: The metric_name of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._metric_name
+
+    @metric_name.setter
+    def metric_name(self, metric_name):
+        """Sets the metric_name of this ReadOnlyMonitorDetailSerializer.
+
+
+        :param metric_name: The metric_name of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._metric_name = metric_name
 
     @property
     def metric(self):
@@ -139,7 +196,7 @@ class ReadOnlyMonitorDetailSerializer(object):
 
 
         :return: The metric of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
-        :rtype: Metric
+        :rtype: int
         """
         return self._metric
 
@@ -149,8 +206,10 @@ class ReadOnlyMonitorDetailSerializer(object):
 
 
         :param metric: The metric of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
-        :type: Metric
+        :type: int
         """
+        if metric is None:
+            raise ValueError("Invalid value for `metric`, must not be `None`")  # noqa: E501
 
         self._metric = metric
 
@@ -172,7 +231,7 @@ class ReadOnlyMonitorDetailSerializer(object):
         :param interval_type: The interval_type of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
         :type: str
         """
-        allowed_values = ["minute", "hour", "day"]  # noqa: E501
+        allowed_values = ["minute", "hour", "day", "last n"]  # noqa: E501
         if interval_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `interval_type` ({0}), must be one of {1}"  # noqa: E501
@@ -222,7 +281,7 @@ class ReadOnlyMonitorDetailSerializer(object):
         :param stat: The stat of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
         :type: str
         """
-        allowed_values = ["count", "sum", "avg", "min", "max"]  # noqa: E501
+        allowed_values = ["count", "sum", "avg", "min", "max", "minabs", "maxabs", "median", "p90", "p95"]  # noqa: E501
         if stat not in allowed_values:
             raise ValueError(
                 "Invalid value for `stat` ({0}), must be one of {1}"  # noqa: E501
@@ -335,6 +394,27 @@ class ReadOnlyMonitorDetailSerializer(object):
         """
 
         self._triggers = triggers
+
+    @property
+    def do_daily_digest(self):
+        """Gets the do_daily_digest of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+
+
+        :return: The do_daily_digest of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._do_daily_digest
+
+    @do_daily_digest.setter
+    def do_daily_digest(self, do_daily_digest):
+        """Sets the do_daily_digest of this ReadOnlyMonitorDetailSerializer.
+
+
+        :param do_daily_digest: The do_daily_digest of this ReadOnlyMonitorDetailSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._do_daily_digest = do_daily_digest
 
     def to_dict(self):
         """Returns the model properties as a dict"""

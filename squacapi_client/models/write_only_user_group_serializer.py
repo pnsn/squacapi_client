@@ -28,14 +28,41 @@ class WriteOnlyUserGroupSerializer(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str'
     }
 
     attribute_map = {
+        'name': 'name'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, name=None):  # noqa: E501
         """WriteOnlyUserGroupSerializer - a model defined in Swagger"""  # noqa: E501
+        self._name = None
         self.discriminator = None
+        self.name = name
+
+    @property
+    def name(self):
+        """Gets the name of this WriteOnlyUserGroupSerializer.  # noqa: E501
+
+
+        :return: The name of this WriteOnlyUserGroupSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this WriteOnlyUserGroupSerializer.
+
+
+        :param name: The name of this WriteOnlyUserGroupSerializer.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,10 +33,9 @@ class UserSimple(object):
         'lastname': 'str',
         'id': 'int',
         'is_active': 'bool',
-        'last_login': 'datetime',
         'organization': 'int',
         'is_org_admin': 'bool',
-        'groups': 'list[int]'
+        'groups': 'list[str]'
     }
 
     attribute_map = {
@@ -45,20 +44,18 @@ class UserSimple(object):
         'lastname': 'lastname',
         'id': 'id',
         'is_active': 'is_active',
-        'last_login': 'last_login',
         'organization': 'organization',
         'is_org_admin': 'is_org_admin',
         'groups': 'groups'
     }
 
-    def __init__(self, email=None, firstname=None, lastname=None, id=None, is_active=None, last_login=None, organization=None, is_org_admin=None, groups=None):  # noqa: E501
+    def __init__(self, email=None, firstname=None, lastname=None, id=None, is_active=None, organization=None, is_org_admin=None, groups=None):  # noqa: E501
         """UserSimple - a model defined in Swagger"""  # noqa: E501
         self._email = None
         self._firstname = None
         self._lastname = None
         self._id = None
         self._is_active = None
-        self._last_login = None
         self._organization = None
         self._is_org_admin = None
         self._groups = None
@@ -70,12 +67,11 @@ class UserSimple(object):
             self.id = id
         if is_active is not None:
             self.is_active = is_active
-        if last_login is not None:
-            self.last_login = last_login
         self.organization = organization
         if is_org_admin is not None:
             self.is_org_admin = is_org_admin
-        self.groups = groups
+        if groups is not None:
+            self.groups = groups
 
     @property
     def email(self):
@@ -189,27 +185,6 @@ class UserSimple(object):
         self._is_active = is_active
 
     @property
-    def last_login(self):
-        """Gets the last_login of this UserSimple.  # noqa: E501
-
-
-        :return: The last_login of this UserSimple.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._last_login
-
-    @last_login.setter
-    def last_login(self, last_login):
-        """Sets the last_login of this UserSimple.
-
-
-        :param last_login: The last_login of this UserSimple.  # noqa: E501
-        :type: datetime
-        """
-
-        self._last_login = last_login
-
-    @property
     def organization(self):
         """Gets the organization of this UserSimple.  # noqa: E501
 
@@ -259,7 +234,7 @@ class UserSimple(object):
 
 
         :return: The groups of this UserSimple.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[str]
         """
         return self._groups
 
@@ -269,10 +244,8 @@ class UserSimple(object):
 
 
         :param groups: The groups of this UserSimple.  # noqa: E501
-        :type: list[int]
+        :type: list[str]
         """
-        if groups is None:
-            raise ValueError("Invalid value for `groups`, must not be `None`")  # noqa: E501
 
         self._groups = groups
 

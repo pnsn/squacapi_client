@@ -28,140 +28,59 @@ class ReadOnlyUserMeSerializer(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'email': 'str',
+        'id': 'int',
         'firstname': 'str',
         'lastname': 'str',
-        'is_staff': 'bool',
-        'id': 'int',
+        'groups': 'list[str]',
         'organization': 'int',
+        'email': 'str',
+        'is_active': 'bool',
         'is_org_admin': 'bool',
-        'groups': 'list[Group]'
+        'is_staff': 'bool'
     }
 
     attribute_map = {
-        'email': 'email',
+        'id': 'id',
         'firstname': 'firstname',
         'lastname': 'lastname',
-        'is_staff': 'is_staff',
-        'id': 'id',
+        'groups': 'groups',
         'organization': 'organization',
+        'email': 'email',
+        'is_active': 'is_active',
         'is_org_admin': 'is_org_admin',
-        'groups': 'groups'
+        'is_staff': 'is_staff'
     }
 
-    def __init__(self, email=None, firstname=None, lastname=None, is_staff=None, id=None, organization=None, is_org_admin=None, groups=None):  # noqa: E501
+    def __init__(self, id=None, firstname=None, lastname=None, groups=None, organization=None, email=None, is_active=None, is_org_admin=None, is_staff=None):  # noqa: E501
         """ReadOnlyUserMeSerializer - a model defined in Swagger"""  # noqa: E501
-        self._email = None
+        self._id = None
         self._firstname = None
         self._lastname = None
-        self._is_staff = None
-        self._id = None
-        self._organization = None
-        self._is_org_admin = None
         self._groups = None
+        self._organization = None
+        self._email = None
+        self._is_active = None
+        self._is_org_admin = None
+        self._is_staff = None
         self.discriminator = None
-        if email is not None:
-            self.email = email
-        self.firstname = firstname
-        self.lastname = lastname
-        if is_staff is not None:
-            self.is_staff = is_staff
         if id is not None:
             self.id = id
-        if organization is not None:
-            self.organization = organization
-        if is_org_admin is not None:
-            self.is_org_admin = is_org_admin
+        if firstname is not None:
+            self.firstname = firstname
+        if lastname is not None:
+            self.lastname = lastname
         if groups is not None:
             self.groups = groups
-
-    @property
-    def email(self):
-        """Gets the email of this ReadOnlyUserMeSerializer.  # noqa: E501
-
-
-        :return: The email of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this ReadOnlyUserMeSerializer.
-
-
-        :param email: The email of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :type: str
-        """
-
-        self._email = email
-
-    @property
-    def firstname(self):
-        """Gets the firstname of this ReadOnlyUserMeSerializer.  # noqa: E501
-
-
-        :return: The firstname of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._firstname
-
-    @firstname.setter
-    def firstname(self, firstname):
-        """Sets the firstname of this ReadOnlyUserMeSerializer.
-
-
-        :param firstname: The firstname of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :type: str
-        """
-        if firstname is None:
-            raise ValueError("Invalid value for `firstname`, must not be `None`")  # noqa: E501
-
-        self._firstname = firstname
-
-    @property
-    def lastname(self):
-        """Gets the lastname of this ReadOnlyUserMeSerializer.  # noqa: E501
-
-
-        :return: The lastname of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._lastname
-
-    @lastname.setter
-    def lastname(self, lastname):
-        """Sets the lastname of this ReadOnlyUserMeSerializer.
-
-
-        :param lastname: The lastname of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :type: str
-        """
-        if lastname is None:
-            raise ValueError("Invalid value for `lastname`, must not be `None`")  # noqa: E501
-
-        self._lastname = lastname
-
-    @property
-    def is_staff(self):
-        """Gets the is_staff of this ReadOnlyUserMeSerializer.  # noqa: E501
-
-
-        :return: The is_staff of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_staff
-
-    @is_staff.setter
-    def is_staff(self, is_staff):
-        """Sets the is_staff of this ReadOnlyUserMeSerializer.
-
-
-        :param is_staff: The is_staff of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_staff = is_staff
+        if organization is not None:
+            self.organization = organization
+        if email is not None:
+            self.email = email
+        if is_active is not None:
+            self.is_active = is_active
+        if is_org_admin is not None:
+            self.is_org_admin = is_org_admin
+        if is_staff is not None:
+            self.is_staff = is_staff
 
     @property
     def id(self):
@@ -185,6 +104,69 @@ class ReadOnlyUserMeSerializer(object):
         self._id = id
 
     @property
+    def firstname(self):
+        """Gets the firstname of this ReadOnlyUserMeSerializer.  # noqa: E501
+
+
+        :return: The firstname of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._firstname
+
+    @firstname.setter
+    def firstname(self, firstname):
+        """Sets the firstname of this ReadOnlyUserMeSerializer.
+
+
+        :param firstname: The firstname of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._firstname = firstname
+
+    @property
+    def lastname(self):
+        """Gets the lastname of this ReadOnlyUserMeSerializer.  # noqa: E501
+
+
+        :return: The lastname of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._lastname
+
+    @lastname.setter
+    def lastname(self, lastname):
+        """Sets the lastname of this ReadOnlyUserMeSerializer.
+
+
+        :param lastname: The lastname of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._lastname = lastname
+
+    @property
+    def groups(self):
+        """Gets the groups of this ReadOnlyUserMeSerializer.  # noqa: E501
+
+
+        :return: The groups of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._groups
+
+    @groups.setter
+    def groups(self, groups):
+        """Sets the groups of this ReadOnlyUserMeSerializer.
+
+
+        :param groups: The groups of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._groups = groups
+
+    @property
     def organization(self):
         """Gets the organization of this ReadOnlyUserMeSerializer.  # noqa: E501
 
@@ -204,6 +186,48 @@ class ReadOnlyUserMeSerializer(object):
         """
 
         self._organization = organization
+
+    @property
+    def email(self):
+        """Gets the email of this ReadOnlyUserMeSerializer.  # noqa: E501
+
+
+        :return: The email of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this ReadOnlyUserMeSerializer.
+
+
+        :param email: The email of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def is_active(self):
+        """Gets the is_active of this ReadOnlyUserMeSerializer.  # noqa: E501
+
+
+        :return: The is_active of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_active
+
+    @is_active.setter
+    def is_active(self, is_active):
+        """Sets the is_active of this ReadOnlyUserMeSerializer.
+
+
+        :param is_active: The is_active of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_active = is_active
 
     @property
     def is_org_admin(self):
@@ -227,25 +251,25 @@ class ReadOnlyUserMeSerializer(object):
         self._is_org_admin = is_org_admin
 
     @property
-    def groups(self):
-        """Gets the groups of this ReadOnlyUserMeSerializer.  # noqa: E501
+    def is_staff(self):
+        """Gets the is_staff of this ReadOnlyUserMeSerializer.  # noqa: E501
 
 
-        :return: The groups of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :rtype: list[Group]
+        :return: The is_staff of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :rtype: bool
         """
-        return self._groups
+        return self._is_staff
 
-    @groups.setter
-    def groups(self, groups):
-        """Sets the groups of this ReadOnlyUserMeSerializer.
+    @is_staff.setter
+    def is_staff(self, is_staff):
+        """Sets the is_staff of this ReadOnlyUserMeSerializer.
 
 
-        :param groups: The groups of this ReadOnlyUserMeSerializer.  # noqa: E501
-        :type: list[Group]
+        :param is_staff: The is_staff of this ReadOnlyUserMeSerializer.  # noqa: E501
+        :type: bool
         """
 
-        self._groups = groups
+        self._is_staff = is_staff
 
     def to_dict(self):
         """Returns the model properties as a dict"""

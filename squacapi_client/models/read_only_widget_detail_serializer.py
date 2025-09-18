@@ -32,12 +32,12 @@ class ReadOnlyWidgetDetailSerializer(object):
         'name': 'str',
         'dashboard': 'int',
         'metrics': 'list[Metric]',
-        'thresholds': 'str',
+        'thresholds': 'object',
         'user': 'int',
         'type': 'str',
         'stat': 'str',
-        'properties': 'str',
-        'layout': 'str'
+        'properties': 'object',
+        'layout': 'object'
     }
 
     attribute_map = {
@@ -179,7 +179,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :return: The thresholds of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._thresholds
 
@@ -189,7 +189,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :param thresholds: The thresholds of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._thresholds = thresholds
@@ -263,7 +263,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :return: The properties of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._properties
 
@@ -273,7 +273,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :param properties: The properties of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._properties = properties
@@ -284,7 +284,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :return: The layout of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._layout
 
@@ -294,7 +294,7 @@ class ReadOnlyWidgetDetailSerializer(object):
 
 
         :param layout: The layout of this ReadOnlyWidgetDetailSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._layout = layout

@@ -29,56 +29,77 @@ class ReadOnlyAlertDetailSerializer(object):
     """
     swagger_types = {
         'id': 'int',
-        'trigger': 'Trigger',
+        'trigger': 'int',
+        'monitor': 'int',
         'timestamp': 'datetime',
-        'message': 'str',
         'in_alarm': 'bool',
-        'breaching_channels': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
-        'user': 'int'
+        'val1': 'float',
+        'val2': 'float',
+        'value_operator': 'str',
+        'num_channels': 'int',
+        'num_channels_operator': 'str',
+        'breaching_channels': 'object',
+        'user': 'int',
+        'monitor_name': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'trigger': 'trigger',
+        'monitor': 'monitor',
         'timestamp': 'timestamp',
-        'message': 'message',
         'in_alarm': 'in_alarm',
+        'val1': 'val1',
+        'val2': 'val2',
+        'value_operator': 'value_operator',
+        'num_channels': 'num_channels',
+        'num_channels_operator': 'num_channels_operator',
         'breaching_channels': 'breaching_channels',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
-        'user': 'user'
+        'user': 'user',
+        'monitor_name': 'monitor_name'
     }
 
-    def __init__(self, id=None, trigger=None, timestamp=None, message=None, in_alarm=None, breaching_channels=None, created_at=None, updated_at=None, user=None):  # noqa: E501
+    def __init__(self, id=None, trigger=None, monitor=None, timestamp=None, in_alarm=None, val1=None, val2=None, value_operator=None, num_channels=None, num_channels_operator=None, breaching_channels=None, user=None, monitor_name=None):  # noqa: E501
         """ReadOnlyAlertDetailSerializer - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._trigger = None
+        self._monitor = None
         self._timestamp = None
-        self._message = None
         self._in_alarm = None
+        self._val1 = None
+        self._val2 = None
+        self._value_operator = None
+        self._num_channels = None
+        self._num_channels_operator = None
         self._breaching_channels = None
-        self._created_at = None
-        self._updated_at = None
         self._user = None
+        self._monitor_name = None
         self.discriminator = None
         if id is not None:
             self.id = id
         if trigger is not None:
             self.trigger = trigger
+        if monitor is not None:
+            self.monitor = monitor
         self.timestamp = timestamp
-        self.message = message
         if in_alarm is not None:
             self.in_alarm = in_alarm
+        if val1 is not None:
+            self.val1 = val1
+        if val2 is not None:
+            self.val2 = val2
+        if value_operator is not None:
+            self.value_operator = value_operator
+        if num_channels is not None:
+            self.num_channels = num_channels
+        if num_channels_operator is not None:
+            self.num_channels_operator = num_channels_operator
         if breaching_channels is not None:
             self.breaching_channels = breaching_channels
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
         if user is not None:
             self.user = user
+        if monitor_name is not None:
+            self.monitor_name = monitor_name
 
     @property
     def id(self):
@@ -107,7 +128,7 @@ class ReadOnlyAlertDetailSerializer(object):
 
 
         :return: The trigger of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :rtype: Trigger
+        :rtype: int
         """
         return self._trigger
 
@@ -117,10 +138,31 @@ class ReadOnlyAlertDetailSerializer(object):
 
 
         :param trigger: The trigger of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :type: Trigger
+        :type: int
         """
 
         self._trigger = trigger
+
+    @property
+    def monitor(self):
+        """Gets the monitor of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The monitor of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._monitor
+
+    @monitor.setter
+    def monitor(self, monitor):
+        """Sets the monitor of this ReadOnlyAlertDetailSerializer.
+
+
+        :param monitor: The monitor of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: int
+        """
+
+        self._monitor = monitor
 
     @property
     def timestamp(self):
@@ -146,29 +188,6 @@ class ReadOnlyAlertDetailSerializer(object):
         self._timestamp = timestamp
 
     @property
-    def message(self):
-        """Gets the message of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-
-
-        :return: The message of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this ReadOnlyAlertDetailSerializer.
-
-
-        :param message: The message of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :type: str
-        """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
-
-        self._message = message
-
-    @property
     def in_alarm(self):
         """Gets the in_alarm of this ReadOnlyAlertDetailSerializer.  # noqa: E501
 
@@ -190,12 +209,117 @@ class ReadOnlyAlertDetailSerializer(object):
         self._in_alarm = in_alarm
 
     @property
+    def val1(self):
+        """Gets the val1 of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The val1 of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: float
+        """
+        return self._val1
+
+    @val1.setter
+    def val1(self, val1):
+        """Sets the val1 of this ReadOnlyAlertDetailSerializer.
+
+
+        :param val1: The val1 of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: float
+        """
+
+        self._val1 = val1
+
+    @property
+    def val2(self):
+        """Gets the val2 of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The val2 of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: float
+        """
+        return self._val2
+
+    @val2.setter
+    def val2(self, val2):
+        """Sets the val2 of this ReadOnlyAlertDetailSerializer.
+
+
+        :param val2: The val2 of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: float
+        """
+
+        self._val2 = val2
+
+    @property
+    def value_operator(self):
+        """Gets the value_operator of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The value_operator of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._value_operator
+
+    @value_operator.setter
+    def value_operator(self, value_operator):
+        """Sets the value_operator of this ReadOnlyAlertDetailSerializer.
+
+
+        :param value_operator: The value_operator of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._value_operator = value_operator
+
+    @property
+    def num_channels(self):
+        """Gets the num_channels of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The num_channels of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_channels
+
+    @num_channels.setter
+    def num_channels(self, num_channels):
+        """Sets the num_channels of this ReadOnlyAlertDetailSerializer.
+
+
+        :param num_channels: The num_channels of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: int
+        """
+
+        self._num_channels = num_channels
+
+    @property
+    def num_channels_operator(self):
+        """Gets the num_channels_operator of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The num_channels_operator of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._num_channels_operator
+
+    @num_channels_operator.setter
+    def num_channels_operator(self, num_channels_operator):
+        """Sets the num_channels_operator of this ReadOnlyAlertDetailSerializer.
+
+
+        :param num_channels_operator: The num_channels_operator of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._num_channels_operator = num_channels_operator
+
+    @property
     def breaching_channels(self):
         """Gets the breaching_channels of this ReadOnlyAlertDetailSerializer.  # noqa: E501
 
 
         :return: The breaching_channels of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._breaching_channels
 
@@ -205,52 +329,10 @@ class ReadOnlyAlertDetailSerializer(object):
 
 
         :param breaching_channels: The breaching_channels of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._breaching_channels = breaching_channels
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-
-
-        :return: The created_at of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this ReadOnlyAlertDetailSerializer.
-
-
-        :param created_at: The created_at of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :type: datetime
-        """
-
-        self._created_at = created_at
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-
-
-        :return: The updated_at of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this ReadOnlyAlertDetailSerializer.
-
-
-        :param updated_at: The updated_at of this ReadOnlyAlertDetailSerializer.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
 
     @property
     def user(self):
@@ -272,6 +354,27 @@ class ReadOnlyAlertDetailSerializer(object):
         """
 
         self._user = user
+
+    @property
+    def monitor_name(self):
+        """Gets the monitor_name of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+
+
+        :return: The monitor_name of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._monitor_name
+
+    @monitor_name.setter
+    def monitor_name(self, monitor_name):
+        """Sets the monitor_name of this ReadOnlyAlertDetailSerializer.
+
+
+        :param monitor_name: The monitor_name of this ReadOnlyAlertDetailSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._monitor_name = monitor_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

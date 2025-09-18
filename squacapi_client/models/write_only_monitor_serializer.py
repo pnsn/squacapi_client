@@ -33,7 +33,8 @@ class WriteOnlyMonitorSerializer(object):
         'interval_type': 'str',
         'interval_count': 'int',
         'stat': 'str',
-        'name': 'str'
+        'name': 'str',
+        'do_daily_digest': 'bool'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class WriteOnlyMonitorSerializer(object):
         'interval_type': 'interval_type',
         'interval_count': 'interval_count',
         'stat': 'stat',
-        'name': 'name'
+        'name': 'name',
+        'do_daily_digest': 'do_daily_digest'
     }
 
-    def __init__(self, channel_group=None, metric=None, interval_type=None, interval_count=None, stat=None, name=None):  # noqa: E501
+    def __init__(self, channel_group=None, metric=None, interval_type=None, interval_count=None, stat=None, name=None, do_daily_digest=None):  # noqa: E501
         """WriteOnlyMonitorSerializer - a model defined in Swagger"""  # noqa: E501
         self._channel_group = None
         self._metric = None
@@ -53,6 +55,7 @@ class WriteOnlyMonitorSerializer(object):
         self._interval_count = None
         self._stat = None
         self._name = None
+        self._do_daily_digest = None
         self.discriminator = None
         self.channel_group = channel_group
         self.metric = metric
@@ -63,6 +66,8 @@ class WriteOnlyMonitorSerializer(object):
             self.stat = stat
         if name is not None:
             self.name = name
+        if do_daily_digest is not None:
+            self.do_daily_digest = do_daily_digest
 
     @property
     def channel_group(self):
@@ -128,7 +133,7 @@ class WriteOnlyMonitorSerializer(object):
         :param interval_type: The interval_type of this WriteOnlyMonitorSerializer.  # noqa: E501
         :type: str
         """
-        allowed_values = ["minute", "hour", "day"]  # noqa: E501
+        allowed_values = ["minute", "hour", "day", "last n"]  # noqa: E501
         if interval_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `interval_type` ({0}), must be one of {1}"  # noqa: E501
@@ -178,7 +183,7 @@ class WriteOnlyMonitorSerializer(object):
         :param stat: The stat of this WriteOnlyMonitorSerializer.  # noqa: E501
         :type: str
         """
-        allowed_values = ["count", "sum", "avg", "min", "max"]  # noqa: E501
+        allowed_values = ["count", "sum", "avg", "min", "max", "minabs", "maxabs", "median", "p90", "p95"]  # noqa: E501
         if stat not in allowed_values:
             raise ValueError(
                 "Invalid value for `stat` ({0}), must be one of {1}"  # noqa: E501
@@ -207,6 +212,27 @@ class WriteOnlyMonitorSerializer(object):
         """
 
         self._name = name
+
+    @property
+    def do_daily_digest(self):
+        """Gets the do_daily_digest of this WriteOnlyMonitorSerializer.  # noqa: E501
+
+
+        :return: The do_daily_digest of this WriteOnlyMonitorSerializer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._do_daily_digest
+
+    @do_daily_digest.setter
+    def do_daily_digest(self, do_daily_digest):
+        """Sets the do_daily_digest of this WriteOnlyMonitorSerializer.
+
+
+        :param do_daily_digest: The do_daily_digest of this WriteOnlyMonitorSerializer.  # noqa: E501
+        :type: bool
+        """
+
+        self._do_daily_digest = do_daily_digest
 
     def to_dict(self):
         """Returns the model properties as a dict"""

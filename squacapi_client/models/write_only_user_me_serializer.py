@@ -28,49 +28,29 @@ class WriteOnlyUserMeSerializer(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'password': 'str',
         'firstname': 'str',
-        'lastname': 'str'
+        'lastname': 'str',
+        'password': 'str'
     }
 
     attribute_map = {
-        'password': 'password',
         'firstname': 'firstname',
-        'lastname': 'lastname'
+        'lastname': 'lastname',
+        'password': 'password'
     }
 
-    def __init__(self, password=None, firstname=None, lastname=None):  # noqa: E501
+    def __init__(self, firstname=None, lastname=None, password=None):  # noqa: E501
         """WriteOnlyUserMeSerializer - a model defined in Swagger"""  # noqa: E501
-        self._password = None
         self._firstname = None
         self._lastname = None
+        self._password = None
         self.discriminator = None
-        self.password = password
-        self.firstname = firstname
-        self.lastname = lastname
-
-    @property
-    def password(self):
-        """Gets the password of this WriteOnlyUserMeSerializer.  # noqa: E501
-
-
-        :return: The password of this WriteOnlyUserMeSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this WriteOnlyUserMeSerializer.
-
-
-        :param password: The password of this WriteOnlyUserMeSerializer.  # noqa: E501
-        :type: str
-        """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
-
-        self._password = password
+        if firstname is not None:
+            self.firstname = firstname
+        if lastname is not None:
+            self.lastname = lastname
+        if password is not None:
+            self.password = password
 
     @property
     def firstname(self):
@@ -90,8 +70,6 @@ class WriteOnlyUserMeSerializer(object):
         :param firstname: The firstname of this WriteOnlyUserMeSerializer.  # noqa: E501
         :type: str
         """
-        if firstname is None:
-            raise ValueError("Invalid value for `firstname`, must not be `None`")  # noqa: E501
 
         self._firstname = firstname
 
@@ -113,10 +91,29 @@ class WriteOnlyUserMeSerializer(object):
         :param lastname: The lastname of this WriteOnlyUserMeSerializer.  # noqa: E501
         :type: str
         """
-        if lastname is None:
-            raise ValueError("Invalid value for `lastname`, must not be `None`")  # noqa: E501
 
         self._lastname = lastname
+
+    @property
+    def password(self):
+        """Gets the password of this WriteOnlyUserMeSerializer.  # noqa: E501
+
+
+        :return: The password of this WriteOnlyUserMeSerializer.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this WriteOnlyUserMeSerializer.
+
+
+        :param password: The password of this WriteOnlyUserMeSerializer.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

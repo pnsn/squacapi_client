@@ -31,9 +31,8 @@ class ReadOnlyAlertSerializer(object):
         'id': 'int',
         'trigger': 'int',
         'timestamp': 'datetime',
-        'message': 'str',
         'in_alarm': 'bool',
-        'breaching_channels': 'str',
+        'breaching_channels': 'object',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'user': 'int'
@@ -43,7 +42,6 @@ class ReadOnlyAlertSerializer(object):
         'id': 'id',
         'trigger': 'trigger',
         'timestamp': 'timestamp',
-        'message': 'message',
         'in_alarm': 'in_alarm',
         'breaching_channels': 'breaching_channels',
         'created_at': 'created_at',
@@ -51,12 +49,11 @@ class ReadOnlyAlertSerializer(object):
         'user': 'user'
     }
 
-    def __init__(self, id=None, trigger=None, timestamp=None, message=None, in_alarm=None, breaching_channels=None, created_at=None, updated_at=None, user=None):  # noqa: E501
+    def __init__(self, id=None, trigger=None, timestamp=None, in_alarm=None, breaching_channels=None, created_at=None, updated_at=None, user=None):  # noqa: E501
         """ReadOnlyAlertSerializer - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._trigger = None
         self._timestamp = None
-        self._message = None
         self._in_alarm = None
         self._breaching_channels = None
         self._created_at = None
@@ -67,7 +64,6 @@ class ReadOnlyAlertSerializer(object):
             self.id = id
         self.trigger = trigger
         self.timestamp = timestamp
-        self.message = message
         if in_alarm is not None:
             self.in_alarm = in_alarm
         if breaching_channels is not None:
@@ -147,29 +143,6 @@ class ReadOnlyAlertSerializer(object):
         self._timestamp = timestamp
 
     @property
-    def message(self):
-        """Gets the message of this ReadOnlyAlertSerializer.  # noqa: E501
-
-
-        :return: The message of this ReadOnlyAlertSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this ReadOnlyAlertSerializer.
-
-
-        :param message: The message of this ReadOnlyAlertSerializer.  # noqa: E501
-        :type: str
-        """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
-
-        self._message = message
-
-    @property
     def in_alarm(self):
         """Gets the in_alarm of this ReadOnlyAlertSerializer.  # noqa: E501
 
@@ -196,7 +169,7 @@ class ReadOnlyAlertSerializer(object):
 
 
         :return: The breaching_channels of this ReadOnlyAlertSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._breaching_channels
 
@@ -206,7 +179,7 @@ class ReadOnlyAlertSerializer(object):
 
 
         :param breaching_channels: The breaching_channels of this ReadOnlyAlertSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._breaching_channels = breaching_channels
