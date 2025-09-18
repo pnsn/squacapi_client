@@ -37,7 +37,7 @@ class ReadOnlyDashboardDetailSerializer(object):
         'share_all': 'bool',
         'share_org': 'bool',
         'organization': 'int',
-        'properties': 'str'
+        'properties': 'object'
     }
 
     attribute_map = {
@@ -285,7 +285,7 @@ class ReadOnlyDashboardDetailSerializer(object):
 
 
         :return: The properties of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._properties
 
@@ -295,7 +295,7 @@ class ReadOnlyDashboardDetailSerializer(object):
 
 
         :param properties: The properties of this ReadOnlyDashboardDetailSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._properties = properties

@@ -5,8 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **channel** | **int** |  | 
 **metric** | **int** |  | 
-**minabs** | **str** |  | [optional] 
-**maxabs** | **str** |  | [optional] 
+**minabs** | **float** |  | [optional] 
+**maxabs** | **float** |  | [optional] 
+**sum** | **float** |  | [optional] 
 **id** | **str** |  | [optional] 
 **min** | **float** |  | 
 **max** | **float** |  | 

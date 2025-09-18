@@ -30,30 +30,26 @@ class WriteOnlyAlertSerializer(object):
     swagger_types = {
         'trigger': 'int',
         'timestamp': 'datetime',
-        'message': 'str',
         'in_alarm': 'bool',
-        'breaching_channels': 'str'
+        'breaching_channels': 'object'
     }
 
     attribute_map = {
         'trigger': 'trigger',
         'timestamp': 'timestamp',
-        'message': 'message',
         'in_alarm': 'in_alarm',
         'breaching_channels': 'breaching_channels'
     }
 
-    def __init__(self, trigger=None, timestamp=None, message=None, in_alarm=None, breaching_channels=None):  # noqa: E501
+    def __init__(self, trigger=None, timestamp=None, in_alarm=None, breaching_channels=None):  # noqa: E501
         """WriteOnlyAlertSerializer - a model defined in Swagger"""  # noqa: E501
         self._trigger = None
         self._timestamp = None
-        self._message = None
         self._in_alarm = None
         self._breaching_channels = None
         self.discriminator = None
         self.trigger = trigger
         self.timestamp = timestamp
-        self.message = message
         if in_alarm is not None:
             self.in_alarm = in_alarm
         if breaching_channels is not None:
@@ -106,29 +102,6 @@ class WriteOnlyAlertSerializer(object):
         self._timestamp = timestamp
 
     @property
-    def message(self):
-        """Gets the message of this WriteOnlyAlertSerializer.  # noqa: E501
-
-
-        :return: The message of this WriteOnlyAlertSerializer.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this WriteOnlyAlertSerializer.
-
-
-        :param message: The message of this WriteOnlyAlertSerializer.  # noqa: E501
-        :type: str
-        """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
-
-        self._message = message
-
-    @property
     def in_alarm(self):
         """Gets the in_alarm of this WriteOnlyAlertSerializer.  # noqa: E501
 
@@ -155,7 +128,7 @@ class WriteOnlyAlertSerializer(object):
 
 
         :return: The breaching_channels of this WriteOnlyAlertSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._breaching_channels
 
@@ -165,7 +138,7 @@ class WriteOnlyAlertSerializer(object):
 
 
         :param breaching_channels: The breaching_channels of this WriteOnlyAlertSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._breaching_channels = breaching_channels

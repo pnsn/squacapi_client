@@ -30,8 +30,9 @@ class ReadOnlyArchiveMonthSerializer(object):
     swagger_types = {
         'channel': 'int',
         'metric': 'int',
-        'minabs': 'str',
-        'maxabs': 'str',
+        'minabs': 'float',
+        'maxabs': 'float',
+        'sum': 'float',
         'id': 'str',
         'min': 'float',
         'max': 'float',
@@ -54,6 +55,7 @@ class ReadOnlyArchiveMonthSerializer(object):
         'metric': 'metric',
         'minabs': 'minabs',
         'maxabs': 'maxabs',
+        'sum': 'sum',
         'id': 'id',
         'min': 'min',
         'max': 'max',
@@ -71,12 +73,13 @@ class ReadOnlyArchiveMonthSerializer(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, channel=None, metric=None, minabs=None, maxabs=None, id=None, min=None, max=None, mean=None, median=None, stdev=None, num_samps=None, p05=None, p10=None, p90=None, p95=None, starttime=None, endtime=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, channel=None, metric=None, minabs=None, maxabs=None, sum=None, id=None, min=None, max=None, mean=None, median=None, stdev=None, num_samps=None, p05=None, p10=None, p90=None, p95=None, starttime=None, endtime=None, created_at=None, updated_at=None):  # noqa: E501
         """ReadOnlyArchiveMonthSerializer - a model defined in Swagger"""  # noqa: E501
         self._channel = None
         self._metric = None
         self._minabs = None
         self._maxabs = None
+        self._sum = None
         self._id = None
         self._min = None
         self._max = None
@@ -99,6 +102,8 @@ class ReadOnlyArchiveMonthSerializer(object):
             self.minabs = minabs
         if maxabs is not None:
             self.maxabs = maxabs
+        if sum is not None:
+            self.sum = sum
         if id is not None:
             self.id = id
         self.min = min
@@ -170,7 +175,7 @@ class ReadOnlyArchiveMonthSerializer(object):
 
 
         :return: The minabs of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: float
         """
         return self._minabs
 
@@ -180,7 +185,7 @@ class ReadOnlyArchiveMonthSerializer(object):
 
 
         :param minabs: The minabs of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
-        :type: str
+        :type: float
         """
 
         self._minabs = minabs
@@ -191,7 +196,7 @@ class ReadOnlyArchiveMonthSerializer(object):
 
 
         :return: The maxabs of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: float
         """
         return self._maxabs
 
@@ -201,10 +206,31 @@ class ReadOnlyArchiveMonthSerializer(object):
 
 
         :param maxabs: The maxabs of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
-        :type: str
+        :type: float
         """
 
         self._maxabs = maxabs
+
+    @property
+    def sum(self):
+        """Gets the sum of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
+
+
+        :return: The sum of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
+        :rtype: float
+        """
+        return self._sum
+
+    @sum.setter
+    def sum(self, sum):
+        """Sets the sum of this ReadOnlyArchiveMonthSerializer.
+
+
+        :param sum: The sum of this ReadOnlyArchiveMonthSerializer.  # noqa: E501
+        :type: float
+        """
+
+        self._sum = sum
 
     @property
     def id(self):

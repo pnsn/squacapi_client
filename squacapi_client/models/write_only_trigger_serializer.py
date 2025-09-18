@@ -34,7 +34,7 @@ class WriteOnlyTriggerSerializer(object):
         'value_operator': 'str',
         'num_channels': 'int',
         'num_channels_operator': 'str',
-        'email_list': 'str',
+        'emails': 'str',
         'alert_on_out_of_alarm': 'bool'
     }
 
@@ -45,11 +45,11 @@ class WriteOnlyTriggerSerializer(object):
         'value_operator': 'value_operator',
         'num_channels': 'num_channels',
         'num_channels_operator': 'num_channels_operator',
-        'email_list': 'email_list',
+        'emails': 'emails',
         'alert_on_out_of_alarm': 'alert_on_out_of_alarm'
     }
 
-    def __init__(self, monitor=None, val1=None, val2=None, value_operator=None, num_channels=None, num_channels_operator=None, email_list=None, alert_on_out_of_alarm=None):  # noqa: E501
+    def __init__(self, monitor=None, val1=None, val2=None, value_operator=None, num_channels=None, num_channels_operator=None, emails=None, alert_on_out_of_alarm=None):  # noqa: E501
         """WriteOnlyTriggerSerializer - a model defined in Swagger"""  # noqa: E501
         self._monitor = None
         self._val1 = None
@@ -57,7 +57,7 @@ class WriteOnlyTriggerSerializer(object):
         self._value_operator = None
         self._num_channels = None
         self._num_channels_operator = None
-        self._email_list = None
+        self._emails = None
         self._alert_on_out_of_alarm = None
         self.discriminator = None
         self.monitor = monitor
@@ -70,8 +70,8 @@ class WriteOnlyTriggerSerializer(object):
             self.num_channels = num_channels
         if num_channels_operator is not None:
             self.num_channels_operator = num_channels_operator
-        if email_list is not None:
-            self.email_list = email_list
+        if emails is not None:
+            self.emails = emails
         if alert_on_out_of_alarm is not None:
             self.alert_on_out_of_alarm = alert_on_out_of_alarm
 
@@ -218,25 +218,25 @@ class WriteOnlyTriggerSerializer(object):
         self._num_channels_operator = num_channels_operator
 
     @property
-    def email_list(self):
-        """Gets the email_list of this WriteOnlyTriggerSerializer.  # noqa: E501
+    def emails(self):
+        """Gets the emails of this WriteOnlyTriggerSerializer.  # noqa: E501
 
 
-        :return: The email_list of this WriteOnlyTriggerSerializer.  # noqa: E501
+        :return: The emails of this WriteOnlyTriggerSerializer.  # noqa: E501
         :rtype: str
         """
-        return self._email_list
+        return self._emails
 
-    @email_list.setter
-    def email_list(self, email_list):
-        """Sets the email_list of this WriteOnlyTriggerSerializer.
+    @emails.setter
+    def emails(self, emails):
+        """Sets the emails of this WriteOnlyTriggerSerializer.
 
 
-        :param email_list: The email_list of this WriteOnlyTriggerSerializer.  # noqa: E501
+        :param emails: The emails of this WriteOnlyTriggerSerializer.  # noqa: E501
         :type: str
         """
 
-        self._email_list = email_list
+        self._emails = emails
 
     @property
     def alert_on_out_of_alarm(self):

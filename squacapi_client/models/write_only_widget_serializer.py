@@ -31,11 +31,11 @@ class WriteOnlyWidgetSerializer(object):
         'name': 'str',
         'dashboard': 'int',
         'metrics': 'list[int]',
-        'layout': 'str',
+        'layout': 'object',
         'type': 'str',
-        'properties': 'str',
+        'properties': 'object',
         'stat': 'str',
-        'thresholds': 'str'
+        'thresholds': 'object'
     }
 
     attribute_map = {
@@ -149,7 +149,7 @@ class WriteOnlyWidgetSerializer(object):
 
 
         :return: The layout of this WriteOnlyWidgetSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._layout
 
@@ -159,7 +159,7 @@ class WriteOnlyWidgetSerializer(object):
 
 
         :param layout: The layout of this WriteOnlyWidgetSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._layout = layout
@@ -191,7 +191,7 @@ class WriteOnlyWidgetSerializer(object):
 
 
         :return: The properties of this WriteOnlyWidgetSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._properties
 
@@ -201,7 +201,7 @@ class WriteOnlyWidgetSerializer(object):
 
 
         :param properties: The properties of this WriteOnlyWidgetSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._properties = properties
@@ -233,7 +233,7 @@ class WriteOnlyWidgetSerializer(object):
 
 
         :return: The thresholds of this WriteOnlyWidgetSerializer.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._thresholds
 
@@ -243,7 +243,7 @@ class WriteOnlyWidgetSerializer(object):
 
 
         :param thresholds: The thresholds of this WriteOnlyWidgetSerializer.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._thresholds = thresholds

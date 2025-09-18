@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **firstname** | **str** |  | 
 **lastname** | **str** |  | 
 **is_staff** | **bool** |  | [optional] 
-**groups** | **list[int]** |  | 
+**groups** | **list[str]** |  | 
 **id** | **int** |  | [optional] 
 **organization** | **int** |  | 
 **is_org_admin** | **bool** |  | [optional] 

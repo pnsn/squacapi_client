@@ -35,7 +35,7 @@ class UserSimple(object):
         'is_active': 'bool',
         'organization': 'int',
         'is_org_admin': 'bool',
-        'groups': 'list[UserGroup]'
+        'groups': 'list[str]'
     }
 
     attribute_map = {
@@ -234,7 +234,7 @@ class UserSimple(object):
 
 
         :return: The groups of this UserSimple.  # noqa: E501
-        :rtype: list[UserGroup]
+        :rtype: list[str]
         """
         return self._groups
 
@@ -244,7 +244,7 @@ class UserSimple(object):
 
 
         :param groups: The groups of this UserSimple.  # noqa: E501
-        :type: list[UserGroup]
+        :type: list[str]
         """
 
         self._groups = groups

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **share_all** | **bool** |  | [optional] 
 **share_org** | **bool** |  | [optional] 
 **organization** | **int** |  | 
-**properties** | **str** |  | [optional] 
+**properties** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **firstname** | **str** |  | [optional] 
 **lastname** | **str** |  | [optional] 
-**groups** | [**list[UserGroup]**](UserGroup.md) |  | [optional] 
-**organization** | **int** |  | 
+**groups** | **list[str]** |  | [optional] 
+**organization** | **int** |  | [optional] 
 **email** | **str** |  | [optional] 
 **is_active** | **bool** |  | [optional] 
 **is_org_admin** | **bool** |  | [optional] 
